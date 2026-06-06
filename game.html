@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Glizzy Breakaway | Utah Glizzies HC</title>
+    <meta name="description" content="Play Glizzy Breakaway, a retro Utah Glizzies HC shootout mini-game." />
+    <meta property="og:title" content="Glizzy Breakaway | Utah Glizzies HC" />
+    <meta property="og:image" content="assets/glizzies-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/glizzies-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&family=Racing+Sans+One&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#062817" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Analytics GA4 — replace G-49PTYCCKB1 with your Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-49PTYCCKB1');
+    </script>
+  </head>
+  <body class="game-body">
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Utah Glizzies home"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="team.html#roster">Roster</a>
+      <a href="players/">Players</a>
+      <a href="recaps/">Recaps</a>
+      <a href="lore.html">Lore</a>
+      <a href="game.html">Play</a>
+      <a href="shop.html">Shop</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="faq.html">FAQ</a>
+      <a href="team.html#schedule" class="nav-cta">Schedule</a>
+      <a class="instagram-link" href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">IG</a>
+    </nav>
+    </header>
+    <main class="game-page">
+      <section class="game-shell">
+        <div class="game-scoreboard">
+          <strong>Glizzy Breakaway</strong>
+          <div><span>Glizzies</span><b data-game-score>0</b></div>
+          <div><span>Round</span><b data-game-round>1</b></div>
+        </div>
+        <div class="game-rink" data-game-rink>
+          <div class="game-net"></div>
+          <img class="game-goalie" src="public/game/sprites/goalie.png" alt="Goalie sprite" data-goalie />
+          <img class="game-skater" src="public/game/sprites/skater-right.png" alt="Glizzies skater sprite" data-skater />
+          <img class="game-puck" src="public/game/sprites/puck.png" alt="Puck sprite" data-puck />
+          <div class="game-nameplate" data-game-nameplate></div>
+          <div class="player-select-panel" data-start-panel>
+            <p class="eyebrow">Select your skater</p>
+            <h1>Choose Your Glizzy</h1>
+            <label for="game-player-select">Nameplate</label>
+            <select id="game-player-select" data-game-player-select></select>
+            <p>Pick the skater you want to control. Goals and saves still log to the live leaderboard below.</p>
+            <button class="button primary" data-start-game>Start Breakaway</button>
+          </div>
+          <div class="game-overlay" data-game-overlay></div>
+        </div>
+        <div class="game-controls">
+          <div class="chirp-cam"><strong>Chirp Cam:</strong> <span data-game-message>Breakaway time. Deke, shoot, embarrass.</span></div>
+          <div class="game-buttons">
+            <button data-deke-left>Deke Left</button>
+            <button data-shoot>Shoot</button>
+            <button data-deke-right>Deke Right</button>
+          </div>
+        </div>
+        <p class="game-help">Controls: drag on the ice or use WASD / arrow keys to skate. Q/E = deke. Space = shoot.</p>
+        <section class="game-leaderboard">
+          <div class="section-heading">
+            <p class="eyebrow">Live Breakaway Ledger</p>
+            <h2>Which nameplate is carrying?</h2>
+            <p>Shared across visitors through the same no-secret counter service as the hype button.</p>
+          </div>
+          <div class="leaderboard-table" data-game-leaderboard></div>
+        </section>
+      </section>
+    </main>
+    <script src="src/data/siteContent.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

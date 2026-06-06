@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Official Glizzies Lore | Utah Glizzies HC</title>
+    <meta name="description" content="Official Utah Glizzies HC player lore, nameplate mythology, and deeply unserious team history." />
+    <meta property="og:title" content="Official Glizzies Lore | Utah Glizzies HC" />
+    <meta property="og:image" content="assets/glizzies-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/glizzies-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&family=Racing+Sans+One&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#062817" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Analytics GA4 — replace G-49PTYCCKB1 with your Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-49PTYCCKB1');
+    </script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Utah Glizzies home"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="team.html#roster">Roster</a>
+      <a href="players/">Players</a>
+      <a href="recaps/">Recaps</a>
+      <a href="lore.html">Lore</a>
+      <a href="game.html">Play</a>
+      <a href="shop.html">Shop</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="faq.html">FAQ</a>
+      <a href="team.html#schedule" class="nav-cta">Schedule</a>
+      <a class="instagram-link" href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">IG</a>
+    </nav>
+    </header>
+    <div class="countdown-bar" data-countdown-bar><span>Next puck drop</span><strong data-countdown>Loading...</strong><small data-countdown-meta></small></div>
+    <main>
+      <section class="subpage-hero lore-hero">
+        <p class="eyebrow">Official Glizzies Lore</p>
+        <h1>The nameplates have files.</h1>
+        <p data-player-lore-intro></p>
+      </section>
+      <section class="section">
+        <div class="lore-toolbar" aria-label="Lore filters">
+          <button class="button primary" data-lore-filter="all" type="button">All Legends</button>
+          <button class="button secondary" data-lore-filter="roster" type="button">Roster</button>
+          <button class="button secondary" data-lore-filter="sub" type="button">Subs</button>
+        </div>
+        <p class="sub-lore-note" data-unnamed-subs-intro></p>
+        <div class="player-lore-grid" data-team-lore data-filter="all"></div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Utah Glizzies Hockey</span><div class="footer-links"><a href="index.html">Home</a><a href="team.html#roster">Roster</a><a href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">Instagram</a></div></footer>
+    <script src="src/data/siteContent.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

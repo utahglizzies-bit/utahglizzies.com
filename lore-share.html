@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Glizzies Lore | Utah Glizzies HC</title>
+<meta name="description" content="The official classified files for every Utah Glizzies nameplate. Screenshot and share." />
+<link rel="canonical" href="https://www.utahglizzies.com/lore-share.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root{--green:#062817;--gold:#e1a21a;--red:#d21f13;--cream:#fff4c9;--ink:#07100d;--card:#0a2116;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--ink);font-family:'Inter',sans-serif;color:var(--cream);min-height:100vh;}
+.site-header{background:linear-gradient(160deg,var(--green) 0%,#091d11 100%);border-bottom:3px solid var(--gold);padding:28px 24px 24px;text-align:center;}
+.header-label{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-family:monospace;margin-bottom:8px;}
+.header-title{font-size:clamp(24px,5vw,40px);font-weight:900;color:var(--cream);line-height:1.1;margin-bottom:6px;font-family:'Bebas Neue',sans-serif;letter-spacing:1px;}
+.header-sub{font-size:13px;color:rgba(255,244,201,.55);font-family:monospace;max-width:480px;margin:0 auto 16px;}
+.header-back{display:inline-block;padding:7px 16px;background:transparent;border:1px solid rgba(225,162,26,.4);border-radius:20px;color:var(--gold);font-family:monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;}
+.filters{background:var(--green);border-bottom:1px solid rgba(225,162,26,.12);padding:10px 20px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:sticky;top:0;z-index:50;}
+.filter-btn{padding:5px 14px;border-radius:20px;border:1px solid rgba(255,244,201,.15);background:transparent;color:rgba(255,244,201,.5);font-family:monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .15s;}
+.filter-btn.active{border-color:var(--gold);background:rgba(225,162,26,.12);color:var(--gold);}
+.share-hint{font-size:11px;font-family:monospace;color:rgba(255,244,201,.3);text-align:center;margin:16px auto -4px;padding:0 16px;max-width:600px;}
+.lore-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;max-width:1080px;margin:24px auto;padding:0 16px 60px;}
+.lore-card{background:var(--card);border:1px solid rgba(225,162,26,.15);border-top:3px solid var(--gold);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+.lore-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.4);}
+.lore-card.sub-card{border-top-color:rgba(255,244,201,.3);}
+.card-header{background:linear-gradient(135deg,var(--green) 0%,#0d2d18 100%);padding:16px 18px 14px;position:relative;}
+.card-nameplate{font-size:20px;font-weight:900;color:var(--cream);letter-spacing:-.5px;line-height:1;margin-bottom:6px;font-family:'Bebas Neue',sans-serif;letter-spacing:1px;}
+.card-name{font-size:12px;color:rgba(255,244,201,.5);font-family:monospace;}
+.card-stamp{position:absolute;top:14px;right:14px;background:rgba(210,31,19,.15);border:1px solid rgba(210,31,19,.4);border-radius:4px;padding:3px 8px;font-size:9px;font-family:monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--red);max-width:110px;text-align:right;line-height:1.3;}
+.card-stamp.sub-stamp{background:rgba(255,244,201,.05);border-color:rgba(255,244,201,.2);color:rgba(255,244,201,.4);}
+.card-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;gap:12px;}
+.card-lore{font-size:13px;line-height:1.65;color:rgba(255,244,201,.75);flex:1;}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid rgba(255,244,201,.06);}
+.card-tag{font-size:10px;font-family:monospace;letter-spacing:.1em;text-transform:uppercase;}
+.tag-roster{color:var(--gold);}
+.tag-sub{color:rgba(255,244,201,.35);}
+.card-brand{font-size:10px;font-family:monospace;color:rgba(255,244,201,.2);letter-spacing:.05em;}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-label">Utah Glizzies HC &middot; Official Records</div>
+  <h1 class="header-title">The Nameplates Have Files.</h1>
+  <p class="header-sub">Every Glizzy has an origin story. Some were engineered. Some escaped. Some are still loading in the spreadsheet.</p>
+  <a href="https://www.utahglizzies.com/" class="header-back">&larr; Back to Glizzies HQ</a>
+</header>
+<nav class="filters">
+  <button class="filter-btn active" data-filter="all">All Legends</button>
+  <button class="filter-btn" data-filter="roster">Roster</button>
+  <button class="filter-btn" data-filter="sub">Subs</button>
+</nav>
+<p class="share-hint">Screenshot any card to share. Tag @utah_glizzies_hockey.</p>
+<main class="lore-grid" id="lore-grid"></main>
+<script src="src/data/siteContent.js"></script>
+<script>
+var LORE = window.siteContent ? window.siteContent.playerLore : [];
+function render(filter) {
+  var grid = document.getElementById('lore-grid');
+  var cards = filter === 'all' ? LORE : LORE.filter(function(p){ return p.status.toLowerCase() === filter; });
+  if (!cards.length) { grid.innerHTML = '<div style="text-align:center;padding:60px;color:rgba(255,244,201,0.3);font-family:monospace;">No players match this filter.</div>'; return; }
+  grid.innerHTML = cards.map(function(p) {
+    var isSub = p.status === 'Sub';
+    return '<div class="lore-card' + (isSub?' sub-card':'') + '">' +
+      '<div class="card-header">' +
+        '<div class="card-nameplate">' + p.nameplate + '</div>' +
+        '<div class="card-name">' + p.name + '</div>' +
+        '<div class="card-stamp' + (isSub?' sub-stamp':'') + '">' + p.stamp + '</div>' +
+      '</div>' +
+      '<div class="card-body">' +
+        '<p class="card-lore">' + p.lore + '</p>' +
+        '<div class="card-footer">' +
+          '<span class="card-tag ' + (isSub?'tag-sub':'tag-roster') + '">' + (isSub?'Sub':'Roster') + '</span>' +
+          '<span class="card-brand">utahglizzies.com</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+document.querySelectorAll('.filter-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    render(btn.dataset.filter);
+  });
+});
+render('all');
+</script>
+</body>
+</html>

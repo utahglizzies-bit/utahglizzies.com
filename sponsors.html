@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utah Glizzies HC Sponsors</title>
+    <meta name="description" content="Sponsor Utah Glizzies HC and join the strongest hot dog-based hockey brand in Utah." />
+    <meta property="og:title" content="Utah Glizzies HC Sponsors" />
+    <meta property="og:description" content="Sponsor the playoff chaos, rink-lobby lore, and elite Glizzy energy." />
+    <meta property="og:image" content="assets/glizzies-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/glizzies-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&family=Racing+Sans+One&display=swap" rel="stylesheet" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#062817" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Analytics GA4 — replace G-49PTYCCKB1 with your Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-49PTYCCKB1');
+    </script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Utah Glizzies home"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="team.html#roster">Roster</a>
+      <a href="players/">Players</a>
+      <a href="recaps/">Recaps</a>
+      <a href="lore.html">Lore</a>
+      <a href="game.html">Play</a>
+      <a href="shop.html">Shop</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="faq.html">FAQ</a>
+      <a href="team.html#schedule" class="nav-cta">Schedule</a>
+      <a class="instagram-link" href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">IG</a>
+    </nav>
+    </header>
+    <div class="countdown-bar" data-countdown-bar><span>Next puck drop</span><strong data-countdown>Loading...</strong><small data-countdown-meta></small></div>
+    <main>
+      <section class="subpage-hero">
+        <p class="eyebrow">Sponsor Utah Glizzies HC</p>
+        <h1>Put your business on the bench.</h1>
+        <p>Support local hockey, playoff chaos, and a team that can turn one decent shift into three weeks of lore.</p>
+        <a class="button primary" href="mailto:utahglizzies@gmail.com?subject=Utah%20Glizzies%20Sponsorship%20Opportunity&body=Hi%20Glizzies%2C%0A%0AI%20am%20interested%20in%20sponsoring%20the%20team.%0A%0ABusiness%3A%0AName%3A%0APhone%3A%0ASponsorship%20interest%3A%0A%0AThanks!">Email Sponsorship</a>
+      </section>
+      <section class="section">
+        <div class="section-heading"><p class="eyebrow">Current Sponsors</p><h2>Open slots on the grill.</h2></div>
+        <div class="sponsor-grid" data-current-sponsors></div>
+      </section>
+      <section class="section">
+        <div class="section-heading"><p class="eyebrow">Sponsor Tiers</p><h2>From mustard packet to legend status.</h2><p>Pick your level of rink-lobby immortality. We will make the logo placement feel worthy of the grill.</p></div>
+        <div class="sponsor-grid" data-sponsor-tiers></div>
+      </section>
+      <section class="section join">
+        <div><p class="eyebrow">Become A Sponsor</p><h2>Tell us what you want to cook.</h2><p>Send the details below or use the direct email button if your browser blocks form submissions.</p><a class="button secondary" href="mailto:utahglizzies@gmail.com?subject=Utah%20Glizzies%20Sponsorship%20Opportunity&body=Hi%20Glizzies%2C%0A%0AI%20am%20interested%20in%20sponsoring%20the%20team.%0A%0ABusiness%3A%0AName%3A%0APhone%3A%0ASponsorship%20interest%3A%0A%0AThanks!">Email utahglizzies@gmail.com</a></div>
+        <form class="signup-form" name="sponsor" method="post" action="https://formsubmit.co/utahglizzies@gmail.com">
+          <input type="hidden" name="_subject" value="Utah Glizzies Sponsorship Opportunity" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://www.utahglizzies.com/thank-you.html" />
+          <label>Name<input name="name" type="text" /></label>
+          <label>Business<input name="business" type="text" /></label>
+          <label>Email<input name="email" type="email" /></label>
+          <label>Phone<input name="phone" type="tel" /></label>
+          <label>Sponsorship interest<select name="interest"><option>Mustard Packet Sponsor</option><option>Footlong Sponsor</option><option>Double Barrel Sponsor</option><option>Glizzy Legend Sponsor</option></select></label>
+          <label>Message<textarea name="message"></textarea></label>
+          <button class="button primary" type="submit">Send Sponsor Interest</button>
+        </form>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Utah Glizzies Hockey</span><div class="footer-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">Instagram</a></div></footer>
+    <script src="src/data/siteContent.js"></script><script src="script.js"></script>
+  </body>
+</html>

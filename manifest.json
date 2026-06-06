@@ -1,0 +1,23 @@
+{
+  "name": "Utah Glizzies HC",
+  "short_name": "Glizzies",
+  "description": "Beer league hockey. Playoff chaos. Elite Glizzy energy. Sandy, Utah.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#062817",
+  "theme_color": "#062817",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/assets/glizzies-logo.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/glizzies-logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "/assets/glizzies-logo.png", "sizes": "1280x720", "type": "image/png" }
+  ],
+  "categories": ["sports", "entertainment"],
+  "shortcuts": [
+    { "name": "Schedule", "url": "/team.html#schedule", "description": "View the full game schedule" },
+    { "name": "Lore", "url": "/lore.html", "description": "Read the official Glizzies lore" },
+    { "name": "Breakaway", "url": "/game.html", "description": "Play Glizzy Breakaway" }
+  ]
+}

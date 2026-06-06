@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glizzies Matchup Card Generator</title>
+<style>
+:root{--green:#062817;--gold:#e1a21a;--red:#d21f13;--cream:#fff4c9;--ink:#07100d;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--ink);font-family:'Georgia',serif;color:var(--cream);min-height:100vh;padding:20px;}
+h1{font-size:22px;color:var(--gold);margin-bottom:4px;}
+.sub{font-size:12px;color:rgba(255,244,201,.5);font-family:monospace;margin-bottom:24px;}
+.layout{display:flex;gap:24px;max-width:1100px;margin:0 auto;flex-wrap:wrap;align-items:flex-start;}
+.controls{flex:0 0 260px;display:flex;flex-direction:column;gap:10px;}
+label{font-size:10px;font-family:monospace;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:3px;}
+input,textarea{width:100%;background:rgba(6,40,23,.8);border:1px solid rgba(225,162,26,.3);border-radius:6px;color:var(--cream);padding:8px 10px;font-family:monospace;font-size:12px;outline:none;resize:vertical;}
+textarea{min-height:55px;}
+input:focus,textarea:focus{border-color:var(--gold);}
+.field{display:flex;flex-direction:column;}
+hr{border:none;border-top:1px solid rgba(225,162,26,.1);margin:4px 0;}
+.sec{font-size:9px;font-family:monospace;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,244,201,.3);}
+.dl-btn{padding:12px;background:var(--gold);color:var(--ink);border:none;border-radius:8px;font-family:monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;margin-top:4px;}
+.dl-btn:hover{background:#f0b020;}
+.note{font-size:10px;font-family:monospace;color:rgba(255,244,201,.3);text-align:center;margin-top:4px;}
+.canvas-wrap{flex:1;min-width:280px;}
+canvas{width:100%;height:auto;border:2px solid rgba(225,162,26,.2);border-radius:10px;display:block;}
+.canvas-note{font-size:10px;font-family:monospace;color:rgba(255,244,201,.3);text-align:center;margin-top:6px;}
+</style>
+</head>
+<body>
+<h1>Matchup Card Generator</h1>
+<p class="sub">Build an Instagram-ready 1080x1080 matchup preview. Fill in the fields, download, post before every game.</p>
+<div class="layout">
+  <div class="controls">
+    <div class="sec">Game Info</div>
+    <div class="field"><label>Game Date</label><input type="text" id="gameDate" value="June 4, 2026" oninput="draw()"></div>
+    <div class="field"><label>Game Time</label><input type="text" id="gameTime" value="9:30 PM" oninput="draw()"></div>
+    <div class="field"><label>Opponent</label><input type="text" id="opponent" value="Salt Shakers" oninput="draw()"></div>
+    <div class="field"><label>Rink</label><input type="text" id="rink" value="North Rink" oninput="draw()"></div>
+    <div class="field"><label>Game Type</label><input type="text" id="gameType" value="PLAYOFF" oninput="draw()"></div>
+    <hr>
+    <div class="sec">Matchup Details</div>
+    <div class="field"><label>Threat Level</label><input type="text" id="threat" value="Full Chili Dog Emergency" oninput="draw()"></div>
+    <div class="field"><label>Player to Watch</label><input type="text" id="playerWatch" value="#79 Josh Morrill — 9G, 13 PTS" oninput="draw()"></div>
+    <hr>
+    <div class="sec">Keys to the Game (up to 3)</div>
+    <div class="field"><label>Key 1</label><textarea id="key1" oninput="draw()">Mark #79 Morrill early. Nine goals means he treats hockey like a solo podcast.</textarea></div>
+    <div class="field"><label>Key 2</label><textarea id="key2" oninput="draw()">Make their goalies relive the May 14 traffic report: screens, rebounds, and rubber.</textarea></div>
+    <div class="field"><label>Key 3</label><textarea id="key3" oninput="draw()">Win or go home. Preferably win.</textarea></div>
+    <button class="dl-btn" onclick="downloadCard()">Download Card (PNG)</button>
+    <p class="note">1080x1080 &middot; Instagram-ready</p>
+  </div>
+  <div class="canvas-wrap">
+    <canvas id="card" width="1080" height="1080"></canvas>
+    <p class="canvas-note">Live preview &mdash; download exports at full 1080x1080</p>
+  </div>
+</div>
+<script>
+var canvas=document.getElementById('card'),ctx=canvas.getContext('2d');
+function v(id){return document.getElementById(id).value.trim();}
+function wrap(ctx,text,x,y,maxW,lh){
+  var words=text.split(' '),line='',yy=y;
+  for(var i=0;i<words.length;i++){
+    var test=line+words[i]+' ';
+    if(ctx.measureText(test).width>maxW&&i>0){ctx.fillText(line,x,yy);line=words[i]+' ';yy+=lh;}
+    else{line=test;}
+  }
+  ctx.fillText(line,x,yy);return yy+lh;
+}
+function draw(){
+  var W=1080,H=1080;
+  ctx.clearRect(0,0,W,H);
+  var bg=ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#04180e');bg.addColorStop(1,'#062817');
+  ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+  var glow=ctx.createRadialGradient(W-100,100,0,W-100,100,400);
+  glow.addColorStop(0,'rgba(225,162,26,0.06)');glow.addColorStop(1,'transparent');
+  ctx.fillStyle=glow;ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='#e1a21a';ctx.fillRect(0,0,W,6);
+  ctx.fillStyle='#d21f13';ctx.fillRect(0,H-8,W,8);
+  var gt=v('gameType')||'GAME DAY';
+  ctx.font='bold 28px monospace';
+  var gtW=ctx.measureText(gt).width+40;
+  ctx.fillStyle='#d21f13';ctx.beginPath();
+  if(ctx.roundRect){ctx.roundRect(52,36,gtW,46,6);}else{ctx.rect(52,36,gtW,46);}
+  ctx.fill();
+  ctx.fillStyle='#fff4c9';ctx.textAlign='center';ctx.fillText(gt,52+gtW/2,68);
+  ctx.font='26px monospace';ctx.fillStyle='#e1a21a';ctx.textAlign='left';
+  ctx.fillText(v('gameDate')+' \u00b7 '+v('gameTime')+' \u00b7 '+v('rink'),52,130);
+  ctx.font='bold 90px Georgia';ctx.fillStyle='#fff4c9';ctx.textAlign='left';ctx.fillText('GLIZZIES',52,225);
+  ctx.font='38px monospace';ctx.fillStyle='#e1a21a';ctx.fillText('vs',52,275);
+  ctx.font='bold 68px Georgia';ctx.fillStyle='#fff4c9';ctx.fillText(v('opponent')||'OPPONENT',52,355);
+  ctx.strokeStyle='rgba(225,162,26,0.25)';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(52,385);ctx.lineTo(W-52,385);ctx.stroke();
+  var threat=v('threat');
+  if(threat){ctx.font='22px monospace';ctx.fillStyle='rgba(255,244,201,0.4)';ctx.fillText('THREAT LEVEL:',52,428);ctx.fillStyle='#d21f13';ctx.font='bold 26px Georgia';ctx.fillText(threat.toUpperCase(),52,462);}
+  var ptw=v('playerWatch');
+  if(ptw){ctx.font='22px monospace';ctx.fillStyle='rgba(255,244,201,0.4)';ctx.fillText('PLAYER TO WATCH:',52,512);ctx.fillStyle='#e1a21a';ctx.font='bold 24px Georgia';ctx.fillText(ptw,52,544);}
+  ctx.strokeStyle='rgba(225,162,26,0.2)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(52,572);ctx.lineTo(W-52,572);ctx.stroke();
+  ctx.font='bold 20px monospace';ctx.fillStyle='#e1a21a';ctx.fillText('KEYS TO THE GAME',52,608);
+  var keyY=644;
+  [v('key1'),v('key2'),v('key3')].filter(Boolean).forEach(function(key,i){
+    ctx.fillStyle='#d21f13';ctx.beginPath();ctx.arc(72,keyY-10,16,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#fff4c9';ctx.font='bold 18px monospace';ctx.textAlign='center';ctx.fillText(String(i+1),72,keyY-4);
+    ctx.textAlign='left';ctx.font='22px Georgia';ctx.fillStyle='#fff4c9';
+    keyY=wrap(ctx,key,100,keyY,W-160,30)+12;
+  });
+  ctx.fillStyle='rgba(255,244,201,0.12)';ctx.fillRect(0,H-80,W,72);
+  ctx.font='bold 30px Georgia';ctx.fillStyle='#e1a21a';ctx.textAlign='center';ctx.fillText('utahglizzies.com',W/2,H-42);
+  ctx.font='20px monospace';ctx.fillStyle='rgba(255,244,201,0.4)';ctx.fillText('@utah_glizzies_hockey',W/2,H-18);
+}
+function downloadCard(){
+  draw();
+  var a=document.createElement('a');
+  a.download='glizzies-matchup-'+(v('opponent')||'card').toLowerCase().replace(/\s+/g,'-')+'.png';
+  a.href=canvas.toDataURL('image/png');a.click();
+}
+draw();
+</script>
+</body>
+</html>

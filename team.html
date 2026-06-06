@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utah Glizzies HC Roster | Playoff Team Hub</title>
+    <meta
+      name="description"
+      content="Meet Utah Glizzies HC roster, schedule, player lore, stats, and playoff team updates."
+    />
+    <meta property="og:title" content="Meet The Utah Glizzies" />
+    <meta
+      property="og:description"
+      content="Roster cards, schedule, player stats, and the official Utah Glizzies HC personality report."
+    />
+    <meta property="og:image" content="assets/glizzies-logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="assets/glizzies-logo.png" />
+    <link rel="icon" href="assets/glizzies-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Grandstander:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#062817" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Analytics GA4 — replace G-49PTYCCKB1 with your Measurement ID from analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-49PTYCCKB1');
+    </script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Utah Glizzies home">
+        <img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" />
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="team.html#roster">Roster</a>
+      <a href="players/">Players</a>
+      <a href="recaps/">Recaps</a>
+      <a href="lore.html">Lore</a>
+      <a href="game.html">Play</a>
+      <a href="shop.html">Shop</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="faq.html">FAQ</a>
+      <a href="team.html#schedule" class="nav-cta">Schedule</a>
+      <a class="instagram-link" href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">IG</a>
+    </nav>
+    </header>
+
+    <div class="countdown-bar" data-countdown-bar>
+      <span>Next puck drop</span>
+      <strong data-countdown>Loading...</strong>
+      <small data-countdown-meta></small>
+    </div>
+
+    <main>
+      <section class="team-hero">
+        <div>
+          <p class="eyebrow">Get To Know The Team</p>
+          <h1>Roster cards with bite.</h1>
+          <p>
+            This page is built to turn real GameSheet stats into player blurbs,
+            awards, schedule notes, and very official nonsense.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="https://teams.gamesheet.app/teams/f6cc3e10-5c24-4049-b6a9-bf2d57024f4a/schedule"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open GameSheet
+            </a>
+            <a class="button secondary" href="#roster">Meet The Bench</a>
+          </div>
+        </div>
+        <div class="team-badge-card">
+          <img src="assets/glizzies-logo.png" alt="" />
+          <span>Official vibe report</span>
+          <strong>Stats imported</strong>
+        </div>
+      </section>
+
+      <section class="section team-dashboard" id="schedule">
+        <div class="next-game-card">
+          <p class="eyebrow">Next Game</p>
+          <h2 data-next-game-title>vs Salt Shakers</h2>
+          <p data-next-game-copy>
+            Thursday, June 4, 2026 at 9:30 PM on North Rink at Utah Mammoth Ice Center,
+            10450 S. State Street STE 2200A, Sandy, UT 84070. The Glizzies enter
+            playoff mode at 5-5-1 with 40 goals for, 37 against, and a fresh 4-1
+            bounce-back win. The Salt Shakers get the next chance to prove
+            whether they are seasoning or just getting sprinkled.
+          </p>
+          <a
+            class="text-link"
+            href="https://teams.gamesheet.app/teams/f6cc3e10-5c24-4049-b6a9-bf2d57024f4a/schedule"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Check the live GameSheet schedule
+          </a>
+        </div>
+        <div class="team-stat-stack" aria-label="Team stat highlights">
+          <article>
+            <span>Puck Drop</span>
+            <strong>9:30 PM</strong>
+          </article>
+          <article>
+            <span>Rink</span>
+            <strong>North</strong>
+          </article>
+          <article>
+            <span>Plot</span>
+            <strong>Playoff grill</strong>
+          </article>
+        </div>
+        <div class="season-schedule-card">
+          <div class="schedule-card-heading">
+            <div>
+              <p class="eyebrow">Season Schedule</p>
+              <h3>Every stop on the grill tour.</h3>
+            </div>
+            <span>Playoff path included</span>
+          </div>
+          <div class="season-schedule-list" data-season-schedule></div>
+        </div>
+      </section>
+
+      <section class="section standings-section">
+        <div class="section-heading">
+          <p class="eyebrow">Spring 2026 D League</p>
+          <h2>Glizzies playoff tracker.</h2>
+          <p>
+            The league export can lag behind the schedule, so this section now
+            tracks only the Glizzies results we can verify from the completed
+            games. No more mixing old league rows with new Glizzies math.
+          </p>
+        </div>
+        <div class="standings-layout">
+          <article class="glizzies-report-card">
+            <img src="assets/glizzies-logo.png" alt="" />
+            <div>
+              <span class="card-kicker">Utah Glizzies</span>
+              <h3>5-5-1, won the latest one, playoff mode loaded.</h3>
+              <p>
+                The latest completed game on the schedule is a 4-1 win over the
+                Zombonis. That puts the Glizzies at 40 goals for, 37 against,
+                and back on the right side of the grill heading into the Salt
+                Shakers playoff game.
+              </p>
+            </div>
+          </article>
+          <div class="tracker-grid" aria-label="Utah Glizzies verified season tracker">
+            <article>
+              <span>Record</span>
+              <strong>5-5-1</strong>
+              <p>Verified from the current completed GameSheet schedule.</p>
+            </article>
+            <article>
+              <span>Goals</span>
+              <strong>40-37</strong>
+              <p>Plus-3 goal differential. Chaotic, but still in the green.</p>
+            </article>
+            <article>
+              <span>Streak</span>
+              <strong>Won 1</strong>
+              <p>The Zombonis win got the grill hot again.</p>
+            </article>
+            <article>
+              <span>Last Game</span>
+              <strong>W 4-1</strong>
+              <p>Zombonis parked. Playoff mode loaded.</p>
+            </article>
+            <article>
+              <span>Next</span>
+              <strong>Salt Shakers</strong>
+              <p>Thursday, June 4 at 9:30 PM on North Rink.</p>
+            </article>
+            <article>
+              <span>Source Note</span>
+              <strong>Schedule-first</strong>
+              <p>Updated from GameSheetStats and the current team schedule.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="roster">
+        <div class="section-heading">
+          <p class="eyebrow">The Roster</p>
+          <h2>Meet the bench, now with receipts.</h2>
+          <p>
+            Pulled from the Utah Glizzies Team Stats export on GameSheetStats.
+            Everybody gets a spot here, even the players whose official stat
+            line currently reads like a very peaceful evening.
+          </p>
+        </div>
+
+        <div class="player-grid featured-player-grid" data-player-grid>
+          <article class="player-card">
+            <div class="player-number">8</div>
+            <span class="card-kicker">Top Dog</span>
+            <h3>Jared Aida</h3>
+            <dl>
+              <div><dt>G</dt><dd>7</dd></div>
+              <div><dt>A</dt><dd>3</dd></div>
+              <div><dt>PTS</dt><dd>10</dd></div>
+            </dl>
+            <p>
+              Leads the team in goals and points, which means every scouting
+              report starts with "please stop letting that guy get open."
+            </p>
+          </article>
+          <article class="player-card">
+            <div class="player-number">3</div>
+            <span class="card-kicker">Clutch Department</span>
+            <h3>Cole Embrey</h3>
+            <dl>
+              <div><dt>A</dt><dd>5</dd></div>
+              <div><dt>GWG</dt><dd>2</dd></div>
+              <div><dt>PTS</dt><dd>7</dd></div>
+            </dl>
+            <p>
+              Two game-winners is not a personality, but it is a pretty good
+              argument to keep showing up for the third period.
+            </p>
+          </article>
+          <article class="player-card">
+            <div class="player-number">11</div>
+            <span class="card-kicker">Crease Counsel</span>
+            <h3>Rushton Hiltbrand</h3>
+            <dl>
+              <div><dt>GA</dt><dd>35</dd></div>
+              <div><dt>SV%</dt><dd>.839</dd></div>
+              <div><dt>GAA</dt><dd>3.79</dd></div>
+            </dl>
+            <p>
+              Eleven games in the crease and still willing to look defensemen
+              in the eye. That is leadership or very generous forgiveness.
+            </p>
+          </article>
+        </div>
+
+        <div class="team-origin-board">
+          <div class="section-heading mini-heading">
+            <p class="eyebrow">Meet Our Team</p>
+            <h2>Nameplate origin stories.</h2>
+            <p>
+              Built from the team nameplate sheet, then lightly grilled until
+              every player gets a legend instead of just a stat line.
+            </p>
+          </div>
+          <div class="origin-grid" data-team-lore></div>
+        </div>
+
+        <div class="stats-feature-grid">
+          <article class="glizzies-report-card goalie-card">
+            <span class="card-kicker">Goalie Watch</span>
+            <h3>Rushton has seen things.</h3>
+            <p>
+              Eleven games, 35 goals against, a 3.79 goals-against average, and
+              a .839 save percentage. That is not a stat line, that is a crease
+              employee asking for hazard pay.
+            </p>
+          </article>
+          <article class="glizzies-report-card goalie-card">
+            <span class="card-kicker">Bench Math</span>
+            <h3>Twenty-five skaters, one shared dream.</h3>
+            <p>
+              The Glizzies have 40 team goals, 16 different goal scorers, and
+              enough zero-PIM skaters to make the penalty box feel oddly quiet.
+            </p>
+          </article>
+        </div>
+
+        <div class="standings-table-wrap roster-table-wrap">
+          <table class="standings-table roster-stats-table">
+            <caption>
+              Utah Glizzies skater stats
+            </caption>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>GP</th>
+                <th>G</th>
+                <th>A</th>
+                <th>PTS</th>
+                <th>PIM</th>
+                <th>Fun scouting report</th>
+              </tr>
+            </thead>
+            <tbody data-player-stats></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section awards-band">
+        <div class="section-heading">
+          <p class="eyebrow">Auto Awards</p>
+          <h2>Stats became jokes here.</h2>
+        </div>
+        <div class="award-grid">
+          <article>
+            <strong>Scoring Hot Dog</strong>
+            <span>Jared Aida leads the team with 7 goals and 10 points.</span>
+          </article>
+          <article>
+            <strong>The Sauce Department</strong>
+            <span>Cole Embrey and Ian Penders are tied with 5 assists each.</span>
+          </article>
+          <article>
+            <strong>Penalty Box Real Estate Investor</strong>
+            <span>Devon Woodside leads with 6 PIM, a tasteful amount of spice.</span>
+          </article>
+          <article>
+            <strong>Clutch Mustard</strong>
+            <span>Cole Embrey has 2 game-winning goals. That deserves extra sauce.</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Utah Glizzies Hockey</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="src/data/siteContent.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

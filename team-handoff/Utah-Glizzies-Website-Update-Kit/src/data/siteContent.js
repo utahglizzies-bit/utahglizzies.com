@@ -1,0 +1,497 @@
+window.siteContent = {
+  teamInfo: {
+    name: "Utah Glizzies HC",
+    shortName: "Glizzies",
+    email: "utahglizzies@gmail.com",
+    instagramHandle: "@utah_glizzies_hockey",
+    instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/",
+    canonicalUrl: "https://www.utahglizzies.com/",
+    logo: "assets/glizzies-logo.png",
+    wordmark: "assets/glizzies-wordmark.png",
+    facility: "Utah Mammoth Ice Center",
+    address: "10450 S. State Street STE 2200A, Sandy, UT 84070",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=10450%20S.%20State%20Street%20STE%202200A%2C%20Sandy%2C%20UT%2084070",
+    blurb:
+      "Utah Glizzies HC is a beer league hockey team built on elite vibes, questionable cardio, and the strongest hot dog-based brand in Utah hockey.",
+    seoTitle: "Utah Glizzies HC | Beer League Hockey, Playoff Chaos & Elite Glizzy Energy",
+    seoDescription:
+      "Official home of Utah Glizzies HC in Sandy, Utah — beer league hockey schedule, playoff scores, player lore, team merch, sponsors, media, and elite Glizzy energy.",
+    brandColors: [
+      ["Glizzy Green", "#062817"],
+      ["Mustard Gold", "#e1a21a"],
+      ["Ketchup Red", "#d21f13"],
+      ["Warm Bun Cream", "#fff4c9"],
+      ["Rink Ink", "#07100d"],
+    ],
+  },
+  siteLinks: [
+    ["Home", "index.html#top", "Scoreboard, next puck drop, matchup hub, hype, Glizzy Cam, and fan chaos."],
+    ["Matchup", "index.html#matchup", "This week's playoff briefing, keys to the game, and Salt Shakers scouting notes."],
+    ["Fan Section", "index.html#fan-section", "Official chants and rotating hot-dog life advice for rink philosophers."],
+    ["Roster", "team.html#roster", "Stats, nameplates, numbers, and the full Glizzies player card wall."],
+    ["Schedule", "team.html#schedule", "Game dates, rink details, results, and playoff placeholders."],
+    ["Lore", "lore.html", "The official classified file for every Glizzy nameplate."],
+    ["Shop", "shop.html", "Future merch drops, hats, shirts, stickers, and external checkout-ready cards."],
+    ["Sponsors", "sponsors.html", "Sponsor tiers, contact form, and local business partnership pitch."],
+    ["Game", "game.html", "Glizzy Breakaway, the retro shootout mini-game."],
+  ],
+  heroTaglines: [
+    "Beer league hockey. Questionable cardio. Elite vibes.",
+    "Playoff hockey. Bring the mustard.",
+    "Win or go home. Preferably win.",
+  ],
+  schedule: [
+    { date: "2026-03-20", displayDate: "Mar 20", time: "10:00 PM", opponent: "Raiders", label: "vs Raiders", rink: "North Rink", status: "final", glizziesScore: 7, opponentScore: 0, result: "win" },
+    { date: "2026-03-26", displayDate: "Mar 26", time: "10:45 PM", opponent: "The Misfits", label: "vs The Misfits", rink: "North Rink", status: "final", glizziesScore: 3, opponentScore: 2, result: "win" },
+    { date: "2026-04-03", displayDate: "Apr 3", time: "10:30 PM", opponent: "Moose", label: "vs Moose", rink: "South Rink", status: "final", glizziesScore: 3, opponentScore: 5, result: "loss" },
+    { date: "2026-04-10", displayDate: "Apr 10", time: "10:30 PM", opponent: "Saucer Kings", label: "vs Saucer Kings", rink: "South Rink", status: "final", glizziesScore: 5, opponentScore: 6, result: "loss" },
+    { date: "2026-04-16", displayDate: "Apr 16", time: "9:30 PM", opponent: "The Hive", label: "@ The Hive", rink: "North Rink", status: "final", glizziesScore: 5, opponentScore: 3, result: "win" },
+    { date: "2026-04-23", displayDate: "Apr 23", time: "10:30 PM", opponent: "Steamers", label: "@ Steamers", rink: "South Rink", status: "final", glizziesScore: 3, opponentScore: 6, result: "loss" },
+    { date: "2026-04-30", displayDate: "Apr 30", time: "8:15 PM", opponent: "Salty Boys", label: "@ Salty Boys", rink: "North Rink", status: "final", glizziesScore: 3, opponentScore: 4, result: "loss" },
+    { date: "2026-05-08", displayDate: "May 8", time: "10:00 PM", opponent: "Buzzed Light Beers", label: "@ Buzzed Light Beers", rink: "North Rink", status: "final", glizziesScore: 2, opponentScore: 3, result: "loss" },
+    { date: "2026-05-14", displayDate: "May 14", time: "10:30 PM", opponent: "Salt Shakers", label: "@ Salt Shakers", rink: "South Rink", status: "final", glizziesScore: 5, opponentScore: 3, result: "win" },
+    { date: "2026-05-21", displayDate: "May 21", time: "11:45 PM", opponent: "Gnarwhalers", label: "@ Gnarwhalers", rink: "South Rink", status: "final", glizziesScore: 0, opponentScore: 4, result: "loss" },
+    { date: "2026-05-29", displayDate: "May 29", time: "8:45 PM", opponent: "Zombonis", label: "@ Zombonis", rink: "North Rink", status: "final", glizziesScore: 4, opponentScore: 1, result: "win" },
+    { date: "2026-06-04", displayDate: "Jun 4", time: "9:30 PM", opponent: "Salt Shakers", label: "vs Salt Shakers", rink: "North Rink", status: "upcoming", gameType: "Playoff" },
+    { date: "2026-06-11", displayDate: "Jun 11", time: "10:45 PM", opponent: "The North", label: "@ The North", rink: "North Rink", status: "upcoming", gameType: "If advanced" },
+    { date: "2026-06-18", displayDate: "Jun 18", time: "9:15 PM", opponent: "Saucer Kings", label: "@ Saucer Kings", rink: "South Rink", status: "upcoming", gameType: "If advanced" },
+    { date: "2026-06-25", displayDate: "Jun 25", time: "9:30 PM", opponent: "The Misfits", label: "vs The Misfits", rink: "North Rink", status: "upcoming", gameType: "If advanced" },
+  ],
+  lastGame: {
+    opponent: "Zombonis",
+    glizziesScore: 4,
+    opponentScore: 1,
+    date: "May 29, 2026",
+    result: "win",
+    recap:
+      "The Glizzies snapped back with a 4-1 win over the Zombonis after a weird midseason slide. Playoff prep looked a lot like Glizzy hockey: cleaner exits, net-front traffic, and Trey turning a Hayden feed into a one-timer that deserved its own replay booth.",
+    momentOfGame:
+      "Trey buried an unreal one-timer from a Hayden Rathmell feed, catching it clean while crashing the net before the goalie could slide across. No hesitation, no committee meeting, just finish.",
+  },
+  playerSpotlight: {
+    name: "Trey Kemp",
+    number: "88",
+    nameplate: "DAWGFATHER",
+    title: "Playoff Prep One-Timer",
+    story:
+      "Trey gets the nod this week after burying an unreal one-timer in true playoff-prep fashion. Hayden Rathmell threaded a perfect pass from the right side of the ice between two defenders while Trey crashed the net. Trey caught it clean and ripped a perfect shot before the goalie could slide across. Textbook finish. Absolute Glizzy hockey.",
+    callouts: [
+      ["Play of the Week", "One-timer goal"],
+      ["Setup Man", "Hayden Rathmell"],
+      ["Finish", "Goalie had no chance"],
+      ["Vibe", "Crashing the net like rent was due"],
+    ],
+  },
+  hypeMeter: {
+    level: 0,
+    label: "Playoff Week Hype",
+    reason: "Reset for the Salt Shakers playoff game. Every click gets the bench closer to full mustard pressure.",
+    gameWeek: "June 4 vs Salt Shakers",
+    hypeGoal: 1000,
+    hypeApiBase: "https://countapi.mileshilliard.com/api/v1",
+    hypeApiKey: "utahglizzies-2026-playoff-salt-shakers",
+    hypeStorageKey: "utah-glizzies-playoff-hype-clicks",
+  },
+  seasonStats: {
+    source: "GameSheetStats D League standings, refreshed June 1, 2026",
+    gamesPlayed: 11,
+    wins: 5,
+    losses: 5,
+    shootoutLosses: 1,
+    points: 11,
+    goalsFor: 40,
+    goalsAgainst: 37,
+    differential: 3,
+    streak: "Won 1",
+    pim: 18,
+    powerPlay: "2-for-13",
+    penaltyKill: "6-for-8",
+  },
+  matchup: {
+    title: "Playoff Briefing: Shake The Salt",
+    threatLevel: "Full Chili Dog Emergency",
+    playerToWatch: "#79 Josh Morrill",
+    opponent: "Salt Shakers",
+    record: "Salt Shakers: 3 wins, 6 losses, 8 points, 26 GF, 59 GA, lost 5",
+    storyline:
+      "This is a playoff rematch with receipts. The Glizzies beat Salt Shakers 5-3 on May 14, and Salt Shakers come in at 3 wins, 6 losses, 8 points, and a five-game skid. Their current GameSheetStats export has one obvious danger label: #79 Josh Morrill with 9 goals and 13 points. Translation: he likes the puck, he likes the shot, and he may or may not know passing is still legal.",
+    opponentBreakdown: [
+      ["Top confirmed scorer", "#79 Josh Morrill: 11 GP, 9 G, 4 A, 13 PTS. Respect the shot. Question the sharing economy."],
+      ["Team trend", "Salt Shakers have 26 goals for, 59 against, a -33 goal differential, and a five-game losing streak. Start fast before they remember this is an elimination game."],
+      ["Swing moment", "The first Salt Shakers rush after a Glizzies goal. We won the first movie 5-3. Do not let the sequel get weird."],
+    ],
+    opponentStats: [
+      "Next up: Salt Shakers, June 4 at 9:30 PM on North Rink.",
+      "Last meeting: Glizzies 5, Salt Shakers 3 on May 14.",
+      "Salt Shakers: 3 wins, 6 losses, 8 points, 26 goals for, 59 against, -33 differential, lost 5.",
+      "#79 Josh Morrill leads the confirmed Salt Shakers export with 9 goals, 4 assists, and 13 points.",
+      "Last game recap: Glizzies beat Zombonis 4-1 behind cleaner exits, net-front pressure, and Trey’s Hayden-fed one-timer.",
+    ],
+    keys: [
+      "Mark #79 Morrill early. Nine goals means he is comfortable turning hockey into a solo podcast.",
+      "Make their goalies relive the May 14 traffic report: screens, rebounds, and enough rubber to make I-15 nervous.",
+      "Do not donate power plays. Salt Shakers are 0-for-6 with the extra skater, but playoff momentum can get weird fast.",
+      "Keep the Zombonis recipe: simple exits, crash the net, and make every defensive shift feel like a bad decision for them.",
+      "Win or go home. Preferably win.",
+    ],
+  },
+  opponentChirps: [
+    {
+      playerName: "Josh Morrill",
+      number: "79",
+      moment: "Solo Mission",
+      lines: [
+        "Morrill has nine goals, so we learned the pass button is apparently decoration.",
+        "Josh, the scouting report is one sentence: shoot first, discover teammates later.",
+        "Morrill, we get it. You watched one highlight reel and made it your whole personality.",
+      ],
+    },
+    {
+      playerName: "Josh Morrill",
+      number: "79",
+      moment: "Nine Goals",
+      lines: [
+        "Nine goals is solid. Passing once would not void the warranty.",
+        "Somebody stand near Morrill before he starts filming a tutorial.",
+        "Morrill is open again? Bold defensive theory, boys.",
+      ],
+    },
+    {
+      playerName: "Sam Brodsky",
+      number: "33",
+      moment: "May 14 Receipt",
+      lines: [
+        "Brodsky, last time we played, your net saw more rubber than I-15.",
+        "The crease had so much traffic last meeting it needed its own exit number.",
+        "Five goals against the Glizzies is not a stat line, it is a Yelp review for defensive coverage.",
+      ],
+    },
+    {
+      playerName: "Dustin Fulmer",
+      number: "92",
+      moment: "No Assists",
+      lines: [
+        "Fulmer has four goals and zero assists, so we learned sharing is still in beta.",
+        "Fulmer, the pass button is not a rumor. You are allowed to try it.",
+        "Four goals, no helpers. Buddy treats teammates like optional DLC.",
+      ],
+    },
+    {
+      playerName: "Josh Hilbum",
+      number: "24",
+      moment: "Also No Assists",
+      lines: [
+        "Hilbum also has four goals and zero assists. Teamwork must be on backorder.",
+        "Josh, soccer practice is tomorrow. First time without toe picks.",
+        "Four goals, zero helpers. The puck goes to him and files a missing-person report.",
+      ],
+    },
+    {
+      playerName: "Daniel Kelso",
+      number: "8",
+      moment: "Three Assists",
+      lines: [
+        "Kelso has three assists and zero goals. Professional witness program.",
+        "Daniel, we know you pass. The mystery is whether you remember the net is legal.",
+        "Three helpers, no goals. That is very generous and deeply non-threatening.",
+      ],
+    },
+    {
+      playerName: "Michael Niemann",
+      number: "2",
+      moment: "Penalty Spice",
+      lines: [
+        "Niemann has four PIM, so if he disappears, check the box before calling anybody.",
+        "Michael, the penalty box is not a second bench. Stop decorating it.",
+        "Four penalty minutes and two points is a very specific commitment to mixed reviews.",
+      ],
+    },
+  ],
+  players: [
+    { name: "Andrew Herrin", number: "6", nameplate: "A. FROMAN", position: "Forward", photo: "", bio: "Alternate captain energy with sensible offense.", stats: { gp: 11, g: 1, a: 2, pts: 3, pim: 2 }, instagram: "", nickname: "Sausage Authority" },
+    { name: "Devon Woodside", number: "94", nameplate: "SAUCE DAWG", position: "Forward", photo: "", bio: "Goal scorer and penalty-box frequent-flyer program member.", stats: { gp: 10, g: 3, a: 1, pts: 4, pim: 6 }, instagram: "", nickname: "Sauce Dawg" },
+    { name: "Chris Call", number: "24", nameplate: "J. CHESTNUT", position: "Forward", photo: "", bio: "Quietly productive, loudly inconvenient for opponents.", stats: { gp: 11, g: 3, a: 4, pts: 7, pim: 0 }, instagram: "", nickname: "J. Chestnut" },
+    { name: "Cole Embrey", number: "3", nameplate: "WURSTMEISTER", position: "Wing", photo: "", bio: "Two game-winners. Knows where the drama button is.", stats: { gp: 11, g: 2, a: 5, pts: 7, pim: 2, gwg: 2 }, instagram: "", nickname: "Wurstmeister" },
+    { name: "Parker Strong", number: "17", nameplate: "SIR GLIZZINGTON III", position: "Forward", photo: "", bio: "Captain. Name checks out. Forecheck probably files taxes early.", stats: { gp: 11, g: 4, a: 1, pts: 5, pim: 0 }, instagram: "", nickname: "Sir Glizzington III" },
+    { name: "Walker Krebs", number: "58", nameplate: "GLIZZ TRAIN", position: "Forward", photo: "", bio: "Assist guy. Keeps the receipts and the puck moving.", stats: { gp: 11, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "Glizz Train" },
+    { name: "James Pope", number: "95", nameplate: "JDAWG", position: "Forward", photo: "", bio: "Points by generosity. Very diplomatic stat line.", stats: { gp: 11, g: 1, a: 2, pts: 3, pim: 0 }, instagram: "", nickname: "JDawg" },
+    { name: "Brian Coburn", number: "73", nameplate: "UNCLE GLIZZBURN", position: "Forward", photo: "", bio: "Alternate captain, one goal, no penalty drama.", stats: { gp: 10, g: 1, a: 0, pts: 1, pim: 0 }, instagram: "", nickname: "Uncle Glizzburn" },
+    { name: "Hayden Rathmell", number: "1", nameplate: "GLIZ GOD", position: "Forward", photo: "", bio: "Balanced enough to make a spreadsheet nod approvingly.", stats: { gp: 11, g: 4, a: 5, pts: 9, pim: 0 }, instagram: "", nickname: "Gliz God" },
+    { name: "Rushton Hiltbrand", number: "11", nameplate: "MEAT SHIELD", position: "Goalie", photo: "", bio: "Eleven games, .839 save percentage, and still appears willing to speak to defensemen.", stats: { gp: 11, g: 0, a: 0, pts: 0, pim: 0, ga: 35, gaa: "3.79", sv: ".839" }, instagram: "", nickname: "Meat Shield" },
+    { name: "Kevin Peterson", number: "22", nameplate: "GLIZZ LORD", position: "Forward", photo: "", bio: "Clean record, useful points, suspiciously professional.", stats: { gp: 11, g: 1, a: 2, pts: 3, pim: 0 }, instagram: "", nickname: "Glizz Lord" },
+    { name: "Jared Aida", number: "8", nameplate: "GLIZZARD OF OZ", position: "Forward", photo: "", bio: "Top scorer. The hot dog cannon points at him.", stats: { gp: 10, g: 7, a: 3, pts: 10, pim: 0 }, instagram: "", nickname: "Glizzard of Oz" },
+    { name: "Trey Kemp", number: "88", nameplate: "DAWGFATHER", position: "Utility", photo: "", bio: "One-timer merchant, board-pressure diplomat, playoff spotlight owner.", stats: { gp: 11, g: 2, a: 0, pts: 2, pim: 0, gwg: 1 }, instagram: "", nickname: "Dawgfather" },
+    { name: "Ian Penders", number: "7", nameplate: "GLIZ-Z", position: "Forward", photo: "", bio: "Assist machine with a perfect shootout percentage cameo.", stats: { gp: 10, g: 1, a: 5, pts: 6, pim: 4 }, instagram: "", nickname: "Gliz-Z" },
+    { name: "Brady Bessette", number: "26", nameplate: "DER WURST", position: "Forward", photo: "", bio: "Three goals, zero assists. Direct deposit only.", stats: { gp: 11, g: 3, a: 0, pts: 3, pim: 0 }, instagram: "", nickname: "Der Wurst" },
+    { name: "JP Gould", number: "42", nameplate: "GREASE MISSILE", position: "Defense", photo: "", bio: "One assist and one minor: a sampler platter.", stats: { gp: 11, g: 0, a: 1, pts: 1, pim: 2 }, instagram: "", nickname: "Grease Missile" },
+    { name: "Anthony Bailey", number: "15", nameplate: "THE QUIET GARNISH", position: "Forward", photo: "", bio: "Two assists, no penalties, teammate-friendly hockey.", stats: { gp: 7, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "The Quiet Garnish" },
+    { name: "Grant Podzinski", number: "77", nameplate: "PODZILLA", position: "Forward", photo: "", bio: "One goal, one apple, zero nonsense on the penalty sheet.", stats: { gp: 5, g: 1, a: 1, pts: 2 }, instagram: "", nickname: "Podzilla" },
+    { name: "Matt Zimmerman", number: "9", nameplate: "ZIMMY CASINO", position: "Forward", photo: "", bio: "Perfectly balanced mini combo meal.", stats: { gp: 9, g: 1, a: 1, pts: 2, pim: 0 }, instagram: "", nickname: "Zimmy Casino" },
+    { name: "Wyatt McNeil", number: "5", nameplate: "WYATT DOGP", position: "Forward", photo: "", bio: "Four goals in six games. Limited edition offense, suspiciously efficient.", stats: { gp: 6, g: 4, a: 0, pts: 4, pim: 0, gwg: 1 }, instagram: "", nickname: "Wyatt Dogp" },
+    { name: "Matt Nelson", number: "70", nameplate: "NELLY DOG", position: "Forward", photo: "", bio: "Two games, zero mess. The score sheet remains calm.", stats: { gp: 2, g: 0, a: 0, pts: 0 }, instagram: "", nickname: "Nelly Dog" },
+    { name: "Grant Prodzinski", number: "17", nameplate: "PROTO-PODZ", position: "Forward", photo: "", bio: "One-game sample size, statistically too cool to judge.", stats: { gp: 1, g: 0, a: 0, pts: 0 }, instagram: "", nickname: "Proto-Podz" },
+    { name: "Peter Henwood-Fitts", number: "-", nameplate: "PIERRE DUSKI", position: "Forward", photo: "", bio: "Affiliate mystery box. Untouched by statistics so far.", stats: { gp: 0, g: 0, a: 0, pts: 0 }, instagram: "", nickname: "Pierre Duski" },
+    { name: "Grant Hiltbrand", number: "-", nameplate: "RESERVE SAUCE", position: "Forward", photo: "", bio: "Affiliate reserve energy. Still has a perfect plus-vibes rating.", stats: { gp: 0, g: 0, a: 0, pts: 0 }, instagram: "", nickname: "Reserve Sauce" },
+    { name: "Cam Fuller", number: "-", nameplate: "FULLER DOG", position: "Forward", photo: "", bio: "Two points in four games. Efficient, like a microwave burrito.", stats: { gp: 4, g: 1, a: 1, pts: 2 }, instagram: "", nickname: "Fuller Dog" },
+    { name: "Max Raffin", number: "-", nameplate: "DEKE", position: "Forward", photo: "", bio: "Affiliate cameo. Advanced stats call this developing lore.", stats: { gp: 1, g: 0, a: 0, pts: 0 }, instagram: "", nickname: "Deke" },
+  ],
+  sponsors: {
+    current: [
+      { name: "Open Sponsor Slot", tier: "Glizzy Legend Sponsor", description: "Your logo could be here with very official rink-lobby authority." },
+    ],
+    tiers: [
+      ["Mustard Packet Sponsor", "Perfect for small businesses who want a bench shoutout and a clean link."],
+      ["Footlong Sponsor", "A bigger presence across sponsor cards, social posts, and game previews."],
+      ["Double Barrel Sponsor", "Featured placement, sponsor thank-yous, and premium site presence."],
+      ["Glizzy Legend Sponsor", "Top-tier chaos: homepage presence, team shoutouts, and maximum mustard."],
+    ],
+    pitch:
+      "Sponsor Utah Glizzies HC and connect your business with a local hockey crew that treats every game like a promo night, every bench chirp like content, and every sponsor like part of the lore.",
+  },
+  store: {
+    provider: "manual-catalog",
+    storeUrl: "",
+    catalogCsvUrl: "data/store-products.csv",
+    publicNote:
+      "The first official Glizzies merch drop is warming up. Product cards can be updated from the simple shop spreadsheet file, then each item can point to Fourthwall, Shopify, Square, Venmo, or any checkout link.",
+    products: [
+      { name: "Glizzies Hat", type: "Hat", price: "Coming Soon", status: "coming-soon", image: "assets/glizzies-logo.png", url: "" },
+      { name: "Playoff Mustard Tee", type: "Shirt", price: "Coming Soon", status: "coming-soon", image: "assets/glizzies-logo.png", url: "" },
+      { name: "Sticker Pack", type: "Sticker", price: "Coming Soon", status: "coming-soon", image: "assets/glizzies-logo.png", url: "" },
+      { name: "Future Merch Drop", type: "Mystery", price: "Coming Soon", status: "coming-soon", image: "assets/glizzies-logo.png", url: "" },
+    ],
+  },
+  socialPosts: [
+    { type: "image", image: "assets/glizzies-wordmark.png", videoUrl: "", caption: "Follow the official Glizzies Instagram for photos, reels, playoff clips, and rink-lobby evidence.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/glizzies-logo.png", videoUrl: "", caption: "Playoff week. Bring the mustard. Tag @utah_glizzies_hockey so the best photos can land here.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/glizzies-logo.png", videoUrl: "", caption: "Glizzy Cam is wired for real team photos. Drop exported Instagram images into assets/media and update this card.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+  ],
+  fanAdvice: [
+    "Life is like a line change: if you wait until you are completely dead, everyone notices.",
+    "Respect the bun. Protect the puck. Hydrate before your legs start filing complaints.",
+    "If the shot is not there, pass the mustard and live to grill another shift.",
+    "Confidence is just cardio wearing a fake mustache. Keep skating anyway.",
+    "A clean breakout fixes more problems than a motivational podcast in the parking lot.",
+    "Never trust warm rink nachos or a defenseman who says he is only joining the rush once.",
+    "Some days you are the hot dog. Some days you are the packet that will not open. Stay useful.",
+    "When in doubt, get pucks deep, keep shifts short, and let the bench believe you meant to do that.",
+    "Greatness is built one questionable stride at a time.",
+    "The grill only gets hot for people willing to crash the net.",
+  ],
+  chants: [
+    ["Opening Faceoff", "DROP. THE. DOG.", "GLIZ-ZIES! GLIZ-ZIES!"],
+    ["Power Play", "GRILL 'EM! GRILL 'EM!", "HOT DOG HOCKEY!"],
+    ["Penalty Kill", "CLEAR IT! CHANGE IT! GLIZZY!", "KILL IT OFF!"],
+    ["Big Save", "NOT. ON. THE. DOG.", "OUR BUNS ARE SECURE!"],
+    ["Glizzies Goal", "LIGHT THE GRILL!", "THAT'S A GLIZZY GOAL!"],
+    ["Win", "GLIZZIES SERVED HOT!", "BUNS OUT, W'S IN!"],
+  ],
+  loreCards: [
+    ["The Shift That Wouldn't End", "A tale of four missed changes, two exhausted legs, and one bench yelling like air traffic control."],
+    ["The Great Water Bottle Incident", "Nobody knows who forgot it. Everybody remembers who complained first."],
+    ["The Costco Dog Prophecy", "Ancient rink-lobby lore says playoff wins arrive when the mustard packet opens clean."],
+    ["The Tape Job Trial", "A nameplate hearing about whether that knob was legal, emotional, or both."],
+  ],
+  playerLoreIntro:
+    "Every Glizzy has an origin story. Some were engineered in forbidden sausage labs. Some were chosen by the bun. Some are still wandering the beer-league wilderness waiting for their true nameplate to be revealed. These are the official legends of the Utah Glizzies.",
+  unnamedSubsIntro:
+    "Not every Glizzy receives their nameplate right away. Some are born into it. Some earn it in battle. Some escape the lab before the branding process is complete and spend years wandering the beer-league wilderness under suspiciously normal government names. These are the unnamed subs — players whose true Glizzy identities remain hidden, lost, sealed, or possibly still loading in the spreadsheet. Until destiny reveals their final form, they skate under temporary aliases.",
+  playerLore: [
+    {
+      name: "Cole Embrey",
+      nameplate: "Würstmeister",
+      status: "Roster",
+      stamp: "Escaped Experiment",
+      lore:
+        "Deep beneath the Bavarian Alps, inside a government-blacklisted sausage laboratory disguised as a family bratwurst factory, German scientists attempted to create the perfect fusion of meat, mustard, and hockey instinct. Their project was called Würstmeister: a glizzy-enhanced winger engineered to forecheck without fear, chirp in two languages, and generate odd-man rushes with deeply irresponsible confidence. But during a routine sauerkraut infusion, the experiment went sideways. A Zamboni crashed through the containment wall, the mustard reactor overheated, and Cole escaped into the night wearing nothing but half-laced skates, a stolen bucket, and a jersey that smelled faintly of smoked paprika. For years, rival sausage syndicates hunted him across beer leagues from Munich to Midvale, trying to drag him back to the lab and finish what they started. But he eventually found refuge where all misunderstood meat-based athletes belong: with the Utah Glizzies. Now known only as Würstmeister, he roams the wing, battling defensemen, evading shadowy bratwurst scouts in the stands, and proving every Friday night that you can take the man out of the sausage lab—but you can’t take the glizzy out of the man.",
+    },
+    {
+      name: "Andrew Herrin",
+      nameplate: "A. Froman",
+      status: "Roster",
+      stamp: "Glizzy Verified",
+      lore:
+        "Before he became a Glizzy, Andrew Herrin was known only in underground meat circles as A. Froman, a mysterious figure whispered about in concession stands across the Midwest. Some claim the “A” stands for Andrew. Others insist it stands for “Authorized,” because he was the only man ever certified to operate the forbidden Chicago Dog Cannon of 1987. Raised in the shadows of the sausage trade, Froman became a master of deception: changing lanes, changing sauces, and changing the momentum of a game with one deeply confusing toe drag. Scouts first spotted him outside a rink arguing with a hot dog vendor about “proper glizzy structure,” and by the time they turned around, he had already stolen the puck, their clipboard, and three packets of relish. The Utah Glizzies brought him in immediately. Now A. Froman patrols the wing with the quiet confidence of a man who knows every secret ingredient and refuses to reveal any of them.",
+    },
+    {
+      name: "Devon Woodside",
+      nameplate: "Sauce Dawg",
+      status: "Roster",
+      stamp: "Sauce Entity",
+      lore:
+        "Devon Woodside earned the name Sauce Dawg after being discovered in an abandoned sauce factory, skating laps around a vat of expired barbecue glaze while barking defensive assignments at nobody in particular. Nobody knows how long he had been there, but security footage showed him perfecting saucer passes by launching pucks off conveyor belts and into open ketchup bottles from impossible angles. Scientists tried to study him, but every clipboard they brought near him mysteriously became covered in fry sauce. When the Glizzies found him, he was wearing taped-up gloves, carrying three backup sticks, and claiming he could “hear the sauce.” Nobody asked what that meant. They just signed him. Now Sauce Dawg centers the chaos, serving up assists with reckless flavor and reminding opponents that once the sauce starts flowing, there is absolutely no clean way to stop it.",
+    },
+    {
+      name: "Chris Call",
+      nameplate: "J. Chestnut",
+      status: "Roster",
+      stamp: "Competitive Eating Adjacent",
+      lore:
+        "Chris Call was once a quiet, normal hockey player until a county fair eating contest changed everything. After defeating seven men, one mascot, and a retired competitive eater in a hot dog showdown, he vanished behind the bleachers in a cloud of steam and stadium mustard. When he returned, he was no longer Chris. He was J. Chestnut, a man blessed and cursed with unnatural glizzy endurance. His lungs could survive triple shifts. His stomach could handle rink food that would hospitalize a lesser athlete. His chirps were short, devastating, and always delivered with the calm confidence of someone who has seen things inside a hot dog bun that no man should see. The Utah Glizzies recruited him after he blocked a shot, won a faceoff, and finished someone else’s concessions order during the same shift. Today, J. Chestnut brings elite hunger to every game, proving that some legends are born, some are made, and some are simply overfed into greatness.",
+    },
+    {
+      name: "Parker Strong",
+      nameplate: "Sir Glizzington III",
+      status: "Roster",
+      stamp: "Alleged Royalty",
+      lore:
+        "Parker Strong is not just a hockey player. He is alleged royalty. According to Glizzies legend, Sir Glizzington III descended from an ancient line of noble rink warriors sworn to defend the sacred bun from soggy condiments, weak forechecks, and poorly timed line changes. Raised in a castle made entirely of old hockey sticks and imported stadium mustard, young Glizzington was trained in the gentlemanly arts: stickhandling, backchecking, and politely destroying opponents in the corner. He arrived in Utah wearing invisible armor, carrying a wooden spoon like a scepter, and demanding to know which peasant controlled the aux cord. The Glizzies had no idea what to do with him, so naturally, they put him on the roster. Now Sir Glizzington III skates with aristocratic swagger, issuing royal decrees from the bench and reminding everyone that beer league may be lawless, but class is forever.",
+    },
+    {
+      name: "Walker Krebs",
+      nameplate: "Glizz Train",
+      status: "Roster",
+      stamp: "All Aboard",
+      lore:
+        "Nobody knows where the Glizz Train originally departed from. Some say it came from an old rail yard behind a minor league arena. Others say it was forged in the mountains after a runaway Zamboni collided with a concession truck full of premium franks. What we do know is that Walker Krebs was found standing on the tracks in full gear, steam rising from his shoulders, calmly asking, “Is this the rink?” From that day on, he became impossible to stop once moving downhill. Defensemen tried poke checks. Centers tried angling him wide. One unfortunate winger tried getting in his way and was last seen reconsidering every life choice that led him there. The Utah Glizzies don’t call plays for Walker. They simply announce boarding, clear the neutral zone, and let the Glizz Train arrive on schedule.",
+    },
+    {
+      name: "James Pope",
+      nameplate: "JDawg",
+      status: "Roster",
+      stamp: "Lobby Survivor",
+      lore:
+        "James Pope became JDawg after surviving the legendary Great Concession Stand Collapse of ’09, when an overloaded hot dog warmer exploded during a youth tournament and covered an entire rink lobby in steam, buns, and destiny. Most people ran. James stayed behind, rescued the mustard pump, and calmly finished taping his stick. From that day forward, he carried himself with the relaxed menace of a man who cannot be rattled by chaos because he has already been baptized in boiling glizzy water. JDawg doesn’t need flash. He doesn’t need drama. He just shows up, makes the smart play, and somehow ends every shift looking like he knows something the rest of the bench doesn’t. The Glizzies trust him because every great team needs one guy who can survive absolute nonsense and still make the breakout pass. That guy is JDawg.",
+    },
+    {
+      name: "Brian Coburn",
+      nameplate: "Uncle Glizzburn",
+      status: "Roster",
+      stamp: "Veteran Presence",
+      lore:
+        "Every team has veterans. The Utah Glizzies have Uncle Glizzburn. Legend says Brian Coburn was once the unofficial guardian of a forgotten rink where the locker room showers only had two temperatures: frozen and lawsuit. For years, young players came to him seeking wisdom, tape, and advice they did not ask for but desperately needed. He taught them sacred truths like “keep your head up,” “short shifts win games,” and “never trust a gas station roller dog after midnight.” But his true power was revealed during a third-period collapse, when he rose from the bench, adjusted his gloves, and delivered a speech so powerful the scoreboard briefly apologized. The Glizzies call him Uncle because he brings wisdom, chaos, and just enough concern to keep everyone alive. They call him Glizzburn because if you ignore his advice, you will feel it later.",
+    },
+    {
+      name: "Hayden Rathmell",
+      nameplate: "Gliz God",
+      status: "Roster",
+      stamp: "Divine Intervention",
+      lore:
+        "Hayden Rathmell did not choose the name Gliz God. The name appeared one night on the locker room whiteboard in mustard, and nobody has been brave enough to erase it since. Some say he was created when a lightning bolt struck a Costco food court during a power play. Others believe he descended from the rafters of an abandoned arena holding a stick in one hand and a perfectly wrapped hot dog in the other. What is certain is that Hayden carries himself like a man who has seen the hockey gods, challenged them to three-on-three overtime, and won on a greasy backhand shelf. When he steps onto the ice, strange things happen: pucks bounce kindly, goalies overthink, and teammates suddenly believe they are one pass away from destiny. The Utah Glizzies do not fully understand Gliz God, but they do not question him. You don’t question divine intervention. You just get open.",
+    },
+    {
+      name: "Rushton Hiltbrand",
+      nameplate: "Meat Shield",
+      status: "Roster",
+      stamp: "Crease Classified",
+      lore:
+        "In every great sausage empire, there is a final line of defense. For the Utah Glizzies, that line wears goalie pads. Rushton Hiltbrand became Meat Shield after volunteering for a top-secret experiment designed to create the most absorbent human barrier in beer-league history. Scientists tested foam, Kevlar, frozen hamburger, and one haunted blocker before realizing the perfect shot-stopper was not a material. It was a mindset. Rushton emerged from the lab with lightning reflexes, questionable flexibility, and the emotional strength to let grown men fire frozen rubber at him for fun. The first time he played for the Glizzies, he took a slapshot off the chest, looked mildly annoyed, and asked if that was “all they had.” Since then, Meat Shield has guarded the crease like a sacred deli counter, turning away pucks, dreams, and anyone foolish enough to believe there is room five-hole.",
+    },
+    {
+      name: "Kevin Peterson",
+      nameplate: "Glizz Lord",
+      status: "Roster",
+      stamp: "Ancient Texts",
+      lore:
+        "Kevin Peterson’s rise to Glizz Lord began in the secret tunnels beneath an arena snack bar, where ancient Glizzies texts were discovered behind a broken nacho machine. The prophecy spoke of one player who would unite the scattered condiments, restore balance to the bun, and bring order to a team built almost entirely on chaos and inside jokes. Kevin denied being the chosen one until his stick mysteriously began glowing under the rink lights and every hot dog in the building turned slightly toward him. The Glizzies accepted his destiny immediately, mostly because nobody else wanted the responsibility. Now Glizz Lord rules not with fear, but with calm authority, mysterious rink presence, and the ability to make opponents feel like they are being judged by a man who controls the mustard supply. His kingdom is the neutral zone. His throne is the bench. His decree is simple: protect the glizzy.",
+    },
+    {
+      name: "Jared Aida",
+      nameplate: "Glizzard of Oz",
+      status: "Roster",
+      stamp: "Arena Sorcery",
+      lore:
+        "Jared Aida became the Glizzard of Oz after being swept into a freak arena storm caused by three broken ceiling fans, a spilled blue raspberry slushie, and a warmup playlist that should never have been played indoors. When the storm cleared, Jared was standing at center ice in full gear, holding a stick shaped like a wizard staff and claiming he had “seen the other side of the faceoff dot.” Since then, his game has been powered by mystery, misdirection, and suspiciously magical zone entries. Opponents swear they have him lined up, only for him to vanish behind a screen, appear near the slot, and send a pass through three pairs of skates like it was guided by arena sorcery. The Utah Glizzies don’t ask where his powers come from. They just follow the yellow-bricked breakout and trust the Glizzard of Oz to lead them somewhere weird, wonderful, and hopefully toward the net.",
+    },
+    {
+      name: "Trey Kemp",
+      nameplate: "Dawgfather",
+      status: "Roster",
+      stamp: "Bench Code",
+      lore:
+        "Trey Kemp did not join the Utah Glizzies. He summoned them. Known in underground rink circles as The Dawgfather, Trey built his empire one favor, one chirp, and one suspiciously well-timed line change at a time. Need tape? He knows a guy. Need a sub? He knows a guy. Need someone to explain why the other team’s best player suddenly looks terrified in warmups? Don’t ask questions. The Dawgfather operates by an old code: protect the bench, feed the boys, and never let an opponent leave the corner feeling comfortable. Before every game, he reportedly places one hot dog on the dashboard as a sign of respect to the hockey gods. Nobody knows what happens if he forgets, because he never forgets. On the ice, Dawgfather plays with loyalty, menace, and just enough mystery to make every puck battle feel like a business meeting you were not prepared for.",
+    },
+    {
+      name: "Ian Penders",
+      nameplate: "Gliz-Z",
+      status: "Roster",
+      stamp: "Reasonable Sauce",
+      lore:
+        "Ian Penders became Gliz-Z after a failed attempt to create the world’s first hip-hop hockey condiment mascot accidentally produced a dangerously smooth beer-league weapon instead. The experiment began with a beat machine, a bucket of warm mustard, and a mixtape titled Reasonable Sauce. When the smoke cleared, Ian stepped out wearing skates, sunglasses, and the calm confidence of someone who had already rhymed “backcheck” with “snack neck” and made it work. His game is built on rhythm: quick cuts, slick passes, and the occasional move that makes defenders question whether they just got dangled or disrespected musically. The Glizzies signed him after he walked into the rink, nodded once, and somehow made the entire locker room feel cooler by association. Now Gliz-Z brings flow to the forecheck, bars to the boards, and just enough swagger to make every shift feel like a music video filmed at a public skate.",
+    },
+    {
+      name: "Brady Bessette",
+      nameplate: "Der Würst",
+      status: "Roster",
+      stamp: "Rival Prototype",
+      lore:
+        "Before Würstmeister escaped the Bavarian sausage lab, there was another experiment locked deeper underground: Der Würst. Brady Bessette was the original prototype, built by a rival meat dynasty that believed hockey greatness could be achieved through discipline, dark mustard, and extremely aggressive neutral-zone pressure. Unlike Würstmeister, who broke free during the sauerkraut explosion, Der Würst was raised in the lab longer—trained in the old ways of bratwurst warfare, stick checks, and emotionally devastating corner battles. Some say he was sent to recapture Würstmeister. Others say he escaped on purpose after realizing the real glory was not in corporate sausage domination, but in beer-league brotherhood. When he finally arrived in Utah, Würstmeister recognized him immediately. No words were spoken. Just one respectful nod, two suspiciously German nameplates, and the beginning of a partnership no defenseman fully understands. Now Der Würst skates with the Glizzies as either Cole’s brother, clone, rival, or all three. Nobody asks too many questions. It feels safer that way.",
+    },
+    {
+      name: "JP Gould",
+      nameplate: "Grease Missile",
+      status: "Roster",
+      stamp: "Projectile Warning",
+      lore:
+        "JP Gould became Grease Missile after being banned from three preseason scrimmages for generating “unreasonable levels of velocity and food-adjacent residue.” Originally developed as part of a failed military program to weaponize concession-stand runoff, JP was engineered for one purpose: launch himself through open ice with absolutely no regard for friction, physics, or public safety. His first test run ended with two defensemen spinning in opposite directions and a Zamboni driver quietly retiring. The Utah Glizzies discovered him after he overshot a line change, slid through the bench door, and landed perfectly in the faceoff circle for the next shift. Since then, Grease Missile has become the team’s most unpredictable projectile. You don’t defend him. You brace for impact, hope your edges hold, and pray he has already selected a target that is not you.",
+    },
+    {
+      name: "Zimmy Casino",
+      nameplate: "Gliz-Z",
+      status: "Roster",
+      stamp: "Marked Cards",
+      lore:
+        "Zimmy Casino’s version of Gliz-Z comes from a very different corner of Glizzies mythology. He was discovered in the back room of a suspicious rink-side casino where the only games were air hockey, pull-tabs, and betting on whether the vending machine would actually drop your snack. Zimmy never lost. Not once. He could read bounces off the boards like marked cards and knew when a puck was about to take a weird hop before it even happened. Some said he was lucky. Others said he had made a deal with the ghost of a retired linesman. The Glizzies did not care. Luck is a skill in beer league, and Zimmy had too much of it to ignore. Now Gliz-Z plays like every shift is a high-stakes hand, bluffing defenders, cashing in rebounds, and reminding everyone that in the house of Glizzies, the odds are always greasy.",
+    },
+    {
+      name: "Matt Nelson",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Name Unknown",
+      lore:
+        "Matt Nelson arrived at the rink with no nameplate, no origin documents, and a hockey bag that hummed faintly whenever someone opened a packet of mustard nearby. He claimed he was “just here to sub,” but nobody believed that for a second. The Glizzies’ internal records show no confirmed alias, no known sausage affiliation, and one security-camera clip of him walking out of a foggy locker room that had been locked from the inside since 2014. Some believe Matt escaped the same Bavarian program that created Würstmeister and Der Würst, but fled before the scientists could finish branding him with his true glizzy name. Others say his nameplate was sealed away because it was too powerful for regular-season beer league play. For now, he skates under the name Matt Nelson, hiding in plain sight, waiting for the night when the bun chooses him and his true Glizzy identity is finally revealed.",
+    },
+    {
+      name: "Grant Hiltbrand",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Do Not Thaw",
+      lore:
+        "Grant Hiltbrand was discovered standing outside the rink during a snowstorm, wearing street clothes, holding a stick he did not remember buying, and asking only one question: “Am I late for warmups?” Nobody knew where he came from, but Rushton immediately sensed something familiar, like two slices from the same mysterious deli loaf. The Glizzies believe Grant may be connected to the same defensive experiment that produced Meat Shield, but escaped before receiving his final goalie-adjacent classification. His unfinished file was found years later in a freezer beneath an abandoned concession stand, labeled only: “HILTBRAND VARIANT — DO NOT THAW UNTIL PLAYOFFS.” Since then, Grant has lived between worlds: not fully named, not fully understood, but undeniably Glizzy. Until his true nameplate emerges, he remains Grant Hiltbrand, the lost variant, called upon only when the team needs another body and possibly another prophecy fulfilled.",
+    },
+    {
+      name: "Tony Bailey",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Redacted",
+      lore:
+        "Tony Bailey’s Glizzy origin is one of the most heavily redacted stories in team history. The only confirmed detail is that he once appeared on a sub list immediately after a power outage, a strange smell of grilled onions, and a printer malfunction that produced 47 blank nameplates in a row. When asked where he came from, Tony simply shrugged and said, “I know a guy,” which is exactly the kind of answer that makes the Glizzies suspicious and interested. Some believe he was smuggled out of a rival sausage academy before his final identity could be assigned. Others say he voluntarily erased his nameplate after losing a high-stakes shootout to a man dressed as a corn dog. Whatever the truth, Tony plays under a temporary human alias until the Glizzy council can determine whether he is a sleeper agent, a forgotten prototype, or just a guy who said yes to subbing at the perfect time.",
+    },
+    {
+      name: "Peter Henwood-Fitts",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Unstable Inscription",
+      lore:
+        "Peter Henwood-Fitts is not technically missing a nameplate. According to ancient Glizzies paperwork, his nameplate exists — it is simply too long, too unstable, and possibly written in a language that predates organized hockey. Equipment managers once attempted to print it, but the machine jammed, caught fire, and began softly playing European techno. Since then, Peter has gone by his civilian name for everyone’s safety. Some say he was raised in a secret international glizzy monastery where young players were trained in the arts of backdoor cuts, polite chirping, and elegant neutral-zone confusion. Others believe the hyphen in his name is actually a seal, holding back whatever his true Glizzy form might be. Until the team can safely decode the full inscription, he remains Peter Henwood-Fitts: unnamed, unclaimed, and probably way more powerful than the roster spreadsheet suggests.",
+    },
+    {
+      name: "Cam Fuller",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Lost And Found",
+      lore:
+        "Cam Fuller was found in the lost-and-found bin beneath a pile of single gloves, broken helmet screws, and one ancient hot dog wrapped in foil that nobody was brave enough to move. He had no nameplate, no number, and no memory of how he got there — only an instinctive understanding of line changes and a deep distrust of opposing defensemen. The Glizzies immediately recognized the signs of an unfinished glizzy transformation. His true name had either been stolen, forgotten, or hidden inside a concession stand receipt that was tragically thrown away during rink cleanup. Since then, Cam has served as a wandering sub, appearing when needed, vanishing when the final buzzer sounds, and leaving behind only skate marks and unanswered questions. For now, he is known simply as Cam Fuller, but the team suspects that one day, under the right arena lighting, his true nameplate will reveal itself.",
+    },
+    {
+      name: "Grant Podzinski",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Roster Anomaly",
+      lore:
+        "Grant Podzinski’s case remains one of the strangest in Glizzies history. He was not recruited, invited, or even added properly. His name simply appeared on the sub list one morning, typed in perfect roster formatting, as if the spreadsheet itself had chosen him. Attempts to delete the row failed. Attempts to rename him crashed the file. One player swears he saw the letters rearrange themselves into something unreadable before snapping back to Grant Podzinski. The leading theory is that Grant’s true Glizzy name exists, but is trapped in another dimension — possibly a hidden tab in Google Sheets, possibly a cursed beer-league database beneath the ice. Until the code can be broken, Grant remains unnamed but active, a mysterious roster anomaly summoned whenever the Glizzies are short a skater and the universe demands balance.",
+    },
+    {
+      name: "Max Raffin",
+      nameplate: "Name Unknown",
+      status: "Sub",
+      stamp: "Deke Warning",
+      lore:
+        "Max Raffin arrived with only one clue to his true identity: Deke. Not a nameplate, not a title, not a full Glizzy designation — just a warning. Nobody knows who taught him the move, where he learned it, or why three separate defenders reportedly felt “emotionally removed from the play” after trying to stop him. Some say Max was trained in an underground stickhandling dojo hidden behind a mall pretzel shop. Others believe he escaped from a rival experiment before the scientists could complete his nameplate, leaving only the operational command burned into his memory: deke. The Glizzies have tried to assign him a proper title, but every time they get close, he cuts left, pulls right, and disappears into open ice before the paperwork can be finished. Until his true Glizzy name is revealed, he remains Max Raffin, also known as Deke — less a man, more a move with skates.",
+    },
+  ],
+  gameStats: {
+    apiBase: "https://countapi.mileshilliard.com/api/v1",
+    keyPrefix: "utahglizzies-breakaway-v1",
+  },
+};
