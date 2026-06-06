@@ -46,8 +46,54 @@
     <meta name="geo.placename" content="Sandy, Utah" />
     <meta name="geo.position" content="40.5621;-111.8983" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  </head>
+    <style>
+    .presale-top-banner {
+      background: var(--gold, #e1a21a);
+      color: #07100d;
+      padding: 10px clamp(18px,4vw,48px);
+      position: relative;
+      z-index: 100;
+    }
+    .presale-top-inner {
+      display: flex; align-items: center; gap: 12px;
+      max-width: 1200px; margin: 0 auto; flex-wrap: wrap;
+    }
+    .presale-badge {
+      background: #07100d; color: var(--gold, #e1a21a);
+      font-family: monospace; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; padding: 2px 8px; border-radius: 4px;
+      text-transform: uppercase; flex-shrink: 0;
+    }
+    .presale-text { font-size: 14px; font-weight: 600; flex: 1; min-width: 200px; }
+    .presale-cta {
+      background: #07100d; color: var(--gold, #e1a21a);
+      padding: 6px 16px; border-radius: 999px; text-decoration: none;
+      font-size: 13px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .presale-cta:hover { background: #0a1a0d; }
+    .presale-close {
+      background: none; border: none; cursor: pointer; font-size: 1.2rem;
+      color: rgba(7,16,13,0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
+    }
+    .presale-close:hover { color: #07100d; }
+    @media (max-width: 480px) {
+      .presale-text { font-size: 12px; }
+      .presale-cta { font-size: 11px; padding: 5px 12px; }
+    }
+  </style>
+</head>
   <body>
+  <!-- PRESALE ANNOUNCEMENT BANNER -->
+  <div class="presale-top-banner" id="presale-banner">
+    <div class="presale-top-inner">
+      <span class="presale-badge">NEW</span>
+      <span class="presale-text">🧢 Official Glizzies hats + jerseys — <strong>Presale now open.</strong> Pledge now, pay when it ships.</span>
+      <a href="shop.html#pledge" class="presale-cta">Pledge Now &rarr;</a>
+      <button class="presale-close" onclick="this.closest('.presale-top-banner').style.display='none'" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
     <header class="site-header" id="top">
       <a class="brand" href="#top" aria-label="Utah Glizzies home">
         <img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" />
