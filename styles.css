@@ -3860,3 +3860,147 @@ body {
   padding: clamp(28px,4vw,48px) !important;
   box-shadow: 0 4px 24px rgba(7,16,13,0.06);
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RAW DOG OF THE NIGHT
+   ═══════════════════════════════════════════════════════════════════════ */
+.rdotn-section {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(210,31,19,0.25), transparent 40%),
+    radial-gradient(circle at 10% 80%, rgba(225,162,26,0.15), transparent 40%),
+    linear-gradient(160deg, #07100d 0%, #1a0a0a 100%);
+  color: var(--cream);
+  padding: clamp(48px,7vw,88px) clamp(18px,5vw,64px);
+  position: relative;
+  overflow: hidden;
+}
+.rdotn-section::before {
+  content: '🌭';
+  position: absolute;
+  font-size: clamp(120px,20vw,240px);
+  opacity: 0.05;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-15deg);
+  pointer-events: none;
+  line-height: 1;
+}
+.rdotn-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px,5vw,64px);
+  align-items: center;
+}
+@media (max-width: 700px) { .rdotn-inner { grid-template-columns: 1fr; } }
+
+.rdotn-badge-col { text-align: center; }
+.rdotn-trophy {
+  font-size: clamp(4rem,10vw,8rem);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+  animation: trophy-wobble 3s ease-in-out infinite;
+}
+@keyframes trophy-wobble {
+  0%,100% { transform: rotate(-3deg) scale(1); }
+  50% { transform: rotate(3deg) scale(1.05); }
+}
+.rdotn-nameplate {
+  font-family: var(--display);
+  font-size: clamp(2.4rem,5vw,5rem);
+  text-transform: uppercase;
+  line-height: 0.95;
+  color: var(--cream);
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.4);
+}
+.rdotn-number {
+  font-family: var(--display);
+  font-size: clamp(1.2rem,2.5vw,2rem);
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+.rdotn-game-label {
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,244,201,0.4);
+  margin-top: 10px;
+}
+
+.rdotn-content-col {}
+.rdotn-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--red);
+  color: var(--cream);
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.rdotn-title {
+  font-family: var(--display);
+  font-size: clamp(2rem,4vw,3.5rem);
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.rdotn-reason {
+  font-size: clamp(1rem,1.5vw,1.15rem);
+  line-height: 1.75;
+  color: rgba(255,244,201,0.82);
+  margin-bottom: 20px;
+}
+.rdotn-citation {
+  background: rgba(210,31,19,0.1);
+  border: 1px solid rgba(210,31,19,0.25);
+  border-left: 3px solid var(--red);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(255,244,201,0.65);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.rdotn-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.rdotn-stat {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,244,201,0.1);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+}
+.rdotn-stat strong {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.4rem;
+  color: var(--gold);
+  line-height: 1;
+}
+.rdotn-stat span {
+  font-size: 10px;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,244,201,0.45);
+}
+.rdotn-voted-by {
+  font-size: 11px;
+  font-family: monospace;
+  color: rgba(255,244,201,0.35);
+  letter-spacing: 0.08em;
+}

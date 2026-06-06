@@ -638,6 +638,36 @@ function renderSportsEventSchema() {
 }
 
 renderSportsEventSchema();
+// ── Raw Dog of the Night ─────────────────────────────────────────────
+function renderRDOTN() {
+  const el = document.querySelector('[data-rdotn]');
+  if (!el || !siteContent.rawDogOfNight) return;
+  const r = siteContent.rawDogOfNight;
+  el.innerHTML = `
+    <div class="rdotn-inner">
+      <div class="rdotn-badge-col">
+        <span class="rdotn-trophy">🌭</span>
+        <div class="rdotn-nameplate">${r.nameplate}</div>
+        <div class="rdotn-number">#${r.number}</div>
+        <div class="rdotn-game-label">${r.game}</div>
+      </div>
+      <div class="rdotn-content-col">
+        <div class="rdotn-eyebrow">🏆 Raw Dog of the Night</div>
+        <h2 class="rdotn-title">${r.winner}</h2>
+        <p class="rdotn-reason">${r.reason}</p>
+        <blockquote class="rdotn-citation">${r.citation}</blockquote>
+        <div class="rdotn-stats-row">
+          <div class="rdotn-stat"><strong>✅</strong><span>Correct Position</span></div>
+          <div class="rdotn-stat"><strong>🔔</strong><span>Pipe Hit</span></div>
+          <div class="rdotn-stat"><strong>0</strong><span>Goals (Close Tho)</span></div>
+        </div>
+        <div class="rdotn-voted-by">Voted by: ${r.nominatedBy} &bull; Honorable mention: ${r.honorableMention}</div>
+      </div>
+    </div>`;
+}
+
+
+renderRDOTN();
 renderHomepage();
 
 // ── Service Worker + Scroll Reveal ────────────────────────────────────

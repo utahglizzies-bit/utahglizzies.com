@@ -552,6 +552,17 @@ window.siteContent = {
       stars: ["Jared Aida (GLIZZARD OF OZ)", "Devon Woodside (SAUCE DAWG)", "Rushton Hiltbrand (MEAT SHIELD)"],
     },
   ],
+rawDogOfNight: {
+    winner: "Chris Call",
+    nameplate: "J. CHESTNUT",
+    number: "24",
+    game: "vs Salt Shakers — June 4, 2026",
+    nominatedBy: "Previous RDOTN",
+    reason: "Always in the right position, never in the wrong place, and yet somehow still managed to hit the pipe.",
+    citation: "Official citation: Demonstrated elite positional awareness across all three zones, culminating in a shot so perfectly placed it rang iron from the inside. The pipe did not move. J. Chestnut has never been more correct while also being more wrong simultaneously.",
+    achievement: "Hit a pipe that had nothing to do with plumbing",
+    honorableMention: "The pipe",
+  },
   gameStats: {
     apiBase: "https://countapi.mileshilliard.com/api/v1",
     keyPrefix: "utahglizzies-breakaway-v1",
