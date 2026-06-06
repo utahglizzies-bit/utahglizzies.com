@@ -206,7 +206,7 @@
   <!-- DISCLAIMER -->
   <div style="background:var(--paper);padding:24px clamp(18px,5vw,64px);">
     <div class="presale-disclaimer">
-      <strong>⚠️ Important — Read Before Pledging:</strong> This is a <strong>pledge drive, not a purchase.</strong> No payment is collected today. Once we hit enough pledges to confirm production, we'll contact you with the final price and collect payment. <strong>More pledges = lower price</strong> for everyone. Jerseys: <strong>$60–$70</strong> depending on demand. Hats: <strong>$30–$35</strong> depending on demand. Production and delivery takes approximately <strong>8 weeks</strong> after the pledge window closes.
+      <strong>⚠️ Important — Read Before Pledging:</strong> This is a <strong>pledge drive, not a purchase.</strong> No payment is collected today. Once we hit enough pledges to confirm production, we'll contact you with the final price and collect payment. <strong>More pledges = lower price</strong> for everyone. Blank jerseys (logo only): <strong>$60–$70</strong> depending on demand. Custom jerseys (name + number): <strong>$85–$95</strong> depending on demand. Hats: <strong>$30–$35</strong> depending on demand. Production and delivery takes approximately <strong>8 weeks</strong> after the pledge window closes.
     </div>
   </div>
 
@@ -256,25 +256,51 @@
         </div>
       </div>
 
-      <!-- JERSEY CARD -->
+      <!-- BLANK JERSEY CARD -->
       <div class="presale-card">
-        <div class="presale-card-images" style="background:linear-gradient(135deg,#062817,#0a1f12);display:flex;align-items:center;justify-content:center;padding:32px;">
-          <img src="assets/glizzies-logo.png" alt="Utah Glizzies Jersey" style="max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" />
+        <div class="presale-card-images" style="background:linear-gradient(135deg,#062817,#0a1f12);display:flex;align-items:center;justify-content:center;padding:32px;position:relative;">
+          <img src="assets/glizzies-logo.png" alt="Utah Glizzies Blank Jersey" style="max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" />
+          <span style="position:absolute;top:14px;right:14px;background:rgba(225,162,26,0.15);border:1px solid rgba(225,162,26,0.4);color:var(--gold);font-family:monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border-radius:4px;">Logo Only</span>
         </div>
         <div class="presale-card-body">
-          <div class="eyebrow">Game-Day Jersey</div>
+          <div class="eyebrow">Game-Day Jersey — Blank</div>
           <h2>Glizzies Jersey</h2>
           <div class="price-range">$60 – $70</div>
-          <div class="price-note">Final price depends on pledge volume. More pledges = lower price.</div>
+          <div class="price-note">More pledges = lower price for everyone.</div>
           <ul class="card-details">
-            <li>Full embroidery — not a print</li>
+            <li>Full embroidery — Utah Glizzies logo on front</li>
             <li>Available in Cream or Glizzy Green</li>
             <li>Sizes: S / M / L / XL / XXL / XXXL</li>
-            <li>Utah Glizzies HC logo on front</li>
-            <li>Number and nameplate on back (your choice)</li>
+            <li><strong>No name or number</strong> — logo jersey only</li>
             <li>~8 weeks production + delivery</li>
           </ul>
-          <a href="#pledge" class="pledge-btn gold">Pledge for a Jersey</a>
+          <a href="#pledge" class="pledge-btn">Pledge — Blank Jersey</a>
+        </div>
+      </div>
+
+      <!-- CUSTOM JERSEY CARD -->
+      <div class="presale-card">
+        <div class="presale-card-images" style="background:linear-gradient(135deg,#062817,#0a1f12);display:flex;align-items:center;justify-content:center;padding:32px;position:relative;">
+          <div style="text-align:center;">
+            <img src="assets/glizzies-logo.png" alt="Utah Glizzies Custom Jersey" style="max-height:160px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" />
+            <div style="margin-top:12px;font-family:var(--display);font-size:1.4rem;color:var(--cream);letter-spacing:2px;text-transform:uppercase;">YOUR NAME</div>
+            <div style="font-family:var(--display);font-size:2rem;color:var(--gold);">00</div>
+          </div>
+          <span style="position:absolute;top:14px;right:14px;background:rgba(210,31,19,0.15);border:1px solid rgba(210,31,19,0.4);color:var(--red);font-family:monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border-radius:4px;">Custom</span>
+        </div>
+        <div class="presale-card-body">
+          <div class="eyebrow">Game-Day Jersey — Custom</div>
+          <h2>Custom Jersey</h2>
+          <div class="price-range">$85 – $95</div>
+          <div class="price-note">More pledges = lower price for everyone.</div>
+          <ul class="card-details">
+            <li>Full embroidery — logo, name <em>and</em> number</li>
+            <li>Available in Cream or Glizzy Green</li>
+            <li>Sizes: S / M / L / XL / XXL / XXXL</li>
+            <li>Your nameplate + number stitched on back</li>
+            <li>~8 weeks production + delivery</li>
+          </ul>
+          <a href="#pledge" class="pledge-btn gold">Pledge — Custom Jersey</a>
         </div>
       </div>
 
@@ -346,8 +372,8 @@
           <label>What are you pledging for? *</label>
           <div class="check-group" id="productGroup">
             <label class="check-label"><input type="checkbox" name="Products" value="Hat" /> 🧢 Hat ($30–$35)</label>
-            <label class="check-label"><input type="checkbox" name="Products" value="Jersey" /> 🏒 Jersey ($60–$70)</label>
-            <label class="check-label"><input type="checkbox" name="Products" value="Hat + Jersey" /> Both</label>
+            <label class="check-label"><input type="checkbox" name="Products" value="Blank Jersey" id="chkBlank" /> 🏒 Blank Jersey ($60–$70)</label>
+            <label class="check-label"><input type="checkbox" name="Products" value="Custom Jersey" id="chkCustom" /> ✏️ Custom Jersey ($85–$95)</label>
           </div>
         </div>
 
@@ -374,13 +400,21 @@
               </div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="pledge-number">Jersey Number (optional)</label>
-            <input type="text" id="pledge-number" name="Jersey Number" placeholder="e.g. 88" maxlength="3" />
-          </div>
-          <div class="form-group">
-            <label for="pledge-nameplate">Nameplate / Name for Back (optional)</label>
-            <input type="text" id="pledge-nameplate" name="Nameplate" placeholder="e.g. DAWGFATHER" maxlength="20" />
+          <!-- Custom jersey fields — only shown when Custom Jersey is selected -->
+          <div id="customFields" style="display:none;flex-direction:column;gap:16px;">
+            <div style="background:rgba(225,162,26,0.08);border:1px solid rgba(225,162,26,0.25);border-radius:8px;padding:12px 16px;font-family:monospace;font-size:12px;color:rgba(255,244,201,0.7);">
+              ✏️ <strong style="color:var(--gold);">Custom jersey</strong> — your name and number will be embroidered on the back. We will confirm spelling before production.
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pledge-number">Jersey Number *</label>
+                <input type="text" id="pledge-number" name="Jersey Number" placeholder="e.g. 88" maxlength="3" />
+              </div>
+              <div class="form-group">
+                <label for="pledge-nameplate">Nameplate (back of jersey) *</label>
+                <input type="text" id="pledge-nameplate" name="Nameplate" placeholder="e.g. DAWGFATHER" maxlength="20" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -404,11 +438,11 @@
     <div class="presale-faq-grid">
       <div class="presale-faq-item">
         <h4>Is this a real purchase?</h4>
-        <p>No payment is collected today. This is a pledge to show demand. We'll contact you when it's time to pay — you decide then if you still want in.</p>
+        <p>No payment collected today. This is a pledge to show demand. Blank jerseys run $60–70. Custom jerseys with name + number run $85–95. Hats $30–35. We'll contact you with final price when pledges close.</p>
       </div>
       <div class="presale-faq-item">
         <h4>Why does price depend on pledges?</h4>
-        <p>Higher volume = lower per-unit cost from the manufacturer. More Glizzies fans pledging means everyone pays less. Spread the word.</p>
+        <p>Higher volume = lower per-unit cost from the manufacturer. Blank jerseys: $60–70. Custom jerseys: $85–95. Hats: $30–35. More pledges = bottom of the range for everyone.</p>
       </div>
       <div class="presale-faq-item">
         <h4>How long does delivery take?</h4>
@@ -456,11 +490,16 @@
   // Show jersey options when jersey is selected
   var checks = document.querySelectorAll('#productGroup input[type="checkbox"]');
   var jerseyOpts = document.getElementById('jerseyOptions');
+  var customFields = document.getElementById('customFields');
   function updateJerseyVisibility() {
     var hasJersey = Array.from(checks).some(function(c) {
-      return c.checked && (c.value === 'Jersey' || c.value === 'Hat + Jersey');
+      return c.checked && (c.value === 'Blank Jersey' || c.value === 'Custom Jersey');
+    });
+    var hasCustom = Array.from(checks).some(function(c) {
+      return c.checked && c.value === 'Custom Jersey';
     });
     jerseyOpts.style.display = hasJersey ? 'flex' : 'none';
+    if (customFields) customFields.style.display = hasCustom ? 'flex' : 'none';
   }
   checks.forEach(function(c) { c.addEventListener('change', updateJerseyVisibility); });
 
