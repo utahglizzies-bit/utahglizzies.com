@@ -1,0 +1,8 @@
+# Wrangler / Cloudflare
+.wrangler/
+
+# Deployment ZIPs (too large for git)
+*.zip
+
+# macOS
+.DS_Store
