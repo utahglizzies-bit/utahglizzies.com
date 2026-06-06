@@ -163,6 +163,16 @@
     .section-heading-center { text-align: center; margin-bottom: 8px; }
     .section-heading-center small { font-size: 11px; font-family: monospace; letter-spacing: 0.15em; text-transform: uppercase; color: var(--red); }
     .section-heading-center h2 { font-family: var(--display); font-size: clamp(1.8rem,3.5vw,3rem); text-transform: uppercase; }
+
+    /* Hat image gallery */
+    .hat-gallery { background: #f5f5f3; }
+    .hat-gallery-main { aspect-ratio: 1; overflow: hidden; }
+    .hat-gallery-main img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.2s; }
+    .hat-gallery-thumbs { display: flex; gap: 3px; background: #f5f5f3; padding: 3px; }
+    .hat-thumb { flex: 1; aspect-ratio: 1; border: 2px solid transparent; border-radius: 4px; overflow: hidden; cursor: pointer; padding: 0; background: none; transition: border-color 0.15s; }
+    .hat-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hat-thumb.active { border-color: var(--gold); }
+    .hat-thumb:hover { border-color: rgba(225,162,26,0.5); }
   </style>
 </head>
 <body>
@@ -210,11 +220,23 @@
 
       <!-- HAT CARD -->
       <div class="presale-card">
-        <div class="presale-card-images">
-          <img src="assets/hat-front.jpeg" alt="Utah Glizzies Hat — Front" />
-          <div class="img-stack">
-            <img src="assets/hat-side.jpeg" alt="Utah Glizzies Hat — Side" />
-            <img src="assets/hat-back.jpeg" alt="Utah Glizzies Hat — Back" />
+        <div class="hat-gallery">
+          <div class="hat-gallery-main">
+            <img id="hatMain" src="assets/hat-front.jpeg" alt="Utah Glizzies Hat" />
+          </div>
+          <div class="hat-gallery-thumbs">
+            <button class="hat-thumb active" onclick="hatSwap(this, 'assets/hat-front.jpeg', 'Front view')">
+              <img src="assets/hat-front.jpeg" alt="Front" />
+            </button>
+            <button class="hat-thumb" onclick="hatSwap(this, 'assets/hat-side.jpeg', 'Side — hockey sticks + glizzy embroidery')">
+              <img src="assets/hat-side.jpeg" alt="Side" />
+            </button>
+            <button class="hat-thumb" onclick="hatSwap(this, 'assets/hat-back.jpeg', 'Back — Utah Glizzies Hockey Club')">
+              <img src="assets/hat-back.jpeg" alt="Back" />
+            </button>
+            <button class="hat-thumb" onclick="hatSwap(this, 'assets/hat-inside.jpeg', 'Inside — custom brim art')">
+              <img src="assets/hat-inside.jpeg" alt="Inside brim" />
+            </button>
           </div>
         </div>
         <div class="presale-card-body">
@@ -418,6 +440,14 @@
   </div></footer>
 
   <script>
+
+  function hatSwap(btn, src, alt) {
+    document.getElementById('hatMain').src = src;
+    document.getElementById('hatMain').alt = alt;
+    document.querySelectorAll('.hat-thumb').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+  }
+
   // Nav toggle
   var t=document.querySelector('.menu-toggle'),n=document.querySelector('.site-nav');
   t&&t.addEventListener('click',function(){var o=n.classList.toggle('is-open');t.setAttribute('aria-expanded',String(o));});
