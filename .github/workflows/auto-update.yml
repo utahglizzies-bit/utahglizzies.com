@@ -1,0 +1,41 @@
+name: Auto-Update Glizzies Site
+
+on:
+  schedule:
+    # Runs at 3 AM Mountain Time every Wednesday and Saturday
+    # (after typical Tuesday/Thursday/Friday game nights)
+    - cron: '0 9 * * 3'   # Wednesday 3am MT
+    - cron: '0 9 * * 6'   # Saturday 3am MT
+  workflow_dispatch:        # Manual trigger button on GitHub
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # Allows the Action to commit + push
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run auto-update script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GAMESHEET_TEAM_ID: f6cc3e10-5c24-4049-b6a9-bf2d57024f4a
+        run: python3 scripts/auto-update.py
+
+      - name: Commit and push if anything changed
+        run: |
+          git config --global user.email "utahglizzies@gmail.com"
+          git config --global user.name "Glizzies Bot"
+          git add -A
+          git diff --quiet HEAD || (git commit -m "🤖 Auto-update: $(date '+%Y-%m-%d') game data + AI content" && git push)
+          echo "Done — Cloudflare will deploy automatically if files changed"
