@@ -226,9 +226,12 @@ window.siteContent = {
     ],
   },
   socialPosts: [
-    { type: "image", image: "assets/glizzies-wordmark.png", videoUrl: "", caption: "Follow the official Glizzies Instagram for photos, reels, playoff clips, and rink-lobby evidence.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
-    { type: "image", image: "assets/glizzies-logo.png", videoUrl: "", caption: "Playoff week. Bring the mustard. Tag @utah_glizzies_hockey so the best photos can land here.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
-    { type: "image", image: "assets/glizzies-logo.png", videoUrl: "", caption: "Glizzy Cam is wired for real team photos. Drop exported Instagram images into assets/media and update this card.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/photos/hero-celebration.jpg", videoUrl: "", caption: "That's a Glizzy goal. Playoff round one. Salt Shakers 0, Mustard Pressure 5.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/photos/glizzycam-laugh.jpg", videoUrl: "", caption: "A. FROMAN and UNCLE GLIZZBURN during warmups. Whatever was said, it was correct.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/photos/hero-faceoff.jpg", videoUrl: "", caption: "WYATT DOGP at the dot. WURSTMEISTER watching. Someone about to have a bad time.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/photos/glizzycam-thumbsup.jpg", videoUrl: "", caption: "The bench has reviewed the tape. Thumbs up approved.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/photos/team-net.jpg", videoUrl: "", caption: "GLIZZARD OF OZ and UNCLE GLIZZBURN post-shift. MEAT SHIELD guarding the crease as required.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
+    { type: "image", image: "assets/photos/hero-action.jpg", videoUrl: "", caption: "GLIZZ TRAIN at full speed. Defenders reviewing their life choices.", instagramUrl: "https://www.instagram.com/utah_glizzies_hockey/" },
   ],
   fanAdvice: [
     "Life is like a line change: if you wait until you are completely dead, everyone notices.",
