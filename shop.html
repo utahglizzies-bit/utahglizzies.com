@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<!-- shop-version:2.1 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Glizzy Shop — Presale | Utah Glizzies HC</title>
   <meta name="description" content="Pre-order official Utah Glizzies HC jerseys and hats. Full embroidery, limited run. Pledge now — pay when your gear ships in 8 weeks." />
   <meta property="og:title" content="Utah Glizzies HC — Official Merch Presale" />
-  <meta property="og:description" content="Pledge for official Glizzies jerseys and hats. More pledges = lower price. 8-week production. Pay when it ships." />
+  <meta property="og:description" content="Pledge for official Glizzies jerseys and hats. Hats $35, blank jerseys $70, custom jerseys $105. 8-week production. Pay when it ships." />
   <meta property="og:image" content="https://www.utahglizzies.com/assets/hat-front.jpeg" />
   <link rel="canonical" href="https://www.utahglizzies.com/shop.html" />
   <link rel="manifest" href="manifest.json" /><link rel="icon" href="assets/glizzies-logo.png" />
@@ -174,28 +175,80 @@
     .hat-thumb.active { border-color: var(--gold); }
     .hat-thumb:hover { border-color: rgba(225,162,26,0.5); }
   </style>
+  <!-- PRESALE STICKY (shared) -->
+  <style id="presale-sticky-css">
+    :root { --presale-h: 44px; }
+    .presale-top-banner {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--gold, #e1a21a); color: #07100d;
+      padding: 10px clamp(18px,4vw,48px);
+      box-shadow: 0 2px 10px rgba(7,16,13,0.25);
+    }
+    .presale-top-inner {
+      display: flex; align-items: center; gap: 12px;
+      max-width: 1200px; margin: 0 auto; flex-wrap: wrap;
+    }
+    .presale-badge {
+      background: #07100d; color: var(--gold, #e1a21a);
+      font-family: monospace; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; padding: 2px 8px; border-radius: 4px;
+      text-transform: uppercase; flex-shrink: 0;
+    }
+    .presale-text { font-size: 14px; font-weight: 600; flex: 1; min-width: 180px; }
+    .presale-cta {
+      background: #07100d; color: var(--gold, #e1a21a);
+      padding: 6px 16px; border-radius: 999px; text-decoration: none;
+      font-size: 13px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .presale-cta:hover { background: #0a1a0d; }
+    .presale-close {
+      background: none; border: none; cursor: pointer; font-size: 1.2rem;
+      color: rgba(7,16,13,0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
+    }
+    .presale-close:hover { color: #07100d; }
+    /* push everything down by the banner height */
+    body { padding-top: var(--presale-h); }
+    .site-header { top: var(--presale-h) !important; }
+    .countdown-bar { top: calc(var(--presale-h) + 88px) !important; }
+    @media (max-width: 480px) {
+      .presale-text { font-size: 12px; }
+      .presale-cta { font-size: 11px; padding: 5px 12px; }
+    }
+  </style>
 </head>
 <body>
+  <!-- PRESALE ANNOUNCEMENT BANNER -->
+  <div class="presale-top-banner" id="presale-banner">
+    <div class="presale-top-inner">
+      <span class="presale-badge">NEW</span>
+      <span class="presale-text">🧢 Official Glizzies hats + jerseys — <strong>Presale now open.</strong> Pledge now, pay when it ships.</span>
+      <a href="shop.html" class="presale-cta">Pledge Now &rarr;</a>
+      <button class="presale-close" type="button" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <a class="brand" href="index.html"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav">
       <a href="team.html#roster">Roster</a>
-      <a href="players/">Players</a>
       <a href="recaps/">Recaps</a>
       <a href="lore.html">Lore</a>
       <a href="game.html">Play</a>
       <a href="shop.html">Shop</a>
       <a href="sponsors.html">Sponsors</a>
+      <a href="brand.html">Brand</a>
       <a href="faq.html">FAQ</a>
       <a href="team.html#schedule" class="nav-cta">Schedule</a>
-      <a class="instagram-link" href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">IG</a>
+      <a class="instagram-link" href="https://www.instagram.com/UtahGlizziesHockey/" target="_blank" rel="noreferrer">IG</a>
     </nav>
   </header>
 
   <!-- PRESALE HERO -->
   <section class="presale-hero">
     <div class="presale-hero-inner">
+      <img src="assets/secondary-stix.png" alt="Utah Glizzies" style="height:90px;margin-bottom:16px;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.5));" />
       <div class="presale-eyebrow">🔥 Official Merch — Now Available</div>
       <h1>Gear Up.<br>Glizzy Style.</h1>
       <p class="sub">Full-embroidery hats and jerseys, built for the bench that takes beer league very seriously. This is a pledge — no payment now. We collect when your gear ships.</p>
@@ -206,7 +259,7 @@
   <!-- DISCLAIMER -->
   <div style="background:var(--paper);padding:24px clamp(18px,5vw,64px);">
     <div class="presale-disclaimer">
-      <strong>⚠️ Important — Read Before Pledging:</strong> This is a <strong>pledge drive, not a purchase.</strong> No payment is collected today. Once we hit enough pledges to confirm production, we'll contact you with the final price and collect payment. <strong>More pledges = lower price</strong> for everyone. Blank jerseys (logo only): <strong>$60–$70</strong> depending on demand. Custom jerseys (name + number): <strong>$85–$95</strong> depending on demand. Hats: <strong>$30–$35</strong> depending on demand. Production and delivery takes approximately <strong>8 weeks</strong> after the pledge window closes.
+      <strong>⚠️ Important — Read Before Pledging:</strong> This is a <strong>pledge drive, not a purchase.</strong> No payment is collected today. Once we hit enough pledges to confirm production, we'll contact you to collect payment. Hats are <strong>$35</strong>, blank jerseys (logo only) <strong>$70</strong>, custom jerseys (name + number) <strong>$105</strong> — plus taxes calculated at checkout. Production and delivery takes approximately <strong>8 weeks</strong> after the pledge window closes. <strong>All sales are final — no returns or exchanges once merchandise has been received.</strong>
     </div>
   </div>
 
@@ -242,8 +295,8 @@
         <div class="presale-card-body">
           <div class="eyebrow">Headwear</div>
           <h2>Glizzies Snapback</h2>
-          <div class="price-range">$30 – $35</div>
-          <div class="price-note">Final price depends on pledge volume. More pledges = lower price.</div>
+          <div class="price-range">$35</div>
+          <div class="price-note">Pay when your gear ships. Taxes calculated at checkout.</div>
           <ul class="card-details">
             <li>Cream crown / dark green corduroy brim</li>
             <li>Full embroidery — Utah Glizzies logo front panel</li>
@@ -265,14 +318,22 @@
         <div class="presale-card-body">
           <div class="eyebrow">Game-Day Jersey — Blank</div>
           <h2>Glizzies Jersey</h2>
-          <div class="price-range">$60 – $70</div>
-          <div class="price-note">More pledges = lower price for everyone.</div>
+          <div class="price-range">$70</div>
+          <div class="price-note">Pay when your gear ships. Taxes calculated at checkout.</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;background:#fff8e8;border:1px solid rgba(225,162,26,0.5);border-radius:8px;padding:10px 14px;margin:12px 0;font-size:12px;font-family:monospace;">
+            <span style="font-size:15px;flex-shrink:0;">🔥</span>
+            <div>
+              <strong style="display:block;color:var(--green);letter-spacing:0.05em;text-transform:uppercase;font-size:11px;margin-bottom:3px;">First Batch Arriving ~3 Weeks</strong>
+              Limited stock available — L &amp; XL only, Cream and Glizzy Green.<br/>
+              <span style="color:rgba(7,16,13,0.6);">Need a different size? Presale covers S through XXL with the full production run.</span>
+            </div>
+          </div>
           <ul class="card-details">
             <li>Full embroidery — Utah Glizzies logo on front</li>
             <li>Available in Cream or Glizzy Green</li>
-            <li>Sizes: S / M / L / XL / XXL / XXXL</li>
+            <li>Sizes: S / M / L / XL / XXL</li>
             <li><strong>No name or number</strong> — logo jersey only</li>
-            <li>~8 weeks production + delivery</li>
+            <li>~8 weeks production + delivery <em>(first batch arrives sooner)</em></li>
           </ul>
           <a href="#pledge" class="pledge-btn">Pledge — Blank Jersey</a>
         </div>
@@ -291,12 +352,12 @@
         <div class="presale-card-body">
           <div class="eyebrow">Game-Day Jersey — Custom</div>
           <h2>Custom Jersey</h2>
-          <div class="price-range">$85 – $95</div>
-          <div class="price-note">More pledges = lower price for everyone.</div>
+          <div class="price-range">$105</div>
+          <div class="price-note">Pay when your gear ships. Taxes calculated at checkout.</div>
           <ul class="card-details">
             <li>Full embroidery — logo, name <em>and</em> number</li>
             <li>Available in Cream or Glizzy Green</li>
-            <li>Sizes: S / M / L / XL / XXL / XXXL</li>
+            <li>Sizes: S / M / L / XL / XXL</li>
             <li>Your nameplate + number stitched on back</li>
             <li>~8 weeks production + delivery</li>
           </ul>
@@ -304,6 +365,72 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- JERSEY SIZE CHART -->
+  <section style="background:#fff;padding:clamp(40px,6vw,72px) clamp(18px,5vw,64px);">
+    <div style="max-width:860px;margin:0 auto;">
+      <p class="eyebrow" style="color:var(--red);font-family:monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:8px;">Sizing Guide</p>
+      <h2 style="font-family:var(--display);font-size:clamp(1.6rem,3vw,2.4rem);text-transform:uppercase;color:var(--green);margin-bottom:6px;">Jersey Measurements</h2>
+      <p style="color:#555;font-size:13px;margin-bottom:24px;">All measurements in inches. jerseys run true to size — order your normal size.</p>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:14px;font-family:monospace;">
+          <thead>
+            <tr style="background:var(--ink);color:var(--gold);">
+              <th style="padding:12px 16px;text-align:left;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap;">Measurement</th>
+              <th style="padding:12px 16px;text-align:center;font-weight:700;">S</th>
+              <th style="padding:12px 16px;text-align:center;font-weight:700;">M</th>
+              <th style="padding:12px 16px;text-align:center;font-weight:700;">L</th>
+              <th style="padding:12px 16px;text-align:center;font-weight:700;">XL</th>
+              <th style="padding:12px 16px;text-align:center;font-weight:700;">XXL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f9f6ef;">
+              <td style="padding:11px 16px;font-weight:600;color:#333;">(A) Chest</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">42&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">46&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">50&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">54&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">58&quot;</td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:11px 16px;font-weight:600;color:#333;">(B) Length</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">31&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">31&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">32&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">33&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">34.5&quot;</td>
+            </tr>
+            <tr style="background:#f9f6ef;">
+              <td style="padding:11px 16px;font-weight:600;color:#333;">(C) Sleeve Length</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">31&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">33&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">34&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">35.5&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">36&quot;</td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:11px 16px;font-weight:600;color:#333;">(D) Armhole</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">11.5&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">12&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">13&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">13.5&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">14&quot;</td>
+            </tr>
+            <tr style="background:#f9f6ef;">
+              <td style="padding:11px 16px;font-weight:600;color:#333;">(E) Cuff</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">5.5&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">5.5&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">6&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">6.5&quot;</td>
+              <td style="padding:11px 16px;text-align:center;color:#555;">7&quot;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -322,7 +449,7 @@
       <div class="step-card">
         <div class="step-num">02</div>
         <h3>We Count</h3>
-        <p>The more pledges we get, the lower the final price for everyone. Volume = savings.</p>
+        <p>We tally pledges to confirm the production run. Hats $35, blank jerseys $70, custom jerseys $105.</p>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
@@ -342,7 +469,7 @@
     <div style="max-width:640px;margin:0 auto;">
       <div class="eyebrow" style="display:inline-block;background:var(--gold);color:var(--ink);font-family:monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;padding:4px 14px;border-radius:4px;margin-bottom:20px;">No Payment Today</div>
       <h2>Place Your Pledge</h2>
-      <p class="sub">Lock in your spot. We'll reach out when it's time to pay. Remember — more pledges means a lower price for everyone.</p>
+      <p class="sub">Lock in your spot. We'll reach out when it's time to pay. Hats $35, blank jerseys $70, custom jerseys $105.</p>
 
       <form class="pledge-form" id="pledgeForm" action="https://formsubmit.co/utahglizzies@gmail.com" method="POST">
         <!-- FormSubmit config -->
@@ -371,9 +498,9 @@
         <div class="form-group">
           <label>What are you pledging for? *</label>
           <div class="check-group" id="productGroup">
-            <label class="check-label"><input type="checkbox" name="Products" value="Hat" /> 🧢 Hat ($30–$35)</label>
-            <label class="check-label"><input type="checkbox" name="Products" value="Blank Jersey" id="chkBlank" /> 🏒 Blank Jersey ($60–$70)</label>
-            <label class="check-label"><input type="checkbox" name="Products" value="Custom Jersey" id="chkCustom" /> ✏️ Custom Jersey ($85–$95)</label>
+            <label class="check-label"><input type="checkbox" name="Products" value="Hat" /> 🧢 Hat ($35)</label>
+            <label class="check-label"><input type="checkbox" name="Products" value="Blank Jersey" id="chkBlank" /> 🏒 Blank Jersey ($70) <span style="font-size:10px;font-family:monospace;color:var(--red);font-weight:700;margin-left:4px;">LIMITED — L &amp; XL IN STOCK</span></label>
+            <label class="check-label"><input type="checkbox" name="Products" value="Custom Jersey" id="chkCustom" /> ✏️ Custom Jersey ($105)</label>
           </div>
         </div>
 
@@ -389,7 +516,6 @@
                 <option>Large</option>
                 <option>XL</option>
                 <option>XXL</option>
-                <option>XXXL</option>
               </select>
             </div>
             <div class="form-group">
@@ -438,11 +564,16 @@
     <div class="presale-faq-grid">
       <div class="presale-faq-item">
         <h4>Is this a real purchase?</h4>
-        <p>No payment collected today. This is a pledge to show demand. Blank jerseys run $60–70. Custom jerseys with name + number run $85–95. Hats $30–35. We'll contact you with final price when pledges close.</p>
+        <p>No payment collected today. This is a pledge to show demand. Hats are $35, blank jerseys (logo only) are $70, and custom jerseys with name + number are $105. We'll contact you to collect payment when pledges close.</p>
       </div>
       <div class="presale-faq-item">
-        <h4>Why does price depend on pledges?</h4>
-        <p>Higher volume = lower per-unit cost from the manufacturer. Blank jerseys: $60–70. Custom jerseys: $85–95. Hats: $30–35. More pledges = bottom of the range for everyone.</p>
+        <div class="presale-faq-item">
+          <h4>What is the return policy?</h4>
+          <p>All sales are final. Once your merchandise has been received, we do not accept returns or exchanges. Custom jerseys are made to order with your name and number — make sure everything looks right before submitting your pledge.</p>
+        </div>
+        <div class="presale-faq-item">
+          <h4>How much does everything cost?</h4>
+        <p>Hats are $35, blank jerseys are $70, and custom jerseys are $105 — plus taxes at checkout. Pledging confirms the production run — you only pay when your gear ships.</p>
       </div>
       <div class="presale-faq-item">
         <h4>How long does delivery take?</h4>
@@ -466,7 +597,7 @@
   <footer class="site-footer"><div class="footer-inner">
     <a class="footer-brand" href="index.html"><img src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
     <nav class="footer-links">
-      <a href="index.html">Home</a><a href="team.html">Team</a><a href="players/">Players</a>
+      <a href="index.html">Home</a><a href="team.html">Team</a>
       <a href="recaps/">Recaps</a><a href="lore.html">Lore</a><a href="faq.html">FAQ</a>
       <a href="shop.html">Shop</a><a href="sponsors.html">Sponsors</a>
     </nav>
@@ -522,9 +653,29 @@
     document.getElementById('pledge').scrollIntoView({behavior:'smooth'});
     var form = document.getElementById('pledgeForm');
     if (form) {
-      form.innerHTML = '<div class="form-success" style="display:block"><div class="checkmark">🌭</div><h3>Pledge Locked In!</h3><p>You\'re on the list. We\'ll reach out to <strong>you</strong> when it\'s time to pay and confirm your order. More pledges = lower price, so send this to your teammates.</p><div style="margin-top:24px"><a href="index.html" class="pledge-btn gold" style="display:inline-block;width:auto;padding:14px 32px;text-decoration:none">Back to Home</a></div></div>';
+      form.innerHTML = '<div class="form-success" style="display:block"><div class="checkmark">🌭</div><h3>Pledge Locked In!</h3><p>You\'re on the list. We\'ll reach out to <strong>you</strong> when it\'s time to pay and confirm your order. Send this to your teammates to lock in the production run.</p><div style="margin-top:24px"><a href="index.html" class="pledge-btn gold" style="display:inline-block;width:auto;padding:14px 32px;text-decoration:none">Back to Home</a></div></div>';
     }
   }
+  </script>
+  <script id="presale-sticky-js">
+  (function(){
+    function setH(){
+      var b=document.getElementById('presale-banner');
+      var h=(b && b.style.display!=='none') ? b.offsetHeight : 0;
+      document.documentElement.style.setProperty('--presale-h', h+'px');
+    }
+    function init(){
+      var b=document.getElementById('presale-banner');
+      if(b){
+        var c=b.querySelector('.presale-close');
+        if(c) c.addEventListener('click', function(){ b.style.display='none'; setH(); });
+      }
+      setH();
+    }
+    window.addEventListener('resize', setH);
+    if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
+    window.addEventListener('load', setH);
+  })();
   </script>
 </body>
 </html>
