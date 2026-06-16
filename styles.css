@@ -281,8 +281,9 @@ h3 {
 }
 
 .button.secondary {
-  color: var(--cream);
-  box-shadow: inset 0 0 0 2px rgba(255, 244, 201, 0.44);
+  color: var(--green);
+  background: rgba(255, 253, 247, 0.92);
+  box-shadow: inset 0 0 0 2px rgba(6, 40, 23, 0.36);
 }
 
 .subpage-hero .button.secondary,
@@ -307,6 +308,39 @@ h3 {
   color: var(--cream);
   background: var(--green);
   box-shadow: inset 0 0 0 2px rgba(6, 40, 23, 0.72);
+}
+
+/* Dark-background contexts — restore cream button style */
+.home-hero .button.secondary,
+.hero .button.secondary,
+.matchup-lead .button.secondary,
+.chirp-section .button.secondary,
+.locker-room .button.secondary,
+.lore-section .button.secondary,
+.stars-section .button.secondary,
+.spotlight-section .button.secondary,
+.last-game-section .button.secondary,
+.team-hero .button.secondary,
+.email-signup-section .button.secondary {
+  color: var(--cream);
+  background: transparent;
+  box-shadow: inset 0 0 0 2px rgba(255, 244, 201, 0.44);
+}
+
+.home-hero .button.secondary:hover,
+.hero .button.secondary:hover,
+.matchup-lead .button.secondary:hover,
+.chirp-section .button.secondary:hover,
+.locker-room .button.secondary:hover,
+.lore-section .button.secondary:hover,
+.stars-section .button.secondary:hover,
+.spotlight-section .button.secondary:hover,
+.last-game-section .button.secondary:hover,
+.team-hero .button.secondary:hover,
+.email-signup-section .button.secondary:hover {
+  color: var(--ink);
+  background: var(--cream);
+  box-shadow: inset 0 0 0 2px var(--cream);
 }
 
 .hero-logo {
@@ -4009,15 +4043,15 @@ body {
 .player-photo-hero {
   position: relative;
   width: 100%;
-  max-height: 520px;
   overflow: hidden;
   display: block;
 }
 .player-photo-hero img {
   width: 100%;
-  height: 520px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center;
   display: block;
 }
 
