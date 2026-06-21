@@ -1,4 +1,4 @@
-// cache-bust: 2026-06-20 roster-correction
+// cache-bust: 2026-06-20 june18-scoring-correction
 window.siteContent = {
   teamInfo: {
     name: "Utah Glizzies HC",
@@ -66,27 +66,27 @@ window.siteContent = {
     date: "June 18, 2026",
     result: "win",
     recap:
-      "WURSTMEISTER cracked the seal with a filthy first-period breakaway, WYATT DOGP made it 2-0 one minute later, and then GLIZ-Z plus ZIMMY CASINO spent the rest of the night turning South Rink into a smoke alarm. GLIZ-Z buried a hat trick, ZIMMY CASINO added two, and the Glizzies rolled Saucer Kings 7-1 while owning the shot clock 23-11. The forecheck stayed loud, the backcheck stayed mean, and the whole thing felt like playoff hockey with zero interest in subtlety.",
+      "WURSTMEISTER cracked the seal with a first-period goal, and then GLIZZNASTY took over the building. Wyatt McNeil buried four goals, ZIMMY CASINO added two, and the Glizzies rolled Saucer Kings 7-1 while owning the shot clock 23-11. The forecheck stayed loud, the backcheck stayed mean, and McNeil treated the Saucer Kings crease like a personal highlight reel from puck drop to final buzzer.",
     momentOfGame:
-      "WURSTMEISTER opening the night by faking right, toe-dragging back left, and roofing a backhand on the breakaway was the kind of goal that makes a whole bench stand up at once.",
+      "GLIZZNASTY's fourth goal of the night, the one that turned a playoff win into a personal statement and made the whole bench start counting on their fingers.",
     threeStars: [
-      { name: "Ian Penders (LIL' SMOKIES)", star: 1 },
+      { name: "Wyatt McNeil (GLIZZNASTY)", star: 1 },
       { name: "Matt Zimmerman (ZIMMY CASINO)", star: 2 },
       { name: "Rushton Hiltbrand (MEAT SHIELD)", star: 3 }
     ],
   },
     playerSpotlight: {
-    name: "Ian Penders",
-    number: "5",
-    nameplate: "LIL' SMOKIES",
-    title: "Hat Trick Hazard",
+    name: "Wyatt McNeil",
+    number: "53",
+    nameplate: "GLIZZNASTY",
+    title: "Four-Goal Felony",
     story:
-      "Lil' Smokies gets the nod after cashing a full playoff hat trick against Saucer Kings and turning every period into a new problem. He scored late in the first, struck again in the second off Walker Krebs' setup, and then finished the trilogy in the third before Matt Zimmerman added the final insult. When the game needed a headline, Ian wrote it in all caps.",
+      "GlizzNasty gets the nod after a four-goal playoff eruption against Saucer Kings that turned a team win into a personal showcase. He opened his account in the first, kept finding soft ice all night, and by the time the dust settled he had four of the Glizzies' seven goals in a 7-1 rout. When the net needed filling, McNeil filled it four times and never looked tired of it.",
     callouts: [
-      ["Bench Verdict", "Hat Trick Hazard"],
-      ["Stat Line", "3 goals in a 7-1 playoff win"],
-      ["Best Habit", "Found soft ice and buried it immediately"],
-      ["Vibe", "Saw daylight once and decided that was enough for three goals"],
+      ["Bench Verdict", "Four-Goal Felony"],
+      ["Stat Line", "4 goals in a 7-1 playoff win"],
+      ["Best Habit", "Found soft ice and buried it on repeat"],
+      ["Vibe", "Treated the crease like a punch card and filled every slot"],
     ],
   },
   hypeMeter: {
@@ -121,9 +121,9 @@ window.siteContent = {
     opponent: "The Misfits",
     record: "The Misfits: 4 wins, 10 losses, 8 points, 35 GF, 55 GA, lost 3",
     storyline:
-      "The Glizzies are coming off a 7-1 playoff demolition of Saucer Kings on June 18, with WURSTMEISTER opening the scoring, LIL' SMOKIES hanging a hat trick, and ZIMMY CASINO cashing two more. GameSheet now also confirms the June 11 trip to The North closed as a 3-4 playoff loss, so the current 14-game totals are fully in sync. The next visible schedule slot is The Misfits on June 25 at 9:30 PM on North Rink. Their standings row is not terrifying on paper: 4 wins, 10 losses, minus-20 differential, and a three-game skid. That said, Julia Mulhern and Angus Maclellan both sit on nine points, so this still needs to be handled like a live grenade, not a souvenir puck.",
+      "The Glizzies are coming off a 7-1 playoff demolition of Saucer Kings on June 18, with WURSTMEISTER opening the scoring, GLIZZNASTY erupting for four goals, and ZIMMY CASINO cashing two more. GameSheet now also confirms the June 11 trip to The North closed as a 3-4 playoff loss, so the current 14-game totals are fully in sync. The next visible schedule slot is The Misfits on June 25 at 9:30 PM on North Rink. Their standings row is not terrifying on paper: 4 wins, 10 losses, minus-20 differential, and a three-game skid. That said, Julia Mulhern and Angus Maclellan both sit on nine points, so this still needs to be handled like a live grenade, not a souvenir puck.",
     opponentBreakdown: [
-      ["Fresh receipt", "Glizzies 7, Saucer Kings 1 on June 18. WURSTMEISTER opened it, LIL' SMOKIES had the hat trick, and the forecheck never let Saucer Kings breathe."],
+      ["Fresh receipt", "Glizzies 7, Saucer Kings 1 on June 18. WURSTMEISTER opened it, GLIZZNASTY buried four, and the forecheck never let Saucer Kings breathe."],
       ["Next puck drop", "June 25, 9:30 PM vs The Misfits on North Rink."],
       ["Misfits danger list", "Julia Mulhern and Angus Maclellan both have 9 points. Todd Margetts has 5 goals and 6 PIM, which is a useful combination if you enjoy chaos."],
     ],
@@ -208,10 +208,10 @@ window.siteContent = {
     { name: "Kevin Peterson", number: "22", nameplate: "GLIZZ LORD", position: "Forward", photo: "", bio: "Clean record, useful points, suspiciously professional.", stats: { gp: 13, g: 1, a: 3, pts: 4, pim: 0 }, instagram: "", nickname: "Glizz Lord" },
     { name: "Jared Aida", number: "8", nameplate: "GLIZZARD OF OZ", position: "Forward", photo: "", bio: "Still parked at 10 points. The hot dog cannon remains pointed at him.", stats: { gp: 12, g: 7, a: 3, pts: 10, pim: 0 }, instagram: "", nickname: "Glizzard of Oz" },
     { name: "Trey Kemp", number: "88", nameplate: "DAWGFATHER", position: "Utility", photo: "", bio: "Goal and assist in the Salt Shakers playoff win. Business meeting accepted.", stats: { gp: 14, g: 3, a: 1, pts: 4, pim: 0, gwg: 1 }, instagram: "", nickname: "Dawgfather" },
-    { name: "Ian Penders", number: "5", nameplate: "LIL' SMOKIES", position: "Forward", photo: "", bio: "Thirteen points, seven assists, six goals, and a fresh playoff hat trick on the resume.", stats: { gp: 13, g: 6, a: 7, pts: 13, pim: 6, gwg: 1 }, instagram: "", nickname: "Lil' Smokies" },
+    { name: "Ian Penders", number: "5", nameplate: "LIL' SMOKIES", position: "Forward", photo: "", bio: "Ten points, seven assists, three goals, and a forecheck that keeps the rhythm section honest.", stats: { gp: 13, g: 3, a: 7, pts: 10, pim: 6, gwg: 1 }, instagram: "", nickname: "Lil' Smokies" },
     { name: "Brady Bessette", number: "26", nameplate: "DER WÜRST", position: "Forward", photo: "", bio: "Three goals, zero assists. Direct deposit only.", stats: { gp: 14, g: 3, a: 0, pts: 3, pim: 2 }, instagram: "", nickname: "Der Würst" },
     { name: "JP Gould", number: "42", nameplate: "GREASE MISSILE", position: "Defense", photo: "", bio: "One goal, three assists, and just enough minor-penalty seasoning.", stats: { gp: 14, g: 1, a: 3, pts: 4, pim: 2 }, instagram: "", nickname: "Grease Missile" },
-    { name: "Wyatt McNeil", number: "53", nameplate: "GLIZZNASTY", position: "Forward", photo: "", bio: "Six goals in nine games and the kind of release that keeps making goalies do paperwork.", stats: { gp: 9, g: 6, a: 0, pts: 6, pim: 2, gwg: 2 }, instagram: "", nickname: "GlizzNasty" },
+    { name: "Wyatt McNeil", number: "53", nameplate: "GLIZZNASTY", position: "Forward", photo: "", bio: "Nine goals in ten games, including a four-goal playoff eruption against Saucer Kings. The release keeps making goalies do paperwork.", stats: { gp: 10, g: 9, a: 0, pts: 9, pim: 2, gwg: 3 }, instagram: "", nickname: "GlizzNasty" },
     { name: "Zimmy Casino", number: "95", nameplate: "GLIZ-Z", position: "Forward", photo: "", bio: "Two goals against Saucer Kings and a four-point season line that keeps paying out.", stats: { gp: 12, g: 3, a: 1, pts: 4, pim: 0 }, instagram: "", nickname: "Gliz-Z" },
   ],
   sponsors: {
@@ -451,6 +451,13 @@ window.siteContent = {
     },
   ],
   gameRecaps: [
+    {
+      date: "2026-06-18", opponent: "Saucer Kings", result: "win", glizziesScore: 7, opponentScore: 1,
+      headline: "GlizzNasty's Four-Goal Night: Glizzies 7, Saucer Kings 1",
+      body: "The Glizzies rolled Saucer Kings 7-1 in the playoffs behind a four-goal eruption from Wyatt McNeil. WURSTMEISTER opened the scoring in the first, McNeil took over from there, and Matt Zimmerman chipped in two of his own. The Glizzies owned the shot clock 23-11 and never let Saucer Kings believe this was going to be close. Rushton Hiltbrand handled the rest with a one-goal night in the crease.",
+      moment: "Wyatt McNeil's fourth goal of the night, the one that turned a team win into a personal statement.",
+      stars: ["Wyatt McNeil (GLIZZNASTY)", "Matt Zimmerman (ZIMMY CASINO)", "Rushton Hiltbrand (MEAT SHIELD)"],
+    },
     {
       date: "2026-05-29", opponent: "Zombonis", result: "win", glizziesScore: 4, opponentScore: 1,
       headline: "Back On The Grill: Glizzies 4, Zombonis 1",
