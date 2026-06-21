@@ -1,4 +1,4 @@
-// cache-bust: 2026-06-20 june18-scoring-correction
+// cache-bust: 2026-06-20 rawdog-krebs
 window.siteContent = {
   teamInfo: {
     name: "Utah Glizzies HC",
@@ -481,15 +481,15 @@ window.siteContent = {
     },
   ],
 rawDogOfNight: {
-    winner: "WW",
-    nameplate: "WW",
-    number: "69",
-    game: "@ The North — June 11, 2026",
-    nominatedBy: "J. CHESTNUT",
-    reason: "Chose by Chris Call for being an absolute bull in a china shop. Mauled people. Conducted what officials generously classified as \u2018hockey\u2019 and got away with it. Including one incident on the ice that the refs apparently decided not to see.",
-    citation: "Official citation: WW #69 played the entire game at a threat level that the rulebook does not have a penalty for. J. Chestnut, who nominated him, described it as \u2018inspiring and slightly concerning.\u2019 The victim declined to comment. The referee was looking the other way. The bench saw everything.",
-    achievement: "Got away with it",
-    honorableMention: "The referee who was definitely not watching",
+    winner: "Walker Krebs",
+    nameplate: "BIG DADDY DANGLES",
+    number: "58",
+    game: "@ Saucer Kings — June 18, 2026",
+    nominatedBy: "THE BENCH",
+    reason: "Walker Krebs put in the work and proved every hater, doubter, and quiet skeptic dead wrong. They wrote him off. He responded with a two-word press release: \u2018I\u2019m back.\u2019 Big Daddy Dangles dragged pucks through traffic, set the table all night, and reminded the building that you do not bet against a man with a nickname like that.",
+    citation: "Official citation: BIG DADDY DANGLES #58 answered the doubt the only way that matters, with shifts that made the haters reconsider their entire scouting report. Nominated by the whole bench. The doubters declined to comment. Somewhere, a Jordan shrug was earned.",
+    achievement: "Proved the haters wrong",
+    honorableMention: "Every doubter who is now suspiciously quiet",
   },
   gameStats: {
     apiBase: "https://countapi.mileshilliard.com/api/v1",
