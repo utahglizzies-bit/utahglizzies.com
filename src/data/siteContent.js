@@ -1,4 +1,4 @@
-// cache-bust: 2026-06-20 rawdog-krebs
+// cache-bust: 2026-06-20 rawdog-krebs-dangles
 window.siteContent = {
   teamInfo: {
     name: "Utah Glizzies HC",
@@ -482,14 +482,20 @@ window.siteContent = {
   ],
 rawDogOfNight: {
     winner: "Walker Krebs",
-    nameplate: "BIG DADDY DANGLES",
+    nameplate: "GLIZZ TRAIN",
+    gameNickname: "Big Daddy Dangles",
     number: "58",
     game: "@ Saucer Kings — June 18, 2026",
     nominatedBy: "THE BENCH",
-    reason: "Walker Krebs put in the work and proved every hater, doubter, and quiet skeptic dead wrong. They wrote him off. He responded with a two-word press release: \u2018I\u2019m back.\u2019 Big Daddy Dangles dragged pucks through traffic, set the table all night, and reminded the building that you do not bet against a man with a nickname like that.",
-    citation: "Official citation: BIG DADDY DANGLES #58 answered the doubt the only way that matters, with shifts that made the haters reconsider their entire scouting report. Nominated by the whole bench. The doubters declined to comment. Somewhere, a Jordan shrug was earned.",
+    reason: "Big Daddy Dangles earned the alias the hard way, toe-dragging through defenders all night like it was a full-time job. Walker Krebs put in the work and proved every hater, doubter, and quiet skeptic dead wrong. They wrote him off. He responded with a two-word press release: \u2018I\u2019m back.\u2019",
+    citation: "Official citation: GLIZZ TRAIN #58, operating under the alias Big Daddy Dangles, dragged pucks through traffic and dangled the doubt right out of the building. Nominated by the whole bench. The defenders he danced declined to comment. Somewhere, a Jordan shrug was earned.",
     achievement: "Proved the haters wrong",
-    honorableMention: "Every doubter who is now suspiciously quiet",
+    honorableMention: "Every defender he danced through",
+    stats: [
+      { icon: "🪄", label: "Defenders Dangled" },
+      { icon: "🔥", label: "Doubters Silenced" },
+      { icon: "🐐", label: "\u2018I\u2019m Back\u2019 Energy" },
+    ],
   },
   gameStats: {
     apiBase: "https://countapi.mileshilliard.com/api/v1",

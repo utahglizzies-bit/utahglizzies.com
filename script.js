@@ -643,11 +643,17 @@ function renderRDOTN() {
   const el = document.querySelector('[data-rdotn]');
   if (!el || !siteContent.rawDogOfNight) return;
   const r = siteContent.rawDogOfNight;
+  const stats = r.stats || [
+    { icon: "🪄", label: "Defenders Dangled" },
+    { icon: "🔥", label: "Doubters Silenced" },
+    { icon: "🐐", label: "\u2018I\u2019m Back\u2019 Energy" },
+  ];
   el.innerHTML = `
     <div class="rdotn-inner">
       <div class="rdotn-badge-col">
         <span class="rdotn-trophy">🌭</span>
         <div class="rdotn-nameplate">${r.nameplate}</div>
+        ${r.gameNickname ? `<div class="rdotn-game-nickname">aka \u201c${r.gameNickname}\u201d</div>` : ""}
         <div class="rdotn-number">#${r.number}</div>
         <div class="rdotn-game-label">${r.game}</div>
       </div>
@@ -657,9 +663,7 @@ function renderRDOTN() {
         <p class="rdotn-reason">${r.reason}</p>
         <blockquote class="rdotn-citation">${r.citation}</blockquote>
         <div class="rdotn-stats-row">
-          <div class="rdotn-stat"><strong>🐂</strong><span>Bull In A China Shop</span></div>
-          <div class="rdotn-stat"><strong>⚰️</strong><span>Confirmed Maulings</span></div>
-          <div class="rdotn-stat"><strong>👁️</strong><span>Refs Looking Away</span></div>
+          ${stats.map((s) => `<div class="rdotn-stat"><strong>${s.icon}</strong><span>${s.label}</span></div>`).join("")}
         </div>
         <div class="rdotn-voted-by">Voted by: ${r.nominatedBy} &bull; Honorable mention: ${r.honorableMention}</div>
       </div>

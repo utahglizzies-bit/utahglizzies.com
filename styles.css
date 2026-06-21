@@ -3949,6 +3949,16 @@ body {
   color: var(--cream);
   text-shadow: 3px 4px 0 rgba(0,0,0,0.4);
 }
+.rdotn-game-nickname {
+  font-family: var(--sports);
+  font-size: clamp(1rem,2vw,1.4rem);
+  font-weight: 900;
+  font-style: italic;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+}
 .rdotn-number {
   font-family: var(--display);
   font-size: clamp(1.2rem,2.5vw,2rem);
