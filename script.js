@@ -657,9 +657,9 @@ function renderRDOTN() {
         <p class="rdotn-reason">${r.reason}</p>
         <blockquote class="rdotn-citation">${r.citation}</blockquote>
         <div class="rdotn-stats-row">
-          <div class="rdotn-stat"><strong>✅</strong><span>Correct Position</span></div>
-          <div class="rdotn-stat"><strong>🔔</strong><span>Pipe Hit</span></div>
-          <div class="rdotn-stat"><strong>0</strong><span>Goals (Close Tho)</span></div>
+          <div class="rdotn-stat"><strong>🐂</strong><span>Bull In A China Shop</span></div>
+          <div class="rdotn-stat"><strong>⚰️</strong><span>Confirmed Maulings</span></div>
+          <div class="rdotn-stat"><strong>👁️</strong><span>Refs Looking Away</span></div>
         </div>
         <div class="rdotn-voted-by">Voted by: ${r.nominatedBy} &bull; Honorable mention: ${r.honorableMention}</div>
       </div>

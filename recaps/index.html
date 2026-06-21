@@ -11,22 +11,73 @@
   <link rel="stylesheet" href="../styles.css"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49PTYCCKB1');</script>
+  <!-- PRESALE STICKY (shared) -->
+  <style id="presale-sticky-css">
+    :root { --presale-h: 44px; }
+    .presale-top-banner {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--gold, #e1a21a); color: #07100d;
+      padding: 10px clamp(18px,4vw,48px);
+      box-shadow: 0 2px 10px rgba(7,16,13,0.25);
+    }
+    .presale-top-inner {
+      display: flex; align-items: center; gap: 12px;
+      max-width: 1200px; margin: 0 auto; flex-wrap: wrap;
+    }
+    .presale-badge {
+      background: #07100d; color: var(--gold, #e1a21a);
+      font-family: monospace; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; padding: 2px 8px; border-radius: 4px;
+      text-transform: uppercase; flex-shrink: 0;
+    }
+    .presale-text { font-size: 14px; font-weight: 600; flex: 1; min-width: 180px; }
+    .presale-cta {
+      background: #07100d; color: var(--gold, #e1a21a);
+      padding: 6px 16px; border-radius: 999px; text-decoration: none;
+      font-size: 13px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .presale-cta:hover { background: #0a1a0d; }
+    .presale-close {
+      background: none; border: none; cursor: pointer; font-size: 1.2rem;
+      color: rgba(7,16,13,0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
+    }
+    .presale-close:hover { color: #07100d; }
+    /* push everything down by the banner height */
+    body { padding-top: var(--presale-h); }
+    .site-header { top: var(--presale-h) !important; }
+    .countdown-bar { top: calc(var(--presale-h) + 88px) !important; }
+    @media (max-width: 480px) {
+      .presale-text { font-size: 12px; }
+      .presale-cta { font-size: 11px; padding: 5px 12px; }
+    }
+  </style>
 </head>
 <body>
+  <!-- PRESALE ANNOUNCEMENT BANNER -->
+  <div class="presale-top-banner" id="presale-banner">
+    <div class="presale-top-inner">
+      <span class="presale-badge">NEW</span>
+      <span class="presale-text">🧢 Official Glizzies hats + jerseys — <strong>Presale now open.</strong> Pledge now, pay when it ships.</span>
+      <a href="../shop.html" class="presale-cta">Pledge Now &rarr;</a>
+      <button class="presale-close" type="button" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <a class="brand" href="../index.html"><img class="brand-wordmark" src="../assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav">
       <a href="../team.html#roster">Roster</a>
-      <a href="../players/">Players</a>
       <a href="../recaps/">Recaps</a>
       <a href="../lore.html">Lore</a>
       <a href="../game.html">Play</a>
       <a href="../shop.html">Shop</a>
       <a href="../sponsors.html">Sponsors</a>
+      <a href="../brand.html">Brand</a>
       <a href="../faq.html">FAQ</a>
       <a href="../team.html#schedule" class="nav-cta">Schedule</a>
-      <a class="instagram-link" href="https://www.instagram.com/utah_glizzies_hockey/" target="_blank" rel="noreferrer">IG</a>
+      <a class="instagram-link" href="https://www.instagram.com/UtahGlizziesHockey/" target="_blank" rel="noreferrer">IG</a>
     </nav>
   </header>
   <div class="subpage-hero">
@@ -98,7 +149,7 @@
   <footer class="site-footer"><div class="footer-inner">
     <a class="footer-brand" href="../index.html"><img src="../assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
     <nav class="footer-links">
-      <a href="../index.html">Home</a><a href="../team.html">Team</a><a href="../players/">Players</a>
+      <a href="../index.html">Home</a><a href="../team.html">Team</a>
       <a href="./index.html">Recaps</a><a href="../lore.html">Lore</a><a href="../faq.html">FAQ</a>
     </nav>
     <p class="footer-copy">Utah Glizzies HC &bull; Sandy, UT &bull; utahglizzies.com</p>
@@ -110,5 +161,25 @@
   // sw disabled
   var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1});
   document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  </script>
+  <script id="presale-sticky-js">
+  (function(){
+    function setH(){
+      var b=document.getElementById('presale-banner');
+      var h=(b && b.style.display!=='none') ? b.offsetHeight : 0;
+      document.documentElement.style.setProperty('--presale-h', h+'px');
+    }
+    function init(){
+      var b=document.getElementById('presale-banner');
+      if(b){
+        var c=b.querySelector('.presale-close');
+        if(c) c.addEventListener('click', function(){ b.style.display='none'; setH(); });
+      }
+      setH();
+    }
+    window.addEventListener('resize', setH);
+    if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
+    window.addEventListener('load', setH);
+  })();
   </script>
 </body></html>
