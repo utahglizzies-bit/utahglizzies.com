@@ -7,10 +7,15 @@
   <meta name="description" content="Pre-order official Utah Glizzies HC jerseys and hats. Full embroidery, limited run. Pledge now — pay when your gear ships in 8 weeks." />
   <meta property="og:title" content="Utah Glizzies HC — Official Merch Presale" />
   <meta property="og:description" content="Pledge for official Glizzies jerseys and hats. Hats $35, blank jerseys $70, custom jerseys $105. 8-week production. Pay when it ships." />
-  <meta property="og:image" content="https://www.utahglizzies.com/assets/hat-front.jpeg" />
-  <link rel="canonical" href="https://www.utahglizzies.com/shop.html" />
+  <meta property="og:image" content="https://utahglizzies.com/assets/hat-front.jpeg" />
+  <link rel="canonical" href="https://utahglizzies.com/shop.html" />
+  <link rel="alternate" hreflang="en-us" href="https://utahglizzies.com/shop.html" />
+  <link rel="alternate" hreflang="en-ca" href="https://utahglizzies.com/shop.html" />
+  <link rel="alternate" hreflang="en" href="https://utahglizzies.com/shop.html" />
+  <link rel="alternate" hreflang="x-default" href="https://utahglizzies.com/shop.html" />
   <link rel="manifest" href="manifest.json" /><link rel="icon" href="assets/glizzies-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
@@ -229,7 +234,7 @@
   </div>
 
   <header class="site-header" id="top">
-    <a class="brand" href="index.html"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
+    <a class="brand" href="index.html"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" decoding="async" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       <a href="team.html#roster">Roster</a>
@@ -273,20 +278,20 @@
       <div class="presale-card">
         <div class="hat-gallery">
           <div class="hat-gallery-main">
-            <img id="hatMain" src="assets/hat-front.jpeg" alt="Utah Glizzies Hat" />
+            <img id="hatMain" src="assets/hat-front.jpeg" alt="Utah Glizzies Hat" loading="lazy" decoding="async" />
           </div>
           <div class="hat-gallery-thumbs">
             <button class="hat-thumb active" onclick="hatSwap(this, 'assets/hat-front.jpeg', 'Front view')">
-              <img src="assets/hat-front.jpeg" alt="Front" />
+              <img src="assets/hat-front.jpeg" alt="Front" loading="lazy" decoding="async" />
             </button>
             <button class="hat-thumb" onclick="hatSwap(this, 'assets/hat-side.jpeg', 'Side — hockey sticks + glizzy embroidery')">
-              <img src="assets/hat-side.jpeg" alt="Side" />
+              <img src="assets/hat-side.jpeg" alt="Side" loading="lazy" decoding="async" />
             </button>
             <button class="hat-thumb" onclick="hatSwap(this, 'assets/hat-back.jpeg', 'Back — Utah Glizzies Hockey Club')">
-              <img src="assets/hat-back.jpeg" alt="Back" />
+              <img src="assets/hat-back.jpeg" alt="Back" loading="lazy" decoding="async" />
             </button>
             <button class="hat-thumb" onclick="hatSwap(this, 'assets/hat-inside.jpeg', 'Inside — custom brim art')">
-              <img src="assets/hat-inside.jpeg" alt="Inside brim" />
+              <img src="assets/hat-inside.jpeg" alt="Inside brim" loading="lazy" decoding="async" />
             </button>
           </div>
         </div>
@@ -310,7 +315,7 @@
       <!-- BLANK JERSEY CARD -->
       <div class="presale-card">
         <div class="presale-card-images" style="background:linear-gradient(135deg,#062817,#0a1f12);display:flex;align-items:center;justify-content:center;padding:32px;position:relative;">
-          <img src="assets/glizzies-logo.png" alt="Utah Glizzies Blank Jersey" style="max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" />
+          <img src="assets/glizzies-logo.png" alt="Utah Glizzies Blank Jersey" style="max-height:200px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" decoding="async" />
           <span style="position:absolute;top:14px;right:14px;background:rgba(225,162,26,0.15);border:1px solid rgba(225,162,26,0.4);color:var(--gold);font-family:monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border-radius:4px;">Logo Only</span>
         </div>
         <div class="presale-card-body">
@@ -341,7 +346,7 @@
       <div class="presale-card">
         <div class="presale-card-images" style="background:linear-gradient(135deg,#062817,#0a1f12);display:flex;align-items:center;justify-content:center;padding:32px;position:relative;">
           <div style="text-align:center;">
-            <img src="assets/glizzies-logo.png" alt="Utah Glizzies Custom Jersey" style="max-height:160px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" />
+            <img src="assets/glizzies-logo.png" alt="Utah Glizzies Custom Jersey" style="max-height:160px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.4));" decoding="async" />
             <div style="margin-top:12px;font-family:var(--display);font-size:1.4rem;color:var(--cream);letter-spacing:2px;text-transform:uppercase;">YOUR NAME</div>
             <div style="font-family:var(--display);font-size:2rem;color:var(--gold);">00</div>
           </div>
@@ -472,7 +477,7 @@
       <form class="pledge-form" id="pledgeForm" action="https://formsubmit.co/utahglizzies@gmail.com" method="POST">
         <!-- FormSubmit config -->
         <input type="hidden" name="_subject" value="🏒 New Glizzies Merch Pledge!" />
-        <input type="hidden" name="_next" value="https://www.utahglizzies.com/shop.html?pledged=true" />
+        <input type="hidden" name="_next" value="https://utahglizzies.com/shop.html?pledged=true" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
 
@@ -593,7 +598,7 @@
   </section>
 
   <footer class="site-footer"><div class="footer-inner">
-    <a class="footer-brand" href="index.html"><img src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
+    <a class="footer-brand" href="index.html"><img src="assets/glizzies-wordmark.png" alt="Utah Glizzies" decoding="async" /></a>
     <nav class="footer-links"><a href="index.html">Home</a><a href="team.html#roster">Roster</a><a href="recaps/">Recaps</a><a href="game.html">Play</a><a href="shop.html">Shop</a><a href="community.html">The Pit</a><a href="blog.html">Blog</a><a href="sponsors.html">Sponsors</a><a href="brand.html">Brand</a><a href="index.html#faq">FAQ</a></nav>
     <p class="footer-copy">Utah Glizzies HC &bull; Sandy, UT &bull; utahglizzies.com</p>
   </div></footer>
