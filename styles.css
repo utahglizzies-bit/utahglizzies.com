@@ -4172,7 +4172,7 @@ body {
   .pit-blog-grid { grid-template-columns: 1fr; }
 }
 
-/* FAQ on homepage */
+/* FAQ on homepage — light frosted glass over rink background */
 .faq-home-section .faq-list {
   display: flex;
   flex-direction: column;
@@ -4181,15 +4181,17 @@ body {
   margin: 0 auto;
 }
 .faq-home-section .faq-item {
-  background: rgba(255, 244, 201, 0.06);
-  border: 1px solid rgba(255, 244, 201, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border: 2px solid var(--green);
   border-radius: 12px;
   overflow: hidden;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(7, 16, 13, 0.08);
 }
 .faq-home-section .faq-item.is-open {
-  background: rgba(255, 244, 201, 0.1);
-  border-color: var(--gold);
+  border-color: var(--red);
+  box-shadow: 0 8px 22px rgba(7, 16, 13, 0.14);
 }
 .faq-home-section .faq-question {
   width: 100%;
@@ -4199,7 +4201,7 @@ body {
   gap: 16px;
   background: transparent;
   border: none;
-  color: var(--cream);
+  color: var(--ink);
   font-family: var(--sports);
   font-size: 1.05rem;
   font-weight: 800;
@@ -4208,12 +4210,17 @@ body {
   cursor: pointer;
   letter-spacing: 0.02em;
 }
+.faq-home-section .faq-question:hover {
+  color: var(--red);
+}
 .faq-home-section .faq-chevron {
   transition: transform 0.2s;
   flex-shrink: 0;
+  color: var(--green);
 }
 .faq-home-section .faq-item.is-open .faq-chevron {
   transform: rotate(180deg);
+  color: var(--red);
 }
 .faq-home-section .faq-answer {
   max-height: 0;
@@ -4224,8 +4231,12 @@ body {
   max-height: 600px;
 }
 .faq-home-section .faq-answer p {
-  padding: 0 22px 20px;
+  padding: 0 22px 22px;
   margin: 0;
-  color: rgba(255, 244, 201, 0.85);
+  color: var(--ink);
+  opacity: 0.82;
   line-height: 1.6;
+  border-top: 1px solid rgba(6, 40, 23, 0.12);
+  padding-top: 16px;
+  margin: 0 22px;
 }
