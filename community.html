@@ -34,19 +34,19 @@
   </style>
   <style>
     .pit-hero { background: var(--green); color: var(--cream); padding: clamp(48px,8vw,96px) clamp(18px,4vw,48px) clamp(32px,5vw,64px); text-align: center; }
-    .pit-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .pit-eyebrow { font-family: monospace; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--cream); margin-bottom: 16px; }
     .pit-title { font-family: var(--display); font-size: clamp(3.5rem,10vw,8rem); line-height: 0.9; text-transform: uppercase; color: var(--cream); margin: 0 0 24px; }
     .pit-title span { color: var(--gold); }
     .pit-subtitle { font-size: clamp(1rem,2vw,1.2rem); max-width: 600px; margin: 0 auto; color: rgba(255,244,201,0.82); line-height: 1.6; }
     .how-steps { display: grid; grid-template-columns: repeat(auto-fill,minmax(190px,1fr)); gap: 20px; margin-top: 32px; }
     .how-step { text-align: center; padding: 24px 16px; }
-    .how-num { font-family: var(--display); font-size: 4rem; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+    .how-num { font-family: var(--display); font-size: 4rem; color: var(--red); line-height: 1; margin-bottom: 10px; }
     .how-step h3 { font-size: 1rem; font-weight: 700; margin: 0 0 8px; text-transform: uppercase; }
     .how-step p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; }
     .antic-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(270px,1fr)); gap: 20px; padding: clamp(24px,4vw,40px) 0; }
     .antic-card { background: var(--paper); border: 2px solid var(--line); border-radius: 12px; padding: 20px 24px; }
     .antic-badge { display: inline-block; font-family: monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; margin-bottom: 12px; }
-    .antic-badge.deployed { background: var(--green); color: var(--gold); }
+    .antic-badge.deployed { background: var(--green); color: var(--cream); }
     .antic-badge.review { background: var(--orange); color: var(--cream); }
     .antic-badge.open { background: var(--muted); color: var(--cream); }
     .antic-card h3 { font-family: var(--display); font-size: 1.4rem; text-transform: uppercase; margin: 0 0 8px; color: var(--green); }
@@ -57,7 +57,7 @@
     .pit-form-wrap h2 span { color: var(--gold); }
     .pit-form-wrap > p { color: rgba(255,244,201,0.72); margin: 0 0 28px; font-size: 15px; }
     .pit-form { display: flex; flex-direction: column; gap: 16px; }
-    .pit-form label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--gold); }
+    .pit-form label { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--cream); }
     .pit-form input, .pit-form select, .pit-form textarea { background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,244,201,0.2); border-radius: 8px; padding: 12px 16px; color: var(--cream); font-family: var(--body); font-size: 15px; transition: border-color 0.15s; }
     .pit-form input:focus, .pit-form select:focus, .pit-form textarea:focus { outline: none; border-color: var(--gold); }
     .pit-form select option { background: var(--ink); }
@@ -83,13 +83,11 @@
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
       <a href="team.html#roster">Roster</a>
       <a href="recaps/">Recaps</a>
-      <a href="lore.html">Lore</a>
       <a href="game.html">Play</a>
       <a href="shop.html">Shop</a>
       <a href="community.html" aria-current="page">The Pit</a>
       <a href="blog.html">Blog</a>
       <a href="sponsors.html">Sponsors</a>
-      <a href="faq.html">FAQ</a>
       <a href="team.html#schedule" class="nav-cta">Schedule</a>
       <a class="instagram-link" href="https://www.instagram.com/UtahGlizziesHockey/" target="_blank" rel="noreferrer">IG</a>
     </nav>
@@ -135,7 +133,7 @@
 
     <section class="section" style="background:var(--green);color:var(--cream);padding:clamp(32px,5vw,56px) clamp(18px,4vw,48px);border-radius:16px;margin-bottom:clamp(24px,4vw,40px);">
       <div class="section-heading">
-        <small style="color:var(--gold);">Community Playbook</small>
+        <small style="color:var(--cream);font-weight:700;letter-spacing:0.2em;text-transform:uppercase;">Community Playbook</small>
         <h2 style="color:var(--cream);">Antics We Actually Did</h2>
         <p style="color:rgba(255,244,201,0.75);">These made it off the bench and onto the ice. You're welcome, Utah.</p>
       </div>
@@ -243,11 +241,7 @@
 
   <footer class="site-footer"><div class="footer-inner">
     <a class="footer-brand" href="index.html"><img src="assets/glizzies-wordmark.png" alt="Utah Glizzies" /></a>
-    <nav class="footer-links">
-      <a href="index.html">Home</a><a href="team.html">Team</a>
-      <a href="recaps/">Recaps</a><a href="lore.html">Lore</a>
-      <a href="community.html">The Pit</a><a href="blog.html">Blog</a>
-    </nav>
+    <nav class="footer-links"><a href="index.html">Home</a><a href="team.html#roster">Roster</a><a href="recaps/">Recaps</a><a href="game.html">Play</a><a href="shop.html">Shop</a><a href="community.html">The Pit</a><a href="blog.html">Blog</a><a href="sponsors.html">Sponsors</a><a href="brand.html">Brand</a><a href="index.html#faq">FAQ</a></nav>
     <p class="footer-copy">Utah Glizzies HC &bull; Sandy, UT &bull; utahglizzies.com</p>
   </div></footer>
   <script>

@@ -4097,3 +4097,135 @@ body {
   max-width: 700px;
 }
 .game-photo-caption span { color: var(--gold); }
+
+
+/* ===== Homepage cleanup additions (2026-06-22) ===== */
+
+/* Compact lore preview */
+.lore-mini {
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 4vw, 40px);
+}
+.lore-mini-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(16px, 3vw, 32px);
+  flex-wrap: wrap;
+}
+.lore-mini-inner .eyebrow {
+  margin-bottom: 8px;
+}
+.lore-mini-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0;
+  line-height: 1.15;
+}
+.lore-mini .button {
+  flex-shrink: 0;
+}
+
+/* The Pit + Blog promo grid */
+.pit-blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 3vw, 28px);
+  padding: 0;
+}
+.pit-blog-grid .promo-card {
+  background: var(--cream);
+  color: var(--ink);
+  border-radius: 16px;
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 3px solid var(--green);
+  position: relative;
+  overflow: hidden;
+}
+.pit-blog-grid .promo-pit {
+  background: linear-gradient(135deg, #fff4c9 0%, #ffe89d 100%);
+}
+.pit-blog-grid .promo-blog {
+  background: linear-gradient(135deg, #fff4c9 0%, #ffd7a8 100%);
+}
+.pit-blog-grid .promo-card .eyebrow {
+  color: var(--red);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+.pit-blog-grid .promo-card h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  margin: 0;
+  line-height: 1.15;
+}
+.pit-blog-grid .promo-card p {
+  color: var(--ink);
+  opacity: 0.85;
+  margin: 0;
+}
+.pit-blog-grid .promo-card .button {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+@media (max-width: 760px) {
+  .pit-blog-grid { grid-template-columns: 1fr; }
+}
+
+/* FAQ on homepage */
+.faq-home-section .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.faq-home-section .faq-item {
+  background: rgba(255, 244, 201, 0.06);
+  border: 1px solid rgba(255, 244, 201, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, background 0.2s;
+}
+.faq-home-section .faq-item.is-open {
+  background: rgba(255, 244, 201, 0.1);
+  border-color: var(--gold);
+}
+.faq-home-section .faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  color: var(--cream);
+  font-family: var(--sports);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-align: left;
+  padding: 18px 22px;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+.faq-home-section .faq-chevron {
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faq-home-section .faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+}
+.faq-home-section .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-home-section .faq-item.is-open .faq-answer {
+  max-height: 600px;
+}
+.faq-home-section .faq-answer p {
+  padding: 0 22px 20px;
+  margin: 0;
+  color: rgba(255, 244, 201, 0.85);
+  line-height: 1.6;
+}
