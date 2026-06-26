@@ -1,57 +1,105 @@
 #!/usr/bin/env python3
 """
 Utah Glizzies — Fully Automatic Weekly Update Script
-Fetches GameSheet data, generates AI content via Claude API,
-updates siteContent.js, and commits. GitHub Action deploys to Cloudflare.
+Fetches GameSheet data via Playwright (headless browser), generates AI content
+via Claude API, updates siteContent.js, and commits. GitHub Action deploys to Cloudflare.
+
+USAGE:
+  python3 scripts/auto-update.py                        # Full auto mode
+  python3 scripts/auto-update.py --manual "2026-07-03,Salty Boys,5,3"  # Override with known result
+  python3 scripts/auto-update.py --dry-run              # Print what would change, don't write
+
+REQUIREMENTS (GitHub Actions installs these):
+  pip install requests playwright
+  playwright install chromium --with-deps
 """
 
-import os, re, json, requests
+import os, re, sys, json, requests, argparse
 from datetime import datetime, timezone
 
 TEAM_ID       = os.environ.get("GAMESHEET_TEAM_ID", "f6cc3e10-5c24-4049-b6a9-bf2d57024f4a")
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 SITE_FILE     = "src/data/siteContent.js"
-GAMESHEET_API = f"https://api.gamesheet.app/api/v4/teams/{TEAM_ID}"
+GAMESHEET_URL = f"https://teams.gamesheet.app/teams/{TEAM_ID}/schedule"
 
 HEADERS = {"Accept": "application/json", "User-Agent": "UtahGlizziesBot/1.0"}
 
 
 # ─── 1. FETCH GAMESHEET DATA ────────────────────────────────────────────────
 
-def fetch_gamesheet_schedule():
-    """Try GameSheet API for schedule results."""
+def scrape_gamesheet_playwright():
+    """Scrape the Gamesheet SPA using a headless browser. Returns list of game dicts."""
     try:
-        r = requests.get(f"{GAMESHEET_API}/schedule", headers=HEADERS, timeout=10)
-        if r.status_code == 200:
-            return r.json()
+        from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
+    except ImportError:
+        print("⚠️  Playwright not installed. Run: pip install playwright && playwright install chromium")
+        return None
+
+    print("🌐 Launching headless browser to scrape Gamesheet...")
+    games = []
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(args=["--no-sandbox", "--disable-dev-shm-usage"])
+            page = browser.new_page()
+            page.goto(GAMESHEET_URL, timeout=30000)
+
+            # Wait for schedule rows to render (Vue SPA needs time)
+            try:
+                page.wait_for_selector(".schedule-row, .game-row, [class*='game'], [class*='schedule']",
+                                       timeout=10000)
+            except PWTimeout:
+                print("   ⚠️  No schedule rows found within timeout — page may still be loading")
+
+            # Dump the full page content for parsing
+            content = page.content()
+            browser.close()
+
+        # Parse completed games: look for score patterns like "8 - 1" near team names
+        # GameSheet renders: home team | score | date | status
+        completed = re.findall(
+            r'(?:FINAL|Final|final).*?(\d{4}-\d{2}-\d{2})|(\d{4}-\d{2}-\d{2}).*?(?:FINAL|Final|final)',
+            content
+        )
+        print(f"   Found {len(completed)} potential final game references")
+
+        # More targeted: look for score blocks
+        score_blocks = re.findall(
+            r'(\d{4}-\d{2}-\d{2})[^<]*?(\d+)\s*[-–]\s*(\d+)',
+            content
+        )
+        for date, s1, s2 in score_blocks:
+            games.append({"date": date, "score1": int(s1), "score2": int(s2)})
+
+        if games:
+            print(f"   ✅ Scraped {len(games)} games with scores")
+        else:
+            print("   ⚠️  Could not parse scores from rendered HTML — Gamesheet layout may have changed")
+
     except Exception as e:
-        print(f"GameSheet schedule fetch failed: {e}")
+        print(f"   ❌ Playwright scrape failed: {e}")
+
+    return games if games else None
+
+
+def fetch_gamesheet_api():
+    """Try the Gamesheet REST API (currently returns empty — kept for future compatibility)."""
+    for path in [
+        f"https://api.gamesheet.app/api/v4/teams/{TEAM_ID}/schedule",
+        f"https://api.gamesheet.app/v4/teams/{TEAM_ID}/schedule",
+    ]:
+        try:
+            r = requests.get(path, headers=HEADERS, timeout=10)
+            if r.status_code == 200 and r.content:
+                data = r.json()
+                if data:
+                    print(f"✅ GameSheet API responded at {path}")
+                    return data
+        except Exception:
+            pass
     return None
 
-def fetch_gamesheet_stats():
-    """Fetch player stats from GameSheet."""
-    try:
-        r = requests.get(f"{GAMESHEET_API}/stats", headers=HEADERS, timeout=10)
-        if r.status_code == 200:
-            return r.json()
-    except Exception as e:
-        print(f"GameSheet stats fetch failed: {e}")
-    return None
 
-def fetch_gamesheet_standings():
-    """Fetch team standings from GameSheet."""
-    try:
-        # Try common GameSheet API patterns
-        for path in ["/standings", "/standing", "/season"]:
-            r = requests.get(f"{GAMESHEET_API}{path}", headers=HEADERS, timeout=10)
-            if r.status_code == 200:
-                return r.json()
-    except Exception as e:
-        print(f"GameSheet standings fetch failed: {e}")
-    return None
-
-
-# ─── 2. READ CURRENT siteContent.js ─────────────────────────────────────────
+# ─── 2. READ / WRITE siteContent.js ─────────────────────────────────────────
 
 def read_site_content():
     with open(SITE_FILE, "r") as f:
@@ -60,32 +108,25 @@ def read_site_content():
 def write_site_content(content):
     with open(SITE_FILE, "w") as f:
         f.write(content)
-    print(f"✅ siteContent.js updated")
+    print("✅ siteContent.js written")
 
 
-# ─── 3. PARSE CURRENT SCHEDULE FROM siteContent.js ──────────────────────────
+# ─── 3. PARSE SCHEDULE FROM siteContent.js ──────────────────────────────────
 
-def parse_current_schedule(js):
-    """Extract schedule array from JS to find what's already final."""
-    try:
-        matches = re.findall(
-            r'\{[^}]*date:\s*"([\d-]+)"[^}]*opponent:\s*"([^"]+)"[^}]*status:\s*"(\w+)"[^}]*\}',
-            js, re.DOTALL
-        )
-        return [{
-            "date": m[0],
-            "opponent": m[1],
-            "status": m[2]
-        } for m in matches]
-    except:
-        return []
+def parse_schedule(js):
+    """Extract schedule entries from siteContent.js."""
+    matches = re.findall(
+        r'\{[^}]*?date:\s*"([\d-]+)"[^}]*?opponent:\s*"([^"]+)"[^}]*?status:\s*"(\w+)"[^}]*?\}',
+        js, re.DOTALL
+    )
+    return [{"date": m[0], "opponent": m[1], "status": m[2]} for m in matches]
 
 
-# ─── 4. CALL CLAUDE API ──────────────────────────────────────────────────────
+# ─── 4. CLAUDE API ───────────────────────────────────────────────────────────
 
 def claude(prompt, system="You are the Utah Glizzies HC content writer. Beer league hockey, funny but clean, ESPN-style promo energy, hot dog branding. Keep it sharp and under 200 words per section."):
     if not ANTHROPIC_KEY:
-        print("⚠️  No ANTHROPIC_API_KEY set — skipping AI content generation")
+        print("⚠️  No ANTHROPIC_API_KEY — skipping AI content generation")
         return None
     try:
         r = requests.post(
@@ -105,268 +146,251 @@ def claude(prompt, system="You are the Utah Glizzies HC content writer. Beer lea
         )
         if r.status_code == 200:
             return r.json()["content"][0]["text"].strip()
-        else:
-            print(f"Claude API error: {r.status_code} {r.text}")
+        print(f"Claude API error: {r.status_code}")
     except Exception as e:
-        print(f"Claude API call failed: {e}")
+        print(f"Claude API failed: {e}")
     return None
 
 
-def generate_game_recap(opponent, glizzies_score, opponent_score, date):
-    result = "win" if glizzies_score > opponent_score else "loss"
-    prompt = f"""
-Write a short game recap for Utah Glizzies HC.
-Game: Glizzies {glizzies_score}, {opponent} {opponent_score} — {"WIN" if result=="win" else "LOSS"}
-Date: {date}
-
-Return ONLY valid JSON like this (no markdown, no extra text):
-{{
-  "recap": "2-3 sentence game recap in Glizzies brand voice",
-  "momentOfGame": "1 sentence describing the key play or moment",
-  "starOne": "Player nameplate and reason (e.g. GLIZZARD OF OZ — 2 goals, carried the offense)",
-  "starTwo": "Player nameplate and reason",
-  "starThree": "Player nameplate and reason"
-}}
-"""
-    text = claude(prompt)
-    if text:
-        try:
-            text = re.sub(r'^```json\s*', '', text.strip())
-            text = re.sub(r'\s*```$', '', text.strip())
-            return json.loads(text)
-        except:
-            print(f"Could not parse Claude recap JSON: {text[:200]}")
-    return None
-
-
-def generate_matchup_content(next_opponent, next_date, next_time, last_result):
-    prompt = f"""
-Write matchup preview content for Utah Glizzies HC vs {next_opponent}.
-Game: {next_date} at {next_time}
-Last game result: {last_result}
+def generate_game_recap(opponent, gs, opp, date):
+    result = "WIN" if gs > opp else "LOSS"
+    prompt = f"""Write a short game recap for Utah Glizzies HC.
+Game: Glizzies {gs}, {opponent} {opp} — {result}  |  Date: {date}
 
 Return ONLY valid JSON (no markdown):
 {{
-  "title": "Matchup title (catchy, like 'Playoff Briefing: Shake The Salt')",
-  "threatLevel": "Funny threat level (like 'Full Chili Dog Emergency')",
-  "storyline": "2-3 sentence matchup storyline in Glizzies voice",
-  "keys": ["Key 1 to winning", "Key 2", "Key 3", "Key 4"]
-}}
-"""
+  "recap": "2-3 sentence recap in Glizzies brand voice",
+  "momentOfGame": "1 sentence key moment",
+  "starOne": "Nameplate — reason (e.g. GLIZZARD OF OZ — 2 goals)",
+  "starTwo": "Nameplate — reason",
+  "starThree": "Nameplate — reason"
+}}"""
     text = claude(prompt)
     if text:
         try:
-            text = re.sub(r'^```json\s*', '', text.strip())
-            text = re.sub(r'\s*```$', '', text.strip())
-            return json.loads(text)
-        except:
-            print(f"Could not parse Claude matchup JSON: {text[:200]}")
+            return json.loads(re.sub(r'^```json\s*|\s*```$', '', text.strip()))
+        except Exception:
+            pass
+    return None
+
+
+def generate_matchup_content(opponent, next_date, next_time, last_result, game_type="Playoff"):
+    prompt = f"""Write matchup preview for Utah Glizzies HC vs {opponent}.
+Game: {next_date} at {next_time} — {game_type}
+Last result: {last_result}
+
+Return ONLY valid JSON (no markdown):
+{{
+  "title": "Catchy matchup title",
+  "threatLevel": "Funny threat level",
+  "storyline": "2-3 sentence storyline in Glizzies voice",
+  "keys": ["Key 1", "Key 2", "Key 3", "Key 4", "Key 5"]
+}}"""
+    text = claude(prompt)
+    if text:
+        try:
+            return json.loads(re.sub(r'^```json\s*|\s*```$', '', text.strip()))
+        except Exception:
+            pass
     return None
 
 
 def generate_chirps(opponent):
-    prompt = f"""
-Write 3 funny opponent chirp cards for {opponent} players.
-These are light-hearted beer league chirps — funny but never mean.
+    prompt = f"""Write 3 funny opponent chirp cards for {opponent} in a beer league hockey game.
+Light-hearted, never mean — bench chirp energy.
 
 Return ONLY valid JSON (no markdown):
 [
-  {{
-    "playerName": "Player name or 'The Bench'",
-    "number": "Jersey number or '00'",
-    "moment": "Short label for the chirp topic",
-    "lines": ["Chirp line 1", "Chirp line 2", "Chirp line 3"]
-  }},
-  {{ ... }},
-  {{ ... }}
-]
-"""
+  {{"playerName": "name or 'The Bench'", "number": "##", "moment": "chirp topic", "lines": ["line 1", "line 2", "line 3"]}},
+  {{...}},
+  {{...}}
+]"""
     text = claude(prompt)
     if text:
         try:
-            text = re.sub(r'^```json\s*', '', text.strip())
-            text = re.sub(r'\s*```$', '', text.strip())
-            return json.loads(text)
-        except:
-            print(f"Could not parse Claude chirps JSON: {text[:200]}")
+            return json.loads(re.sub(r'^```json\s*|\s*```$', '', text.strip()))
+        except Exception:
+            pass
     return None
 
 
 # ─── 5. UPDATE siteContent.js SECTIONS ──────────────────────────────────────
 
-def update_last_game(js, opponent, gs, os_, date, recap_data):
-    result = "win" if gs > os_ else "loss"
-    recap  = recap_data.get("recap", f"Glizzies {gs}, {opponent} {os_}.") if recap_data else f"Glizzies {gs}, {opponent} {os_}."
-    moment = recap_data.get("momentOfGame", "Great effort by the whole team.") if recap_data else "Great effort."
+def update_last_game(js, opponent, gs, opp, date, recap):
+    result = "win" if gs > opp else "loss"
+    recap_text  = recap.get("recap", f"Glizzies {gs}, {opponent} {opp}.") if recap else f"Glizzies {gs}, {opponent} {opp}."
+    moment_text = recap.get("momentOfGame", "Great team effort.") if recap else "Great team effort."
+    stars_block = ""
+    if recap and recap.get("starOne"):
+        stars_block = f"""
+    threeStars: [
+      {{ name: "{recap.get('starOne','')}", star: 1 }},
+      {{ name: "{recap.get('starTwo','')}", star: 2 }},
+      {{ name: "{recap.get('starThree','')}", star: 3 }}
+    ],"""
 
     new_block = f"""  lastGame: {{
     opponent: "{opponent}",
     glizziesScore: {gs},
-    opponentScore: {os_},
+    opponentScore: {opp},
     date: "{date}",
     result: "{result}",
-    recap: "{recap.replace(chr(34), chr(39))}",
-    momentOfGame: "{moment.replace(chr(34), chr(39))}","""
+    recap:
+      "{recap_text.replace(chr(34), chr(39))}",
+    momentOfGame:
+      "{moment_text.replace(chr(34), chr(39))}",{stars_block}
+  }},"""
 
-    if recap_data and recap_data.get("starOne"):
-        new_block += f"""
-    threeStars: [
-      {{ name: "{recap_data.get('starOne','')}", star: 1 }},
-      {{ name: "{recap_data.get('starTwo','')}", star: 2 }},
-      {{ name: "{recap_data.get('starThree','')}", star: 3 }}
-    ],"""
-
-    new_block += "\n  },"
-
-    js = re.sub(r'  lastGame:\s*\{.*?\},', new_block, js, flags=re.DOTALL)
-    return js
+    return re.sub(r'  lastGame:\s*\{.*?\},', new_block, js, flags=re.DOTALL)
 
 
-def update_matchup(js, matchup_data, opponent, next_date, next_time):
-    if not matchup_data:
+def update_matchup(js, data, opponent, next_date, next_time):
+    if not data:
         return js
-    keys_str = json.dumps(matchup_data.get("keys", []))
-    new_block = f"""  matchup: {{
-    title: "{matchup_data.get('title','Matchup Preview')}",
-    threatLevel: "{matchup_data.get('threatLevel','Elevated Mustard')}",
+    keys_str = json.dumps(data.get("keys", []))
+    new_block = f"""    matchup: {{
+    title: "{data.get('title', 'Matchup Preview')}",
+    threatLevel: "{data.get('threatLevel', 'Elevated Mustard')}",
     playerToWatch: "TBD",
     opponent: "{opponent}",
     record: "{opponent}: record TBD",
-    storyline: "{matchup_data.get('storyline','').replace(chr(34), chr(39))}",
+    storyline:
+      "{data.get('storyline', '').replace(chr(34), chr(39))}",
     opponentBreakdown: [],
     opponentStats: ["Next up: {opponent}, {next_date} at {next_time}."],
     keys: {keys_str},
   }},"""
-    js = re.sub(r'  matchup:\s*\{.*?\},', new_block, js, flags=re.DOTALL)
-    return js
+    return re.sub(r'    matchup:\s*\{.*?\},', new_block, js, flags=re.DOTALL)
 
 
-def update_chirps(js, chirps_data):
-    if not chirps_data:
+def update_chirps(js, chirps):
+    if not chirps:
         return js
-    chirps_str = json.dumps(chirps_data, indent=4)
-    js = re.sub(r'  opponentChirps:\s*\[.*?\],', f'  opponentChirps: {chirps_str},', js, flags=re.DOTALL)
-    return js
+    chirps_str = json.dumps(chirps, indent=4)
+    return re.sub(r'    opponentChirps:\s*\[.*?\],',
+                  f'    opponentChirps: {chirps_str},', js, flags=re.DOTALL)
 
 
-def mark_game_final(js, date, gs, os_):
-    result = "win" if gs > os_ else "loss"
-    # Find the schedule entry for this date and update it
-    pattern = r'(\{[^}]*date:\s*"' + re.escape(date) + r'"[^}]*status:\s*)"upcoming"'
-    replacement = r'\1"final", glizziesScore: ' + str(gs) + ', opponentScore: ' + str(os_) + ', result: "' + result + '"'
+def mark_game_final(js, date, gs, opp):
+    result = "win" if gs > opp else "loss"
+    pattern = r'(date:\s*"' + re.escape(date) + r'"[^}]*?status:\s*)"upcoming"'
+    replacement = (r'\1"final", glizziesScore: ' + str(gs) +
+                   ', opponentScore: ' + str(opp) +
+                   ', result: "' + result + '"')
     new_js = re.sub(pattern, replacement, js, flags=re.DOTALL)
     if new_js == js:
-        print(f"  ⚠️  Could not find upcoming game for {date} to mark final")
+        print(f"  ⚠️  Could not find upcoming game for {date}")
     else:
-        print(f"  ✅ Marked {date} as final ({gs}-{os_} {result})")
+        print(f"  ✅ {date} → final {gs}-{opp} {result}")
     return new_js
 
 
-# ─── 6. MAIN ORCHESTRATION ───────────────────────────────────────────────────
+def update_cache_bust(js):
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return re.sub(r'// cache-bust: [\d-]+ \S+',
+                  f'// cache-bust: {today} auto-updated', js)
+
+
+# ─── 6. MAIN ─────────────────────────────────────────────────────────────────
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--manual", help="Force a result: 'YYYY-MM-DD,Opponent,gs,opp'")
+    parser.add_argument("--dry-run", action="store_true", help="Print changes, don't write")
+    args = parser.parse_args()
+
     print("🏒 Utah Glizzies Auto-Update Starting...")
     print(f"   Time: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
 
     js = read_site_content()
-    current_schedule = parse_current_schedule(js)
-    upcoming = [g for g in current_schedule if g["status"] == "upcoming"]
-    finals   = [g for g in current_schedule if g["status"] == "final"]
-
+    schedule = parse_schedule(js)
+    upcoming = [g for g in schedule if g["status"] == "upcoming"]
+    finals   = [g for g in schedule if g["status"] == "final"]
     print(f"   Schedule: {len(finals)} final, {len(upcoming)} upcoming")
 
-    # ── Try GameSheet API ──
-    gs_data = fetch_gamesheet_schedule()
     changed = False
+    new_results = []   # list of (date, opponent, gs, opp)
 
-    if gs_data:
-        print("✅ GameSheet data fetched successfully")
-        # Parse GameSheet response — handle various response formats
-        games = []
-        if isinstance(gs_data, list):
-            games = gs_data
-        elif isinstance(gs_data, dict):
-            games = gs_data.get("games", gs_data.get("schedule", gs_data.get("data", [])))
+    # ── Manual override ──
+    if args.manual:
+        parts = args.manual.split(",")
+        if len(parts) == 4:
+            date, opp, gs, opp_s = parts[0].strip(), parts[1].strip(), int(parts[2]), int(parts[3])
+            print(f"\n📋 Manual override: {date} — Glizzies {gs}, {opp} {opp_s}")
+            new_results.append((date, opp, gs, opp_s))
+        else:
+            print("❌ --manual format: 'YYYY-MM-DD,Opponent,glizzies_score,opp_score'")
+            sys.exit(1)
 
-        for game in games:
-            # GameSheet field names vary — try common patterns
-            game_date = (game.get("date") or game.get("gameDate") or game.get("scheduled_at", ""))[:10]
-            home_score = game.get("homeScore") or game.get("home_score") or game.get("homeTeamScore")
-            away_score = game.get("awayScore") or game.get("away_score") or game.get("awayTeamScore")
-            status     = (game.get("status") or game.get("gameStatus") or "").lower()
-
-            if not game_date or home_score is None:
-                continue
-
-            # Check if this game is in our upcoming list and now has a score
-            in_upcoming = any(g["date"] == game_date for g in upcoming)
-            is_complete = "final" in status or "complete" in status or "done" in status
-
-            if in_upcoming and is_complete:
-                # Determine which score is ours
-                home_team = str(game.get("homeTeam") or game.get("home_team") or "").lower()
-                is_home   = "glizz" in home_team or "utah" in home_team
-                gs_score  = int(home_score) if is_home else int(away_score)
-                opp_score = int(away_score) if is_home else int(home_score)
-                opponent  = next((g["opponent"] for g in upcoming if g["date"] == game_date), "Opponent")
-
-                print(f"\n🆕 New result found: {game_date} — Glizzies {gs_score}, {opponent} {opp_score}")
-
-                # Mark final in schedule
-                js = mark_game_final(js, game_date, gs_score, opp_score)
-
-                # Generate AI recap content
-                print("   🤖 Generating game recap via Claude...")
-                recap_data = generate_game_recap(opponent, gs_score, opp_score, game_date)
-
-                # Update lastGame
-                display_date = datetime.strptime(game_date, "%Y-%m-%d").strftime("%b %-d, %Y")
-                js = update_last_game(js, opponent, gs_score, opp_score, display_date, recap_data)
-                print(f"   ✅ lastGame updated")
-
-                changed = True
-
+    # ── Auto-scrape ──
     else:
-        print("⚠️  GameSheet API unavailable — skipping score updates")
-        print("   (Scores must be entered manually or GameSheet API endpoint needs updating)")
+        # Try Playwright scraping first
+        scraped = scrape_gamesheet_playwright()
 
-    # ── Generate matchup + chirps for next upcoming game ──
-    # Re-parse to get updated upcoming list
-    current_schedule = parse_current_schedule(js)
-    upcoming = [g for g in current_schedule if g["status"] == "upcoming"]
+        # Fallback: try REST API
+        if not scraped:
+            scraped = fetch_gamesheet_api()
 
-    if upcoming:
-        next_game = upcoming[0]
-        print(f"\n🎯 Next game: {next_game['date']} vs {next_game['opponent']}")
+        if scraped:
+            for entry in upcoming:
+                for game in scraped:
+                    if game.get("date") == entry["date"]:
+                        # Determine which score is ours — heuristic: Glizzies score is likely higher in wins
+                        # We need context from the page; without it, we can't reliably assign home/away
+                        # For now, flag for manual review
+                        print(f"  ⚠️  Found score for {entry['date']} from scrape — verify manually which team is Glizzies")
+                        print(f"       Raw scores: {game.get('score1')} - {game.get('score2')}")
+        else:
+            print("⚠️  No game data available from Gamesheet — no score updates")
+            print("   To manually enter a result:")
+            print("   python3 scripts/auto-update.py --manual '2026-07-03,Salty Boys,5,3'")
 
-        if ANTHROPIC_KEY:
-            # Only regenerate matchup if we have a new result (or first run)
-            if changed:
-                print("   🤖 Generating matchup preview via Claude...")
-                last_final = [g for g in current_schedule if g["status"] == "final"]
-                last_result = f"Glizzies most recent game was vs {last_final[-1]['opponent']}" if last_final else "coming off a break"
-                matchup_data = generate_matchup_content(
-                    next_game["opponent"], next_game["date"], "game time TBD", last_result
-                )
-                if matchup_data:
-                    js = update_matchup(js, matchup_data, next_game["opponent"], next_game["date"], "game time TBD")
-                    print("   ✅ matchup updated")
+    # ── Apply new results ──
+    for date, opponent, gs, opp in new_results:
+        in_upcoming = any(g["date"] == date for g in upcoming)
+        if not in_upcoming:
+            print(f"  ⚠️  {date} not in upcoming schedule — skipping")
+            continue
 
-                print("   🤖 Generating opponent chirps via Claude...")
-                chirps = generate_chirps(next_game["opponent"])
-                if chirps:
-                    js = update_chirps(js, chirps)
-                    print("   ✅ opponentChirps updated")
+        js = mark_game_final(js, date, gs, opp)
 
-                changed = True
+        print(f"   🤖 Generating recap via Claude...")
+        display_date = datetime.strptime(date, "%Y-%m-%d").strftime("%b %-d, %Y")
+        recap = generate_game_recap(opponent, gs, opp, display_date)
+        js = update_last_game(js, opponent, gs, opp, display_date, recap)
+        changed = True
 
-    # ── Write file if anything changed ──
+    # ── Refresh matchup + chirps for next upcoming game ──
+    schedule = parse_schedule(js)
+    upcoming = [g for g in schedule if g["status"] == "upcoming"]
+
+    if upcoming and changed and ANTHROPIC_KEY:
+        nxt = upcoming[0]
+        print(f"\n🎯 Generating content for: {nxt['date']} vs {nxt['opponent']}")
+
+        last_final = [g for g in schedule if g["status"] == "final"]
+        last_result = f"just beat {last_final[-1]['opponent']}" if last_final else "coming off a break"
+
+        matchup = generate_matchup_content(nxt["opponent"], nxt["date"], "game time TBD", last_result)
+        if matchup:
+            js = update_matchup(js, matchup, nxt["opponent"], nxt["date"], "game time TBD")
+
+        chirps = generate_chirps(nxt["opponent"])
+        if chirps:
+            js = update_chirps(js, chirps)
+        changed = True
+
     if changed:
-        write_site_content(js)
-        print("\n✅ siteContent.js updated — GitHub Action will commit and push")
-        print("   Cloudflare Pages will auto-deploy in ~30 seconds after push")
+        js = update_cache_bust(js)
+        if args.dry_run:
+            print("\n🔍 DRY RUN — changes computed but NOT written")
+        else:
+            write_site_content(js)
+            print("\n✅ siteContent.js updated — push to GitHub and Cloudflare will auto-deploy")
+            print("   Or run: bash deploy.sh  (direct Wrangler deploy)")
     else:
-        print("\n✅ No changes detected — site is already up to date")
+        print("\n✅ No new results — site already up to date")
+
 
 if __name__ == "__main__":
     main()

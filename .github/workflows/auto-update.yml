@@ -2,17 +2,23 @@ name: Auto-Update Glizzies Site
 
 on:
   schedule:
-    # Runs at 3 AM Mountain Time every Wednesday and Saturday
-    # (after typical Tuesday/Thursday/Friday game nights)
-    - cron: '0 9 * * 3'   # Wednesday 3am MT
-    - cron: '0 9 * * 6'   # Saturday 3am MT
-  workflow_dispatch:        # Manual trigger button on GitHub
+    # ── Regular season / playoff Fridays ──
+    # Games typically 8-10:30 PM MT. Run 1hr after a 10:30 PM game = 11:30 PM MT = 5:30 AM UTC Sat
+    - cron: '30 5 * * 6'   # Saturday 5:30 AM UTC = Friday 11:30 PM MT (post-game)
+
+    # ── Championship game: July 3 at 8 PM MT = 2 AM UTC July 4 → run at 3 AM UTC July 4 ──
+    - cron: '0 3 4 7 *'    # July 4, 3:00 AM UTC = July 3, 9:00 PM MT (1hr after 8pm game)
+
+    # ── Fallback: Wednesday 3 AM MT for Thursday game nights ──
+    - cron: '0 9 * * 3'    # Wednesday 9:00 AM UTC = 3:00 AM MT
+
+  workflow_dispatch:        # Manual trigger button on GitHub Actions
 
 jobs:
   update-site:
     runs-on: ubuntu-latest
     permissions:
-      contents: write       # Allows the Action to commit + push
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -23,8 +29,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install requests
+      - name: Install Python dependencies
+        run: pip install requests playwright
+
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
 
       - name: Run auto-update script
         env:
@@ -38,4 +47,4 @@ jobs:
           git config --global user.name "Glizzies Bot"
           git add -A
           git diff --quiet HEAD || (git commit -m "🤖 Auto-update: $(date '+%Y-%m-%d') game data + AI content" && git push)
-          echo "Done — Cloudflare will deploy automatically if files changed"
+          echo "Done — Cloudflare Pages deploys automatically on push to main"
