@@ -1,4 +1,4 @@
-// cache-bust: 2026-06-26 misfits-demolished-championship-bound
+// cache-bust: 2026-06-26 rawdog-unc
 window.siteContent = {
   teamInfo: {
     name: "Utah Glizzies HC",
@@ -461,20 +461,20 @@ window.siteContent = {
     },
   ],
 rawDogOfNight: {
-    winner: "Walker Krebs",
-    nameplate: "GLIZZ TRAIN",
-    gameNickname: "Big Daddy Dangles",
-    number: "58",
-    game: "@ Saucer Kings — June 18, 2026",
+    winner: "Brian Coburn",
+    nameplate: "UNCLE GLIZZBURN",
+    gameNickname: "Unc",
+    number: "73",
+    game: "vs The Misfits — June 25, 2026",
     nominatedBy: "THE BENCH",
-    reason: "Big Daddy Dangles earned the alias the hard way, toe-dragging through defenders all night like it was a full-time job. Walker Krebs put in the work and proved every hater, doubter, and quiet skeptic dead wrong. They wrote him off. He responded with a two-word press release: \u2018I\u2019m back.\u2019",
-    citation: "Official citation: GLIZZ TRAIN #58, operating under the alias Big Daddy Dangles, dragged pucks through traffic and dangled the doubt right out of the building. Nominated by the whole bench. The defenders he danced declined to comment. Somewhere, a Jordan shrug was earned.",
-    achievement: "Proved the haters wrong",
-    honorableMention: "Every defender he danced through",
+    reason: "Unc opened the scoring and set the tone for the entire 8-1 demolition. The Glizzy mascot showed up in the stands and gave him the extra mustard, and from there nobody on the bench wanted him to stop. He obliged. Because no moment is too big for Unc.",
+    citation: "Official citation: UNCLE GLIZZBURN #73 took one look at the Glizzy mascot in the crowd, found another gear of mustard, and opened the scoring like a man who has done this a thousand times. The veteran presence delivered when the moment got big. The Misfits declined to comment. Unc just nodded.",
+    achievement: "Opened the scoring",
+    honorableMention: "The Glizzy mascot in the stands",
     stats: [
-      { icon: "🪄", label: "Defenders Dangled" },
-      { icon: "🔥", label: "Doubters Silenced" },
-      { icon: "🐐", label: "\u2018I\u2019m Back\u2019 Energy" },
+      { icon: "🌭", label: "Extra Mustard Unlocked" },
+      { icon: "🎯", label: "Opened The Scoring" },
+      { icon: "🧓", label: "No Moment Too Big" },
     ],
   },
   gameStats: {
