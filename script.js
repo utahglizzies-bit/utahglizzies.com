@@ -341,11 +341,20 @@ function renderTeamLore() {
   // Lore lives at site root (team.html, lore.html) so profile links are relative to root.
   const onLorePage = window.location.pathname.includes("/players/");
   const prefix = onLorePage ? "../players/" : "players/";
+  // Build a nameplate -> jersey number lookup from the roster data.
+  const numberByName = {};
+  (siteContent.players || []).forEach((p) => {
+    numberByName[loreProfileSlug(p.nameplate)] = p.number;
+  });
   target.innerHTML = lore.map((player) => {
-    const href = `${prefix}${player.profileSlug || loreProfileSlug(player.nameplate)}.html`;
+    const slug = player.profileSlug || loreProfileSlug(player.nameplate);
+    const href = `${prefix}${slug}.html`;
+    const number = numberByName[slug];
+    const numberTag = number && number !== "-" ? `<span class="lore-card-number">#${number}</span>` : "";
     return `
     <article class="lore-profile-card">
       <div class="lore-card-topline">
+        ${numberTag}
         <em>${player.stamp}</em>
       </div>
       <h3>${player.nameplate}</h3>
