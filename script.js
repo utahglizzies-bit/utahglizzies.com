@@ -323,25 +323,37 @@ function renderSeasonSchedule() {
   `);
 }
 
+function loreProfileSlug(nameplate) {
+  return String(nameplate)
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/['.]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function renderTeamLore() {
   const target = document.querySelector("[data-team-lore]");
   if (!target || !siteContent.playerLore) return;
   const activeFilter = target.dataset.filter || "all";
   const lore = siteContent.playerLore.filter((player) => activeFilter === "all" || player.status.toLowerCase() === activeFilter);
-  target.innerHTML = lore.map((player) => `
+  // Lore lives at site root (team.html, lore.html) so profile links are relative to root.
+  const onLorePage = window.location.pathname.includes("/players/");
+  const prefix = onLorePage ? "../players/" : "players/";
+  target.innerHTML = lore.map((player) => {
+    const href = `${prefix}${player.profileSlug || loreProfileSlug(player.nameplate)}.html`;
+    return `
     <article class="lore-profile-card">
       <div class="lore-card-topline">
-        <span>${player.status}</span>
         <em>${player.stamp}</em>
       </div>
       <h3>${player.nameplate}</h3>
       <p class="lore-real-name">${player.name}</p>
-      <details>
-        <summary>Read Full Lore</summary>
-        <p>${player.lore}</p>
-      </details>
+      <a class="button secondary lore-read-link" href="${href}">Read Full Lore</a>
     </article>
-  `).join("");
+  `;
+  }).join("");
 }
 
 document.querySelectorAll("[data-lore-filter]").forEach((button) => {
