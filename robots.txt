@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://utahglizzies.com/sitemap.xml
+Sitemap: https://www.utahglizzies.com/sitemap.xml
