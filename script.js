@@ -706,3 +706,27 @@ document.querySelectorAll('.section').forEach(el => {
   el.classList.add('reveal');
   revealObs.observe(el);
 });
+
+// If the page is opened with a hash (e.g. team.html#roster), make sure the
+// target section and everything above it is revealed immediately, then scroll
+// to it once content has rendered. Without this, anchor-jumping can land on a
+// section the IntersectionObserver never triggers, leaving it stuck invisible.
+function revealHashTarget() {
+  const hash = window.location.hash;
+  if (!hash || hash.length < 2) return;
+  let target;
+  try { target = document.querySelector(hash); } catch (e) { return; }
+  if (!target) return;
+  // Reveal the target and any revealable ancestor/preceding sections.
+  document.querySelectorAll('.reveal').forEach((el) => {
+    if (el === target || el.contains(target) || target.contains(el) ||
+        el.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING) {
+      el.classList.add('visible');
+    }
+  });
+  target.classList.add('visible');
+  // Re-scroll after dynamic content (roster, lore) has been injected.
+  requestAnimationFrame(() => target.scrollIntoView({ behavior: 'auto', block: 'start' }));
+}
+window.addEventListener('load', revealHashTarget);
+window.addEventListener('hashchange', revealHashTarget);
