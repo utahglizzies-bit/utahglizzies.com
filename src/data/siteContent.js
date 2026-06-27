@@ -82,10 +82,10 @@ window.siteContent = {
     nameplate: "LIL' SMOKIES",
     title: "The Quiet Closer",
     story:
-      "Ian Penders doesn't make a lot of noise, but his stat line does. Ten points on the season. A goal and an assist in the 8-1 Misfits demolition. A GWG assist on Wyatt McNeil's early-first-period dagger that effectively ended the game before most fans finished their rink nachos. LIL' SMOKIES is the kind of player who is everywhere on the ice and somehow never seems to be in a hurry. That combination of vision, pace, and quiet confidence is exactly what a team needs heading into a championship game.",
+      "Ian Penders doesn't make a lot of noise, but his stat line does. Ten points on the season. A goal and an assist in the 8-1 Misfits demolition. LIL' SMOKIES is the kind of player who is everywhere on the ice and somehow never seems to be in a hurry. That combination of vision, pace, and quiet confidence is exactly what a team needs heading into a championship game.",
     callouts: [
       ["Bench Verdict", "The Quiet Closer"],
-      ["Stat Line", "12 points, 3 GWG assists on the season"],
+      ["Stat Line", "10 points, 4 goals, 6 assists on the season"],
       ["Best Habit", "Shows up in the right place at the exact right moment"],
       ["Vibe", "Too calm for how many important plays he's on"],
     ],
@@ -175,7 +175,7 @@ window.siteContent = {
     },
   ],
     players: [
-    { name: "Andrew Herrin", number: "6", nameplate: "A. FROMAN", position: "Forward", photo: "", bio: "Abe Froman. Sausage King of Chicago. Ten assists and a reservation nobody can explain.", stats: { gp: 14, g: 1, a: 10, pts: 11, pim: 2 }, instagram: "", nickname: "A. Froman" },
+    { name: "Andrew Herrin", number: "6", nameplate: "A. FROMAN", position: "Forward", photo: "", bio: "Abe Froman. Sausage King of Chicago. Nine assists, including the GWG feed to Wyatt McNeil in the Misfits 8-1 win.", stats: { gp: 14, g: 1, a: 9, pts: 10, pim: 2, gwa: 1 }, instagram: "", nickname: "A. Froman" },
     { name: "Devon Woodside", number: "94", nameplate: "SAUCE DAWG", position: "Forward", photo: "", bio: "Goal scorer and penalty-box frequent-flyer program member.", stats: { gp: 13, g: 3, a: 2, pts: 5, pim: 6, gwg: 1 }, instagram: "", nickname: "Sauce Dawg" },
     { name: "Chris Call", number: "24", nameplate: "J. CHESTNUT", position: "Forward", photo: "", bio: "Quietly productive, loudly inconvenient for opponents.", stats: { gp: 15, g: 3, a: 6, pts: 9, pim: 4 }, instagram: "", nickname: "J. Chestnut" },
     { name: "Cole Embrey", number: "3", nameplate: "WÜRSTMEISTER", position: "Wing", photo: "", bio: "Three goals, three assists, two game-winners, and still fully comfortable causing a scene.", stats: { gp: 14, g: 3, a: 3, pts: 6, pim: 2, gwg: 2 }, instagram: "", nickname: "Würstmeister" },
@@ -188,7 +188,7 @@ window.siteContent = {
     { name: "Kevin Peterson", number: "22", nameplate: "GLIZZ LORD", position: "Forward", photo: "", bio: "Clean record, useful points, suspiciously professional.", stats: { gp: 14, g: 1, a: 4, pts: 5, pim: 0 }, instagram: "", nickname: "Glizz Lord" },
     { name: "Jared Aida", number: "8", nameplate: "GLIZZARD OF OZ", position: "Forward", photo: "", bio: "Still parked at 10 points. The hot dog cannon remains pointed at him.", stats: { gp: 12, g: 7, a: 3, pts: 10, pim: 0 }, instagram: "", nickname: "Glizzard of Oz" },
     { name: "Trey Kemp", number: "88", nameplate: "DAWGFATHER", position: "Utility", photo: "", bio: "Goal and assist in the Salt Shakers playoff win. Business meeting accepted.", stats: { gp: 14, g: 3, a: 1, pts: 4, pim: 0, gwg: 1 }, instagram: "", nickname: "Dawgfather" },
-    { name: "Ian Penders", number: "5", nameplate: "LIL' SMOKIES", position: "Forward", photo: "", bio: "Ten points, six assists, four goals, and a forecheck that keeps the rhythm section honest. GWG assist in the Misfits 8-1 playoff win.", stats: { gp: 14, g: 4, a: 6, pts: 10, pim: 6, gwg: 1 }, instagram: "", nickname: "Lil' Smokies" },
+    { name: "Ian Penders", number: "5", nameplate: "LIL' SMOKIES", position: "Forward", photo: "", bio: "Ten points, six assists, four goals, and a forecheck that keeps the rhythm section honest.", stats: { gp: 14, g: 4, a: 6, pts: 10, pim: 6 }, instagram: "", nickname: "Lil' Smokies" },
     { name: "Brady Bessette", number: "26", nameplate: "DER WÜRST", position: "Forward", photo: "", bio: "Three goals, zero assists. Direct deposit only.", stats: { gp: 14, g: 3, a: 0, pts: 3, pim: 2 }, instagram: "", nickname: "Der Würst" },
     { name: "JP Gould", number: "42", nameplate: "GREASE MISSILE", position: "Defense", photo: "", bio: "Two goals, three assists, and just enough minor-penalty seasoning.", stats: { gp: 15, g: 2, a: 3, pts: 5, pim: 2 }, instagram: "", nickname: "Grease Missile" },
     { name: "Wyatt McNeil", number: "53", nameplate: "GLIZZNASTY", position: "Forward", photo: "", bio: "Eleven goals in eleven games, including two more in the 8-1 Misfits playoff demolition. The release is a public safety concern.", stats: { gp: 11, g: 11, a: 0, pts: 11, pim: 2, gwg: 4 }, instagram: "", nickname: "GlizzNasty" },
