@@ -3492,7 +3492,12 @@ textarea {
 
 /* ── NAV UPDATE — new pages ──────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .site-nav { display: none; position: fixed; inset: 0; flex-direction: column; justify-content: center; align-items: center; gap: 18px; background: rgba(6,40,23,0.97); backdrop-filter: blur(20px); z-index: 15; }
+  /* .site-header has backdrop-filter, which creates a new containing block for
+     position:fixed descendants — without neutralizing it here, .site-nav's
+     fixed/inset:0 overlay gets trapped inside the small header box instead of
+     covering the full viewport. */
+  .site-header { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .site-nav { display: none; position: fixed; inset: 0; flex-direction: column; justify-content: center; align-items: center; gap: 18px; overflow-y: auto; background: rgba(6,40,23,0.97); backdrop-filter: blur(20px); z-index: 15; }
   .site-nav.is-open { display: flex; }
   .site-nav a { font-size: 1.4rem; }
   .menu-toggle { display: block; }
@@ -3633,7 +3638,11 @@ textarea {
 
 /* ── NAV — trigger hamburger earlier to avoid overflow ─────────────── */
 @media (max-width: 1100px) {
-  .site-nav { display: none; position: fixed; inset: 0; flex-direction: column; justify-content: center; align-items: center; gap: 22px; background: rgba(6,40,23,0.97); backdrop-filter: blur(20px); z-index: 15; }
+  /* Same containing-block fix as the 900px block above — .site-header's
+     backdrop-filter must be neutralized so .site-nav's fixed overlay actually
+     covers the full viewport instead of the header's small box. */
+  .site-header { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .site-nav { display: none; position: fixed; inset: 0; flex-direction: column; justify-content: center; align-items: center; gap: 22px; overflow-y: auto; background: rgba(6,40,23,0.97); backdrop-filter: blur(20px); z-index: 15; }
   .site-nav.is-open { display: flex; }
   .site-nav a { font-size: 1.5rem; color: var(--cream) !important; }
   .site-nav .nav-cta { background: var(--gold) !important; color: var(--ink) !important; }

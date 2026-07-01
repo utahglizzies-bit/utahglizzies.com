@@ -46,16 +46,27 @@ const lastFinalGame = getLastFinalGame();
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 
+function setNavOpen(isOpen) {
+  nav.classList.toggle("is-open", isOpen);
+  toggle?.setAttribute("aria-expanded", String(isOpen));
+  if (toggle) toggle.textContent = isOpen ? "Close" : "Menu";
+  // Lock body scroll while the full-screen mobile nav is open so the page
+  // behind it can't scroll and nothing feels "stuck".
+  document.body.style.overflow = isOpen ? "hidden" : "";
+}
+
 toggle?.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("is-open");
-  toggle.setAttribute("aria-expanded", String(isOpen));
+  setNavOpen(!nav.classList.contains("is-open"));
 });
 
 document.querySelectorAll(".site-nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("is-open");
-    toggle?.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", () => setNavOpen(false));
+});
+
+// Safety net: if the viewport is ever resized/rotated past the mobile
+// breakpoint while the menu is open, force it closed so it can't get stuck.
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1100 && nav?.classList.contains("is-open")) setNavOpen(false);
 });
 
 function renderSimpleCards(selector, items, template) {

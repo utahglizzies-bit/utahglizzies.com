@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260622e" />
+  <link rel="stylesheet" href="styles.css?v=20260628a" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49PTYCCKB1');</script>
   <style id="presale-sticky-css">
@@ -258,8 +258,10 @@
   </div></footer>
   <script>
   var t=document.querySelector('.menu-toggle'),n=document.querySelector('.site-nav');
-  t&&t.addEventListener('click',function(){var o=n.classList.toggle('is-open');t.setAttribute('aria-expanded',String(o));});
-  document.querySelectorAll('.site-nav a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('is-open');t&&t.setAttribute('aria-expanded','false');});});
+  function setNavOpen(o){n.classList.toggle('is-open',o);t&&t.setAttribute('aria-expanded',String(o));t&&(t.textContent=o?'Close':'Menu');document.body.style.overflow=o?'hidden':'';}
+  t&&t.addEventListener('click',function(){ setNavOpen(!n.classList.contains('is-open')); });
+  document.querySelectorAll('.site-nav a').forEach(function(a){a.addEventListener('click',function(){ setNavOpen(false); }); });
+  window.addEventListener('resize',function(){ if(window.innerWidth>1100&&n&&n.classList.contains('is-open'))setNavOpen(false); });
   </script>
   <script id="presale-sticky-js">
   (function(){

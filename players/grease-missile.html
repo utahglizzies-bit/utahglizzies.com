@@ -203,8 +203,10 @@
   </footer>
   <script>
     const t=document.querySelector('.menu-toggle'),n=document.querySelector('.site-nav');
-    t&&t.addEventListener('click',()=>{const o=n.classList.toggle('is-open');t.setAttribute('aria-expanded',String(o));});
-    document.querySelectorAll('.site-nav a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('is-open');t&&t.setAttribute('aria-expanded','false');}));
+    function setNavOpen(o){n.classList.toggle('is-open',o);t&&t.setAttribute('aria-expanded',String(o));t&&(t.textContent=o?'Close':'Menu');document.body.style.overflow=o?'hidden':'';}
+    t&&t.addEventListener('click',()=>setNavOpen(!n.classList.contains('is-open')));
+    document.querySelectorAll('.site-nav a').forEach(a=>a.addEventListener('click',()=>setNavOpen(false)));
+    window.addEventListener('resize',()=>{if(window.innerWidth>1100&&n&&n.classList.contains('is-open'))setNavOpen(false);});
     if('serviceWorker' in navigator){navigator.serviceWorker.register('../sw.js').catch(()=>{});}
   </script>
   <script>
