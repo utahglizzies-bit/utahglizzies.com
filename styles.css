@@ -3490,6 +3490,31 @@ textarea {
 .signup-row input[type="email"]:focus { border-color: var(--gold); }
 .email-signup-section small { display: block; font-size: 11px; color: rgba(255,244,201,0.35); font-family: monospace; margin-top: 12px; }
 
+/* ── MOBILE NAV CLOSE BUTTON ───────────────────────────────────────────
+   Dedicated close control living INSIDE the full-screen overlay itself, so
+   closing the menu never depends on tapping something outside it (which
+   z-index/stacking-context quirks can make unreliable). Hidden entirely on
+   desktop where the overlay pattern doesn't apply. */
+.nav-close { display: none; }
+@media (max-width: 1100px) {
+  .nav-close {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: clamp(18px, 5vw, 40px);
+    z-index: 31;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,244,201,0.4);
+    border-radius: 999px;
+    color: var(--cream);
+    background: rgba(255,244,201,0.08);
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
 /* ── NAV UPDATE — new pages ──────────────────────────────────────────── */
 @media (max-width: 900px) {
   /* .site-header has backdrop-filter, which creates a new containing block for
@@ -3500,7 +3525,11 @@ textarea {
   .site-nav { display: none; position: fixed; inset: 0; flex-direction: column; justify-content: center; align-items: center; gap: 18px; overflow-y: auto; background: rgba(6,40,23,0.97); backdrop-filter: blur(20px); z-index: 15; }
   .site-nav.is-open { display: flex; }
   .site-nav a { font-size: 1.4rem; }
-  .menu-toggle { display: block; }
+  /* menu-toggle and site-nav are SIBLINGS inside .site-header, so z-index is
+     compared between them directly — without a higher z-index here, the
+     fixed full-screen nav (z-index:15) paints ON TOP of this button and
+     silently swallows the tap meant to close it. */
+  .menu-toggle { display: block; position: relative; z-index: 30; }
 }
 
 /* ── MICROSOFT CLARITY PLACEHOLDER ──────────────────────────────────── */
@@ -3647,7 +3676,8 @@ textarea {
   .site-nav a { font-size: 1.5rem; color: var(--cream) !important; }
   .site-nav .nav-cta { background: var(--gold) !important; color: var(--ink) !important; }
   .site-nav .instagram-link { background: var(--red) !important; }
-  .menu-toggle { display: block; }
+  /* Same sibling-stacking fix as the 900px block above. */
+  .menu-toggle { display: block; position: relative; z-index: 30; }
 }
 @media (min-width: 1101px) {
   .menu-toggle { display: none !important; }

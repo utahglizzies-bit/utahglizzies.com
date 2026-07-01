@@ -63,6 +63,8 @@ document.querySelectorAll(".site-nav a").forEach((link) => {
   link.addEventListener("click", () => setNavOpen(false));
 });
 
+document.querySelector(".nav-close")?.addEventListener("click", () => setNavOpen(false));
+
 // Safety net: if the viewport is ever resized/rotated past the mobile
 // breakpoint while the menu is open, force it closed so it can't get stuck.
 window.addEventListener("resize", () => {

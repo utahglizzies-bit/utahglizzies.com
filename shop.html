@@ -236,7 +236,7 @@
   <header class="site-header" id="top">
     <a class="brand" href="index.html"><img class="brand-wordmark" src="assets/glizzies-wordmark.png" alt="Utah Glizzies" decoding="async" /></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><button class="nav-close" type="button" aria-label="Close menu">&times;</button>
       <a href="team.html#roster">Roster</a>
       <a href="recaps/">Recaps</a>
       <a href="game.html">Play</a>
@@ -622,6 +622,7 @@
   }
   t&&t.addEventListener('click',function(){ setNavOpen(!n.classList.contains('is-open')); });
   document.querySelectorAll('.site-nav a').forEach(function(a){a.addEventListener('click',function(){ setNavOpen(false); });});
+  document.querySelector('.nav-close')&&document.querySelector('.nav-close').addEventListener('click',function(){ setNavOpen(false); });
   window.addEventListener('resize', function(){ if(window.innerWidth>1100 && n&&n.classList.contains('is-open')) setNavOpen(false); });
 
   // Show jersey options when jersey is selected
