@@ -227,44 +227,6 @@ function renderSpotlight() {
   `;
 }
 
-async function requestCount(action) {
-  const meter = siteContent.hypeMeter;
-  const url = `${meter.hypeApiBase}/${action}/${meter.hypeApiKey}`;
-  const response = await fetch(url);
-  if (!response.ok) throw new Error("Hype service unavailable");
-  const data = await response.json();
-  return data.value || data.count || 0;
-}
-
-function renderGlizzyMeter() {
-  const target = document.querySelector("[data-glizzy-meter]");
-  if (!target) return;
-  const meter = siteContent.hypeMeter;
-  target.innerHTML = `
-    <div class="meter-header">
-      <div>
-        <span class="eyebrow">${meter.gameWeek}</span>
-        <h3>${meter.label}</h3>
-        <p>${meter.reason}</p>
-      </div>
-    </div>
-    <div class="hype-progress"><span data-hype-progress style="width: 0%"></span></div>
-    <p class="hype-caption" data-hype-caption>Playoff mustard pressure is building across the fanbase.</p>
-  `;
-
-  const progress = target.querySelector("[data-hype-progress]");
-  const caption = target.querySelector("[data-hype-caption]");
-  const update = (value) => {
-    const clicks = Math.max(0, Number(value) || 0);
-    const hypePercent = Math.min(100, Math.round((clicks / meter.hypeGoal) * 100));
-    progress.style.width = `${hypePercent}%`;
-    caption.textContent = hypePercent >= 100
-      ? "Full playoff mustard achieved. The bench is officially overcooked."
-      : "Playoff hype is building steadily across the fanbase.";
-  };
-  requestCount("get").then(update).catch(() => update(Number(localStorage.getItem(meter.hypeStorageKey)) || meter.level));
-}
-
 function renderFanAdvice() {
   const target = document.querySelector("[data-fan-advice]");
   if (!target || !siteContent.fanAdvice?.length) return;
@@ -559,7 +521,6 @@ function renderHomepage() {
   renderLastGame();
   renderMatchup();
   renderSpotlight();
-  renderGlizzyMeter();
   renderThreeStars();
   renderPlayerCards();
   renderSeasonSchedule();
