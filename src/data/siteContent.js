@@ -1,4 +1,4 @@
-// cache-bust: 2026-06-26 rawdog-unc
+// cache-bust: 2026-07-07 auto-updated
 window.siteContent = {
   teamInfo: {
     name: "Utah Glizzies HC",
@@ -58,22 +58,22 @@ window.siteContent = {
     { date: "2026-06-11", displayDate: "Jun 11", time: "10:45 PM", opponent: "The North", label: "@ The North", rink: "North Rink", status: "final", glizziesScore: 3, opponentScore: 4, result: "loss", gameType: "Playoff" },
     { date: "2026-06-18", displayDate: "Jun 18", time: "9:15 PM", opponent: "Saucer Kings", label: "@ Saucer Kings", rink: "South Rink", status: "final", glizziesScore: 7, opponentScore: 1, result: "win", gameType: "Playoff" },
     { date: "2026-06-25", displayDate: "Jun 25", time: "9:30 PM", opponent: "The Misfits", label: "vs The Misfits", rink: "North Rink", status: "final", glizziesScore: 8, opponentScore: 1, result: "win", gameType: "Playoff" },
-    { date: "2026-07-03", displayDate: "Jul 3", time: "8:00 PM", opponent: "Salty Boys", label: "vs Salty Boys", rink: "TBD", status: "upcoming", gameType: "Championship" },
+    { date: "2026-07-03", displayDate: "Jul 3", time: "8:00 PM", opponent: "Salty Boys", label: "vs Salty Boys", rink: "TBD", status: "final", glizziesScore: 5, opponentScore: 6, result: "loss", gameType: "Championship" },
   ],
   lastGame: {
-    opponent: "The Misfits",
-    glizziesScore: 8,
-    opponentScore: 1,
-    date: "June 25, 2026",
-    result: "win",
+    opponent: "Salty Boys",
+    glizziesScore: 5,
+    opponentScore: 6,
+    date: "Jul 3, 2026",
+    result: "loss",
     recap:
-      "The Glizzies came out hunting from the drop puck and never let The Misfits breathe. UNCLE GLIZZBURN opened the scoring, GLIZZNASTY punched in the GWG before the first period was done, and the second period turned into a five-goal explosion that ended the game as a competitive exercise before anyone touched the third-period Gatorade. ZIMMY CASINO added one more in the third and LIL' SMOKIES finished the night with a goal and an assist. Final: 8-1. The Glizzies are going to the championship.",
+      "The Glizzies' championship dream went to overtime, and the Salty Boys walked out with the trophy on a 6-5 final. J. CHESTNUT opened the scoring off a Hayden Rathmell (GLIZ GOD) feed just past the midpoint of the first, but Salty Boys forward Nick Gavern answered right back to tie it before the period ended. The second turned into a track meet: Dakota Janes and JDAWG traded goals before Ryan Miller put Salty Boys back in front 3-2 heading to the third. The Glizzies clawed back hard — WÜRSTMEISTER tied it off a Rushton Hiltbrand feed, GLIZZNASTY buried an unassisted snipe to make it 4-4, and ZIMMY CASINO forced overtime with a helper from SAUCE DAWG. But 3:11 into the extra frame, Dion Devries beat MEAT SHIELD off a Nick Gavern feed to end it. Salty Boys 6, Glizzies 5. The April 30 receipt just got longer, but the Glizzies close the season 8-6-2 with a trophy game on the resume and a target on their back for next year.",
     momentOfGame:
-      "GLIZZNASTY's GWG at 00:20 of the first period — barely a minute into the game and it already felt like a formality.",
+      "Dion Devries' overtime winner at 3:11 — set up by Nick Gavern, who had a hand in three of Salty Boys' final four goals.",
     threeStars: [
-      { name: "Wyatt McNeil (GLIZZNASTY) — 2G, GWG", star: 1 },
-      { name: "Ian Penders (LIL' SMOKIES) — 1G, 1A", star: 2 },
-      { name: "Rushton Hiltbrand (MEAT SHIELD) — W, 1 GA", star: 3 }
+      { name: "Nick Gavern (Salty Boys) — 1G, 2A, OT-winning helper", star: 1 },
+      { name: "Wyatt McNeil (GLIZZNASTY) — 1G, unassisted", star: 2 },
+      { name: "Rushton Hiltbrand (MEAT SHIELD) — L, 6 GA on 24 shots", star: 3 }
     ],
   },
     playerSpotlight: {
