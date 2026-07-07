@@ -216,6 +216,47 @@ Return ONLY valid JSON (no markdown):
 
 # ─── 5. UPDATE siteContent.js SECTIONS ──────────────────────────────────────
 
+def replace_balanced_block(js, start_marker, new_block, open_ch="{", close_ch="}"):
+    """Replace a `key: { ... },` (or `key: [ ... ],`) block by counting delimiter
+    depth instead of a naive non-greedy regex.
+
+    Bug this fixes: objects like `lastGame` and `opponentChirps` contain NESTED
+    uses of the same delimiter (e.g. lastGame.threeStars is an array of `{...}`
+    objects; each chirp has a nested `lines: [...]` array). A regex like
+    `r'lastGame:\\s*\\{.*?\\},'` stops at the FIRST `},`/`],` it finds, which is
+    usually the end of a nested item, not the end of the outer block — silently
+    truncating the object and leaving orphaned JS behind (this broke the site
+    on 2026-07-07). Counting delimiter depth finds the real matching close.
+
+    Caveat: this is a simple char counter, not a JS parser, so a string value
+    that itself contains a literal `{`/`}`/`[`/`]` matching open_ch/close_ch
+    could throw off the count. None of our generated content does that today.
+    """
+    start = js.find(start_marker)
+    if start == -1:
+        print(f"  ⚠️  Could not find block starting with {start_marker!r} — leaving js unchanged")
+        return js
+
+    depth = 1
+    i = start + len(start_marker)
+    while depth > 0 and i < len(js):
+        if js[i] == open_ch:
+            depth += 1
+        elif js[i] == close_ch:
+            depth -= 1
+        i += 1
+
+    if depth != 0:
+        print(f"  ⚠️  Unbalanced {open_ch!r}/{close_ch!r} after {start_marker!r} — leaving js unchanged")
+        return js
+
+    end = i
+    if end < len(js) and js[end] == ",":
+        end += 1
+
+    return js[:start] + new_block + js[end:]
+
+
 def update_last_game(js, opponent, gs, opp, date, recap):
     result = "win" if gs > opp else "loss"
     recap_text  = recap.get("recap", f"Glizzies {gs}, {opponent} {opp}.") if recap else f"Glizzies {gs}, {opponent} {opp}."
@@ -241,7 +282,7 @@ def update_last_game(js, opponent, gs, opp, date, recap):
       "{moment_text.replace(chr(34), chr(39))}",{stars_block}
   }},"""
 
-    return re.sub(r'  lastGame:\s*\{.*?\},', new_block, js, flags=re.DOTALL)
+    return replace_balanced_block(js, "  lastGame: {", new_block)
 
 
 def update_matchup(js, data, opponent, next_date, next_time):
@@ -260,15 +301,15 @@ def update_matchup(js, data, opponent, next_date, next_time):
     opponentStats: ["Next up: {opponent}, {next_date} at {next_time}."],
     keys: {keys_str},
   }},"""
-    return re.sub(r'    matchup:\s*\{.*?\},', new_block, js, flags=re.DOTALL)
+    return replace_balanced_block(js, "    matchup: {", new_block)
 
 
 def update_chirps(js, chirps):
     if not chirps:
         return js
     chirps_str = json.dumps(chirps, indent=4)
-    return re.sub(r'    opponentChirps:\s*\[.*?\],',
-                  f'    opponentChirps: {chirps_str},', js, flags=re.DOTALL)
+    new_block = f'    opponentChirps: {chirps_str},'
+    return replace_balanced_block(js, "    opponentChirps: [", new_block, open_ch="[", close_ch="]")
 
 
 def mark_game_final(js, date, gs, opp):
@@ -289,6 +330,27 @@ def update_cache_bust(js):
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     return re.sub(r'// cache-bust: [\d-]+ \S+',
                   f'// cache-bust: {today} auto-updated', js)
+
+
+def validate_js_syntax(js):
+    """Sanity-check that the generated siteContent.js still parses before we write it.
+    Runs it through Node so a truncated/regex bug can never silently ship broken JS
+    to the live site again (this is what happened on 2026-07-07)."""
+    import subprocess
+    script = js.replace("window.siteContent", "global.siteContent") + "\nconsole.log('__VALID__');"
+    try:
+        result = subprocess.run(["node", "-e", script], capture_output=True, text=True, timeout=15)
+        if result.returncode != 0 or "__VALID__" not in result.stdout:
+            print("❌ Generated siteContent.js failed Node.js syntax validation:")
+            print("   " + (result.stderr.strip() or "unknown error").replace("\n", "\n   ")[:2000])
+            return False
+        return True
+    except FileNotFoundError:
+        print("⚠️  Node.js not found on PATH — skipping syntax validation (proceed with caution)")
+        return True
+    except Exception as e:
+        print(f"⚠️  Validation could not run ({e}) — proceeding without it")
+        return True
 
 
 # ─── 6. MAIN ─────────────────────────────────────────────────────────────────
@@ -382,6 +444,12 @@ def main():
 
     if changed:
         js = update_cache_bust(js)
+
+        if not validate_js_syntax(js):
+            print("\n🛑 Aborting WITHOUT writing — the update would have broken siteContent.js.")
+            print("   Check the update_last_game / update_matchup / update_chirps regex logic above.")
+            sys.exit(1)
+
         if args.dry_run:
             print("\n🔍 DRY RUN — changes computed but NOT written")
         else:
