@@ -247,38 +247,22 @@ function renderGlizzyMeter() {
         <h3>${meter.label}</h3>
         <p>${meter.reason}</p>
       </div>
-      <button class="hype-button" data-hype-button type="button">
-        <strong data-hype-percent>${Math.round((meter.level / meter.hypeGoal) * 100)}%</strong>
-        <span>Push playoff hype</span>
-      </button>
     </div>
     <div class="hype-progress"><span data-hype-progress style="width: 0%"></span></div>
     <p class="hype-caption" data-hype-caption>Playoff mustard pressure is building across the fanbase.</p>
   `;
 
-  const percent = target.querySelector("[data-hype-percent]");
   const progress = target.querySelector("[data-hype-progress]");
-  const button = target.querySelector("[data-hype-button]");
   const caption = target.querySelector("[data-hype-caption]");
   const update = (value) => {
     const clicks = Math.max(0, Number(value) || 0);
     const hypePercent = Math.min(100, Math.round((clicks / meter.hypeGoal) * 100));
-    percent.textContent = `${hypePercent}%`;
     progress.style.width = `${hypePercent}%`;
     caption.textContent = hypePercent >= 100
       ? "Full playoff mustard achieved. The bench is officially overcooked."
-      : "Every click raises the playoff hype without showing the recipe.";
+      : "Playoff hype is building steadily across the fanbase.";
   };
   requestCount("get").then(update).catch(() => update(Number(localStorage.getItem(meter.hypeStorageKey)) || meter.level));
-  button.addEventListener("click", async () => {
-    try {
-      update(await requestCount("hit"));
-    } catch {
-      const next = (Number(localStorage.getItem(meter.hypeStorageKey)) || meter.level) + 1;
-      localStorage.setItem(meter.hypeStorageKey, String(next));
-      update(next);
-    }
-  });
 }
 
 function renderFanAdvice() {
