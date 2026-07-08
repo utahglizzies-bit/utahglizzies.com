@@ -15,21 +15,59 @@
   try { var saved = JSON.parse(localStorage.getItem(LS_KEY)||"null"); if(saved && saved.lines) state = saved; } catch(e){}
   function persist(){ try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch(e){} }
 
-  var PRODUCT_QUERY = "query($id: ID!){ product(id:$id){ id title availableForSale priceRange{ minVariantPrice{ amount } maxVariantPrice{ amount } } options{ name values } variants(first:100){ edges{ node{ id title availableForSale price{ amount } selectedOptions{ name value } } } } } }";
+  var PRODUCT_QUERY = "query($id: ID!){ product(id:$id){ id title descriptionHtml availableForSale priceRange{ minVariantPrice{ amount } maxVariantPrice{ amount } } options{ name values } variants(first:100){ edges{ node{ id title availableForSale price{ amount } selectedOptions{ name value } } } } } }";
   var CART_CREATE = "mutation($lines:[CartLineInput!]!){ cartCreate(input:{lines:$lines}){ cart{ id checkoutUrl } userErrors{ message } } }";
 
-  var loaded = {}; // productId -> {variants, options, available, minPrice}
+  var loaded = {}; // productId -> {variants, options, available, minPrice, title, desc, specs}
+
+  // Parse a Shopify descriptionHtml blob into {desc, specs}.
+  // Convention: prose paragraphs first; spec lines are the bullet items (start with "•").
+  // Cleans junk (meta tags, editor CSS classes, &nbsp;, empty nodes).
+  function parseDescription(html){
+    if(!html) return {desc:"", specs:""};
+    // normalize breaks/paragraph ends to newlines so we can work line-by-line
+    var t = html
+      .replace(/<meta[^>]*>/gi,"")
+      .replace(/<\/(p|div|li)>/gi,"\n")
+      .replace(/<br\s*\/?>/gi,"\n")
+      .replace(/<li[^>]*>/gi,"• ")
+      .replace(/<[^>]+>/g,"")        // strip any remaining tags
+      .replace(/&nbsp;/gi," ")
+      .replace(/&amp;/gi,"&")
+      .replace(/&quot;/gi,'"')
+      .replace(/&#39;|&rsquo;/gi,"\u2019")
+      .replace(/\u00a0/g," ");
+    var lines = t.split("\n").map(function(l){return l.trim();}).filter(function(l){return l.length>0;});
+    var descLines=[], specLines=[];
+    lines.forEach(function(l){
+      // treat a line as a spec if it starts with a bullet marker
+      if(/^[•\-\u2022]/.test(l)){
+        specLines.push(l.replace(/^[•\-\u2022]\s*/,"").trim());
+      } else {
+        descLines.push(l);
+      }
+    });
+    return {
+      desc: descLines.join(" ").replace(/\s+/g," ").trim(),
+      specs: specLines.join(" • ").trim()
+    };
+  }
+
 
   function fetchProduct(pid){
     if(loaded[pid]) return Promise.resolve(loaded[pid]);
     return gql(PRODUCT_QUERY,{id:gid(pid)}).then(function(res){
       var pr = res && res.data && res.data.product;
       if(!pr){ loaded[pid]={variants:[],options:[],available:false,minPrice:null}; return loaded[pid]; }
+      var parsed = parseDescription(pr.descriptionHtml||"");
       loaded[pid] = {
         variants:(pr.variants.edges||[]).map(function(e){return e.node;}),
         options:pr.options||[], available:pr.availableForSale,
         minPrice:parseFloat(pr.priceRange.minVariantPrice.amount),
-        maxPrice:parseFloat(pr.priceRange.maxVariantPrice.amount)
+        maxPrice:parseFloat(pr.priceRange.maxVariantPrice.amount),
+        title:pr.title||"",
+        desc:parsed.desc,
+        specs:parsed.specs
       };
       return loaded[pid];
     }).catch(function(){ loaded[pid]={variants:[],options:[],available:false,minPrice:null}; return loaded[pid]; });
@@ -83,6 +121,7 @@
   window.GlizzCart = {
     fetchProduct: fetchProduct,
     realOptions: realOptions,
+    parseDescription: parseDescription,
     money: money,
     esc: esc,
     add: function(opts){

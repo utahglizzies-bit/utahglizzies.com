@@ -16,7 +16,7 @@
 .shop-group-heading small { font-size:11px; font-family:monospace; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); font-weight:700; }
 .shop-group-heading h2 { font-family:var(--display); font-size:clamp(1.8rem,3.5vw,3rem); text-transform:uppercase; color:var(--ink); }
 .shop-group-heading p { font-size:13px; color:rgba(7,16,13,0.6); max-width:620px; margin-top:4px; }
-.product-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:24px; max-width:1160px; margin:24px auto 0; }
+.product-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:24px; max-width:1160px; margin:24px auto 0; }
 .product-card { background:#fff; border-radius:16px; overflow:hidden; border:1px solid rgba(7,16,13,0.08); box-shadow:0 6px 30px rgba(7,16,13,0.08); display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s; }
 .product-card:hover { transform:translateY(-4px); box-shadow:0 18px 48px rgba(7,16,13,0.14); }
 .product-card .pc-img { aspect-ratio:1; background:#f4f4f2; overflow:hidden; position:relative; }
@@ -215,3 +215,58 @@
 .hiw-mission p:last-child { margin-bottom:0; }
 .hiw-mission .hiw-mission-close { font-family:var(--sports,'Oswald'); font-weight:700; font-size:16px; color:var(--green,#062817); letter-spacing:0.01em; }
 @media (max-width:600px){ .hiw-mission p { font-size:14px; } }
+
+/* GRID FIX — override the global styles.css repeat(3,1fr) that leaves dead
+   space on short rows. Scoped to .shop-section for higher specificity. */
+.shop-section .product-grid {
+  display:grid !important;
+  gap:24px !important;
+  max-width:1160px !important;
+  margin:24px auto 0 !important;
+}
+/* Hero row (hat + 2 jerseys) = 3 across, fills the row */
+#shop .product-grid { grid-template-columns:repeat(3, 1fr) !important; }
+/* New Drop = 4 across on desktop */
+.shop-section-grid4 .product-grid { grid-template-columns:repeat(4, 1fr) !important; }
+/* Responsive: collapse both gracefully */
+@media (max-width:1000px){
+  #shop .product-grid { grid-template-columns:repeat(2, 1fr) !important; }
+  .shop-section-grid4 .product-grid { grid-template-columns:repeat(2, 1fr) !important; }
+}
+@media (max-width:560px){
+  #shop .product-grid,
+  .shop-section-grid4 .product-grid { grid-template-columns:1fr !important; }
+}
+
+/* Footer logo — show the real primary logo in full color (override the
+   monochrome silhouette filter that styles.css applies to the old wordmark). */
+.site-footer .footer-brand img { filter:none !important; height:72px !important; opacity:1 !important; width:auto !important; }
+
+
+/* CENTER SHOP CONTENT — full-width section backgrounds, inner content centered
+   with equal L/R space. Heading, mission, and grid share one centered column. */
+.shop-section .shop-group-heading,
+.shop-section .product-grid {
+  max-width:1240px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+.shop-section .shop-group-heading { margin-bottom:8px !important; }
+.shop-section .product-grid { margin-top:24px !important; }
+/* CARD IMAGE — remove the dead gray band. Give the image area a fixed,
+   sensible height and ensure the photo fills it (cover), so there's no
+   leftover background between the photo and the card text. */
+.shop-section .product-card .pc-img {
+  aspect-ratio:auto !important;
+  height:300px !important;
+  background:#f4f4f2 !important;
+}
+.shop-section .product-card .pc-img img {
+  width:100% !important;
+  height:100% !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+/* Tighten body so text sits closer under the image */
+.shop-section .product-card .pc-body { padding:18px 20px 20px !important; }

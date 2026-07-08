@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tut Tut Beanie — Utah Glizzies HC</title>
+  <title>Embroidered Tut Tut Beanie — Utah Glizzies HC</title>
   <meta name="description" content="Glizztopher Robin would wear this deep in the hunnid acre wood." />
-  <meta property="og:title" content="Tut Tut Beanie — Utah Glizzies HC" />
+  <meta property="og:title" content="Embroidered Tut Tut Beanie — Utah Glizzies HC" />
   <meta property="og:description" content="Glizztopher Robin would wear this deep in the hunnid acre wood." />
   <meta property="og:image" content="https://www.utahglizzies.com/assets/products/tut-tut-beanie-1.jpg" />
   <link rel="manifest" href="../manifest.json" /><link rel="icon" href="../assets/glizzies-logo.png" />
@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../assets/shop.css?v=9" />
+  <link rel="stylesheet" href="../assets/shop.css?v=18" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49PTYCCKB1');</script>
 </head>
@@ -43,11 +43,11 @@
         <div class="pd-thumbs"><button class="pd-thumb active" data-thumb="../assets/products/tut-tut-beanie-1.jpg"><img src="../assets/products/tut-tut-beanie-1.jpg" alt="" /></button><button class="pd-thumb" data-thumb="../assets/products/tut-tut-beanie-2.jpg"><img src="../assets/products/tut-tut-beanie-2.jpg" alt="" /></button></div>
       </div>
       <div class="pd-info">
-        <h1>Tut Tut Beanie</h1>
+        <h1>Embroidered Tut Tut Beanie</h1>
         <div class="pd-price" data-price-slot>$35</div>
         
         <div class="pd-desc">Glizztopher Robin would wear this deep in the hunnid acre wood.</div>
-        <div class="pd-specs">100% acrylic • Wide, ribbed knit • Snug, comfortable fit • One size fits most</div>
+        <div class="pd-specs">100% acrylic • Wide, ribbed knit • One size fits most • Embroidered logo</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. Once this dog’s off the leash it stays off. No returns — one size fits most, so you’re covered.</div></div>
         <div class="pc-options" data-options></div>
         
@@ -71,11 +71,11 @@
   </aside>
 
   <footer class="site-footer"><div class="footer-inner">
-    <a class="footer-brand" href="../index.html"><img src="../assets/glizzies-wordmark.png" alt="Utah Glizzies" decoding="async" /></a>
+    <a class="footer-brand" href="../index.html"><img src="../assets/glizzies-logo.png" alt="Utah Glizzies" decoding="async" /></a>
     <nav class="footer-links"><a href="../index.html">Home</a><a href="../team.html#roster">Roster</a><a href="../game.html">Play</a><a href="../shop-index-staged.html">Shop</a><a href="../community.html">The Pit</a><a href="../blog.html">Blog</a><a href="../sponsors.html">Sponsors</a><a href="../brand.html">Brand</a><a href="../index.html#faq">FAQ</a></nav>
     <p class="footer-copy">Utah Glizzies HC &bull; Sandy, UT &bull; utahglizzies.com</p>
   </div></footer>
-  <script src="../assets/shop-cart.js?v=9"></script>
+  <script src="../assets/shop-cart.js?v=18"></script>
   <script>
   (function(){
     var wrap=document.querySelector(".pd-wrap");
@@ -95,6 +95,14 @@
     // load live variants/price/options
     GlizzCart.fetchProduct(pid).then(function(data){
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
+      // LIVE description + specs from Shopify (names stay curated on-page)
+      var descEl = wrap.querySelector(".pd-desc");
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
+      var specEl = wrap.querySelector(".pd-specs");
+      if(specEl && data){
+        if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }
+        else { specEl.textContent=""; specEl.style.display="none"; }  // no live specs -> hide (don't show stale hardcoded)
+      }
       var ro = GlizzCart.realOptions(data && data.options);
       if(ro.length && optWrap){
         optWrap.innerHTML = ro.map(function(o){
