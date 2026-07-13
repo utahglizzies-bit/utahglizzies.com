@@ -73,6 +73,72 @@
     }
     .game-photo-caption span { color: var(--gold); }
   </style>
+  <style>
+    /* PARADE ANNOUNCEMENT SECTION */
+    .parade-section {
+      background: linear-gradient(135deg, var(--green,#062817) 0%, #0a3a20 100%) !important;
+      color: var(--cream,#fff4c9);
+      border-top: 4px solid var(--gold,#e1a21a);
+      border-bottom: 4px solid var(--gold,#e1a21a);
+    }
+    .parade-inner {
+      max-width: 1160px; margin: 0 auto;
+      display: grid; grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr);
+      gap: clamp(24px,4vw,56px); align-items: center;
+    }
+    .parade-image {
+      display: block; border-radius: 18px; overflow: hidden;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.4); border: 3px solid var(--gold,#e1a21a);
+      transition: transform 0.2s ease;
+    }
+    .parade-image:hover { transform: translateY(-3px) scale(1.01); }
+    .parade-image img { width: 100%; height: auto; display: block; }
+    .parade-copy .eyebrow { color: var(--gold,#e1a21a); }
+    .parade-copy h2 {
+      font-family: var(--display); text-transform: uppercase;
+      color: var(--cream,#fff4c9); line-height: 1.02;
+      font-size: clamp(1.9rem,4.5vw,3.2rem); margin: 6px 0 14px;
+    }
+    .parade-lead { font-size: 1.05rem; line-height: 1.5; margin-bottom: 22px; color: rgba(255,244,201,0.92); }
+    .parade-lead strong { color: var(--gold,#e1a21a); }
+    .parade-stops {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 22px;
+    }
+    .parade-stop {
+      background: rgba(255,244,201,0.06); border: 1px solid rgba(225,162,26,0.35);
+      border-radius: 14px; padding: 18px 20px;
+    }
+    .parade-num {
+      display: inline-block; font-family: monospace; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #07100d; background: var(--gold,#e1a21a);
+      padding: 3px 9px; border-radius: 5px; margin-bottom: 10px;
+    }
+    .parade-stop h3 {
+      font-family: var(--display); text-transform: uppercase; color: var(--cream,#fff4c9);
+      font-size: clamp(1.2rem,2.4vw,1.6rem); line-height: 1.05; margin: 0 0 8px;
+    }
+    .parade-time { font-size: 1.5rem; font-weight: 900; color: var(--gold,#e1a21a); margin: 0 0 2px; }
+    .parade-loc { font-size: 0.95rem; color: rgba(255,244,201,0.85); margin: 0; }
+    .parade-perks {
+      list-style: none; padding: 0; margin: 0 0 18px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .parade-perks li {
+      background: rgba(210,31,19,0.9); color: var(--cream,#fff4c9);
+      font-weight: 800; font-size: 0.9rem; text-transform: uppercase;
+      letter-spacing: 0.03em; padding: 8px 14px; border-radius: 999px;
+    }
+    .parade-perks li::before { content: "🌭 "; }
+    .parade-cta-line { font-size: 1rem; line-height: 1.5; color: rgba(255,244,201,0.9); margin: 0; font-weight: 600; }
+    @media (max-width: 820px) {
+      .parade-inner { grid-template-columns: 1fr; }
+      .parade-image { max-width: 520px; margin: 0 auto; }
+    }
+    @media (max-width: 520px) {
+      .parade-stops { grid-template-columns: 1fr; }
+    }
+  </style>
   <!-- PRESALE STICKY (shared) -->
   <style id="presale-sticky-css">
     :root { --presale-h: 44px; }
@@ -167,6 +233,43 @@
     </div>
 
     <main>
+
+      <!-- PARADE ANNOUNCEMENT -->
+      <section class="section parade-section" id="parade" aria-labelledby="parade-heading">
+        <div class="parade-inner">
+          <a class="parade-image" href="assets/photos/parade-announcement.jpg" target="_blank" rel="noreferrer">
+            <img src="assets/photos/parade-announcement.jpg?v=1" alt="Utah Glizzies parade announcement — Saturday July 18th 2026: Draper Days parade 9AM on Fort Street in Draper, and Cottonwood Heights parade 5PM on Bengal Blvd." decoding="async" />
+          </a>
+          <div class="parade-copy">
+            <p class="eyebrow">🌭 Street Meat Alert</p>
+            <h2 id="parade-heading">The Glizzies Are Parading The 801</h2>
+            <p class="parade-lead">Grab your bun and hit the curb &mdash; the bench is trading the blue line for the parade route. Two towns, one Saturday, an ungodly amount of glizzy energy. <strong>Saturday, July 18th, 2026.</strong></p>
+
+            <div class="parade-stops">
+              <div class="parade-stop">
+                <span class="parade-num">Parade #1</span>
+                <h3>Draper Days</h3>
+                <p class="parade-time">9:00 AM</p>
+                <p class="parade-loc">Down Fort Street &mdash; Draper, UT</p>
+              </div>
+              <div class="parade-stop">
+                <span class="parade-num">Parade #2</span>
+                <h3>Cottonwood Heights</h3>
+                <p class="parade-time">5:00 PM</p>
+                <p class="parade-loc">Down Bengal Blvd &mdash; Cottonwood Heights, UT</p>
+              </div>
+            </div>
+
+            <ul class="parade-perks">
+              <li>Win Glizzy pucks</li>
+              <li>Catch gummy dogs</li>
+              <li>Feed your inner bear</li>
+            </ul>
+            <p class="parade-cta-line">Same day. Two routes. Bring the mustard and the kids &mdash; we&rsquo;re slinging dogs and elite vibes down both streets.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section last-game-section" id="scoreboard">
         <div class="section-heading">
           <p class="eyebrow">Last Game Recap</p>
