@@ -604,6 +604,7 @@ function renderSportsEventSchema() {
       'price': '0',
       'priceCurrency': 'USD',
       'availability': 'https://schema.org/InStock',
+      'validFrom': startISO,
       'url': 'https://www.utahglizzies.com/team.html#schedule',
       'description': 'Free to attend at Utah Mammoth Ice Center, Sandy UT'
     },
