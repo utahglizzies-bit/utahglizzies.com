@@ -376,6 +376,38 @@ window.siteContent = {
       lore:
         "There is a form Wyatt McNeil was supposed to fill out before every shift, and the Glizzies stopped asking him to sign it after his twelfth goal of the season. GlizzNasty did not arrive through a lab accident or a mythic storm — he simply showed up one Tuesday, put a puck through a spot in the net that should not have physically existed, and the equipment manager quietly reclassified his release as a hazard rather than a shot. The nameplate came from an assistant coach who watched him rip a one-timer so violently unclean that the only appropriate word muttered on the bench was “nasty,” and it stuck immediately. Twelve goals in twelve games would be a career for most Glizzies. For GlizzNasty, it was a warmup. He scored twice in the 8-1 Misfits playoff demolition and buried an unassisted snipe in the championship game just to force overtime, because letting a season die quietly has never once occurred to him. Defensemen do not so much cover him as file incident reports. The Glizzies do not have a plan for GlizzNasty. They just get out of the way and let the release do what it does.",
     },
+    {
+      name: "Devin Bain",
+      nameplate: "Meat Shield",
+      status: "Roster",
+      stamp: "Mantle Inherited",
+      lore:
+        "The MEAT SHIELD mantle does not retire. It gets handed down. When the previous Meat Shield stepped away from the crease after carrying the sacred deli counter through an entire playoff run, the Glizzies needed someone willing to inherit both the pads and the paperwork. Devin Bain volunteered before anyone finished explaining what the job actually involved. Nobody knows exactly what the handoff ceremony entailed, only that Devin walked out of it wearing the same haunted blocker, the same quiet resolve, and a distinct new willingness to let large men fire frozen rubber at him for sport. Season one behind the new mask begins this Fall. The nameplate is the same. The mindset, apparently, is hereditary.",
+    },
+    {
+      name: "Derek Schlenker",
+      nameplate: "Micro Glizz",
+      status: "Roster",
+      stamp: "Concentrated Formula",
+      lore:
+        "Micro Glizz was not discovered so much as decanted. Rumor has it a lab technician, trying to engineer a full-size Glizzy, over-reduced the formula by accident and ended up with something smaller, denser, and considerably more dangerous per ounce. Derek Schlenker showed up wearing the results without comment. He is not the biggest body on the bench, and he has never once acted like that was relevant. Defensemen who size him up before the whistle spend the rest of the shift recalculating. The Glizzies have learned not to underestimate a concentrated formula just because the bottle is small — Micro Glizz packs a full-size problem into a compact frame, and opponents keep finding that out the hard way.",
+    },
+    {
+      name: "Joey Teahan",
+      nameplate: "Wiener Wrangler",
+      status: "Roster",
+      stamp: "Loose Puck Specialist",
+      lore:
+        "Every rink has loose pucks rattling around the corners, and every beer league has at least one guy willing to go get them. The Glizzies have Joey Teahan. Nobody taught him to hunt down a rebound in the blue paint like it owed him money — it just seems to be how he was built. The nameplate Wiener Wrangler was bestowed after a single shift in which he rounded up three separate loose pucks and one very confused opposing winger, herding all four toward the exact spot on the ice he wanted them. Some call it hustle. The Glizzies call it a specialty. Whatever is loose, wherever it ends up, Joey Teahan is already headed that direction.",
+    },
+    {
+      name: "Hunter Stewart",
+      nameplate: "Glizzin' Stew",
+      status: "Roster",
+      stamp: "Slow Simmer",
+      lore:
+        "Glizzin' Stew does not arrive hot. He arrives low, slow, and fully prepared to outlast whatever the other team is bringing. Hunter Stewart's game was reportedly built over a long offseason of watching game tape the way other people watch a crockpot — patiently, without rushing anything, confident the flavor develops on its own schedule. By the third period, when everyone else's legs have started filing complaints, Glizzin' Stew is somehow just getting to temperature. The Glizzies were skeptical of a forecheck that takes its time, right up until the moment it started working. Now they just let him simmer and wait for the shift to pay off.",
+    },
   ],
 
   emailSignup: {
