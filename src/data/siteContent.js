@@ -140,33 +140,75 @@ window.siteContent = {
   },
     opponentChirps: [
     {
-      playerName: "The Salty Boys Bench",
-      number: "ALL",
-      moment: "April 30 Receipts",
+      playerName: "Whoever's In The Away Room",
+      moment: "Pregame Warmup",
       lines: [
-        "Great win on April 30. We saved the receipt. It has been marinating.",
-        "You beat us 4-3 in April. We beat our next two opponents 7-1 and 8-1. Trajectory check.",
-        "The regular season is great for building character. The championship is where the mustard flows.",
+        "Nice warmup laps. We timed them. They were fine.",
+        "Bold pregame stretch routine. Very optimistic.",
+        "Good luck out there. You'll need marginally more than that.",
       ],
     },
     {
-      playerName: "The Salty Boys",
-      number: "00",
-      moment: "Name Energy",
+      playerName: "The Opposing Bench",
+      moment: "First Whistle",
       lines: [
-        "Salty Boys. Bold name for a championship. The Glizzies will provide the sodium content.",
-        "You named yourselves after the feeling of losing. We admire the preparation.",
-        "Salt is a condiment. Glizzies are the main course. Know your role.",
+        "The puck drops and suddenly everyone remembers hockey is hard.",
+        "Fresh legs, fresh gloves, same result incoming.",
+        "Respect the jersey. Question the roster.",
       ],
     },
     {
-      playerName: "Their Whole Lineup",
-      number: "1-99",
-      moment: "Championship Math",
+      playerName: "Your Fourth Line",
+      moment: "Line Change Chaos",
       lines: [
-        "You survived your bracket. We demolished ours. One of those feels different.",
-        "The Glizzies have been averaging 7.5 goals in the last two games. That is not a stat, that is a warning.",
-        "If you came here expecting an easy final, the Glizzies bench formally declines to cooperate.",
+        "That change took a while. We'll wait. We have all period.",
+        "Too many men? No judgment, just a whistle.",
+        "The bench door is not a suggestion.",
+      ],
+    },
+    {
+      playerName: "The Man Advantage",
+      moment: "Power Play Energy",
+      lines: [
+        "A power play is just extra time to not score. Respect the effort.",
+        "Fun fact: we've seen this power play before. It ends the same way.",
+        "The umbrella formation is cute. We prefer umbrellas that work.",
+      ],
+    },
+    {
+      playerName: "Whoever Started Talking First",
+      moment: "Post-Whistle Chirping",
+      lines: [
+        "Great chirp. We'll allow it, this once.",
+        "Save some words for the handshake line.",
+        "Talk is free. So is the rebound you just gave up.",
+      ],
+    },
+    {
+      playerName: "The Away Section",
+      moment: "Scoreboard Watch",
+      lines: [
+        "The scoreboard is right there. It has feelings too, probably.",
+        "Every glance at the clock is a vote for overtime. Bold strategy.",
+        "We read the scoreboard the same way you're about to.",
+      ],
+    },
+    {
+      playerName: "Your Coach's Intermission Speech",
+      moment: "Locker Room Wisdom",
+      lines: [
+        "Whatever's being said in that room right now, we hope it's inspiring.",
+        "Intermission adjustments are great. Ours already worked once tonight.",
+        "Chalkboard talk only helps if the legs show up for period two.",
+      ],
+    },
+    {
+      playerName: "Everyone, Eventually",
+      moment: "Handshake Line Energy",
+      lines: [
+        "Good game. Mean it. Also, see you next season.",
+        "Handshake line's the only lineup change we respect.",
+        "Beer league is long. Tonight's just one chapter.",
       ],
     },
   ],
