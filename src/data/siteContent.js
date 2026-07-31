@@ -62,13 +62,13 @@ window.siteContent = {
     date: "Jul 29, 2026",
     result: "win",
     recap:
-      "Fall 2026 opened with a statement: the Glizzies blanked the Salt Shakers 4-0 on the road, outshooting them 25-8. LIL' SMOKIES (Ian Penders) opened the scoring just 5:39 into the first with the eventual game-winner, and UNCLE GLIZZBURN (Brian Coburn) followed two minutes later with a shorthanded snipe off a GLIZ GOD (Hayden Rathmell) feed while the Glizzies killed a WIENER WRANGLER (Joey Teahan) penalty. LIL' SMOKIES struck again in the second for his own multi-goal night, and UNCLE GLIZZBURN closed the book in the third with his second of the game, set up by A. FROMAN (Andrew Herrin), for the 4-0 final. MEAT SHIELD (Devin Bain) turned aside all 8 shots he faced across a full 48 minutes for the shutout. Next up: the Gnarwhalers, who beat the Glizzies 0-4 back in May, come to South Rink on August 5.",
+      "Fall 2026 opened with a statement: the Glizzies blanked the Salt Shakers 4-0 on the road, outshooting them 25-8. LIL' SMOKIES (Ian Penders) opened the scoring just 5:39 into the first with the eventual game-winner, and UNCLE GLIZZBURN (Brian Coburn) followed two minutes later with a shorthanded snipe off a GLIZ GOD (Hayden Rathmell) feed while the Glizzies killed a WIENER WRANGLER (Joey Teahan) penalty. LIL' SMOKIES struck again in the second for his own multi-goal night, and UNCLE GLIZZBURN closed the book in the third with his second of the game, set up by A. FROMAN (Andrew Herrin), for the 4-0 final. With MEAT SHIELD (Devin Bain) out for the game, GLIZZIN' STEW (Hunter Stewart) played the full 48 minutes in net and turned aside all 8 shots he faced for a shutout in his goaltending debut. Next up: the Gnarwhalers, who beat the Glizzies 0-4 back in May, come to South Rink on August 5.",
     momentOfGame:
       "LIL' SMOKIES' opening goal at 5:39 of the first — it held up as the game-winner in a 4-0 shutout.",
     threeStars: [
       { name: "Ian Penders (LIL' SMOKIES) — 2G, including the GWG", star: 1 },
       { name: "Brian Coburn (UNCLE GLIZZBURN) — 2G, one shorthanded", star: 2 },
-      { name: "Devin Bain (MEAT SHIELD) — 48:00, 8 saves, shutout win", star: 3 },
+      { name: "Hunter Stewart (GLIZZIN' STEW) — 48:00, 8 saves, shutout in his goaltending debut", star: 3 },
     ],
   },
     playerSpotlight: {
@@ -489,9 +489,9 @@ window.siteContent = {
     {
       date: "2026-07-29", opponent: "Salt Shakers", result: "win", glizziesScore: 4, opponentScore: 0,
       headline: "Fall 2026 Opens With a Shutout: Glizzies 4, Salt Shakers 0",
-      body: "The Glizzies opened the Fall 2026 season with a statement road win, blanking the Salt Shakers 4-0 and outshooting them 25-8. LIL' SMOKIES potted a pair, including the game-winner just 5:39 into the first. UNCLE GLIZZBURN added two of his own, one of them shorthanded off a GLIZ GOD feed while the Glizzies killed a WIENER WRANGLER minor. MEAT SHIELD turned away all 8 shots he saw across a full 48 minutes for the shutout. New season, same result: Glizzies win.",
+      body: "The Glizzies opened the Fall 2026 season with a statement road win, blanking the Salt Shakers 4-0 and outshooting them 25-8. LIL' SMOKIES potted a pair, including the game-winner just 5:39 into the first. UNCLE GLIZZBURN added two of his own, one of them shorthanded off a GLIZ GOD feed while the Glizzies killed a WIENER WRANGLER minor. With MEAT SHIELD out for the game, GLIZZIN' STEW played all 48 minutes in net and turned away all 8 shots he saw for a shutout in his goaltending debut. New season, same result: Glizzies win.",
       moment: "UNCLE GLIZZBURN's shorthanded goal at 2:56 of the first — a penalty kill that turned into two points on the board instead of a chance against.",
-      stars: ["Ian Penders (LIL' SMOKIES)", "Brian Coburn (UNCLE GLIZZBURN)", "Devin Bain (MEAT SHIELD)"],
+      stars: ["Ian Penders (LIL' SMOKIES)", "Brian Coburn (UNCLE GLIZZBURN)", "Hunter Stewart (GLIZZIN' STEW)"],
     },
     {
       date: "2026-06-18", opponent: "Saucer Kings", result: "win", glizziesScore: 7, opponentScore: 1,
@@ -529,10 +529,10 @@ rawDogOfNight: {
     number: "10",
     game: "@ Salt Shakers — July 29, 2026",
     nominatedBy: "THE BENCH",
-    reason: "When MEAT SHIELD needed a breather partway through the opener, GLIZZIN' STEW strapped on the pads and subbed into net without blinking. Second game as a Glizzy and he's already answering the call nobody wants to answer.",
-    citation: "Official citation: GLIZZIN' STEW #10 saw MEAT SHIELD needed a break and volunteered to strap on the pads mid-shutout like it was nothing. The Salt Shakers still didn't score. Stew just shrugged and went back to being a forward.",
-    achievement: "Subbed into net for MEAT SHIELD",
-    honorableMention: "Devin Bain, for handing over the pads and trusting him with it",
+    reason: "MEAT SHIELD was out for the opener, so GLIZZIN' STEW strapped on the pads and played all 48 minutes in net — his goaltending debut as a Glizzy. Shutout win. No big deal, apparently.",
+    citation: "Official citation: GLIZZIN' STEW #10 found out he was playing goalie and just did it — a full 48 minutes, first start of his career, and the Salt Shakers still didn't score. Never blinked.",
+    achievement: "Played a full game in net — his goaltending debut",
+    honorableMention: "The rest of the bench, for acting like this was totally normal",
     stats: [
       { icon: "🥅", label: "Answered The Call" },
       { icon: "🌭", label: "Certified Team Player" },
