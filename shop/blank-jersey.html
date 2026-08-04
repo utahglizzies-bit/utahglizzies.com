@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../assets/shop.css?v=20" />
+  <link rel="stylesheet" href="../assets/shop.css?v=22" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49PTYCCKB1');</script>
 </head>
@@ -78,7 +78,7 @@
     <nav class="footer-links"><a href="../index.html">Home</a><a href="../team.html#roster">Roster</a><a href="../game.html">Play</a><a href="../shop.html">Shop</a><a href="../community.html">The Pit</a><a href="../blog.html">Blog</a><a href="../sponsors.html">Sponsors</a><a href="../brand.html">Brand</a><a href="../contact.html">Contact</a><a href="../index.html#faq">FAQ</a></nav>
     <p class="footer-copy">Utah Glizzies HC &bull; Sandy, UT &bull; utahglizzies.com</p>
   </div></footer>
-  <script src="../assets/shop-cart.js?v=20"></script>
+  <script src="../assets/shop-cart.js?v=22"></script>
   <script>
   (function(){
     var wrap=document.querySelector(".pd-wrap");
@@ -106,26 +106,16 @@
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }
         else { specEl.textContent=""; specEl.style.display="none"; }  // no live specs -> hide (don't show stale hardcoded)
       }
-      var ro = GlizzCart.realOptions(data && data.options);
-      if(ro.length && optWrap){
-        optWrap.innerHTML = ro.map(function(o){
-          return '<div class="pc-opt-row"><label>'+GlizzCart.esc(o.name)+'</label><select data-opt="'+GlizzCart.esc(o.name)+'">'
-            + o.values.map(function(v){return '<option value="'+GlizzCart.esc(v)+'">'+GlizzCart.esc(v)+'</option>';}).join("")
-            + '</select></div>';
-        }).join("");
-      }
       wrap.__variants = (data&&data.variants)||[];
+      // Variant-aware options (shared): only shows existing, in-stock combos.
+      GlizzCart.renderVariantOptions(optWrap, data);
       var isPresale = wrap.getAttribute("data-presale")==="1";
       if(!isPresale && data && !data.available && addBtn){ addBtn.disabled=true; addBtn.textContent="Sold Out"; }
       if(data && data.variants.length===0 && addBtn){ addBtn.disabled=true; addBtn.textContent="Unavailable"; }
     });
 
     function resolveVariant(){
-      var variants=wrap.__variants||[];
-      if(variants.length===0) return null;
-      if(variants.length===1) return variants[0];
-      var chosen={}; wrap.querySelectorAll("[data-opt]").forEach(function(s){ chosen[s.getAttribute("data-opt")]=s.value; });
-      return variants.filter(function(v){ return (v.selectedOptions||[]).every(function(so){ return chosen[so.name]===undefined||chosen[so.name]===so.value; }); })[0] || variants[0];
+      return GlizzCart.resolveVariantFrom(wrap, wrap.__variants);
     }
 
     addBtn.addEventListener("click",function(){

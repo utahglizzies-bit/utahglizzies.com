@@ -75,6 +75,69 @@
 
   function realOptions(options){ return (options||[]).filter(function(o){ return !(o.values.length===1 && (o.values[0]==="Default Title"||o.name==="Title")); }); }
 
+  // Variant-aware option rendering. Renders <select> dropdowns into optWrap using ONLY
+  // variants that exist and are availableForSale. When a product has 2+ options
+  // (e.g. Color + Size), later dropdowns are filtered by the earlier selections, so a
+  // discontinued combo (e.g. Sand / 4XL) simply never appears. Re-renders on change.
+  // data = the object returned by fetchProduct(); returns nothing (mutates optWrap).
+  function renderVariantOptions(optWrap, data){
+    if(!optWrap || !data) return;
+    var ro = realOptions(data.options);
+    var sellable = (data.variants||[]).filter(function(v){ return v.availableForSale; });
+    if(!ro.length){ optWrap.innerHTML=""; return; }
+    if(!sellable.length){ sellable = data.variants||[]; } // fallback so page isn't empty
+
+    function buildSelect(name, values, current){
+      return '<div class="pc-opt-row"><label>'+esc(name)+'</label><select data-opt="'+esc(name)+'">'
+        + values.map(function(v){ return '<option value="'+esc(v)+'"'+(v===current?' selected':'')+'>'+esc(v)+'</option>'; }).join("")
+        + '</select></div>';
+    }
+    function selOf(name){ var el=optWrap.querySelector('[data-opt="'+name+'"]'); return el?el.value:null; }
+
+    // values available for optName given the current selections of all EARLIER options
+    function valuesFor(optName, priorSelections){
+      var seen=[];
+      sellable.forEach(function(v){
+        var ok=true, val=null;
+        (v.selectedOptions||[]).forEach(function(so){
+          if(priorSelections[so.name]!==undefined && priorSelections[so.name]!==so.value) ok=false;
+          if(so.name===optName) val=so.value;
+        });
+        if(ok && val!=null && seen.indexOf(val)<0) seen.push(val);
+      });
+      return seen;
+    }
+
+    function render(){
+      var prior={}, html="";
+      ro.forEach(function(o){
+        var vals = valuesFor(o.name, prior);
+        if(!vals.length) vals = o.values; // safety
+        var cur = selOf(o.name);
+        if(vals.indexOf(cur)<0) cur = vals[0];
+        prior[o.name] = cur;              // lock this selection for the next option's filter
+        html += buildSelect(o.name, vals, cur);
+      });
+      optWrap.innerHTML = html;
+    }
+    render();
+    // any change re-renders downstream options (a new color may change which sizes exist)
+    optWrap.addEventListener("change", function(e){
+      if(e.target && e.target.getAttribute && e.target.getAttribute("data-opt")!=null){ render(); }
+    });
+  }
+
+  // Resolve the chosen variant from the dropdowns. Exact match on availableForSale
+  // variants only — no silent fallback to a wrong variant.
+  function resolveVariantFrom(optWrap, variants){
+    var avail = (variants||[]).filter(function(v){ return v.availableForSale; });
+    if(avail.length===0) return null;
+    if(avail.length===1) return avail[0];
+    var chosen={};
+    optWrap.querySelectorAll("[data-opt]").forEach(function(s){ chosen[s.getAttribute("data-opt")]=s.value; });
+    return avail.filter(function(v){ return (v.selectedOptions||[]).every(function(so){ return chosen[so.name]===undefined||chosen[so.name]===so.value; }); })[0] || null;
+  }
+
   // Rebuild the Shopify cart from our line list; returns promise resolving to checkoutUrl
   function syncCart(){
     var lines = state.lines.map(function(l){
@@ -121,6 +184,8 @@
   window.GlizzCart = {
     fetchProduct: fetchProduct,
     realOptions: realOptions,
+    renderVariantOptions: renderVariantOptions,
+    resolveVariantFrom: resolveVariantFrom,
     parseDescription: parseDescription,
     money: money,
     esc: esc,
