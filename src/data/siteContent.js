@@ -535,7 +535,7 @@ rawDogOfNight: {
     gameNickname: "Nasty",
     number: "53",
     game: "@ Gnarwhalers — August 5, 2026",
-    nominatedBy: "THE BENCH",
+    nominatedBy: "Hunter Stewart (GLIZZIN' STEW) — last week's Raw Dog of the Night",
     reason: "GLIZZNASTY went off: a fake-shot pass to A. FROMAN that may or may not have been on purpose, a fluffer off the point that snuck in with two seconds left in the first, and a top-shelf snipe on the power play to put it away. Two goals, an assist, and a game the Gnarwhalers won't forget.",
     citation: "Official citation: GLIZZNASTY #53 walked into the receipts game and settled the whole account personally — a sneaky helper nobody's sure was intentional, a goal that beat the period clock by two seconds, and a snipe that didn't miss. The Gnarwhalers had no answer.",
     achievement: "2G, 1A — the receipts game",
