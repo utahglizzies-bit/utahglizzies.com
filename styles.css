@@ -784,9 +784,12 @@ h3 {
   margin: 10px 0;
   color: var(--green);
   font-family: var(--display-font);
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 0.9;
+  font-size: clamp(1.5rem, 2.6vw, 2.5rem);
+  line-height: 1.08;
   text-transform: uppercase;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .tracker-grid p {
