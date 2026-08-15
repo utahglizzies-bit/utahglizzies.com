@@ -2207,13 +2207,6 @@ select {
   color: rgba(255, 244, 201, 0.78);
 }
 
-.lore-section .section-heading h1,
-.lore-section .section-heading h2,
-.lore-section .section-heading h3,
-.lore-section .section-heading small {
-  color: var(--cream) !important;
-}
-
 .lore-card {
   border-color: rgba(255, 244, 201, 0.16);
   color: var(--cream);
