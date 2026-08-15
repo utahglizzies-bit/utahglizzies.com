@@ -232,8 +232,6 @@ window.siteContent = {
     { name: "Derek Schlenker", number: "4", nameplate: "MICRO GLIZZ", position: "Forward", photo: "", bio: "New for Fall 2026. Small package, full-size problem for opposing D. The stat sheet awaits.", stats: { gp: 0, g: 0, a: 0, pts: 0, pim: 0 }, instagram: "", nickname: "Micro Glizz" },
     { name: "Joey Teahan", number: "69", nameplate: "WIENER WRANGLER", position: "Forward", photo: "", bio: "New for Fall 2026. Rounds up loose pucks and loose men alike. One game in, one trip to the penalty box.", stats: { gp: 1, g: 0, a: 0, pts: 0, pim: 2 }, instagram: "", nickname: "Wiener Wrangler" },
     { name: "Hunter Stewart", number: "10", nameplate: "GLIZZIN' STEW", position: "Forward", photo: "", bio: "New for Fall 2026. Stepped into net for a shutout win in his debut, then picked up an assist back at forward in game two — and a tripping minor to keep it honest. Broke out with a 2-goal game against the Zombonis.", stats: { gp: 3, g: 2, a: 1, pts: 3, pim: 2 }, instagram: "", nickname: "Glizzin' Stew" },
-    { name: "Kyle Ronchak", number: "7", nameplate: "RONCHAK", position: "Forward", photo: "", bio: "New name on the sheet against the Zombonis — official Glizzy nameplate still pending.", stats: { gp: 1, g: 0, a: 0, pts: 0, pim: 0 }, instagram: "", nickname: "Ronchak" },
-    { name: "Kaden Hess", number: "15", nameplate: "HESS", position: "Forward", photo: "", bio: "Debut game to remember — an assist on the game-winner and a goal of his own against the Zombonis. Official Glizzy nameplate still pending.", stats: { gp: 1, g: 1, a: 1, pts: 2, pim: 0 }, instagram: "", nickname: "Hess" },
   ],
   sponsors: {
     current: [
