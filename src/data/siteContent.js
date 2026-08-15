@@ -64,7 +64,7 @@ window.siteContent = {
     recap:
       "The Glizzies made it 3-0-0 with a dominant 10-0 shutout over the Zombonis at home on the South Rink, outshooting them 30-12 from puck drop. GLIZ-Z (Zimmy Casino) opened the scoring with the game-winner just 12:45 into the first — assisted by newcomer Kaden Hess on his very first shift as a Glizzy — and the lead never got smaller. SAUCE DAWG (Devon Woodside) ran the offense with a goal and two assists, GLIZZIN' STEW (Hunter Stewart) scored twice, and GLIZ-Z added a second goal in the third. GLIZZARD OF OZ (Jared Aida) — wearing the captain's letter in A. FROMAN's absence — scored to boot, with SIR GLIZZINGTON III (Parker Strong), J. CHESTNUT (Chris Call), and GLIZZNASTY (Wyatt McNeil) each chipping in a goal. Kaden Hess capped an outstanding Glizzies debut with a goal of his own in the third, and fellow newcomer Kyle Ronchak also suited up for his first game. MEAT SHIELD (Devin Bain) turned aside all 12 shots he faced for his second win and first shutout of the young season. JDAWG (James Pope) earned Raw Dog of the Night honors for a game as greasy as it gets on D — the kind of shift that doesn't always show up on the scoresheet. Glizzies improve to 3-0-0 to open Fall 2026, outscoring opponents 19-3 through three games.",
     momentOfGame:
-      "Kaden Hess picking up an assist on the game-winner in his very first shift as a Glizzy, then adding a goal of his own before the final horn — as good a Glizzies debut as they come.",
+      "GLIZ-Z (Zimmy Casino) burying the game-winner just 12:45 into the first period — his first multi-goal game of the season — and setting a tone the Zombonis never recovered from.",
     threeStars: [
       { name: "Devon Woodside (SAUCE DAWG) — 1G, 2A, ran the offense all night", star: 1 },
       { name: "Devin Bain (MEAT SHIELD) — 12 saves for the shutout win", star: 2 },
@@ -490,7 +490,7 @@ window.siteContent = {
       date: "2026-08-13", opponent: "Zombonis", result: "win", glizziesScore: 10, opponentScore: 0,
       headline: "Shutout Statement: Glizzies Blank Zombonis 10-0",
       body: "The Glizzies made it 3-0-0 with a dominant 10-0 shutout over the Zombonis at home on the South Rink, outshooting them 30-12. GLIZ-Z opened the scoring with the game-winner just 12:45 into the first, assisted by newcomer Kaden Hess on his very first shift as a Glizzy, and never let up from there. SAUCE DAWG ran the offense with a goal and two assists, GLIZZIN' STEW scored twice, and GLIZ-Z added a second goal in the third. GLIZZARD OF OZ — wearing the captain's letter in A. FROMAN's absence — scored to boot, with SIR GLIZZINGTON III, J. CHESTNUT, and GLIZZNASTY each chipping in a goal. Kaden Hess capped an outstanding debut with a goal of his own, and fellow newcomer Kyle Ronchak also suited up for his first game. MEAT SHIELD turned aside all 12 shots he faced for his second win and first shutout of the season. Glizzies improve to 3-0-0.",
-      moment: "Kaden Hess picking up an assist on the game-winner in his very first shift as a Glizzy, then adding a goal of his own before the final horn — as good a Glizzies debut as they come.",
+      moment: "GLIZ-Z (Zimmy Casino) burying the game-winner just 12:45 into the first period — his first multi-goal game of the season — and setting a tone the Zombonis never recovered from.",
       stars: ["Devon Woodside (SAUCE DAWG)", "Devin Bain (MEAT SHIELD)", "Kaden Hess"],
     },
     {

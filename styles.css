@@ -3893,6 +3893,13 @@ body {
     linear-gradient(135deg, #07100d, #10251c) !important;
   color: var(--cream) !important;
 }
+.last-game-section .section-heading h2,
+.last-game-section .section-heading h3 {
+  color: var(--cream) !important;
+}
+.last-game-section .section-heading p {
+  color: rgba(255,244,201,0.78) !important;
+}
 
 /* Matchup section — keep light sections white-frosted, dark cards dark */
 .matchup-lead {
