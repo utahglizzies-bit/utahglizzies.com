@@ -2207,6 +2207,13 @@ select {
   color: rgba(255, 244, 201, 0.78);
 }
 
+.lore-section .section-heading h1,
+.lore-section .section-heading h2,
+.lore-section .section-heading h3,
+.lore-section .section-heading small {
+  color: var(--cream) !important;
+}
+
 .lore-card {
   border-color: rgba(255, 244, 201, 0.16);
   color: var(--cream);
@@ -3932,6 +3939,13 @@ body {
 /* Chirp section — keep its own background */
 .chirp-section {
   background: var(--scoreboard) !important;
+}
+.chirp-section .section-heading h2,
+.chirp-section .section-heading h3 {
+  color: var(--cream) !important;
+}
+.chirp-section .section-heading p {
+  color: rgba(255,244,201,0.78) !important;
 }
 
 /* Locker room / lore sections */
