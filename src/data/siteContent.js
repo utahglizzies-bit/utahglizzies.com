@@ -62,12 +62,12 @@ window.siteContent = {
     date: "Aug 27, 2026",
     result: "win",
     recap:
-      "The Glizzies bounced back in a big way, dismantling the Devastators 5-1 on home ice at the South Rink for a much-needed reset after last week's stumble. The 3rd line was flat-out unstoppable — GLIZZIN' STEW (Hunter Stewart), DER WÜRST (Brady Bessette), and A. FROMAN (Andrew Herrin) combined for 4 goals, 4 assists, and were on the ice for 4 of the Glizzies' 5 goals on the night. GLIZZIN' STEW dropped a full hat trick including TWO shorthanded goals in the third period. DER WÜRST made his Fall 2026 debut count, opening the scoring at 13:19 of the first and adding a pair of assists for a 3-point night in his first game back. A. FROMAN picked up the primary helper on the game-winner. Elsewhere, GLIZZARD OF OZ (Jared Aida) buried a 2nd-period marker with GLIZZ LORD (Kevin Peterson) and SAUCE DAWG (Devon Woodside) assisting, and MEAT SHIELD (Devin Bain) was a wall in net — 23 saves on 24 shots for the win, holding the Devastators off the board until 06:31 of the third when Landon Pace finally solved him. The Glizzies were badly outshot 24-17 but made every chance count. The night's low light: LIL' SMOKIES (Ian Penders) picked up a game misconduct and a disqualification with three minutes to go, running his season PIM total to 28. Glizzies improve to 4-1-0 and welcome the Whalers to the North Rink next Thursday at 6:15 PM.",
+      "The Glizzies bounced back in a big way, dismantling the Devastators 5-1 on home ice at the South Rink for a much-needed reset after last week's stumble. The 3rd line was flat-out unstoppable — GLIZZIN' STEW (Hunter Stewart), DER WÜRST (Brady \"B-Cups\" Bessette), and A. FROMAN (Andrew Herrin) combined for 4 goals, 4 assists, and were on the ice for 4 of the Glizzies' 5 goals on the night. GLIZZIN' STEW dropped a full hat trick including TWO shorthanded goals in the third period. DER WÜRST opened the scoring at 13:19 of the first and added a pair of assists for a 3-point night — three days before his own wedding on Sunday, August 30, with his whole family and friends in from Vermont in the stands. A. FROMAN picked up the primary helper on the game-winner. Elsewhere, GLIZZARD OF OZ (Jared Aida) buried a 2nd-period marker with GLIZZ LORD (Kevin Peterson) and SAUCE DAWG (Devon Woodside) assisting, and MEAT SHIELD (Devin Bain) was a wall in net — 23 saves on 24 shots for the win, holding the Devastators off the board until 06:31 of the third when Landon Pace finally solved him. The Glizzies were badly outshot 24-17 but made every chance count. The night's low light: LIL' SMOKIES (Ian Penders) picked up a game misconduct and a disqualification with three minutes to go, running his season PIM total to 28. Glizzies improve to 4-1-0 and welcome the Whalers to the North Rink next Thursday at 6:15 PM.",
     momentOfGame:
       "GLIZZIN' STEW's second shorthanded goal of the third period at 02:27 — assisted by DER WÜRST — to cap the hat trick and put the game to bed. Two shorties in one period, on one man, is legally suspicious behavior.",
     threeStars: [
       { name: "Hunter Stewart (GLIZZIN' STEW) — hat trick with TWO shorthanded goals in the third (3rd line)", star: 1 },
-      { name: "Brady Bessette (DER WÜRST) — season debut, opening goal + 2 assists (3 pts), Raw Dog of the Night (3rd line)", star: 2 },
+      { name: "Brady \"B-Cups\" Bessette (DER WÜRST) — opening goal + 2 assists (3 pts), Raw Dog of the Night, three days before his own wedding (3rd line)", star: 2 },
       { name: "Andrew Herrin (A. FROMAN) — captain's primary helper on the game-winner; the 3rd line was unstoppable (4G, 4A combined; on for 4 of 5)", star: 3 },
     ],
   },
@@ -88,7 +88,7 @@ window.siteContent = {
   hypeMeter: {
     level: 0,
     label: "4-1 Statement Hype",
-    reason: "A statement 5-1 win over the Devastators — GLIZZIN' STEW's hat trick (two shorties in the third!) and DER WÜRST's 3-point debut headlined the bounce-back. Glizzies are 4-1-0 and hosting the 1-4-0 Whalers next at the North Rink. Every click gets the bench closer to making it two in a row.",
+    reason: "A statement 5-1 win over the Devastators — GLIZZIN' STEW's hat trick (two shorties in the third!) and DER WÜRST's 3-point night (three days before his own wedding) headlined the bounce-back. Glizzies are 4-1-0 and hosting the 1-4-0 Whalers next at the North Rink. Every click gets the bench closer to making it two in a row.",
     gameWeek: "September 3 vs Whalers",
     hypeGoal: 1000,
     hypeApiBase: "https://countapi.mileshilliard.com/api/v1",
@@ -118,7 +118,7 @@ window.siteContent = {
     opponent: "Whalers",
     record: "First meeting between these two this Fall 2026 season",
     storyline:
-      "Coming off a 5-1 statement win over the Devastators — a GLIZZIN' STEW hat trick and a 3-point debut from DER WÜRST — the Glizzies (4-1-0) host a struggling Whalers side (1-4-0) at the North Rink to close week six. On paper this is a mismatch: the Glizzies are scoring 5.2 per game, allowing 1.4, and clicking at 22.2% on the power play. The Whalers are 4.0 GF/1.6 GA on the wrong side and 0-for on the man advantage all year. The trap: 8.8 PIM/game for the Glizzies to the Whalers' 1.6 — get lazy with the stick and this becomes a special-teams game.",
+      "Coming off a 5-1 statement win over the Devastators — a GLIZZIN' STEW hat trick and a 3-point night from DER WÜRST — the Glizzies (4-1-0) host a struggling Whalers side (1-4-0) at the North Rink to close week six. On paper this is a mismatch: the Glizzies are scoring 5.2 per game, allowing 1.4, and clicking at 22.2% on the power play. The Whalers are 4.0 GF/1.6 GA on the wrong side and 0-for on the man advantage all year. The trap: 8.8 PIM/game for the Glizzies to the Whalers' 1.6 — get lazy with the stick and this becomes a special-teams game.",
     opponentBreakdown: [
       ["Last meeting", "First matchup between these two this Fall 2026 season."],
       ["Whalers form", "1-4-0, scoring 4.0/g, allowing 5.4/g. PP 0%, PK 100%."],
@@ -130,7 +130,7 @@ window.siteContent = {
       "Glizzies record: 4-1-0, 26 goals for, 7 against (+19 differential).",
       "First meeting: no history yet against the Whalers this season.",
       "GLIZZIN' STEW has 5 goals in 5 games (T-1st on team in G, T-1st in points).",
-      "DER WÜRST enters game two of his Fall 2026 season after a 3-point debut.",
+      "DER WÜRST is coming off a 3-point night against the Devastators.",
     ],
     keys: [
       "Stay out of the box — Glizzies average 8.8 PIM/g to the Whalers' 1.6. Don't hand them power plays.",
@@ -228,7 +228,7 @@ window.siteContent = {
     { name: "Kevin Peterson", number: "22", nameplate: "GLIZZ LORD", position: "Forward", photo: "", bio: "Clean record, useful points, suspiciously professional. Two assists through three games — the second helper on GLIZZARD OF OZ's 2nd-period goal in the 5-1 win over the Devastators.", stats: { gp: 3, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "Glizz Lord" },
     { name: "Jared Aida", number: "8", nameplate: "GLIZZARD OF OZ", position: "Forward", photo: "", bio: "The hot dog cannon remains pointed at him. Wore the captain's letter in A. FROMAN's absence against the Zombonis and scored to boot, then buried a 2nd-period goal in the 5-1 win over the Devastators. Three points through three games.", stats: { gp: 3, g: 2, a: 1, pts: 3, pim: 0 }, instagram: "", nickname: "Glizzard of Oz" },
     { name: "Ian Penders", number: "5", nameplate: "LIL' SMOKIES", position: "Forward (A)", photo: "", bio: "A forecheck that keeps the rhythm section honest. Assistant captain for Fall 2026. Also single-handedly leading the team in penalty minutes with 28 through five games — that's more than every other Glizzy on the roster combined (12), or roughly one full period per game in the box. Three straight minors in the third against the Salties. Then, going for the achievement unlock against the Devastators, capped the night with a disqualification AND a game misconduct inside the final three minutes. The A on the sweater is currently doing a LOT of heavy lifting. Still 3 goals in there. Somehow.", stats: { gp: 5, g: 3, a: 0, pts: 3, pim: 28 }, instagram: "", nickname: "Lil' Smokies" },
-    { name: "Brady Bessette", number: "26", nameplate: "DER WÜRST", position: "Forward", photo: "", bio: "Fall 2026 debut in game five — and made it count. Opened the scoring against the Devastators at 13:19 of the first, then added a pair of assists (one on the game-winner) for a 3-point night in his first game back. Raw Dog of the Night honors on the same weekend he got married, with his family and friends in from Vermont to watch. Raw groom, raw dog.", stats: { gp: 1, g: 1, a: 2, pts: 3, pim: 0 }, instagram: "", nickname: "Der Würst" },
+    { name: "Brady Bessette", number: "26", nameplate: "DER WÜRST", position: "Forward", photo: "", bio: "Brady \"B-Cups\" Bessette. Opened the scoring against the Devastators at 13:19 of the first, then added a pair of assists (one on the game-winner) for a 3-point night — three days before his own wedding on Sunday, August 30, with his whole family and friends in from Vermont in the stands. Raw Dog of the Night honors, raw-groom energy, all in the same weekend.", stats: { gp: 1, g: 1, a: 2, pts: 3, pim: 0 }, instagram: "", nickname: "Der Würst" },
     { name: "Wyatt McNeil", number: "53", nameplate: "GLIZZNASTY", position: "Forward", photo: "", bio: "The release is a public safety concern. A 2-goal, 1-assist night against the Gnarwhalers to open his Fall 2026 season with a bang — Raw Dog of the Night honors included. Added another against the Zombonis to keep the streak going.", stats: { gp: 2, g: 3, a: 1, pts: 4, pim: 0 }, instagram: "", nickname: "GlizzNasty" },
     { name: "Zimmy Casino", number: "95", nameplate: "GLIZ-Z", position: "Forward", photo: "", bio: "The dangle and top-shelf snipe against the Salties earned him Raw Dog of the Night; three goals on the season through five games. A tripping minor in the third against the Devastators — first-line hands, third-line stick discipline.", stats: { gp: 5, g: 3, a: 0, pts: 3, pim: 4 }, instagram: "", nickname: "Gliz-Z" },
     { name: "Derek Schlenker", number: "4", nameplate: "MICRO GLIZZ", position: "Forward", photo: "", bio: "Debut game, first point as a Glizzy — the secondary assist on GLIZ-Z's tying goal against the Salties. Small package, full-size problem for opposing D.", stats: { gp: 1, g: 0, a: 1, pts: 1, pim: 0 }, instagram: "", nickname: "Micro Glizz" },
@@ -545,14 +545,14 @@ rawDogOfNight: {
     number: "26",
     game: "vs Devastators — August 27, 2026",
     nominatedBy: "Zimmy Casino (GLIZ-Z) — last week's Raw Dog of the Night",
-    reason: "Season debut. Opening goal at 13:19 of the first. Two more assists on the way to a 3-point night. And he did it all with his whole family and friends in from Vermont for his wedding on Sunday. Kept his undies clean when the pressure was highest. Raw groom, raw dog.",
-    citation: "Official citation: DER WÜRST #26 checked in for his first game of Fall 2026 with a full wedding-week entourage in the stands, put the Glizzies on the board with the opening tally, and stacked two assists on top. There is no more Raw Dog scenario in the history of the honor than getting married one day and dropping a 3-point night in your season debut the next.",
-    achievement: "1G 2A — season debut, opening goal, groom energy",
+    reason: "Opening goal at 13:19 of the first. Two more assists on the way to a 3-point night. And he did it three days before his own wedding on Sunday, August 30, with his whole family and friends in from Vermont in the stands for the occasion. Kept his undies clean when the pressure was highest. Raw groom, raw dog.",
+    citation: "Official citation: DER WÜRST #26 — aka B-Cups — hit the ice with a full wedding-week entourage in from Vermont, put the Glizzies on the board with the opening tally, and stacked two assists on top. Three days later, he got married. There is no more Raw Dog scenario in the history of the honor than dropping a 3-point night in front of your entire out-of-state family, right before your own wedding.",
+    achievement: "1G 2A — opening goal, three days before the wedding, full groom energy",
     honorableMention: "Vermont travel party — you're official Glizzies faithful now",
     stats: [
-      { icon: "💍", label: "Married Sunday, Scored Wednesday" },
+      { icon: "💍", label: "Scored Thursday, Married Sunday" },
       { icon: "🥇", label: "Opening Goal" },
-      { icon: "🎯", label: "3-Point Night in the Debut" },
+      { icon: "🎯", label: "3-Point Night, VT Family in the Stands" },
     ],
   },
   gameStats: {
