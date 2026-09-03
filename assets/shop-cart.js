@@ -164,7 +164,7 @@
     if(!state.lines.length){
       itemsEl.innerHTML='<div class="cart-empty">Your cart is empty. Get that dog in you.</div>';
       if(subEl) subEl.textContent="$0";
-      if(nudge){ nudge.textContent="Shipping calculated at checkout — low per-item rates. Pucks & stickers ship free."; nudge.classList.remove("free"); }
+      if(nudge){ nudge.textContent="Shipping calculated at checkout — low per-item rates."; nudge.classList.remove("free"); }
       if(checkout){ checkout.classList.add("disabled"); checkout.removeAttribute("href"); }
       return;
     }
@@ -176,7 +176,7 @@
         +'<button class="cart-line-remove" data-rm="'+i+'">Remove</button></div></div>';
     }).join("");
     var sub=subtotal(); if(subEl) subEl.textContent=money(sub);
-    if(nudge){ nudge.textContent="Shipping calculated at checkout — low per-item rates. Pucks & stickers ship free."; nudge.classList.remove("free"); }
+    if(nudge){ nudge.textContent="Shipping calculated at checkout — low per-item rates."; nudge.classList.remove("free"); }
     if(checkout){ checkout.classList.remove("disabled"); checkout.setAttribute("href", state.checkoutUrl||"#"); }
   }
 
