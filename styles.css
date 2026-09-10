@@ -1,14 +1,14 @@
 :root {
-  --green: #062817;
-  --green-2: #0d3b22;
+  --green: #1a3d24;
+  --green-2: #2a5236;
   --cream: #fff4c9;
-  --gold: #e1a21a;
+  --gold: #c19a2c;
   --orange: #b96806;
-  --red: #d21f13;
-  --ink: #07100d;
+  --red: #a63525;
+  --ink: #2b1a10;
   --muted: #66736c;
-  --paper: #fffaf0;
-  --line: rgba(7, 16, 13, 0.14);
+  --paper: #f5ecd4;
+  --line: rgba(43, 26, 16, 0.16);
   --shadow: 0 18px 50px rgba(7, 16, 13, 0.18);
   --scoreboard: #101816;
   --display: "Bebas Neue", "Oswald", "Racing Sans One", Impact, fantasy;
@@ -28,23 +28,9 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 50% 50%, rgba(34, 94, 168, 0.12) 0 4px, transparent 5px),
-    radial-gradient(circle at 42% 31%, rgba(210, 31, 19, 0.11) 0 3px, transparent 4px),
-    radial-gradient(circle at 42% 69%, rgba(210, 31, 19, 0.11) 0 3px, transparent 4px),
-    radial-gradient(circle at 58% 31%, rgba(210, 31, 19, 0.11) 0 3px, transparent 4px),
-    radial-gradient(circle at 58% 69%, rgba(210, 31, 19, 0.11) 0 3px, transparent 4px),
-    radial-gradient(circle at 15.5% 26%, transparent 0 64px, rgba(210, 31, 19, 0.075) 65px 68px, transparent 69px),
-    radial-gradient(circle at 15.5% 74%, transparent 0 64px, rgba(210, 31, 19, 0.075) 65px 68px, transparent 69px),
-    radial-gradient(circle at 84.5% 26%, transparent 0 64px, rgba(210, 31, 19, 0.075) 65px 68px, transparent 69px),
-    radial-gradient(circle at 84.5% 74%, transparent 0 64px, rgba(210, 31, 19, 0.075) 65px 68px, transparent 69px),
-    radial-gradient(circle at 50% 50%, transparent 0 76px, rgba(34, 94, 168, 0.075) 77px 80px, transparent 81px),
-    radial-gradient(ellipse 44px 24px at 5.5% 50%, rgba(34, 94, 168, 0.08) 0 64%, rgba(210, 31, 19, 0.08) 65% 69%, transparent 70%),
-    radial-gradient(ellipse 44px 24px at 94.5% 50%, rgba(34, 94, 168, 0.08) 0 64%, rgba(210, 31, 19, 0.08) 65% 69%, transparent 70%),
-    linear-gradient(90deg, transparent 0 5.35%, rgba(210, 31, 19, 0.075) 5.35% 5.65%, transparent 5.65% 37.1%, rgba(34, 94, 168, 0.075) 37.1% 37.9%, transparent 37.9% 49.75%, rgba(210, 31, 19, 0.075) 49.75% 50.25%, transparent 50.25% 62.1%, rgba(34, 94, 168, 0.075) 62.1% 62.9%, transparent 62.9% 94.35%, rgba(210, 31, 19, 0.075) 94.35% 94.65%, transparent 94.65%),
-    linear-gradient(0deg, transparent 0 49.75%, rgba(6, 40, 23, 0.025) 49.75% 50.25%, transparent 50.25%),
+    linear-gradient(rgba(245, 236, 212, 0.6), rgba(245, 236, 212, 0.6)),
+    url("assets/skated-ice.png?v=20260909") center/cover fixed,
     var(--paper);
-  background-size: 100vw 760px;
-  background-attachment: fixed;
   font-family: var(--body);
 }
 
@@ -3298,7 +3284,7 @@ textarea {
   margin-top: 60px;
 }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center; }
-.footer-brand img { height: 48px; filter: brightness(0) invert(1) opacity(0.8); }
+.footer-brand img { height: 56px; max-width: 240px; object-fit: contain; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; }
 .footer-links a { color: rgba(255,244,201,0.7); font-family: monospace; font-size: 12px; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; }
 .footer-links a:hover { color: var(--gold); }
