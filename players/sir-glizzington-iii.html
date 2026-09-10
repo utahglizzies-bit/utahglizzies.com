@@ -34,23 +34,23 @@
     :root { --presale-h: 44px; }
     .presale-top-banner {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: var(--gold, #e1a21a); color: #07100d;
+      background: var(--gold, #c19a2c); color: #2b1a10;
       padding: 10px clamp(18px,4vw,48px);
-      box-shadow: 0 2px 10px rgba(7,16,13,0.25);
+      box-shadow: 0 2px 10px rgba(43, 26, 16, 0.25);
     }
     .presale-top-inner {
       display: flex; align-items: center; gap: 12px;
       max-width: 1200px; margin: 0 auto; flex-wrap: wrap;
     }
     .presale-badge {
-      background: #07100d; color: var(--gold, #e1a21a);
+      background: #2b1a10; color: var(--gold, #c19a2c);
       font-family: monospace; font-size: 10px; font-weight: 700;
       letter-spacing: 0.15em; padding: 2px 8px; border-radius: 4px;
       text-transform: uppercase; flex-shrink: 0;
     }
     .presale-text { font-size: 14px; font-weight: 600; flex: 1; min-width: 180px; }
     .presale-cta {
-      background: #07100d; color: var(--gold, #e1a21a);
+      background: #2b1a10; color: var(--gold, #c19a2c);
       padding: 6px 16px; border-radius: 999px; text-decoration: none;
       font-size: 13px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
       transition: background 0.15s;
@@ -58,9 +58,9 @@
     .presale-cta:hover { background: #0a1a0d; }
     .presale-close {
       background: none; border: none; cursor: pointer; font-size: 1.2rem;
-      color: rgba(7,16,13,0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
+      color: rgba(43, 26, 16, 0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
     }
-    .presale-close:hover { color: #07100d; }
+    .presale-close:hover { color: #2b1a10; }
     /* push everything down by the banner height */
     body { padding-top: var(--presale-h); }
     .site-header { top: var(--presale-h) !important; }
@@ -76,7 +76,7 @@
   <div class="presale-top-banner" id="presale-banner">
     <div class="presale-top-inner">
       <span class="presale-badge">PRESALE</span>
-      <span class="presale-text">🌭 Presale is OPEN — Glizzy sweaters &amp; D1 Legends hats, limited time. <strong>Lost dogs, come home.</strong></span>
+      <span class="presale-text">🌭 Presale is OPEN — D1 Legends hats, limited time. <strong>Lost dogs, come home.</strong></span>
       <a href="../shop.html" class="presale-cta">Shop Now &rarr;</a>
       <button class="presale-close" type="button" aria-label="Close">&times;</button>
     </div>
@@ -105,7 +105,7 @@
   
   <div class="player-photo-hero" style="position:relative;width:100%;overflow:hidden;">
     <img src="../assets/photos/sir-glizzington-iii.jpg" alt="sir-glizzington-iii in action" style="width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;display:block;" loading="lazy" decoding="async" />
-    <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 40%, rgba(6,40,23,0.95) 100%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to bottom, transparent 40%, rgba(26, 61, 36, 0.95) 100%);"></div>
   </div>
   <div class="subpage-hero player-hero" style="margin-top:-4px;border-top:none;padding-top:24px;">
     <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="./index.html">Players</a> / SIR GLIZZINGTON III</div>
@@ -133,7 +133,7 @@
     <div class="pstat-bars">
       <div class="pstat-row">
       <span class="pstat-label">Goals</span>
-      <div class="pstat-track"><div class="pstat-fill" style="width:42%;background:#e1a21a"></div></div>
+      <div class="pstat-track"><div class="pstat-fill" style="width:42%;background:#c19a2c"></div></div>
       <span class="pstat-val">5</span>
     </div>
       <div class="pstat-row">
@@ -143,12 +143,12 @@
     </div>
       <div class="pstat-row">
       <span class="pstat-label">Points</span>
-      <div class="pstat-track"><div class="pstat-fill" style="width:38%;background:#e1a21a"></div></div>
+      <div class="pstat-track"><div class="pstat-fill" style="width:38%;background:#c19a2c"></div></div>
       <span class="pstat-val">6</span>
     </div>
       <div class="pstat-row">
       <span class="pstat-label">PIM</span>
-      <div class="pstat-track"><div class="pstat-fill" style="width:0%;background:#d21f13"></div></div>
+      <div class="pstat-track"><div class="pstat-fill" style="width:0%;background:#a63525"></div></div>
       <span class="pstat-val">0</span>
     </div>
     </div>

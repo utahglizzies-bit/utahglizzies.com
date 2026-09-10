@@ -33,8 +33,8 @@
       rel="stylesheet"
     />
     <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#062817" />
-    <link rel="stylesheet" href="styles.css?v=20260909c" />
+    <meta name="theme-color" content="#1a3d24" />
+    <link rel="stylesheet" href="styles.css?v=20260909d" />
     <!-- Google Analytics GA4 — replace G-49PTYCCKB1 with your Measurement ID from analytics.google.com -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
     <script>
@@ -66,7 +66,7 @@
     }
     .game-photo-banner-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(6,40,23,0.3) 0%, transparent 40%, rgba(6,40,23,0.8) 100%);
+      background: linear-gradient(to bottom, rgba(26, 61, 36, 0.3) 0%, transparent 40%, rgba(26, 61, 36, 0.8) 100%);
       display: flex; align-items: flex-end; padding: clamp(20px,4vw,48px);
     }
     .game-photo-caption {
@@ -78,10 +78,10 @@
   <style>
     /* PARADE ANNOUNCEMENT SECTION */
     .parade-section {
-      background: linear-gradient(135deg, var(--green,#062817) 0%, #0a3a20 100%) !important;
+      background: linear-gradient(135deg, var(--green,#1a3d24) 0%, #0a3a20 100%) !important;
       color: var(--cream,#fff4c9);
-      border-top: 4px solid var(--gold,#e1a21a);
-      border-bottom: 4px solid var(--gold,#e1a21a);
+      border-top: 4px solid var(--gold,#c19a2c);
+      border-bottom: 4px solid var(--gold,#c19a2c);
     }
     .parade-inner {
       max-width: 1160px; margin: 0 auto;
@@ -95,39 +95,39 @@
     }
     .parade-image:hover { transform: translateY(-3px) scale(1.01); }
     .parade-image img { width: 100%; height: auto; display: block; }
-    .parade-copy .eyebrow { color: var(--gold,#e1a21a); }
+    .parade-copy .eyebrow { color: var(--gold,#c19a2c); }
     .parade-copy h2 {
       font-family: var(--display); text-transform: uppercase;
       color: var(--cream,#fff4c9); line-height: 1.02;
       font-size: clamp(1.9rem,4.5vw,3.2rem); margin: 6px 0 14px;
     }
     .parade-lead { font-size: 1.05rem; line-height: 1.5; margin-bottom: 22px; color: rgba(255,244,201,0.92); }
-    .parade-lead strong { color: var(--gold,#e1a21a); }
+    .parade-lead strong { color: var(--gold,#c19a2c); }
     .parade-stops {
       display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 22px;
     }
     .parade-stop {
-      background: rgba(255,244,201,0.06); border: 1px solid rgba(225,162,26,0.35);
+      background: rgba(255,244,201,0.06); border: 1px solid rgba(193, 154, 44, 0.35);
       border-radius: 14px; padding: 18px 20px;
     }
     .parade-num {
       display: inline-block; font-family: monospace; font-size: 11px; font-weight: 700;
       letter-spacing: 0.14em; text-transform: uppercase;
-      color: #07100d; background: var(--gold,#e1a21a);
+      color: #2b1a10; background: var(--gold,#c19a2c);
       padding: 3px 9px; border-radius: 5px; margin-bottom: 10px;
     }
     .parade-stop h3 {
       font-family: var(--display); text-transform: uppercase; color: var(--cream,#fff4c9);
       font-size: clamp(1.2rem,2.4vw,1.6rem); line-height: 1.05; margin: 0 0 8px;
     }
-    .parade-time { font-size: 1.5rem; font-weight: 900; color: var(--gold,#e1a21a); margin: 0 0 2px; }
+    .parade-time { font-size: 1.5rem; font-weight: 900; color: var(--gold,#c19a2c); margin: 0 0 2px; }
     .parade-loc { font-size: 0.95rem; color: rgba(255,244,201,0.85); margin: 0; }
     .parade-perks {
       list-style: none; padding: 0; margin: 0 0 18px;
       display: flex; flex-wrap: wrap; gap: 10px;
     }
     .parade-perks li {
-      background: rgba(210,31,19,0.9); color: var(--cream,#fff4c9);
+      background: rgba(166, 53, 37, 0.9); color: var(--cream,#fff4c9);
       font-weight: 800; font-size: 0.9rem; text-transform: uppercase;
       letter-spacing: 0.03em; padding: 8px 14px; border-radius: 999px;
     }
@@ -146,23 +146,23 @@
     :root { --presale-h: 44px; }
     .presale-top-banner {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: var(--gold, #e1a21a); color: #07100d;
+      background: var(--gold, #c19a2c); color: #2b1a10;
       padding: 10px clamp(18px,4vw,48px);
-      box-shadow: 0 2px 10px rgba(7,16,13,0.25);
+      box-shadow: 0 2px 10px rgba(43, 26, 16, 0.25);
     }
     .presale-top-inner {
       display: flex; align-items: center; gap: 12px;
       max-width: 1200px; margin: 0 auto; flex-wrap: wrap;
     }
     .presale-badge {
-      background: #07100d; color: var(--gold, #e1a21a);
+      background: #2b1a10; color: var(--gold, #c19a2c);
       font-family: monospace; font-size: 10px; font-weight: 700;
       letter-spacing: 0.15em; padding: 2px 8px; border-radius: 4px;
       text-transform: uppercase; flex-shrink: 0;
     }
     .presale-text { font-size: 14px; font-weight: 600; flex: 1; min-width: 180px; }
     .presale-cta {
-      background: #07100d; color: var(--gold, #e1a21a);
+      background: #2b1a10; color: var(--gold, #c19a2c);
       padding: 6px 16px; border-radius: 999px; text-decoration: none;
       font-size: 13px; font-weight: 700; white-space: nowrap; flex-shrink: 0;
       transition: background 0.15s;
@@ -170,9 +170,9 @@
     .presale-cta:hover { background: #0a1a0d; }
     .presale-close {
       background: none; border: none; cursor: pointer; font-size: 1.2rem;
-      color: rgba(7,16,13,0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
+      color: rgba(43, 26, 16, 0.5); padding: 0 4px; flex-shrink: 0; line-height: 1;
     }
-    .presale-close:hover { color: #07100d; }
+    .presale-close:hover { color: #2b1a10; }
     /* push everything down by the banner height */
     body { padding-top: var(--presale-h); }
     .site-header { top: var(--presale-h) !important; }
@@ -199,7 +199,7 @@
   <div class="presale-top-banner" id="presale-banner">
     <div class="presale-top-inner">
       <span class="presale-badge">PRESALE</span>
-      <span class="presale-text">🌭 Presale is OPEN — Glizzy sweaters &amp; D1 Legends hats, limited time. <strong>Lost dogs, come home.</strong></span>
+      <span class="presale-text">🌭 Presale is OPEN — D1 Legends hats, limited time. <strong>Lost dogs, come home.</strong></span>
       <a href="shop.html" class="presale-cta">Shop Now &rarr;</a>
       <button class="presale-close" type="button" aria-label="Close">&times;</button>
     </div>
@@ -269,7 +269,7 @@
               <li>Classic rivalries</li>
               <li>Same classic vibes</li>
             </ul>
-            <p class="parade-cta-line">Fall's on ice, winter's on deck, same mustard energy. <a href="team.html#schedule" style="color:var(--gold,#e1a21a);font-weight:700;">See the full Fall schedule &rarr;</a></p>
+            <p class="parade-cta-line">Fall's on ice, winter's on deck, same mustard energy. <a href="team.html#schedule" style="color:var(--gold,#c19a2c);font-weight:700;">See the full Fall schedule &rarr;</a></p>
           </div>
         </div>
       </section>
@@ -359,7 +359,7 @@
         </div>
         <div class="fan-photo-band" style="position:relative;width:100%;height:300px;overflow:hidden;border-radius:18px;margin:0 0 22px;">
           <img src="assets/photos/hero-fans.jpg?v=20260622e" alt="Utah Glizzies fans cheering at the glass" style="width:100%;height:300px;object-fit:cover;object-position:center 40%;" decoding="async" />
-          <div style="position:absolute;left:0;right:0;bottom:0;padding:16px 22px;background:linear-gradient(to top, rgba(7,16,13,0.85), rgba(7,16,13,0));color:#fff4c9;font-weight:800;letter-spacing:0.5px;">
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:16px 22px;background:linear-gradient(to top, rgba(43, 26, 16, 0.85), rgba(43, 26, 16, 0));color:#fff4c9;font-weight:800;letter-spacing:0.5px;">
             Glizzy Nation. Loud, loyal, and lightly mustard-scented.
           </div>
         </div>
