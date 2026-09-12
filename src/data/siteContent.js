@@ -62,7 +62,7 @@ window.siteContent = {
     date: "Sep 10, 2026",
     result: "win",
     recap:
-      "Three in a row. Grinder version. Glizzies walked into Steamers territory, got outshot 36-19, and walked out with all the points — 4-3 on the South Rink at 11 PM. Steamers struck first at 15:24 of the first, but GLIZ GOD (Hayden Rathmell) answered right back at 11:48 with his first goal of the season, assisted by SIR GLIZZINGTON III (Parker Strong) — set up by a stretch of dekes so nasty the bench nearly cleared. Steamers took the lead back at 04:35 to make it 2-1 after one. GLIZZIN' STEW (Hunter Stewart) tied it at 10:54 of the second with an unassisted marker, Steamers grabbed another lead at 09:05, and STEW tied it again with 54 ticks left in the second (assisted by JDAWG). Third period was tight until sub Kyle Ronchak buried the GWG at 03:47, assisted by GLIZZIN' STEW — Ronchak's first tally since his season debut against the Zombonis. MEAT SHIELD (Devin Bain) locked it down from there: 33 of 36 saved, .917 SV%, W3 in the books. Glizzies took just 4 in penalties. Glizzies improve to 6-1-0, +27 differential, and get their shot at the Salt Shakers — the only team to beat them this season — at 11:15 PM on September 23.",
+      "Three in a row. Grinder version. Glizzies walked into Steamers territory, got outshot 36-19, and walked out with all the points — 4-3 on the South Rink at 11 PM. Steamers struck first at 15:24 of the first, but GLIZ GOD (Hayden Rathmell) answered right back at 11:48 with his first goal of the season, assisted by SIR GLIZZINGTON III (Parker Strong) — set up by a stretch of dekes so nasty the bench nearly cleared. Steamers took the lead back at 04:35 to make it 2-1 after one. GLIZZIN' STEW (Hunter Stewart) tied it at 10:54 of the second with an unassisted marker, Steamers grabbed another lead at 09:05, and STEW tied it again with 54 ticks left in the second (assisted by JDAWG). Third period was tight until sub Kyle Ronchak buried the GWG at 03:47, assisted by GLIZZIN' STEW — Ronchak's first tally since his season debut against the Zombonis. MEAT SHIELD (Devin Bain) locked it down from there: 33 of 36 saved, .917 SV%, W3 in the books. Glizzies took just 4 in penalties. Glizzies improve to 6-1-0, +27 differential, and get a rematch against the Salt Shakers — a team they blanked 4-0 back in game two — at 11:15 PM on September 23.",
     momentOfGame:
       "GLIZ GOD (Hayden Rathmell) — the team's leading assist man with four helpers and zero goals coming in — walked into the zone at 11:48 of the first, put on a set of dekes that shifted the Wasatch fault line, and snapped his first goal of the season past the Steamers goalie. The setup man decided to shoot. Turns out he's got hands too. The bench nearly stood up. Top line center, top shelf grease.",
     threeStars: [
@@ -88,7 +88,7 @@ window.siteContent = {
   hypeMeter: {
     level: 0,
     label: "6-1 Grinder Hype",
-    reason: "Outshot 36-19 and still walked out 4-3 winners. GLIZ GOD finally shot AND scored (first of the season, deke tree included), GLIZZIN' STEW added two more to take the team lead at 9G, and MEAT SHIELD stopped 33 of 36. Glizzies are 6-1-0, W3 streak, and headed for a revenge rematch against the Salt Shakers — the only team to beat them this year.",
+    reason: "Outshot 36-19 and still walked out 4-3 winners. GLIZ GOD finally shot AND scored (first of the season, deke tree included), GLIZZIN' STEW added two more to take the team lead at 9G, and MEAT SHIELD stopped 33 of 36. Glizzies are 6-1-0, W3 streak, and headed for a rematch against the Salt Shakers — a team they shut out 4-0 earlier this season. Don't sleep.",
     gameWeek: "September 23 @ Salt Shakers",
     hypeGoal: 1000,
     hypeApiBase: "https://countapi.mileshilliard.com/api/v1",
@@ -112,31 +112,31 @@ window.siteContent = {
     penaltyKill: "11-for-11",
   },
     matchup: {
-    title: "Rematch: Salt Shakers — Round Two, Revenge Slot",
-    threatLevel: "Rematch — Revenge Slot",
+    title: "Rematch: Salt Shakers — Round Two, Don't Get Cute",
+    threatLevel: "Rematch — Don't Sleep",
     playerToWatch: "GLIZZIN' STEW — team-leading 9G, on a heater",
     opponent: "Salt Shakers",
     record: "First meeting between these two this Fall 2026 season",
     storyline:
-      "Coming off a gritty 4-3 grinder win over the Steamers — third straight for the Glizzies (6-1-0, W3) — this is THE rematch. The Salt Shakers are the only team that's beaten the Glizzies this season (2-3 in game five, back in August), and this is round two. Everything else has been going the Glizzies' way: 37 goals for, 10 against, +27 differential, and GLIZZIN' STEW has scored 4 goals across the last two games alone. This one's different. The bench remembers game five. 11:15 PM at the South Rink.",
+      "Coming off a gritty 4-3 grinder win over the Steamers — third straight for the Glizzies (6-1-0, W3) — the schedule delivers a rematch against the Salt Shakers, a team the Glizzies blanked 4-0 back in game two on July 29. That was the second game of the season, when the streak was just starting. Now it's game eight of eleven, playoff seed conversations are opening up, and the Salt Shakers know exactly how the first meeting went. Different game, same job. 11:15 PM at the South Rink.",
     opponentBreakdown: [
-      ["Last meeting", "August 19 — Salties 3, Glizzies 2. A one-goal heartbreaker. The Glizzies' only loss of the season."],
+      ["Last meeting", "July 29 — Glizzies 4, Salt Shakers 0. Full shutout, MEAT SHIELD in the crease. Game two of the season."],
       ["Glizzies form", "6-1-0, W3 streak. Scoring 5.29/g, allowing 1.43/g. 37 GF, 10 GA (+27 differential)."],
-      ["Salties form", "Beat the Glizzies in game five; the only team to do so this season. Rest of their year unknown from here."],
-      ["The rematch", "September 23, 11:15 PM, South Rink. Game eight of eleven. Revenge slot."],
+      ["Salt Shakers form", "Lost 4-0 to the Glizzies in game two; unknown record since. They've had ~7 weeks to adjust."],
+      ["The rematch", "September 23, 11:15 PM, South Rink. Game eight of eleven."],
     ],
     opponentStats: [
       "Next game: September 23 at 11:15 PM on the South Rink at Utah Mammoth Ice Center.",
       "Glizzies record: 6-1-0, 37 goals for, 10 against (+27 differential).",
-      "Previous meeting: Salties 3, Glizzies 2 on August 19 — the Glizzies' lone L of the season.",
+      "Previous meeting: Glizzies 4, Salt Shakers 0 (shutout) on July 29 — game two of the season.",
       "GLIZZIN' STEW leads the team with 9 goals through 7 games (T-league lead territory).",
       "MEAT SHIELD: 33 of 36 saved against the Steamers, riding a W3 streak.",
     ],
     keys: [
-      "This is the rematch. Everyone remembers game five. Play like it.",
-      "Shot volume defense — Steamers got 36 shots on the Glizzies. Salties will look to do the same.",
+      "Don't confuse them with the Salties — different team, and the Salties are the only ones who've actually beat us this year.",
+      "Shot volume defense — Steamers put 36 on us; don't let the Salt Shakers do the same.",
       "Feed STEW — 9 goals through 7 games is a heater; keep him on the ice.",
-      "GLIZ GOD showed he'll shoot when the moment calls; give him the space to deke.",
+      "GLIZ GOD showed he'll shoot when the moment calls; give him room to deke.",
       "Eight games into eleven. Win this and the playoffs conversation gets serious.",
     ],
   },
