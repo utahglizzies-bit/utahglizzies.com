@@ -54,7 +54,7 @@ window.siteContent = {
     { date: "2026-09-30", displayDate: "Sep 30", time: "10:00 PM", opponent: "Salt Shakers", label: "@ Salt Shakers", rink: "South Rink", status: "final", result: "win", glizziesScore: 7, opponentScore: 0 },
     { date: "2026-10-08", displayDate: "Oct 8", time: "11:15 PM", opponent: "Gnarwhalers", label: "@ Gnarwhalers", rink: "North Rink", status: "final", result: "win", glizziesScore: 2, opponentScore: 1 },
     { date: "2026-10-15", displayDate: "Oct 15", time: "11:00 PM", opponent: "Geri", label: "@ Geri", rink: "North Rink", status: "final", result: "win", glizziesScore: 6, opponentScore: 2 },
-    { date: "2026-10-21", displayDate: "Oct 21", time: "8:45 PM", opponent: "Salt Shakers", label: "vs Salt Shakers", rink: "TBD", status: "upcoming", gameType: "Playoff" },
+    { date: "2026-10-21", displayDate: "Oct 21", time: "8:45 PM", opponent: "Salt Shakers", label: "vs Salt Shakers", rink: "North Rink", status: "upcoming", gameType: "Playoff" },
   ],
   lastGame: {
     opponent: "Geri-Hattricks",
@@ -63,7 +63,7 @@ window.siteContent = {
     date: "Oct 15, 2026",
     result: "win",
     recap:
-      "Regular season finale, and the #1 seed is locked up. The Glizzies went into the North Rink and beat the Geri-Hattricks 6-2, outshooting them 29-16 to finish the regular season 9-2-0. GLIZZ TRAIN (Walker Krebs) opened the scoring with 10:35 left in the first off a GLIZ GOD feed, and SAUCE DAWG made it 2-0 with 2:58 left, assisted by WURSTMEISTER. The second period was a clinic: DER WURST scored the game-winner at 13:32 (GLIZZARD OF OZ assisting), GLIZZNASTY went bar down 55 seconds later, JDAWG made it 4-0 at 7:36 off a DER WURST feed, and GLIZ GOD cashed in at 5:17 for a 5-0 lead. Geri got two late in the third, but MEAT SHIELD (Devin Bain) stopped 14 of 16 for the win and the Glizzies killed SAUCE DAWG's slashing minor. Top seed. Playoffs next.",
+      "Regular season finale, and the #1 seed is locked up. The Glizzies went into the North Rink and beat the Geri-Hattricks 6-2, outshooting them 29-16 to finish the regular season 9-2-0. GLIZZ TRAIN (Walker Krebs) opened the scoring with 10:35 left in the first off a GLIZ GOD feed, and SAUCE DAWG made it 2-0 with 2:58 left, assisted by WURSTMEISTER. The second period was a clinic: DER WURST scored the game-winner at 13:32 (GLIZZARD OF OZ assisting), GLIZZNASTY went bar down 55 seconds later, JDAWG made it 4-0 at 7:36 off a DER WURST feed, and GLIZ GOD cashed in at 5:17 for a 5-0 lead. Geri got two late in the third, but GLIZZIN' STEW, in net for the finale, stopped 14 of 16 for the win and the Glizzies killed SAUCE DAWG's slashing minor. Top seed. Playoffs next.",
     momentOfGame:
       "GLIZZNASTY (Wyatt McNeil) took the puck from just inside the blue line, deked the shorts clean off the Geris, and sniped it bar down. Unassisted, absolutely filthy, and Raw Dog of the Night on the spot.",
     threeStars: [
@@ -73,17 +73,17 @@ window.siteContent = {
     ],
   },
     playerSpotlight: {
-    name: "Hunter Stewart",
-    number: "10",
-    nameplate: "GLIZZIN' STEW",
-    title: "The Goal Machine",
+    name: "Wyatt McNeil",
+    number: "53",
+    nameplate: "GLIZZNASTY",
+    title: "Bar Down From The Blue Line",
     story:
-      "Hunter Stewart is on a heater. A pair in the 7-0 shutout of the Salt Shakers and the opening goal against the Gnarwhalers pushed him to 12 goals and 3 assists for 15 points this Fall 2026, the team lead by a wide margin. GLIZZIN' STEW does not arrive hot. He arrives, and then it gets hot.",
+      "GLIZZNASTY gets the spotlight after a regular season finale goal that belongs in a museum. Wyatt McNeil took the puck from just inside the blue line, deked the shorts off the Geris, and sniped it bar down. Unassisted. Unbothered. That makes 8 goals and 12 points this Fall 2026, and a Raw Dog of the Night to go with the #1 seed. The release is still a public safety concern.",
     callouts: [
-      ["Bench Verdict", "The Goal Machine"],
-      ["Stat Line", "12 goals, 3 assists, 15 points (Fall 2026)"],
-      ["Best Habit", "Being exactly where the rebound lands"],
-      ["Vibe", "Slow simmer, full boil"],
+      ["Play of the Week", "Bar-down snipe from the blue line"],
+      ["Stat Line", "8 goals, 4 assists, 12 points (Fall 2026)"],
+      ["Victims", "A few pairs of Geri shorts"],
+      ["Vibe", "Filthy, unassisted, fully condimented"],
     ],
   },
   hypeMeter: {
@@ -222,10 +222,10 @@ window.siteContent = {
     { name: "Cole Embrey", number: "3", nameplate: "WÜRSTMEISTER", position: "Wing", photo: "", bio: "Still fully comfortable causing a scene. An assist through three games this Fall, setting up SAUCE DAWG's goal against the Gnarwhalers.", stats: { gp: 3, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "Würstmeister" },
     { name: "Parker Strong", number: "17", nameplate: "SIR GLIZZINGTON III", position: "Forward", photo: "", bio: "Back in the lineup and finding the net — first goal of the season in the 10-0 win over the Zombonis. Then picked up the primary helper on GLIZ GOD's first goal of the season against the Steamers at 11:48 of the first, setting up the deke tree of the year. Formally passed the Glizzies Own Goal Crown over to SAUCE DAWG at center ice on August 27. Two Fall 2026 penalties, killed both.", stats: { gp: 5, g: 2, a: 1, pts: 3, pim: 2 }, instagram: "", nickname: "Sir Glizzington III" },
     { name: "Walker Krebs", number: "58", nameplate: "GLIZZ TRAIN", position: "Forward", photo: "", bio: "Raw Dog of the Night energy, fresh season. An assist and a tripping minor through two games.", stats: { gp: 2, g: 1, a: 2, pts: 3, pim: 2 }, instagram: "", nickname: "Glizz Train" },
-    { name: "James Pope", number: "9", nameplate: "JDAWG", position: "Forward", photo: "", bio: "Points by generosity. Raw Dog of the Night against the Zombonis — one assist, a full shift of grease. Then buried the first ever competition goal of his life against the Whalers — unassisted, career-first, Raw Dog again. Followed it up with the primary helper on GLIZZIN' STEW's late 2nd-period tying goal vs the Steamers on September 10. The Pope has a scoring career AND a setup career now.", stats: { gp: 8, g: 3, a: 2, pts: 5, pim: 4 }, instagram: "", nickname: "JDawg" },
+    { name: "James Pope", number: "9", nameplate: "JDAWG", position: "Forward", photo: "", bio: "Points by generosity. Raw Dog of the Night against the Zombonis — one assist, a full shift of grease. Then buried the first ever competition goal of his life against the Whalers — unassisted, career-first, Raw Dog again. Followed it up with the primary helper on GLIZZIN' STEW's late 2nd-period tying goal vs the Steamers on September 10. The Pope has a scoring career AND a setup career now.", stats: { gp: 8, g: 2, a: 2, pts: 4, pim: 4 }, instagram: "", nickname: "JDawg" },
     { name: "Brian Coburn", number: "73", nameplate: "UNCLE GLIZZBURN", position: "Forward", photo: "", bio: "Two goals, including a shorthander, in the Fall 2026 opener. Dressed again against the Zombonis in the 10-0 win.", stats: { gp: 2, g: 2, a: 0, pts: 2, pim: 0 }, instagram: "", nickname: "Uncle Glizzburn" },
     { name: "Hayden Rathmell", number: "1", nameplate: "GLIZ GOD", position: "Forward (A)", photo: "", bio: "The spreadsheet has a personality now. Assistant captain for Fall 2026. Was quietly running the top line as pure setup man — four assists through three games, zero goals — then walked into the Steamers zone at 11:48 of the first on September 10, ran a deke tree so nasty the bench nearly cleared, and sniped his first goal of the season past the Steamers goalie. Top line center, top shelf grease. Raw Dog of the Night. The setup man is now the finisher too.", stats: { gp: 5, g: 2, a: 5, pts: 7, pim: 0 }, instagram: "", nickname: "Gliz God" },
-    { name: "Devin Bain", number: "11", nameplate: "MEAT SHIELD", position: "Goalie", photo: "", bio: "New season, same sacred crease. 27-for-30 W over the Gnarwhalers, 12-for-12 shutout of the Zombonis, .958 SV% vs the Devastators, 13-for-13 SHUTOUT of the Whalers plus a scoring assist. Then the grinder: took 36 shots against the Steamers on September 10 and stopped 33 of them (.917 SV%) for the win. Riding W3 into the Salt Shakers rematch.", stats: { gp: 9, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "Meat Shield" },
+    { name: "Devin Bain", number: "11", nameplate: "MEAT SHIELD", position: "Goalie", photo: "", bio: "New season, same sacred crease. 27-for-30 W over the Gnarwhalers, 12-for-12 shutout of the Zombonis, .958 SV% vs the Devastators, 13-for-13 SHUTOUT of the Whalers plus a scoring assist. Then the grinder: took 36 shots against the Steamers on September 10 and stopped 33 of them (.917 SV%) for the win. Riding W3 into the Salt Shakers rematch.", stats: { gp: 8, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "Meat Shield" },
     { name: "Kevin Peterson", number: "22", nameplate: "GLIZZ LORD", position: "Forward", photo: "", bio: "Clean record, useful points, suspiciously professional. Two assists through three games — the second helper on GLIZZARD OF OZ's 2nd-period goal in the 5-1 win over the Devastators.", stats: { gp: 3, g: 0, a: 2, pts: 2, pim: 0 }, instagram: "", nickname: "Glizz Lord" },
     { name: "Jared Aida", number: "8", nameplate: "GLIZZARD OF OZ", position: "Forward", photo: "", bio: "The hot dog cannon remains pointed at him. Wore the captain's letter in A. FROMAN's absence against the Zombonis and scored to boot, then buried a 2nd-period goal in the 5-1 win over the Devastators. Three points through three games.", stats: { gp: 5, g: 3, a: 3, pts: 6, pim: 0 }, instagram: "", nickname: "Glizzard of Oz" },
     { name: "Ian Penders", number: "5", nameplate: "LIL' SMOKIES", position: "Forward (A)", photo: "", bio: "A forecheck that keeps the rhythm section honest. Assistant captain for Fall 2026. Also single-handedly leading the team in penalty minutes with 28 through five games — that's more than every other Glizzy on the roster combined (12), or roughly one full period per game in the box. Three straight minors in the third against the Salties. Then, going for the achievement unlock against the Devastators, capped the night with a disqualification AND a game misconduct inside the final three minutes. The A on the sweater is currently doing a LOT of heavy lifting. Still 3 goals in there. Somehow.", stats: { gp: 6, g: 3, a: 1, pts: 4, pim: 28 }, instagram: "", nickname: "Lil' Smokies" },
@@ -234,7 +234,7 @@ window.siteContent = {
     { name: "Zimmy Casino", number: "95", nameplate: "GLIZ-Z", position: "Forward", photo: "", bio: "The dangle and top-shelf snipe against the Salties earned him Raw Dog of the Night; three goals on the season. Then flipped into pure setup mode against the Whalers — THREE assists on a 7-0 shutout night (on GLIZZNASTY's 4th, on GLIZZIN' STEW's 6th, and on J. CHESTNUT's late snipe with 5 seconds left). 6 points through 6 games. The puck is on a string.", stats: { gp: 8, g: 3, a: 3, pts: 6, pim: 8 }, instagram: "", nickname: "Gliz-Z" },
     { name: "Derek Schlenker", number: "4", nameplate: "MICRO GLIZZ", position: "Forward", photo: "", bio: "Debut game, first point as a Glizzy — the secondary assist on GLIZ-Z's tying goal against the Salties. Followed up in the Whalers shutout with his first Glizzy goal, unassisted, at 01:18 of the first. Small package, full-size problem for opposing D.", stats: { gp: 3, g: 2, a: 2, pts: 4, pim: 0 }, instagram: "", nickname: "Micro Glizz" },
     { name: "Joey Teahan", number: "69", nameplate: "WIENER WRANGLER", position: "Forward", photo: "", bio: "New for Fall 2026. Opened the scoring against the Whalers at 04:31 of the first for his first-Glizzy GWG. Picked up another roughing minor late in the 3rd against the Steamers — third roughing infraction in four games. The nameplate is not lying.", stats: { gp: 4, g: 1, a: 0, pts: 1, pim: 6 }, instagram: "", nickname: "Wiener Wrangler" },
-    { name: "Hunter Stewart", number: "10", nameplate: "GLIZZIN' STEW", position: "Forward", photo: "", bio: "New for Fall 2026. Debut shutout in net, then dropped hat tricks and multi-goal games as a forward — including a hatty vs the Devastators with TWO shorties, and a two-goal 3rd in the Whalers shutout. Followed it up with another 2G night against the Steamers on September 10 PLUS the primary helper on Kyle Ronchak's GWG — a 3-point night that puts him at 9G on the season (team lead, T-league lead territory).", stats: { gp: 9, g: 12, a: 3, pts: 15, pim: 2 }, instagram: "", nickname: "Glizzin' Stew" },
+    { name: "Hunter Stewart", number: "10", nameplate: "GLIZZIN' STEW", position: "Forward", photo: "", bio: "New for Fall 2026. Debut shutout in net, then dropped hat tricks and multi-goal games as a forward — including a hatty vs the Devastators with TWO shorties, and a two-goal 3rd in the Whalers shutout. Followed it up with another 2G night against the Steamers on September 10 PLUS the primary helper on Kyle Ronchak's GWG — a 3-point night that puts him at 9G on the season (team lead, T-league lead territory). Then put the pads back on for the 6-2 regular season finale at Geri and stopped 14 of 16 for the win.", stats: { gp: 10, g: 12, a: 3, pts: 15, pim: 2 }, instagram: "", nickname: "Glizzin' Stew" },
   ],
   sponsors: {
     current: [
@@ -492,7 +492,7 @@ window.siteContent = {
     {
       date: "2026-10-15", opponent: "Geri-Hattricks", result: "win", glizziesScore: 6, opponentScore: 2,
       headline: "Top Seed Secured: Glizzies 6, Geri-Hattricks 2",
-      body: "The Glizzies closed out the regular season with a 6-2 win at Geri on the North Rink, outshooting the Geri-Hattricks 29-16 and locking up the #1 seed in the playoffs at 9-2-0. GLIZZ TRAIN opened the scoring with 10:35 left in the first off a GLIZ GOD feed, and SAUCE DAWG made it 2-0 with 2:58 left. In the second, DER WURST scored the game-winner at 13:32, GLIZZNASTY went bar down at 12:37, JDAWG made it 4-0 at 7:36, and GLIZ GOD made it 5-0 at 5:17. Geri got two in the third, but MEAT SHIELD stopped 14 of 16 for the win. Next up: the Salt Shakers in the playoffs on October 21 at 8:45 PM.",
+      body: "The Glizzies closed out the regular season with a 6-2 win at Geri on the North Rink, outshooting the Geri-Hattricks 29-16 and locking up the #1 seed in the playoffs at 9-2-0. GLIZZ TRAIN opened the scoring with 10:35 left in the first off a GLIZ GOD feed, and SAUCE DAWG made it 2-0 with 2:58 left. In the second, DER WURST scored the game-winner at 13:32, GLIZZNASTY went bar down at 12:37, JDAWG made it 4-0 at 7:36, and GLIZ GOD made it 5-0 at 5:17. Geri got two in the third, but GLIZZIN' STEW, in net for the finale, stopped 14 of 16 for the win. Next up: the Salt Shakers in the playoffs on October 21 at 8:45 PM.",
       moment: "GLIZZNASTY's bar-down snipe from just inside the blue line after deking the shorts off the Geris. Raw Dog of the Night.",
       stars: ["Wyatt McNeil (GLIZZNASTY)", "Hayden Rathmell (GLIZ GOD)", "Brady Bessette (DER WURST)"],
     },
