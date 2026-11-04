@@ -64,7 +64,7 @@ window.siteContent = {
     opponentScore: 1,
     date: "Oct 28, 2026",
     result: "win",
-    recap: "Round 2 of the playoffs, locked down. Glizzies beat the Whalers 5-1 on the South Rink to move to 2-0 in the bracket. First period was scoreless, shots 11-9 Glizzies. Second period cracked open at 6:09 on the power play: GLIZZNASTY (Wyatt McNeil) buried his 9th of the season, assisted by DER WURST (Brady Bessette) and SAUCE DAWG (Devon Woodside). At 4:39 the captain A. FROMAN (Andrew Herrin) scored unassisted for the game-winner. Whalers answered with 1:21 left in the second on their own PP (LIL SMOKIES in the box for hooking). Third period: SAUCE DAWG at 11:35 on the PP assisted by MICRO GLIZZ (Derek Schlenker), DER WURST at 9:02 assisted by LIL SMOKIES (Ian Penders), and GLIZZNASTY again at 1:23 for his 2G night, assisted by J. CHESTNUT (Chris Call) and WIENER WRANGLER (Joey Teahan). MEAT SHIELD (Devin Bain) stopped 27 of 28 for the W. After the game the captain himself presented Raw Dog of the Night to GLIZZ LORD (Kevin Peterson) for a D performance that defined playoff hockey. Next up: the Salties on Nov 4 at 10:00 PM — the rematch for the only loss of the entire season.",
+    recap: "Round 2 of the playoffs, locked down. Glizzies beat the Whalers 5-1 on the South Rink to move to 2-0 in the bracket. First period was scoreless, shots 11-9 Glizzies. Second period cracked open at 6:09 on the power play: GLIZZNASTY (Wyatt McNeil) buried his 9th of the season, assisted by DER WURST (Brady Bessette) and SAUCE DAWG (Devon Woodside). At 4:39 the captain A. FROMAN (Andrew Herrin) scored unassisted for the game-winner. Whalers answered with 1:21 left in the second on their own PP (LIL SMOKIES in the box for hooking). Third period: SAUCE DAWG at 11:35 on the PP assisted by MICRO GLIZZ (Derek Schlenker), DER WURST at 9:02 assisted by LIL SMOKIES (Ian Penders), and GLIZZNASTY again at 1:23 for his 2G night, assisted by J. CHESTNUT (Chris Call) and WIENER WRANGLER (Joey Teahan). MEAT SHIELD (Devin Bain) stopped 27 of 28 for the W. After the game the captain himself presented Raw Dog of the Night to GLIZZ LORD (Kevin Peterson) for a D performance that defined playoff hockey. Next up: the Salties on Nov 4 at 10:00 PM — the rematch for our only unavenged loss (3-2, Aug 19). Salt Shakers got us too (Sep 23), but we have paid them back twice since.",
     momentOfGame: "A. FROMAN (Andrew Herrin) walking across the locker room post-game to hand the Raw Dog honors to GLIZZ LORD (Kevin Peterson) himself. Captain to blueliner, mustard to mustard. The D clinic Peterson put on all night earned a captain presentation — and the room knew it.",
     threeStars: [
       { name: "Wyatt McNeil (GLIZZNASTY) — 2-goal night, his 9th and 10th of the season, including a PP marker in the 2nd", star: 1 },
@@ -89,7 +89,7 @@ window.siteContent = {
   hypeMeter: {
     level: 0,
     label: "Playoff Rematch Hype — Salties",
-    reason: "Two playoff rounds down. 6-2 over Salt Shakers (Round 1), 5-1 over Whalers (Round 2). Captain A. FROMAN presented Raw Dog to GLIZZ LORD for a D clinic that defined playoff hockey. Now the rematch we have been waiting all season for: the Salties, the only team to beat us this year, back on August 19. 10:00 PM, winner moves on.",
+    reason: "Two playoff rounds down. 6-2 over Salt Shakers (Round 1), 5-1 over Whalers (Round 2). Captain A. FROMAN presented Raw Dog to GLIZZ LORD for a D clinic that defined playoff hockey. Now the rematch we have been waiting all season for: the Salties, the only team we have NOT paid back yet (3-2 loss Aug 19). Salt Shakers beat us too (3-2 on Sep 23), but we have gone 2-0 against them since. Salties are unfinished business. 10:00 PM, winner moves on.",
     gameWeek: "November 4 vs Salties",
     hypeGoal: 1000,
     hypeApiBase: "https://countapi.mileshilliard.com/api/v1",
@@ -118,9 +118,9 @@ window.siteContent = {
     playerToWatch: "Alex Tschinkel (Salties) — top-line RW with 7G/8A/15 PTS",
     opponent: "Salties",
     record: "Playoffs: Salties (2-0-0) at the Glizzies (2-0-0). Winner moves on.",
-    storyline: "The last time these two met, August 19, the Salties won 3-2. It stayed our only loss of Fall 2026. Now we meet again in the playoffs — both 2-0 in the bracket, both coming off dominant wins. Glizzies beat Salt Shakers 6-2 (Round 1) and Whalers 5-1 (Round 2). GLIZZIN' STEW is on a 13-goal heater, GLIZZNASTY added 2G in Round 2, and captain A. FROMAN presented Raw Dog to GLIZZ LORD after a D clinic. Nov 4 at 10 PM, South Rink, the rematch we have been building toward.",
+    storyline: "The last time these two met, August 19, the Salties won 3-2. One of only two losses on the year, and the one we have not paid back. The Salt Shakers beat us 3-2 on September 23 — we answered with a 7-0 shutout one week later and a 6-2 playoff win Oct 21. Salties: unfinished business. Now we meet again in the playoffs — both 2-0 in the bracket, both coming off dominant wins. Glizzies beat Salt Shakers 6-2 (Round 1) and Whalers 5-1 (Round 2). GLIZZIN' STEW is on a 13-goal heater, GLIZZNASTY added 2G in Round 2, and captain A. FROMAN presented Raw Dog to GLIZZ LORD after a D clinic. Nov 4 at 10 PM, South Rink, the rematch we have been building toward.",
     opponentBreakdown: [
-      ["Last meeting", "August 19 — Salties 3, Glizzies 2. One-goal loss, our only L of the season."],
+      ["Last meeting", "August 19 — Salties 3, Glizzies 2. One of two losses on the year. The other: 3-2 at Salt Shakers on Sep 23 (already paid back twice)."],
       ["Glizzies playoffs", "2-0. 6-2 over Salt Shakers (Round 1), 5-1 over Whalers (Round 2)."],
       ["Salties playoffs", "2-0 in their own bracket, same spot as us."],
       ["The rematch", "November 4, 10:00 PM, South Rink. Winner advances."],
@@ -128,12 +128,12 @@ window.siteContent = {
     opponentStats: [
       "Next game: Playoff rematch vs Salties, November 4 at 10:00 PM, South Rink.",
       "Glizzies record: 11-2-0 overall, 65 GF / 19 GA (+46 differential).",
-      "Previous meeting: Salties 3, Glizzies 2 on August 19 — our only loss.",
+      "Previous meeting: Salties 3, Glizzies 2 on August 19 — one of two losses this year, and the one still unavenged.",
       "Salties leaders: Alex Tschinkel 7G/8A/15 PTS (RW).",
       "GLIZZIN' STEW leads the Glizzies with 13G / 18 PTS. MEAT SHIELD stopped 40 of 43 across the first two playoff rounds.",
     ],
     keys: [
-      "This is the one. The only team that beat us this year, back in the rematch. Play like it.",
+      "This is the one. The only team we haven't paid back yet. Play like it.",
       "Mark Tschinkel. 15 points from one guy is a feature, not a bug — bottle him up.",
       "Keep feeding STEW and GLIZZNASTY. Twenty-three combined goals is not an accident.",
       "D clamp. GLIZZ LORD showed the blueprint in Round 2 — captain-approved. Same formula tonight.",
