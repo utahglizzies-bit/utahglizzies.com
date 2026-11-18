@@ -67,9 +67,9 @@ window.siteContent = {
     date: "Nov 11, 2026",
     result: "win",
     recap:
-      "Playoff win number four, and it was never close. The Glizzies beat the Zombonis 5-1 on the South Rink and outshot them 34-8. Kyle Ronchak opened the scoring in the first off a GLIZZIN' STEW feed. In the second, J. CHESTNUT (Chris Call) scored the game-winner at 11:26 with A. FROMAN (Andrew Herrin) on the assist, GLIZZIN' STEW made it 3-0 at 9:50 off a WIENER WRANGLER (Joey Teahan) helper, and GLIZZ TRAIN (Walker Krebs), starting at center in full beast mode, buried a one-timer at 6:19 with assists from Ronchak and MEAT SHIELD (Devin Bain). The Zombonis got one back in the third, then GLIZZIN' STEW sealed it with his 16th of the season at 5:33, assisted by GLIZZ LORD (Kevin Peterson) and J. CHESTNUT. Third-place game against the Gnarwhalers on Nov 18 at 10:00 PM.",
+      "Playoff win number four, and it was never close. The Glizzies beat the Zombonis 5-1 on the South Rink and outshot them 34-8. Kyle Ronchak opened the scoring in the first off a GLIZZIN' STEW feed. In the second, J. CHESTNUT (Chris Call) scored the game-winner at 11:26 with A. FROMAN (Andrew Herrin) on the assist, GLIZZIN' STEW made it 3-0 at 9:50 off a WIENER WRANGLER (Joey Teahan) helper, and GLIZZ TRAIN, starting at center in full beast mode, buried a one-timer at 6:19 with assists from Ronchak and MEAT SHIELD (Devin Bain). The Zombonis got one back in the third, then GLIZZIN' STEW sealed it with his 16th of the season at 5:33, assisted by GLIZZ LORD (Kevin Peterson) and J. CHESTNUT. Third-place game against the Gnarwhalers on Nov 18 at 10:00 PM.",
     momentOfGame:
-      "GLIZZ TRAIN (Walker Krebs), starting at center in beast mode, burying a sick one-timer in the second. Raw Dog of the Night.",
+      "GLIZZ TRAIN, starting at center in beast mode, burying a sick one-timer in the second. Raw Dog of the Night.",
     threeStars: [
       { name: "Hunter Stewart (GLIZZIN' STEW) — 2 goals and an assist, 16 goals on the season", star: 1 },
       { name: "Chris Call (J. CHESTNUT) — game-winning goal and an assist", star: 2 },
@@ -77,12 +77,12 @@ window.siteContent = {
     ],
   },
     playerSpotlight: {
-    name: "Walker Krebs",
+    name: "GLIZZ TRAIN",
     number: "58",
     nameplate: "GLIZZ TRAIN",
     title: "Starting Center, Beast Mode",
     story:
-      "GLIZZ TRAIN gets the spotlight after a Raw Dog of the Night performance against the Zombonis. Walker Krebs started at center, played the whole game in beast mode, and buried a sick one-timer in the second period with assists from Kyle Ronchak and Devin Bain. The train has left the station, and the Zombonis were standing on the tracks.",
+      "GLIZZ TRAIN gets the spotlight after a Raw Dog of the Night performance against the Zombonis. He started at center, played the whole game in beast mode, and buried a sick one-timer in the second period with assists from Kyle Ronchak and Devin Bain. The train has left the station, and the Zombonis were standing on the tracks.",
     callouts: [
       ["Play of the Week", "Sick one-timer vs the Zombonis"],
       ["Role", "Starting center, beast mode"],
@@ -497,7 +497,7 @@ window.siteContent = {
       date: "2026-11-11", opponent: "Zombonis", result: "win", glizziesScore: 5, opponentScore: 1,
       headline: "Four-Zip in the Bracket: Glizzies 5, Zombonis 1",
       body: "The Glizzies beat the Zombonis 5-1 on the South Rink and outshot them 34-8 to go 4-0 in the playoffs. Kyle Ronchak opened the scoring in the first off a GLIZZIN' STEW feed. In the second, J. CHESTNUT scored the game-winner at 11:26 with A. FROMAN assisting, GLIZZIN' STEW made it 3-0 at 9:50 off WIENER WRANGLER, and GLIZZ TRAIN, starting at center, buried a one-timer at 6:19 with assists from Ronchak and MEAT SHIELD. Raw Dog of the Night. The Zombonis got one back in the third before GLIZZIN' STEW sealed it with his 16th of the season, assisted by GLIZZ LORD and J. CHESTNUT.",
-      moment: "Walker Krebs' one-timer in the second, from the starting center spot. Raw Dog of the Night.",
+      moment: "GLIZZ TRAIN's one-timer in the second, from the starting center spot. Raw Dog of the Night.",
       stars: ["Hunter Stewart (GLIZZIN' STEW)", "Chris Call (J. CHESTNUT)", "Kyle Ronchak"],
     },
     {
@@ -593,13 +593,13 @@ window.siteContent = {
     },
   ],
 rawDogOfNight: {
-    winner: "Walker Krebs",
+    winner: "GLIZZ TRAIN",
     nameplate: "GLIZZ TRAIN",
     gameNickname: "",
     number: "58",
     game: "vs Zombonis — November 11, 2026",
     nominatedBy: "The Glizzies bench",
-    reason: "Walker Krebs started at center and went full beast mode all night, then buried a sick one-timer in the second period to help bury the Zombonis in a 5-1 playoff win. The Glizz Train arrived on schedule.",
+    reason: "GLIZZ TRAIN started at center and went full beast mode all night, then buried a sick one-timer in the second period to help bury the Zombonis in a 5-1 playoff win. The Glizz Train arrived on schedule.",
     citation: "Official citation: GLIZZ TRAIN took the starting center spot against the Zombonis on November 11, played beast mode from the opening faceoff, and finished it with a one-timer. Raw Dog of the Night, bench-approved.",
     achievement: "Starting center beast mode and a sick one-timer",
     honorableMention: "Hunter Stewart (GLIZZIN' STEW) — 2 goals and an assist, 16th of the season",
