@@ -338,6 +338,284 @@
       },
       "noMeasureDiagram": true,
       "order": 6
+    },
+    "8421059592249": {
+      "sizeGuide": {
+        "cols": [
+          "Length",
+          "Width"
+        ],
+        "rows": [
+          [
+            "S",
+            "27",
+            "20"
+          ],
+          [
+            "M",
+            "28",
+            "22"
+          ],
+          [
+            "L",
+            "29",
+            "24"
+          ],
+          [
+            "XL",
+            "30",
+            "26"
+          ],
+          [
+            "2XL",
+            "31",
+            "28"
+          ],
+          [
+            "3XL",
+            "32",
+            "30"
+          ]
+        ],
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm)."
+      }
+    },
+    "8421389566009": {
+      "sizeGuide": {
+        "cols": [
+          "Length",
+          "Width"
+        ],
+        "rows": [
+          [
+            "S",
+            "27",
+            "20"
+          ],
+          [
+            "M",
+            "28",
+            "21"
+          ],
+          [
+            "L",
+            "29",
+            "23"
+          ],
+          [
+            "XL",
+            "30",
+            "25"
+          ],
+          [
+            "2XL",
+            "31",
+            "26 1/2"
+          ],
+          [
+            "3XL",
+            "32",
+            "28"
+          ]
+        ],
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Heads up: this crew runs small — we recommend ordering one size up."
+      }
+    },
+    "8420322705465": {
+      "sizeGuide": {
+        "cols": [
+          "Length",
+          "Width"
+        ],
+        "rows": [
+          [
+            "S",
+            "27 1/2",
+            "20 1/8"
+          ],
+          [
+            "M",
+            "28",
+            "21 1/8"
+          ],
+          [
+            "L",
+            "29",
+            "23 1/8"
+          ],
+          [
+            "XL",
+            "30 1/4",
+            "25 1/8"
+          ],
+          [
+            "2XL",
+            "31 3/4",
+            "27 1/8"
+          ],
+          [
+            "3XL",
+            "32 3/4",
+            "29 1/8"
+          ]
+        ],
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Oversized boxy fit."
+      }
+    },
+    "8417882538041": {
+      "sizeGuide": {
+        "cols": [
+          "Length",
+          "Width"
+        ],
+        "rows": [
+          [
+            "S",
+            "26",
+            "18"
+          ],
+          [
+            "M",
+            "27",
+            "20"
+          ],
+          [
+            "L",
+            "28",
+            "21 5/8"
+          ],
+          [
+            "XL",
+            "29",
+            "23 5/8"
+          ],
+          [
+            "2XL",
+            "30",
+            "25 5/8"
+          ]
+        ],
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm)."
+      }
+    },
+    "8417764212793": {
+      "sizeGuide": {
+        "cols": [
+          "Length",
+          "Width"
+        ],
+        "rows": [
+          [
+            "S",
+            "18 5/8",
+            "22"
+          ],
+          [
+            "M",
+            "19 3/8",
+            "23 1/2"
+          ],
+          [
+            "L",
+            "21 3/8",
+            "25 1/2"
+          ],
+          [
+            "XL",
+            "22 1/8",
+            "27 1/2"
+          ],
+          [
+            "2XL",
+            "22 7/8",
+            "29 1/2"
+          ]
+        ],
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Cropped fit — size up for a longer, roomier hoodie."
+      }
+    },
+    "8452387962937": {
+      "sizeGuide": {
+        "cols": [
+          "Width",
+          "Length",
+          "Sleeve"
+        ],
+        "rows": [
+          [
+            "XS",
+            "19 3/4",
+            "26 1/8",
+            "22"
+          ],
+          [
+            "S",
+            "20 1/2",
+            "26 3/4",
+            "22 5/8"
+          ],
+          [
+            "M",
+            "21 1/4",
+            "27 3/8",
+            "23 1/4"
+          ],
+          [
+            "L",
+            "22 7/8",
+            "28",
+            "23 7/8"
+          ],
+          [
+            "XL",
+            "24 3/8",
+            "28 1/2",
+            "24"
+          ],
+          [
+            "2XL",
+            "26",
+            "29 1/8",
+            "24 1/4"
+          ],
+          [
+            "3XL",
+            "27 1/2",
+            "29 3/4",
+            "24 3/8"
+          ]
+        ],
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm)."
+      },
+      "noMeasureDiagram": true
+    },
+    "8451839262777": {
+      "sizeGuide": {
+        "cols": [
+          "Head circumference"
+        ],
+        "rows": [
+          [
+            "XS",
+            "21 7/8"
+          ],
+          [
+            "S/M",
+            "23 3/8"
+          ],
+          [
+            "L/XL",
+            "25"
+          ]
+        ],
+        "note": "Measure around your head just above the ears and eyebrows. Reversible — same fit both sides."
+      },
+      "noMeasureDiagram": true
+    },
+    "8421056544825": {
+      "cats": [
+        "hats"
+      ]
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T23:20:00.626Z",
+  "syncedAt": "2026-11-19T23:24:59.431Z",
   "products": [
     {
       "id": "10458970357817",
@@ -190,7 +190,7 @@
       "slug": "glizz-toile-sweater",
       "name": "Glizz Toile Sweater",
       "card": "Glizz Toile, head to toe.",
-      "noMeasure": false,
+      "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-recycled-unisex-sweatshirt-white-front-6aab1c2747489.jpg?v=1789598962&width=640",
       "cats": [
         "hoodies"
@@ -410,7 +410,7 @@
       "slug": "glizz-toile-bucket-hat",
       "name": "Glizz Toile Bucket Hat",
       "card": "Glizz Toile. Old-world French toile, Glizzies style.",
-      "noMeasure": false,
+      "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-reversible-bucket-hat-white-front-outside-6ab0994367467.jpg?v=1789958477&width=640",
       "cats": [
         "hats"
@@ -501,7 +501,7 @@
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/classic-dad-hat-spruce-front-6ab09b7a84fdb.jpg?v=1789959045&width=640",
       "cats": [
-        "gear"
+        "hats"
       ],
       "tags": [],
       "price": 32,
