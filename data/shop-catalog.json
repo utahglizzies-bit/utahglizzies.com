@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T23:12:31.385Z",
+  "syncedAt": "2026-11-19T23:20:00.626Z",
   "products": [
     {
       "id": "10458970357817",
@@ -579,7 +579,7 @@
       "isNew": false,
       "order": 1,
       "created": "2026-09-03T06:45:09Z",
-      "hero": "hero-hat",
+      "hero": "hero-classic",
       "curated": true
     },
     {
