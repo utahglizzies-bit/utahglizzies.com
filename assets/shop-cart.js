@@ -132,10 +132,17 @@
       });
       optWrap.innerHTML = html;
     }
-    render();
+    // keep the displayed price in sync with the selected variant (e.g. 2XL+ or larger blanket costs more)
+    function syncPrice(){
+      var wrap = optWrap.closest(".pd-wrap") || document;
+      var slot = wrap.querySelector("[data-price-slot]");
+      var v = resolveVariantFrom(optWrap, data.variants);
+      if(slot && v && v.price) slot.textContent = money(parseFloat(v.price.amount));
+    }
+    render(); syncPrice();
     // any change re-renders downstream options (a new color may change which sizes exist)
     optWrap.addEventListener("change", function(e){
-      if(e.target && e.target.getAttribute && e.target.getAttribute("data-opt")!=null){ render(); }
+      if(e.target && e.target.getAttribute && e.target.getAttribute("data-opt")!=null){ render(); syncPrice(); }
     });
   }
 
