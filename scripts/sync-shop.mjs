@@ -169,7 +169,7 @@ for (const p of live) {
     order: o.order ?? 1000,
     created,
     hero: tags.find((t) => t.startsWith("hero-")) || null,
-    curated: !!o.slug,
+    curated: !!o.img,
   });
 }
 // curated products that are unpublished but should still show (e.g. sold-out pucks)
@@ -216,7 +216,7 @@ for (const p of products) {
     .replaceAll("{{SLUG}}", p.slug)
     .replaceAll("{{OG_IMAGE}}", esc(cdn(p.images[0], 1200)))
     .replaceAll("{{PID}}", p.id)
-    .replaceAll("{{MAIN_IMG}}", esc(big[0] || ""))
+    .replaceAll("{{MAIN_IMG}}", esc(big[0] || "../assets/glizzies-logo.png?v=20260909"))
     .replaceAll("{{BADGE}}", badgeHtml(p))
     .replaceAll("{{THUMBS}}", thumbs)
     .replaceAll("{{PRICE}}", money(p.price))
@@ -242,7 +242,7 @@ function card(p, root) {
   const href = `${root}shop/${p.slug}.html`;
   const price = p.priceHi > p.price ? `${money(p.price)}–${money(p.priceHi)}` : money(p.price);
   const btn = p.soldOut ? `<a class="pc-add pc-add-soldout" href="${href}">Sold Out — Notify Me</a>` : `<a class="pc-add" href="${href}">View &amp; Buy</a>`;
-  const img = p.img.startsWith("http") ? p.img : root + p.img;
+  const img = !p.img ? root + "assets/glizzies-logo.png?v=20260909" : p.img.startsWith("http") ? p.img : root + p.img;
   return `<div class="product-card" data-name="${esc(p.name.toLowerCase())}" data-search="${esc((p.name + " " + p.cats.join(" ") + " " + p.tags.join(" ")).toLowerCase())}" data-price="${p.price}" data-created="${esc(p.created)}" data-order="${products.indexOf(p)}" data-soldout="${p.soldOut ? 1 : 0}">
         <a class="pc-thumb-link" href="${href}"><div class="pc-img"><img src="${esc(img)}" alt="${esc(p.name)}" loading="lazy" decoding="async" />${badgeHtml(p)}</div></a>
         <div class="pc-body">
