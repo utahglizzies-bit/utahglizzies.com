@@ -6,3 +6,7 @@
 
 # macOS
 .DS_Store
+
+# shop sync preview fixtures (never deploy)
+scripts/templates/.preview-fixture.json
+_preview/

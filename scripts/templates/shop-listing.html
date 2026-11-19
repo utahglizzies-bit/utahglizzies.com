@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- generated-by:sync-shop — edit scripts/templates/shop-listing.html, then run `node scripts/sync-shop.mjs`. Hand-edits here get overwritten. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{META_DESC}}" />
+  <link rel="canonical" href="{{CANONICAL}}" />
+  <meta property="og:title" content="{{TITLE}}" />
+  <meta property="og:description" content="{{META_DESC}}" />
+  <meta property="og:image" content="https://www.utahglizzies.com/assets/products/glizzy-jersey-1.jpg" />
+  <meta property="og:url" content="{{CANONICAL}}" />
+  <link rel="manifest" href="{{ROOT}}manifest.json" /><link rel="icon" href="{{ROOT}}assets/glizzies-logo.png?v=20260909" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ROOT}}styles.css?v=20260909d" />
+  <link rel="stylesheet" href="{{ROOT}}assets/shop.css?v=23" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49PTYCCKB1');</script>
+{{JSONLD}}
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="{{ROOT}}index.html"><img class="brand-wordmark" src="{{ROOT}}assets/nav-brand.png?v=20260909" alt="Utah Glizzies" decoding="async" /></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation"><button class="nav-close" type="button" aria-label="Close menu">&times;</button>
+      <a href="{{ROOT}}team.html#roster">Roster</a>
+      
+      <a href="{{ROOT}}game.html">Play</a>
+      <a href="{{ROOT}}shop.html" aria-current="page">Shop</a>
+      <a href="{{ROOT}}community.html">The Pit</a>
+      <a href="{{ROOT}}blog.html">Blog</a>
+      <a href="{{ROOT}}sponsors.html">Sponsors</a>
+      <a href="{{ROOT}}brand.html">Brand</a>
+      <a href="{{ROOT}}contact.html">Contact</a>
+      <a href="{{ROOT}}team.html#schedule">Schedule</a>
+      <a class="instagram-link" href="https://www.instagram.com/UtahGlizziesHockey/" target="_blank" rel="noreferrer">IG</a>
+    </nav>
+  </header>
+
+{{INTRO}}
+
+  {{HERO_LINEUP}}
+
+  {{BROWSE}}
+
+  {{OUTRO}}
+
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Open cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head"><h3>Your Cart</h3><button class="cart-close" id="cartClose" type="button" aria-label="Close cart">&times;</button></div>
+    <div class="cart-ship-nudge" id="cartShipNudge">Low per-item shipping rates, calculated at checkout.</div>
+    <div class="cart-items" id="cartItems"><div class="cart-empty">Your cart is empty. Get that dog in you.</div></div>
+    <div class="cart-foot">
+      <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0</span></div>
+      <div class="cart-tax-note">Low per-item shipping rates, calculated at checkout. International calculated too.</div>
+      <a class="cart-checkout disabled" id="cartCheckout" href="#">Checkout</a>
+    </div>
+  </aside>
+
+  <footer class="site-footer"><div class="footer-inner">
+    <a class="footer-brand" href="{{ROOT}}index.html"><img src="{{ROOT}}assets/glizzies-logo.png?v=20260909" alt="Utah Glizzies" decoding="async" /></a>
+    <nav class="footer-links"><a href="{{ROOT}}index.html">Home</a><a href="{{ROOT}}team.html#roster">Roster</a><a href="{{ROOT}}game.html">Play</a><a href="{{ROOT}}shop.html">Shop</a><a href="{{ROOT}}community.html">The Pit</a><a href="{{ROOT}}blog.html">Blog</a><a href="{{ROOT}}sponsors.html">Sponsors</a><a href="{{ROOT}}brand.html">Brand</a><a href="{{ROOT}}contact.html">Contact</a><a href="{{ROOT}}index.html#faq">FAQ</a></nav>
+    <p class="footer-copy">Utah Glizzies HC &bull; Sandy, UT &bull; utahglizzies.com</p>
+  </div></footer>
+  <script src="{{ROOT}}assets/shop-cart.js?v=23"></script>
+  <script src="{{ROOT}}assets/shop-browse.js?v=1"></script>
+  <script>
+  /* Live-refresh grid card prices from Shopify so they never drift from the product pages. data-card-price live refresh */
+  (function(){
+    if(!window.GlizzCart||!GlizzCart.fetchProduct) return;
+    document.querySelectorAll("[data-card-price][data-card-pid]").forEach(function(el){
+      var pid=el.getAttribute("data-card-pid"); if(!pid) return;
+      GlizzCart.fetchProduct(pid).then(function(data){
+        if(data&&data.minPrice!=null){
+          var lo=data.minPrice, hi=(data.maxPrice!=null?data.maxPrice:lo);
+          el.textContent = (hi>lo) ? (GlizzCart.money(lo)+"–"+GlizzCart.money(hi)) : GlizzCart.money(lo);
+        }
+      }).catch(function(){});
+    });
+  })();
+  </script>
+
+</body>
+</html>

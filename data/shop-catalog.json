@@ -1,0 +1,376 @@
+{
+  "syncedAt": "2026-11-19T21:39:31.339Z",
+  "products": [
+    {
+      "id": "8319559139385",
+      "handle": "d1-legends-utah-glizzies-hc-hat",
+      "slug": "glizzies-hat",
+      "name": "D1 Legends Utah Glizzies HC Hat",
+      "card": "The official lid of Utah Glizzies HC. Cream crown, dark green corduroy brim, full embroidery.",
+      "img": "assets/products/d1-legends-hat-thumb.jpg",
+      "cats": [
+        "hats"
+      ],
+      "tags": [],
+      "price": 40,
+      "priceHi": 40,
+      "soldOut": false,
+      "badge": "Presale",
+      "isNew": false,
+      "order": 1,
+      "created": "2026-09-03T06:45:09Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8319939117113",
+      "handle": "the-glizzy-sweater-blank",
+      "slug": "blank-jersey",
+      "name": "THE Glizzy Sweater (Blank)",
+      "card": "No name. No number. No accountability. The jersey for the people. Full embroidery.",
+      "img": "assets/products/glizzy-jersey-1.jpg",
+      "cats": [
+        "jerseys"
+      ],
+      "tags": [],
+      "price": 90,
+      "priceHi": 90,
+      "soldOut": true,
+      "badge": null,
+      "isNew": false,
+      "order": 2,
+      "created": "2026-09-12T17:02:31Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8319941443641",
+      "handle": "the-glizzy-sweater-custom",
+      "slug": "custom-jersey",
+      "name": "THE Glizzy Sweater (Custom)",
+      "card": "Your name. Your number. Your problem now. Full embroidery, made to order.",
+      "img": "assets/products/glizzy-jersey-1.jpg",
+      "cats": [
+        "jerseys"
+      ],
+      "tags": [],
+      "price": 110,
+      "priceHi": 110,
+      "soldOut": true,
+      "badge": null,
+      "isNew": false,
+      "order": 3,
+      "created": "2026-09-12T17:02:33Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311696687161",
+      "handle": "embroidered-glizz-hoodie",
+      "slug": "embroidered-glizz-hoodie",
+      "name": "Embroidered Glizz Hoodie",
+      "card": "The flagship. Full Utah Glizzies HC primary logo, embroidered. The default. The classic. The dog.",
+      "img": "assets/products/embroidered-glizz-hoodie-1.jpg?v=3",
+      "cats": [
+        "hoodies"
+      ],
+      "tags": [
+        "apparel",
+        "embroidered",
+        "hockey",
+        "hoodie",
+        "Utah Glizzies"
+      ],
+      "price": 58,
+      "priceHi": 60,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 10,
+      "created": "2026-07-06T18:28:18Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311698784313",
+      "handle": "double-barrel-hoodie",
+      "slug": "double-barrel-hoodie",
+      "name": "Double Barrel Hoodie",
+      "card": "Two dogs, one bun. Secondary logo front, primary on back. Feed the bear.",
+      "img": "assets/products/double-barrel-hoodie-1.jpg",
+      "cats": [
+        "hoodies"
+      ],
+      "tags": [
+        "apparel",
+        "hockey",
+        "hoodie",
+        "Utah Glizzies"
+      ],
+      "price": 45,
+      "priceHi": 53,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 11,
+      "created": "2026-07-06T18:28:17Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311688855609",
+      "handle": "unisex-garment-dyed-heavyweight-t-shirt",
+      "slug": "glizzy-tee",
+      "name": "Glizzy Tee",
+      "card": "The flagship tee. Full primary logo. The default. The classic. The dog.",
+      "img": "assets/products/glizzy-tee-1.jpg",
+      "cats": [
+        "tees"
+      ],
+      "tags": [
+        "apparel",
+        "hockey",
+        "t-shirt",
+        "tee",
+        "Utah Glizzies"
+      ],
+      "price": 32,
+      "priceHi": 37,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 12,
+      "created": "2026-07-06T18:28:24Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311672471609",
+      "handle": "mustard-gold-tee",
+      "slug": "mustard-gold-tee",
+      "name": "Mustard Gold Tee",
+      "card": "We waited 46 years for the mustard. Wait no more. Champion mood, oversized fit.",
+      "img": "assets/products/mustard-gold-tee-1.jpg",
+      "cats": [
+        "tees"
+      ],
+      "tags": [
+        "apparel",
+        "mustard gold",
+        "t-shirt",
+        "tee",
+        "Utah Glizzies"
+      ],
+      "price": 38,
+      "priceHi": 41,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 13,
+      "created": "2026-07-06T18:28:20Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311692329017",
+      "handle": "glizzy-crop-top",
+      "slug": "glizzy-crop-top",
+      "name": "Glizzy Crop Top",
+      "card": "The flagship, cropped. Full primary logo. The default. The classic. The dog.",
+      "img": "assets/products/glizzy-crop-top-1.jpg",
+      "cats": [
+        "tees"
+      ],
+      "tags": [
+        "apparel",
+        "crop top",
+        "hockey",
+        "Utah Glizzies",
+        "women"
+      ],
+      "price": 32,
+      "priceHi": 32,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 14,
+      "created": "2026-07-06T18:28:19Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311694786617",
+      "handle": "tut-tut-beanie",
+      "slug": "tut-tut-beanie",
+      "name": "Embroidered Tut Tut Beanie",
+      "card": "Glizztopher Robin would wear this deep in the hunnid acre wood.",
+      "img": "assets/products/tut-tut-beanie-1.jpg?v=4",
+      "cats": [
+        "hats"
+      ],
+      "tags": [
+        "beanie",
+        "embroidered",
+        "headwear",
+        "hockey",
+        "Utah Glizzies"
+      ],
+      "price": 35,
+      "priceHi": 35,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 15,
+      "created": "2026-07-06T18:28:23Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311650156601",
+      "handle": "youth-glizzy-hoodie",
+      "slug": "youth-glizzy-hoodie",
+      "name": "Youth Glizzy Hoodie",
+      "card": "The flagship, youth sized. Primary & secondary logos. The default. The classic. The dog.",
+      "img": "assets/products/youth-glizzy-hoodie-1.jpg",
+      "cats": [
+        "youth",
+        "hoodies"
+      ],
+      "tags": [
+        "hockey",
+        "hoodie",
+        "kids",
+        "Utah Glizzies",
+        "youth"
+      ],
+      "price": 48,
+      "priceHi": 48,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 30,
+      "created": "2026-07-06T18:28:25Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311657857081",
+      "handle": "youth-mustard-gold",
+      "slug": "youth-mustard-gold-tee",
+      "name": "Youth Mustard Gold Tee",
+      "card": "We waited 46 years for the mustard. Youth sized, champion mood.",
+      "img": "assets/products/youth-mustard-gold-tee-1.jpg",
+      "cats": [
+        "youth",
+        "tees"
+      ],
+      "tags": [
+        "kids",
+        "mustard gold",
+        "tee",
+        "Utah Glizzies",
+        "youth"
+      ],
+      "price": 32,
+      "priceHi": 32,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 31,
+      "created": "2026-07-06T18:28:27Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8311649009721",
+      "handle": "youth-glizzy-tee",
+      "slug": "youth-glizzy-tee",
+      "name": "Youth Glizzy Tee",
+      "card": "The flagship, youth sized. Primary front, secondary back. The default. The classic. The dog.",
+      "img": "assets/products/youth-glizzy-tee-1.jpg",
+      "cats": [
+        "youth",
+        "tees"
+      ],
+      "tags": [
+        "hockey",
+        "kids",
+        "tee",
+        "Utah Glizzies",
+        "youth"
+      ],
+      "price": 27,
+      "priceHi": 27,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 32,
+      "created": "2026-07-06T18:28:26Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8319954452537",
+      "handle": "glizzy-stickies",
+      "slug": "glizzy-stickies",
+      "name": "Glizzy Stickies",
+      "card": "Stickers with a bear eating a hot dog. For the golf cart, the bumper, the tele, wherever.",
+      "img": "assets/products/sticker-1.jpg",
+      "cats": [
+        "gear"
+      ],
+      "tags": [],
+      "price": 2,
+      "priceHi": 2,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 40,
+      "created": "2026-07-06T18:28:19Z",
+      "hero": null,
+      "curated": true
+    },
+    {
+      "id": "8319569035321",
+      "slug": "glizzies-pucks",
+      "name": "Utah Glizzies HC Official Game Puck",
+      "card": "The official puck we sometimes play with in games. Puck yeah.",
+      "img": "assets/products/puck-1.jpg",
+      "cats": [
+        "gear"
+      ],
+      "tags": [],
+      "price": 8,
+      "priceHi": 8,
+      "soldOut": true,
+      "badge": null,
+      "isNew": false,
+      "order": 41,
+      "created": "2000-01-01",
+      "hero": null,
+      "curated": true,
+      "unpublished": true
+    },
+    {
+      "id": "8319584796729",
+      "handle": "golf-towel",
+      "slug": "glizzy-links-wiper",
+      "name": "Glizzy Links Wiper",
+      "card": "\"He's fixin a divot!\" Wipe your shafts clean and get back at it next swing.",
+      "img": "assets/products/glizzy-links-wiper-1.jpg",
+      "cats": [
+        "gear"
+      ],
+      "tags": [],
+      "price": 28,
+      "priceHi": 28,
+      "soldOut": false,
+      "badge": null,
+      "isNew": false,
+      "order": 42,
+      "created": "2026-07-06T20:45:22Z",
+      "hero": null,
+      "curated": true
+    }
+  ]
+}

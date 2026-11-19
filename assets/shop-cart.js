@@ -25,6 +25,8 @@
   // Cleans junk (meta tags, editor CSS classes, &nbsp;, empty nodes).
   function parseDescription(html){
     if(!html) return {desc:"", specs:""};
+    // drop Printful size-guide tables (rendered separately) and made-to-order boilerplate
+    var sg = html.search(/<[^>]*class="size-guide-title"|size guide/i); if(sg>=0) html = html.slice(0, sg);
     // normalize breaks/paragraph ends to newlines so we can work line-by-line
     var t = html
       .replace(/<meta[^>]*>/gi,"")
@@ -43,7 +45,7 @@
       // treat a line as a spec if it starts with a bullet marker
       if(/^[•\-\u2022]/.test(l)){
         specLines.push(l.replace(/^[•\-\u2022]\s*/,"").trim());
-      } else {
+      } else if(!/made especially for you|^disclaimer:/i.test(l)) {
         descLines.push(l);
       }
     });
@@ -142,7 +144,10 @@
   function syncCart(){
     var lines = state.lines.map(function(l){
       var input = { merchandiseId:l.variantId, quantity:l.qty };
-      if(l.custom){ input.attributes=[{key:"Nameplate",value:l.custom.name},{key:"Number",value:l.custom.number}]; }
+      var attrs=[];
+      if(l.custom){ attrs.push({key:"Nameplate",value:l.custom.name},{key:"Number",value:l.custom.number}); }
+      (l.attrs||[]).forEach(function(a){ attrs.push(a); });
+      if(attrs.length) input.attributes=attrs;
       return input;
     });
     if(!lines.length){ state.cartId=null; state.checkoutUrl=null; persist(); return Promise.resolve(); }
@@ -192,7 +197,7 @@
     add: function(opts){
       // opts: {productId, variant, title, img, custom}
       var v = opts.variant;
-      var line = { variantId:v.id, qty:1, title:opts.title, variantTitle:(v.title&&v.title!=="Default Title")?v.title:"", price:parseFloat(v.price.amount), img:opts.img, custom:opts.custom||null };
+      var line = { variantId:v.id, qty:1, title:opts.title, variantTitle:(v.title&&v.title!=="Default Title")?v.title:"", price:parseFloat(v.price.amount), img:opts.img, custom:opts.custom||null, attrs:opts.attrs||null };
       state.lines.push(line);
       persist();
       renderCart();
@@ -323,12 +328,13 @@
       var body = data.rows.map(function(r){
         var cells = "<td>"+esc(r[0])+"</td>";
         for(var i=1;i<r.length;i++){
-          var raw = r[i];
-          var num = fracToNum(raw);
+          var raw = String(r[i]).replace(/\s*[-–]\s*/g, " – ");
+          var parts = raw.split(" – ");                 // ranges like "38 - 41"
+          var nums = parts.map(fracToNum);
           var out;
-          if(num === null){ out = '<span class="size-todo">TODO</span>'; }
+          if(nums.some(function(n){ return n === null; })){ out = '<span class="size-todo">TODO</span>'; }
           else if(unit === "in"){ out = esc(raw); }
-          else { out = (Math.round(num*2.54*10)/10).toFixed(1); }
+          else { out = nums.map(function(n){ return (Math.round(n*2.54*10)/10).toFixed(1); }).join(" – "); }
           cells += "<td>"+out+"</td>";
         }
         return "<tr>"+cells+"</tr>";
