@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T23:24:59.431Z",
+  "syncedAt": "2026-11-19T23:32:35.128Z",
   "products": [
     {
       "id": "10458970357817",
@@ -72,6 +72,31 @@
       "order": 41,
       "created": "2026-11-19T22:34:01Z",
       "hero": null,
+      "curated": false
+    },
+    {
+      "id": "10458957512761",
+      "handle": "utah-glizzies-grandmas-house-hat",
+      "slug": "utah-glizzies-grandmas-house-hat",
+      "name": "Utah Glizzies Grandma's House Hat",
+      "card": "The new hero lid. Welcome to Grandma's House.",
+      "noMeasure": false,
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/Hat_Photo_-_00000003.jpg?v=1795130948&width=640",
+      "cats": [
+        "hats"
+      ],
+      "tags": [
+        "cat:hats",
+        "hero-hat"
+      ],
+      "price": 44,
+      "priceHi": 44,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 1000,
+      "created": "2026-11-19T23:32:14Z",
+      "hero": "hero-hat",
       "curated": false
     },
     {
