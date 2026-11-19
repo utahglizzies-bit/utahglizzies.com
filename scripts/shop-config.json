@@ -201,12 +201,8 @@
       "cats": [
         "gear"
       ],
-      "img": "assets/products/puck-1.jpg",
       "name": "Utah Glizzies HC Official Game Puck",
-      "card": "The official puck we sometimes play with in games. Puck yeah.",
-      "price": 8,
-      "soldOut": true,
-      "keepWhenUnpublished": true
+      "card": "The official puck we sometimes play with in games. Puck yeah."
     },
     "8319584796729": {
       "slug": "glizzy-links-wiper",

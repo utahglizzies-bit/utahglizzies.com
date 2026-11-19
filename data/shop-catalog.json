@@ -1,6 +1,27 @@
 {
-  "syncedAt": "2026-11-19T22:06:23.299Z",
+  "syncedAt": "2026-11-19T22:35:06.977Z",
   "products": [
+    {
+      "id": "8319569035321",
+      "handle": "utah-glizzies-hc-pucks",
+      "slug": "glizzies-pucks",
+      "name": "Utah Glizzies HC Official Game Puck",
+      "card": "The official puck we sometimes play with in games. Puck yeah.",
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/JPEGimage.jpg?v=1795126929&width=640",
+      "cats": [
+        "gear"
+      ],
+      "tags": [],
+      "price": 12,
+      "priceHi": 12,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 41,
+      "created": "2026-11-19T22:34:01Z",
+      "hero": null,
+      "curated": false
+    },
     {
       "id": "10453818114105",
       "handle": "the-dog-house-zip-up",
@@ -840,27 +861,6 @@
       "created": "2026-07-06T18:28:19Z",
       "hero": null,
       "curated": true
-    },
-    {
-      "id": "8319569035321",
-      "slug": "glizzies-pucks",
-      "name": "Utah Glizzies HC Official Game Puck",
-      "card": "The official puck we sometimes play with in games. Puck yeah.",
-      "img": "assets/products/puck-1.jpg",
-      "cats": [
-        "gear"
-      ],
-      "tags": [],
-      "price": 8,
-      "priceHi": 8,
-      "soldOut": true,
-      "badge": null,
-      "isNew": false,
-      "order": 41,
-      "created": "2000-01-01",
-      "hero": null,
-      "curated": true,
-      "unpublished": true
     },
     {
       "id": "8319584796729",
