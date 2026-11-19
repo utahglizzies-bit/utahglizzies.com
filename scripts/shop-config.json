@@ -20,6 +20,16 @@
       "tag": "hero-jersey",
       "placeholderTitle": "Grandma's Sweater (Custom)",
       "placeholderText": "Follow us on IG so you don't miss the drop."
+    },
+    {
+      "tag": "hero-classic",
+      "placeholderTitle": "THE Glizzy Sweater",
+      "placeholderText": ""
+    },
+    {
+      "tag": "hero-classic",
+      "placeholderTitle": "THE Glizzy Sweater",
+      "placeholderText": ""
     }
   ],
   "categories": [
@@ -81,7 +91,8 @@
       "img": "assets/products/glizzy-jersey-1.jpg",
       "name": "THE Glizzy Sweater (Blank)",
       "card": "No name. No number. No accountability. The jersey for the people. Full embroidery.",
-      "soldOut": true
+      "soldOut": true,
+      "hero": "hero-classic"
     },
     "8319941443641": {
       "slug": "custom-jersey",
@@ -92,7 +103,8 @@
       "img": "assets/products/glizzy-jersey-1.jpg",
       "name": "THE Glizzy Sweater (Custom)",
       "card": "Your name. Your number. Your problem now. Full embroidery, made to order.",
-      "soldOut": true
+      "soldOut": true,
+      "hero": "hero-classic"
     },
     "8311696687161": {
       "slug": "embroidered-glizz-hoodie",
@@ -270,7 +282,8 @@
         ],
         "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut — prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
       },
-      "noMeasureDiagram": true
+      "noMeasureDiagram": true,
+      "order": 5
     },
     "10458978615353": {
       "sizeGuide": {
@@ -322,7 +335,8 @@
         ],
         "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut — prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
       },
-      "noMeasureDiagram": true
+      "noMeasureDiagram": true,
+      "order": 6
     }
   },
   "banner": "🌭 GRANDMA'S HOUSE IS OPEN. COME SIT AT THE TABLE AND ENJOY A GLIZZY. WELCOME TO THE FAM."

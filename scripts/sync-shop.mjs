@@ -169,7 +169,7 @@ for (const p of live) {
     isNew: now - Date.parse(created) < 45 * 864e5,
     order: o.order ?? 1000,
     created,
-    hero: tags.find((t) => t.startsWith("hero-")) || null,
+    hero: o.hero || tags.find((t) => t.startsWith("hero-")) || null,
     curated: !!o.img,
   });
 }
@@ -182,7 +182,7 @@ for (const [id, o] of Object.entries(cfg.products)) {
 const slugCount = {};
 for (const p of products) { if (CAT_SLUGS.includes(p.slug)) p.slug += "-item"; slugCount[p.slug] = (slugCount[p.slug] || 0) + 1; if (slugCount[p.slug] > 1) p.slug += "-" + slugCount[p.slug]; }
 // Featured order: new drops first (newest on top), then the rest by curated order
-const featured = (a, b) => (b.isNew - a.isNew) || (a.isNew && b.isNew ? Date.parse(b.created) - Date.parse(a.created) : 0) || a.order - b.order || Date.parse(b.created) - Date.parse(a.created);
+const featured = (a, b) => (b.isNew - a.isNew) || (a.isNew && b.isNew ? (a.order - b.order) || Date.parse(b.created) - Date.parse(a.created) : 0) || a.order - b.order || Date.parse(b.created) - Date.parse(a.created);
 products.sort(featured);
 
 // ---------- product pages ----------
@@ -224,8 +224,8 @@ for (const p of products) {
     .replaceAll("{{DESC}}", esc(p.desc))
     .replaceAll("{{SPECS}}", esc(p.specs))
     .replaceAll("{{SIZE_GUIDE}}", sizeGuideHtml(p.size, p.noMeasure ? [] : p.cats))
-    .replaceAll("{{BACK_HREF}}", primaryCat ? `${primaryCat.slug}.html` : "../shop.html")
-    .replaceAll("{{BACK_LABEL}}", primaryCat ? esc(primaryCat.name) : "shop")
+    .replaceAll("{{BACK_HREF}}", "../shop.html#shop")
+    .replaceAll("{{BACK_LABEL}}", "shop")
     .replaceAll("{{CUSTOM_ATTR}}", p.tags.includes("custom-jersey") ? ' data-custom="jersey"' : "")
     .replaceAll("{{CUSTOM_FIELDS}}", p.tags.includes("custom-jersey") ? '<div class="pc-custom-field"><label for="cfName">Nameplate (back)</label><input id="cfName" data-custom-name maxlength="16" placeholder="GLIZZY MCGUIRE" autocomplete="off" style="text-transform:uppercase" /></div><div class="pc-custom-field"><label for="cfNum">Number</label><input id="cfNum" data-custom-number inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="26" autocomplete="off" /></div><p class="pc-custom-note">Double-check your spelling. We stitch exactly what you type.</p>' : "")
     .replaceAll("{{PRESALE_BOX}}", (p.tags.includes("presale") || p.tags.includes("custom-jersey")) ? PRESALE_BOX : "")

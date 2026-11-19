@@ -1,6 +1,57 @@
 {
-  "syncedAt": "2026-11-19T22:54:45.286Z",
+  "syncedAt": "2026-11-19T23:03:59.279Z",
   "products": [
+    {
+      "id": "10458970357817",
+      "handle": "utah-glizzies-grandmas-sweater",
+      "slug": "utah-glizzies-grandmas-sweater-blank",
+      "name": "Utah Glizzies Grandma's Sweater Blank",
+      "card": "Grandma's Sweater. The new jersey of the Utah Glizzies HC.",
+      "noMeasure": true,
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1.jpg?v=1795124764&width=640",
+      "cats": [
+        "jerseys"
+      ],
+      "tags": [
+        "cat:jerseys",
+        "hero-jersey"
+      ],
+      "price": 105,
+      "priceHi": 105,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 5,
+      "created": "2026-11-19T22:02:53Z",
+      "hero": "hero-jersey",
+      "curated": false
+    },
+    {
+      "id": "10458978615353",
+      "handle": "utah-glizzies-grandmas-sweater-custom",
+      "slug": "utah-glizzies-grandmas-sweater-custom",
+      "name": "Utah Glizzies Grandma's Sweater Custom",
+      "card": "Grandma's Sweater, with your name on it.",
+      "noMeasure": true,
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1_92e6c561-7972-4cfa-a63a-ce877ebdde2d.jpg?v=1795124868&width=640",
+      "cats": [
+        "jerseys"
+      ],
+      "tags": [
+        "cat:jerseys",
+        "custom-jersey",
+        "hero-jersey"
+      ],
+      "price": 125,
+      "priceHi": 125,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 6,
+      "created": "2026-11-19T22:02:54Z",
+      "hero": "hero-jersey",
+      "curated": false
+    },
     {
       "id": "8319569035321",
       "handle": "utah-glizzies-hc-pucks",
@@ -486,57 +537,6 @@
       "curated": false
     },
     {
-      "id": "10458978615353",
-      "handle": "utah-glizzies-grandmas-sweater-custom",
-      "slug": "utah-glizzies-grandmas-sweater-custom",
-      "name": "Utah Glizzies Grandma's Sweater Custom",
-      "card": "Grandma's Sweater, with your name on it.",
-      "noMeasure": true,
-      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1_92e6c561-7972-4cfa-a63a-ce877ebdde2d.jpg?v=1795124868&width=640",
-      "cats": [
-        "jerseys"
-      ],
-      "tags": [
-        "cat:jerseys",
-        "custom-jersey",
-        "hero-jersey"
-      ],
-      "price": 125,
-      "priceHi": 125,
-      "soldOut": false,
-      "badge": null,
-      "isNew": true,
-      "order": 1000,
-      "created": "2026-11-19T22:02:54Z",
-      "hero": "hero-jersey",
-      "curated": false
-    },
-    {
-      "id": "10458970357817",
-      "handle": "utah-glizzies-grandmas-sweater",
-      "slug": "utah-glizzies-grandmas-sweater-blank",
-      "name": "Utah Glizzies Grandma's Sweater Blank",
-      "card": "Grandma's Sweater. The new jersey of the Utah Glizzies HC.",
-      "noMeasure": true,
-      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1.jpg?v=1795124764&width=640",
-      "cats": [
-        "jerseys"
-      ],
-      "tags": [
-        "cat:jerseys",
-        "hero-jersey"
-      ],
-      "price": 105,
-      "priceHi": 105,
-      "soldOut": false,
-      "badge": null,
-      "isNew": true,
-      "order": 1000,
-      "created": "2026-11-19T22:02:53Z",
-      "hero": "hero-jersey",
-      "curated": false
-    },
-    {
       "id": "10319716089913",
       "handle": "glizzy-stickies-pack",
       "slug": "glizzy-stickies-pack",
@@ -601,7 +601,7 @@
       "isNew": false,
       "order": 2,
       "created": "2026-09-12T17:02:31Z",
-      "hero": null,
+      "hero": "hero-classic",
       "curated": true
     },
     {
@@ -623,7 +623,7 @@
       "isNew": false,
       "order": 3,
       "created": "2026-09-12T17:02:33Z",
-      "hero": null,
+      "hero": "hero-classic",
       "curated": true
     },
     {
