@@ -1,0 +1,20 @@
+  <script id="presale-sticky-js">
+  (function(){
+    function setH(){
+      var b=document.getElementById('presale-banner');
+      var h=(b && b.style.display!=='none') ? b.offsetHeight : 0;
+      document.documentElement.style.setProperty('--presale-h', h+'px');
+    }
+    function init(){
+      var b=document.getElementById('presale-banner');
+      if(b){
+        var c=b.querySelector('.presale-close');
+        if(c) c.addEventListener('click', function(){ b.style.display='none'; setH(); });
+      }
+      setH();
+    }
+    window.addEventListener('resize', setH);
+    if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded', init);
+    window.addEventListener('load', setH);
+  })();
+  </script>

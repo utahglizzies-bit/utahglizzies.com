@@ -75,6 +75,8 @@
     }).catch(function(){ loaded[pid]={variants:[],options:[],available:false,minPrice:null}; return loaded[pid]; });
   }
 
+  var SIZE_ORDER = ["XXS","XS","S","S/M","M","M/L","L","L/XL","XL","XXL","2XL","XXXL","3XL","4XL","5XL","GOALIE","OS","ONE SIZE"];
+  function sizeRank(v){ var i = SIZE_ORDER.indexOf(String(v).trim().toUpperCase()); return i<0 ? null : i; }
   function realOptions(options){ return (options||[]).filter(function(o){ return !(o.values.length===1 && (o.values[0]==="Default Title"||o.name==="Title")); }); }
 
   // Variant-aware option rendering. Renders <select> dropdowns into optWrap using ONLY
@@ -107,7 +109,15 @@
         });
         if(ok && val!=null && seen.indexOf(val)<0) seen.push(val);
       });
-      return seen;
+      // Always show values in a sensible order: standard size order for sizes,
+      // otherwise Shopify's option order (not the order variants were created in).
+      var opt = ro.filter(function(o){ return o.name===optName; })[0];
+      var base = opt ? opt.values : [];
+      return seen.sort(function(a,b){
+        var ra=sizeRank(a), rb=sizeRank(b);
+        if(ra!==null && rb!==null && ra!==rb) return ra-rb;
+        return base.indexOf(a)-base.indexOf(b);
+      });
     }
 
     function render(){
