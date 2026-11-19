@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T22:41:08.014Z",
+  "syncedAt": "2026-11-19T22:45:19.849Z",
   "products": [
     {
       "id": "8319569035321",
@@ -7,6 +7,7 @@
       "slug": "glizzies-pucks",
       "name": "Utah Glizzies HC Official Game Puck",
       "card": "The official puck we sometimes play with in games. Puck yeah.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/JPEGimage.jpg?v=1795126929&width=640",
       "cats": [
         "gear"
@@ -28,6 +29,7 @@
       "slug": "the-dog-house-zip-up",
       "name": "The Dog House Zip-Up",
       "card": "Welcome to the Dog House.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-zip-hoodie-forest-green-back-6afbef825e216.jpg?v=1794895775&width=640",
       "cats": [
         "hoodies"
@@ -49,6 +51,7 @@
       "slug": "the-dog-house-hoodie",
       "name": "The Dog House Hoodie",
       "card": "Welcome to the Dog House.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-sand-back-6afbf23c737ce.jpg?v=1794896478&width=640",
       "cats": [
         "hoodies"
@@ -70,6 +73,7 @@
       "slug": "the-dog-house-embroidered-hoodie",
       "name": "The Dog House Embroidered Hoodie",
       "card": "The Dog House, embroidered small on the chest — quiet enough for the office, loud enough for anyone who knows.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-forest-green-front-6afbf3ae776d1.jpg?v=1794896837&width=640",
       "cats": [
         "hoodies"
@@ -91,6 +95,7 @@
       "slug": "utah-dog-embroidered-hoodie",
       "name": "Utah Dog Embroidered Hoodie",
       "card": "One dog. That's it. A little embroidered red Utah glizzy on the chest for the minimalists who still want everyone to kno",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-dark-chocolate-front-6afbf4e3b5976.jpg?v=1794897142&width=640",
       "cats": [
         "hoodies"
@@ -112,6 +117,7 @@
       "slug": "glizz-toile-hoodie",
       "name": "Glizz Toile Hoodie",
       "card": "Glizz Toile, now heavyweight.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-oversized-cotton-hoodie-white-front-6afbfa187da38.jpg?v=1794898570&width=640",
       "cats": [
         "hoodies"
@@ -133,6 +139,7 @@
       "slug": "glizz-toile-sweater",
       "name": "Glizz Toile Sweater",
       "card": "Glizz Toile, head to toe.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-recycled-unisex-sweatshirt-white-front-6aab1c2747489.jpg?v=1789598962&width=640",
       "cats": [
         "hoodies"
@@ -154,6 +161,7 @@
       "slug": "grandmas-apron",
       "name": "Grandma's Apron",
       "card": "Grandma's in the kitchen and the dogs are on the grill.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-apron-white-front-6ac5241ce918f.jpg?v=1791304752&width=640",
       "cats": [
         "gear"
@@ -175,6 +183,7 @@
       "slug": "mountain-love-hoodie",
       "name": "Mountain Love Hoodie",
       "card": "Mountain love, worn close to the heart.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-black-front-6aeaadc928d8a.jpg?v=1793764823&width=640",
       "cats": [
         "hoodies"
@@ -196,6 +205,7 @@
       "slug": "glizz-toile-playing-cards",
       "name": "Glizz Toile Playing Cards",
       "card": "Deal 'em like a dog. Glizz Toile on the back of every card, so poker night after the game looks a lot classier than the guys playing it.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/poker-playing-cards-white-2.5x3.5-front-6aeac7876567b.jpg?v=1793771419&width=640",
       "cats": [
         "gear"
@@ -217,6 +227,7 @@
       "slug": "grandmas-mug",
       "name": "Grandma's Mug",
       "card": "Grandma's house always had the coffee on and the dogs on the grill.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/white-glossy-mug-white-11-oz-front-view-6aeac93b91605.jpg?v=1793771848&width=640",
       "cats": [
         "gear"
@@ -238,6 +249,7 @@
       "slug": "glizzy-dinkers-pickleball-set",
       "name": "The Glizzy Dinkers™ Pickleball Set",
       "card": "Big dinks. Bad decisions.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/pickleball-paddle-_set_-wood-7.5-x-15.5-front-6af233ba0ac29.jpg?v=1794257858&width=640",
       "cats": [
         "gear"
@@ -259,6 +271,7 @@
       "slug": "embroidered-love-in-this-grub-beanie",
       "name": "Embroidered Love in this Grub Beanie",
       "card": "There's love in this grub.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/cuffed-beanie-spruce-front-6a990e9ec3803.jpg?v=1788415660&width=640",
       "cats": [
         "hats"
@@ -280,6 +293,7 @@
       "slug": "winter-glizzic-crew",
       "name": "Winter Glizzic Crew",
       "card": "The Winter Glizzic. Outdoor ice, Wasatch peaks, and a grizzly squaring up with a glizzy at center ice, all wrapped in one crest.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-premium-sweatshirt-forest-green-front-6a991145ce831.jpg?v=1788416345&width=640",
       "cats": [
         "hoodies"
@@ -301,6 +315,7 @@
       "slug": "embroidered-dog-sticks-trucker",
       "name": "Embroidered Dog Sticks Trucker",
       "card": "A mesh-back trucker for the ones who show up early, stay late, and spend the time in between on the dog sticks.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/retro-trucker-hat-brown-khaki-front-6aeac57d6b3cb.jpg?v=1793770887&width=640",
       "cats": [
         "hats"
@@ -322,6 +337,7 @@
       "slug": "mountain-love-blanket",
       "name": "Mountain Love Blanket",
       "card": "Mountain love. A grizzly and a glizzy squaring up on mountain lake ice, the Wasatch behind them and a little heart above",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/sublimated-sherpa-blanket-tan-50x60-front-6ab094adeeb88.jpg?v=1789957298&width=640",
       "cats": [
         "gear"
@@ -343,6 +359,7 @@
       "slug": "glizz-toile-bucket-hat",
       "name": "Glizz Toile Bucket Hat",
       "card": "Glizz Toile. Old-world French toile, Glizzies style.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-reversible-bucket-hat-white-front-outside-6ab0994367467.jpg?v=1789958477&width=640",
       "cats": [
         "hats"
@@ -364,6 +381,7 @@
       "slug": "womens-bears-heart-dogs-cropped-hoodie",
       "name": "Womens Bears Heart Dogs Cropped Hoodie",
       "card": "Bears ♥ dogs. It's not complicated.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/womens-cropped-hoodie-military-green-front-6a95edb892f7f.jpg?v=1788212975&width=640",
       "cats": [
         "hoodies"
@@ -385,6 +403,7 @@
       "slug": "igtdim-tee",
       "name": "IGTDIM Tee",
       "card": "I Got That Dog In Me.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-muscle-shirt-black-front-6a96486767677.jpg?v=1788233847&width=640",
       "cats": [
         "tees"
@@ -406,6 +425,7 @@
       "slug": "winter-glizzic-patch-tee",
       "name": "Winter Glizzic Patch Tee",
       "card": "Your ticket stub for the Winter Glizzic.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-oversized-boxy-tee-black-front-6a98997a00027.jpg?v=1788385668&width=640",
       "cats": [
         "tees"
@@ -427,6 +447,7 @@
       "slug": "smoky-dog",
       "name": "Smoky Dog",
       "card": "Dad hats aren't just for dads.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/classic-dad-hat-spruce-front-6ab09b7a84fdb.jpg?v=1789959045&width=640",
       "cats": [
         "gear"
@@ -448,6 +469,7 @@
       "slug": "embroidered-grandmas-house-hoodie",
       "name": "Embroidered Grandma's House Hoodie",
       "card": "Grandma’s house rules: shoes off, dogs on the grill, and everybody gets a hug.",
+      "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-sand-front-6ab099b8661ba.jpg?v=1789958593&width=640",
       "cats": [
         "hoodies"
@@ -469,6 +491,7 @@
       "slug": "utah-glizzies-grandmas-sweater-custom",
       "name": "Utah Glizzies Grandma's Sweater Custom",
       "card": "Grandma's Sweater, with your name on it.",
+      "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1_92e6c561-7972-4cfa-a63a-ce877ebdde2d.jpg?v=1795124868&width=640",
       "cats": [
         "jerseys"
@@ -494,6 +517,7 @@
       "slug": "utah-glizzies-grandmas-sweater-blank",
       "name": "Utah Glizzies Grandma's Sweater Blank",
       "card": "Grandma's Sweater. The new jersey of the Utah Glizzies HC.",
+      "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1.jpg?v=1795124764&width=640",
       "cats": [
         "jerseys"
@@ -518,6 +542,7 @@
       "slug": "glizzy-stickies-pack",
       "name": "Glizzy Stickies Pack",
       "card": "One sticker wasn't enough, so we packed a whole litter.",
+      "noMeasure": false,
       "img": "",
       "cats": [
         "gear"
@@ -539,6 +564,7 @@
       "slug": "glizzies-hat",
       "name": "D1 Legends Utah Glizzies HC Hat",
       "card": "The official lid of Utah Glizzies HC. Cream crown, dark green corduroy brim, full embroidery.",
+      "noMeasure": false,
       "img": "assets/products/d1-legends-hat-thumb.jpg",
       "cats": [
         "hats"
@@ -560,6 +586,7 @@
       "slug": "blank-jersey",
       "name": "THE Glizzy Sweater (Blank)",
       "card": "No name. No number. No accountability. The jersey for the people. Full embroidery.",
+      "noMeasure": false,
       "img": "assets/products/glizzy-jersey-1.jpg",
       "cats": [
         "jerseys"
@@ -581,6 +608,7 @@
       "slug": "custom-jersey",
       "name": "THE Glizzy Sweater (Custom)",
       "card": "Your name. Your number. Your problem now. Full embroidery, made to order.",
+      "noMeasure": false,
       "img": "assets/products/glizzy-jersey-1.jpg",
       "cats": [
         "jerseys"
@@ -602,6 +630,7 @@
       "slug": "embroidered-glizz-hoodie",
       "name": "Embroidered Glizz Hoodie",
       "card": "The flagship. Full Utah Glizzies HC primary logo, embroidered. The default. The classic. The dog.",
+      "noMeasure": false,
       "img": "assets/products/embroidered-glizz-hoodie-1.jpg?v=3",
       "cats": [
         "hoodies"
@@ -629,6 +658,7 @@
       "slug": "double-barrel-hoodie",
       "name": "Double Barrel Hoodie",
       "card": "Two dogs, one bun. Secondary logo front, primary on back. Feed the bear.",
+      "noMeasure": false,
       "img": "assets/products/double-barrel-hoodie-1.jpg",
       "cats": [
         "hoodies"
@@ -655,6 +685,7 @@
       "slug": "glizzy-tee",
       "name": "Glizzy Tee",
       "card": "The flagship tee. Full primary logo. The default. The classic. The dog.",
+      "noMeasure": false,
       "img": "assets/products/glizzy-tee-1.jpg",
       "cats": [
         "tees"
@@ -682,6 +713,7 @@
       "slug": "mustard-gold-tee",
       "name": "Mustard Gold Tee",
       "card": "We waited 46 years for the mustard. Wait no more. Champion mood, oversized fit.",
+      "noMeasure": false,
       "img": "assets/products/mustard-gold-tee-1.jpg",
       "cats": [
         "tees"
@@ -709,6 +741,7 @@
       "slug": "glizzy-crop-top",
       "name": "Glizzy Crop Top",
       "card": "The flagship, cropped. Full primary logo. The default. The classic. The dog.",
+      "noMeasure": false,
       "img": "assets/products/glizzy-crop-top-1.jpg",
       "cats": [
         "tees"
@@ -736,6 +769,7 @@
       "slug": "tut-tut-beanie",
       "name": "Embroidered Tut Tut Beanie",
       "card": "Glizztopher Robin would wear this deep in the hunnid acre wood.",
+      "noMeasure": false,
       "img": "assets/products/tut-tut-beanie-1.jpg?v=4",
       "cats": [
         "hats"
@@ -763,6 +797,7 @@
       "slug": "youth-glizzy-hoodie",
       "name": "Youth Glizzy Hoodie",
       "card": "The flagship, youth sized. Primary & secondary logos. The default. The classic. The dog.",
+      "noMeasure": false,
       "img": "assets/products/youth-glizzy-hoodie-1.jpg",
       "cats": [
         "youth",
@@ -791,6 +826,7 @@
       "slug": "youth-mustard-gold-tee",
       "name": "Youth Mustard Gold Tee",
       "card": "We waited 46 years for the mustard. Youth sized, champion mood.",
+      "noMeasure": false,
       "img": "assets/products/youth-mustard-gold-tee-1.jpg",
       "cats": [
         "youth",
@@ -819,6 +855,7 @@
       "slug": "youth-glizzy-tee",
       "name": "Youth Glizzy Tee",
       "card": "The flagship, youth sized. Primary front, secondary back. The default. The classic. The dog.",
+      "noMeasure": false,
       "img": "assets/products/youth-glizzy-tee-1.jpg",
       "cats": [
         "youth",
@@ -847,6 +884,7 @@
       "slug": "glizzy-stickies",
       "name": "Glizzy Stickies",
       "card": "Stickers with a bear eating a hot dog. For the golf cart, the bumper, the tele, wherever.",
+      "noMeasure": false,
       "img": "assets/products/sticker-1.jpg",
       "cats": [
         "gear"
@@ -868,6 +906,7 @@
       "slug": "glizzy-links-wiper",
       "name": "Glizzy Links Wiper",
       "card": "\"He's fixin a divot!\" Wipe your shafts clean and get back at it next swing.",
+      "noMeasure": false,
       "img": "assets/products/glizzy-links-wiper-1.jpg",
       "cats": [
         "gear"

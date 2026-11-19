@@ -217,6 +217,110 @@
     "10430657626169": {
       "slug": "glizzy-dinkers-pickleball-set",
       "name": "The Glizzy Dinkers™ Pickleball Set"
+    },
+    "10458970357817": {
+      "sizeGuide": {
+        "cols": [
+          "Chest",
+          "Length"
+        ],
+        "rows": [
+          [
+            "S",
+            "44-45",
+            "30"
+          ],
+          [
+            "M",
+            "46-47",
+            "31"
+          ],
+          [
+            "L",
+            "48-49",
+            "32"
+          ],
+          [
+            "XL",
+            "51-52",
+            "33"
+          ],
+          [
+            "2XL",
+            "55-56",
+            "34"
+          ],
+          [
+            "3XL",
+            "59-60",
+            "35"
+          ],
+          [
+            "4XL",
+            "62-63",
+            "36"
+          ],
+          [
+            "Goalie",
+            "64",
+            "37"
+          ]
+        ],
+        "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut — prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
+      },
+      "noMeasureDiagram": true
+    },
+    "10458978615353": {
+      "sizeGuide": {
+        "cols": [
+          "Chest",
+          "Length"
+        ],
+        "rows": [
+          [
+            "S",
+            "44-45",
+            "30"
+          ],
+          [
+            "M",
+            "46-47",
+            "31"
+          ],
+          [
+            "L",
+            "48-49",
+            "32"
+          ],
+          [
+            "XL",
+            "51-52",
+            "33"
+          ],
+          [
+            "2XL",
+            "55-56",
+            "34"
+          ],
+          [
+            "3XL",
+            "59-60",
+            "35"
+          ],
+          [
+            "4XL",
+            "62-63",
+            "36"
+          ],
+          [
+            "Goalie",
+            "64",
+            "37"
+          ]
+        ],
+        "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut — prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
+      },
+      "noMeasureDiagram": true
     }
   }
 }

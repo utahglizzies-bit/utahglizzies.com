@@ -159,7 +159,7 @@ for (const p of live) {
     slug: o.slug || slugify(p.title),
     name: o.name || p.title,
     card: o.card || (parsed.desc.match(/^.{20,140}?[.!?](\s|$)/)?.[0].trim() ?? parsed.desc.slice(0, 120)),
-    desc: parsed.desc, specs: parsed.specs, size: parsed.size,
+    desc: parsed.desc, specs: parsed.specs, size: o.sizeGuide || parsed.size, noMeasure: !!o.noMeasureDiagram,
     img: o.img || cdn(images[0], 640),
     images, cats, tags,
     price: lo, priceHi: hi,
@@ -222,7 +222,7 @@ for (const p of products) {
     .replaceAll("{{PRICE}}", money(p.price))
     .replaceAll("{{DESC}}", esc(p.desc))
     .replaceAll("{{SPECS}}", esc(p.specs))
-    .replaceAll("{{SIZE_GUIDE}}", sizeGuideHtml(p.size, p.cats))
+    .replaceAll("{{SIZE_GUIDE}}", sizeGuideHtml(p.size, p.noMeasure ? [] : p.cats))
     .replaceAll("{{BACK_HREF}}", primaryCat ? `${primaryCat.slug}.html` : "../shop.html")
     .replaceAll("{{BACK_LABEL}}", primaryCat ? esc(primaryCat.name) : "shop")
     .replaceAll("{{CUSTOM_ATTR}}", p.tags.includes("custom-jersey") ? ' data-custom="jersey"' : "")
