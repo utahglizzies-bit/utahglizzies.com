@@ -317,3 +317,8 @@
 .presale-box.needs-ack .presale-ack { border-color:#c0261c; }
 .presale-box.needs-ack .presale-error { display:block; }
 @keyframes presaleShake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+/* Hero lineup: 4 across (2 hats + 2 jerseys) */
+.shop-hero-lineup .product-grid { grid-template-columns:repeat(4, 1fr) !important; }
+@media (max-width:1100px){ .shop-hero-lineup .product-grid { grid-template-columns:repeat(2, 1fr) !important; } }
+@media (max-width:560px){ .shop-hero-lineup .product-grid { grid-template-columns:1fr !important; } }
+.pd-wrap + .ship-strip, header + .ship-strip[data-shop-banner] { margin:0; }

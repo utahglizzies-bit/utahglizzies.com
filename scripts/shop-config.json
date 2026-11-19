@@ -3,21 +3,23 @@
   "heroSlots": [
     {
       "tag": "hero-hat",
-      "label": "The New Hero Hat",
-      "placeholderTitle": "New Hero Hat",
-      "placeholderText": "The next flagship lid is in the oven. Follow us on IG so you don't miss the drop."
+      "placeholderTitle": "Grandma's House Hat",
+      "placeholderText": "The new hero lid is almost out of the oven. Follow us on IG so you don't miss the drop."
+    },
+    {
+      "tag": "hero-hat",
+      "placeholderTitle": "Grandma's House Hat",
+      "placeholderText": "The new hero lid is almost out of the oven. Follow us on IG so you don't miss the drop."
     },
     {
       "tag": "hero-jersey",
-      "label": "Hero Jersey",
-      "placeholderTitle": "New Hero Jersey",
-      "placeholderText": "New sweaters are on the way. Follow us on IG so you don't miss the drop."
+      "placeholderTitle": "Grandma's Sweater",
+      "placeholderText": "Follow us on IG so you don't miss the drop."
     },
     {
       "tag": "hero-jersey",
-      "label": "Hero Jersey",
-      "placeholderTitle": "New Hero Jersey (Custom)",
-      "placeholderText": "Your name. Your number. Coming soon. Follow us on IG so you don't miss the drop."
+      "placeholderTitle": "Grandma's Sweater (Custom)",
+      "placeholderText": "Follow us on IG so you don't miss the drop."
     }
   ],
   "categories": [
@@ -322,5 +324,6 @@
       },
       "noMeasureDiagram": true
     }
-  }
+  },
+  "banner": "🌭 GRANDMA'S HOUSE IS OPEN. COME SIT AT THE TABLE AND ENJOY A GLIZZY. WELCOME TO THE FAM."
 }

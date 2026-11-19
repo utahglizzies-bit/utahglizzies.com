@@ -42,6 +42,7 @@ const SHOP = {
 const cfg = JSON.parse(read("scripts/shop-config.json"));
 const CATS = cfg.categories;
 const CAT_SLUGS = CATS.map((c) => c.slug);
+const BANNER_HTML = cfg.banner ? `<div class="ship-strip" data-shop-banner>${cfg.banner.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div>` : "";
 
 // ---------- helpers ----------
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -228,6 +229,7 @@ for (const p of products) {
     .replaceAll("{{CUSTOM_ATTR}}", p.tags.includes("custom-jersey") ? ' data-custom="jersey"' : "")
     .replaceAll("{{CUSTOM_FIELDS}}", p.tags.includes("custom-jersey") ? '<div class="pc-custom-field"><label for="cfName">Nameplate (back)</label><input id="cfName" data-custom-name maxlength="16" placeholder="GLIZZY MCGUIRE" autocomplete="off" style="text-transform:uppercase" /></div><div class="pc-custom-field"><label for="cfNum">Number</label><input id="cfNum" data-custom-number inputmode="numeric" pattern="[0-9]*" maxlength="2" placeholder="26" autocomplete="off" /></div><p class="pc-custom-note">Double-check your spelling. We stitch exactly what you type.</p>' : "")
     .replaceAll("{{PRESALE_BOX}}", (p.tags.includes("presale") || p.tags.includes("custom-jersey")) ? PRESALE_BOX : "")
+    .replaceAll("{{BANNER}}", BANNER_HTML)
     .replaceAll("{{JSONLD}}", jsonld);
   write(file, html);
   report.generated.push(file);
@@ -308,6 +310,7 @@ function listing({ root, title, desc, canonical, active, list, main }) {
     .replaceAll("{{CANONICAL}}", canonical)
     .replaceAll("{{JSONLD}}", `<script type="application/ld+json">${JSON.stringify(itemList).replace(/</g, "\\u003c")}</script>`)
     .replace("{{INTRO}}", main ? intro : "")
+    .replace("{{BANNER}}", BANNER_HTML)
     .replace("{{HERO_LINEUP}}", main ? heroLineup(root) : "")
     .replace("{{BROWSE}}", browse(list, root, active))
     .replace("{{OUTRO}}", main ? outro : "")
