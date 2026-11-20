@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-19T23:42:09.694Z",
+  "syncedAt": "2026-11-20T02:46:32.477Z",
   "products": [
     {
       "id": "10458970357817",
@@ -441,8 +441,8 @@
         "hats"
       ],
       "tags": [],
-      "price": 38,
-      "priceHi": 38,
+      "price": 32,
+      "priceHi": 32,
       "soldOut": false,
       "badge": null,
       "isNew": true,
