@@ -1,6 +1,52 @@
 {
-  "syncedAt": "2026-11-20T02:49:14.863Z",
+  "syncedAt": "2026-11-20T02:57:36.640Z",
   "products": [
+    {
+      "id": "10319716089913",
+      "handle": "glizzy-stickies-pack",
+      "slug": "glizzy-stickies-pack",
+      "name": "Glizzy Stickies Pack",
+      "card": "One sticker wasn't enough, so we packed a whole litter.",
+      "noMeasure": false,
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/Stickerpack_OGLogo.jpg?v=1795143225&width=640",
+      "cats": [
+        "gear"
+      ],
+      "tags": [],
+      "price": 10,
+      "priceHi": 10,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 1000,
+      "pin": 1,
+      "created": "2026-11-19T22:02:44Z",
+      "hero": null,
+      "curated": false
+    },
+    {
+      "id": "8319569035321",
+      "handle": "utah-glizzies-hc-pucks",
+      "slug": "glizzies-pucks",
+      "name": "Utah Glizzies HC Official Game Puck",
+      "card": "The official puck we sometimes play with in games. Puck yeah.",
+      "noMeasure": false,
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/JPEGimage.jpg?v=1795126929&width=640",
+      "cats": [
+        "gear"
+      ],
+      "tags": [],
+      "price": 12,
+      "priceHi": 12,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 41,
+      "pin": 2,
+      "created": "2026-11-19T22:34:01Z",
+      "hero": null,
+      "curated": false
+    },
     {
       "id": "10458970357817",
       "handle": "utah-glizzies-grandmas-sweater",
@@ -22,6 +68,7 @@
       "badge": null,
       "isNew": true,
       "order": 5,
+      "pin": 999,
       "created": "2026-11-19T22:02:53Z",
       "hero": "hero-jersey",
       "curated": false
@@ -48,30 +95,9 @@
       "badge": null,
       "isNew": true,
       "order": 6,
+      "pin": 999,
       "created": "2026-11-19T22:02:54Z",
       "hero": "hero-jersey",
-      "curated": false
-    },
-    {
-      "id": "8319569035321",
-      "handle": "utah-glizzies-hc-pucks",
-      "slug": "glizzies-pucks",
-      "name": "Utah Glizzies HC Official Game Puck",
-      "card": "The official puck we sometimes play with in games. Puck yeah.",
-      "noMeasure": false,
-      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/JPEGimage.jpg?v=1795126929&width=640",
-      "cats": [
-        "gear"
-      ],
-      "tags": [],
-      "price": 12,
-      "priceHi": 12,
-      "soldOut": false,
-      "badge": null,
-      "isNew": true,
-      "order": 41,
-      "created": "2026-11-19T22:34:01Z",
-      "hero": null,
       "curated": false
     },
     {
@@ -95,6 +121,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T23:32:14Z",
       "hero": "hero-hat",
       "curated": false
@@ -117,6 +144,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:05:00Z",
       "hero": null,
       "curated": false
@@ -139,6 +167,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:05:00Z",
       "hero": null,
       "curated": false
@@ -161,6 +190,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:05:00Z",
       "hero": null,
       "curated": false
@@ -183,6 +213,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:05:00Z",
       "hero": null,
       "curated": false
@@ -205,6 +236,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:05:00Z",
       "hero": null,
       "curated": false
@@ -227,6 +259,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:59Z",
       "hero": null,
       "curated": false
@@ -249,6 +282,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:59Z",
       "hero": null,
       "curated": false
@@ -271,6 +305,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:59Z",
       "hero": null,
       "curated": false
@@ -293,6 +328,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:59Z",
       "hero": null,
       "curated": false
@@ -315,6 +351,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:59Z",
       "hero": null,
       "curated": false
@@ -337,6 +374,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:59Z",
       "hero": null,
       "curated": false
@@ -359,6 +397,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:58Z",
       "hero": null,
       "curated": false
@@ -381,6 +420,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:58Z",
       "hero": null,
       "curated": false
@@ -403,6 +443,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:58Z",
       "hero": null,
       "curated": false
@@ -425,6 +466,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:58Z",
       "hero": null,
       "curated": false
@@ -447,6 +489,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:58Z",
       "hero": null,
       "curated": false
@@ -469,6 +512,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:57Z",
       "hero": null,
       "curated": false
@@ -491,6 +535,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:57Z",
       "hero": null,
       "curated": false
@@ -513,6 +558,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:57Z",
       "hero": null,
       "curated": false
@@ -535,6 +581,7 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:57Z",
       "hero": null,
       "curated": false
@@ -557,29 +604,8 @@
       "badge": null,
       "isNew": true,
       "order": 1000,
+      "pin": 999,
       "created": "2026-11-19T22:04:57Z",
-      "hero": null,
-      "curated": false
-    },
-    {
-      "id": "10319716089913",
-      "handle": "glizzy-stickies-pack",
-      "slug": "glizzy-stickies-pack",
-      "name": "Glizzy Stickies Pack",
-      "card": "One sticker wasn't enough, so we packed a whole litter.",
-      "noMeasure": false,
-      "img": "",
-      "cats": [
-        "gear"
-      ],
-      "tags": [],
-      "price": 10,
-      "priceHi": 10,
-      "soldOut": false,
-      "badge": null,
-      "isNew": true,
-      "order": 1000,
-      "created": "2026-11-19T22:02:44Z",
       "hero": null,
       "curated": false
     },
@@ -603,6 +629,7 @@
       "badge": "Presale",
       "isNew": false,
       "order": 1,
+      "pin": 999,
       "created": "2026-09-03T06:45:09Z",
       "hero": "hero-classic",
       "curated": true
@@ -625,6 +652,7 @@
       "badge": null,
       "isNew": false,
       "order": 2,
+      "pin": 999,
       "created": "2026-09-12T17:02:31Z",
       "hero": "hero-classic",
       "curated": true
@@ -647,6 +675,7 @@
       "badge": null,
       "isNew": false,
       "order": 3,
+      "pin": 999,
       "created": "2026-09-12T17:02:33Z",
       "hero": "hero-classic",
       "curated": true
@@ -675,6 +704,7 @@
       "badge": null,
       "isNew": false,
       "order": 10,
+      "pin": 999,
       "created": "2026-07-06T18:28:18Z",
       "hero": null,
       "curated": true
@@ -702,6 +732,7 @@
       "badge": null,
       "isNew": false,
       "order": 11,
+      "pin": 999,
       "created": "2026-07-06T18:28:17Z",
       "hero": null,
       "curated": true
@@ -730,6 +761,7 @@
       "badge": null,
       "isNew": false,
       "order": 12,
+      "pin": 999,
       "created": "2026-07-06T18:28:24Z",
       "hero": null,
       "curated": true
@@ -758,6 +790,7 @@
       "badge": null,
       "isNew": false,
       "order": 13,
+      "pin": 999,
       "created": "2026-07-06T18:28:20Z",
       "hero": null,
       "curated": true
@@ -786,6 +819,7 @@
       "badge": null,
       "isNew": false,
       "order": 14,
+      "pin": 999,
       "created": "2026-07-06T18:28:19Z",
       "hero": null,
       "curated": true
@@ -814,6 +848,7 @@
       "badge": null,
       "isNew": false,
       "order": 15,
+      "pin": 999,
       "created": "2026-07-06T18:28:23Z",
       "hero": null,
       "curated": true
@@ -843,6 +878,7 @@
       "badge": null,
       "isNew": false,
       "order": 30,
+      "pin": 999,
       "created": "2026-07-06T18:28:25Z",
       "hero": null,
       "curated": true
@@ -872,6 +908,7 @@
       "badge": null,
       "isNew": false,
       "order": 31,
+      "pin": 999,
       "created": "2026-07-06T18:28:27Z",
       "hero": null,
       "curated": true
@@ -901,6 +938,7 @@
       "badge": null,
       "isNew": false,
       "order": 32,
+      "pin": 999,
       "created": "2026-07-06T18:28:26Z",
       "hero": null,
       "curated": true
@@ -923,6 +961,7 @@
       "badge": null,
       "isNew": false,
       "order": 40,
+      "pin": 999,
       "created": "2026-07-06T18:28:19Z",
       "hero": null,
       "curated": true
@@ -945,6 +984,7 @@
       "badge": null,
       "isNew": false,
       "order": 42,
+      "pin": 999,
       "created": "2026-07-06T20:45:22Z",
       "hero": null,
       "curated": true

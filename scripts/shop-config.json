@@ -217,7 +217,8 @@
         "gear"
       ],
       "name": "Utah Glizzies HC Official Game Puck",
-      "card": "The official puck we sometimes play with in games. Puck yeah."
+      "card": "The official puck we sometimes play with in games. Puck yeah.",
+      "pinTop": 2
     },
     "8319584796729": {
       "slug": "glizzy-links-wiper",
@@ -616,6 +617,9 @@
       "cats": [
         "hats"
       ]
+    },
+    "10319716089913": {
+      "pinTop": 1
     }
   }
 }

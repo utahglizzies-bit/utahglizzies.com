@@ -168,6 +168,7 @@ for (const p of live) {
     badge: o.badge || null,
     isNew: now - Date.parse(created) < 45 * 864e5,
     order: o.order ?? 1000,
+    pin: o.pinTop ?? 999,
     created,
     hero: o.hero || tags.find((t) => t.startsWith("hero-")) || null,
     curated: !!o.img,
@@ -182,7 +183,7 @@ for (const [id, o] of Object.entries(cfg.products)) {
 const slugCount = {};
 for (const p of products) { if (CAT_SLUGS.includes(p.slug)) p.slug += "-item"; slugCount[p.slug] = (slugCount[p.slug] || 0) + 1; if (slugCount[p.slug] > 1) p.slug += "-" + slugCount[p.slug]; }
 // Featured order: new drops first (newest on top), then the rest by curated order
-const featured = (a, b) => (b.isNew - a.isNew) || (a.isNew && b.isNew ? (a.order - b.order) || Date.parse(b.created) - Date.parse(a.created) : 0) || a.order - b.order || Date.parse(b.created) - Date.parse(a.created);
+const featured = (a, b) => (a.pin - b.pin) || (b.isNew - a.isNew) || (a.isNew && b.isNew ? (a.order - b.order) || Date.parse(b.created) - Date.parse(a.created) : 0) || a.order - b.order || Date.parse(b.created) - Date.parse(a.created);
 products.sort(featured);
 
 // ---------- product pages ----------
