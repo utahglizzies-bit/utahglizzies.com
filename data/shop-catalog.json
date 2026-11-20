@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-20T02:46:32.477Z",
+  "syncedAt": "2026-11-20T02:49:14.863Z",
   "products": [
     {
       "id": "10458970357817",
@@ -89,8 +89,8 @@
         "cat:hats",
         "hero-hat"
       ],
-      "price": 44,
-      "priceHi": 44,
+      "price": 42,
+      "priceHi": 42,
       "soldOut": false,
       "badge": null,
       "isNew": true,
