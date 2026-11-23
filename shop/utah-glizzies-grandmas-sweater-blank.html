@@ -100,7 +100,7 @@
         <h1>Utah Glizzies Grandma's Sweater Blank</h1>
         <div class="pd-price" data-price-slot>$105</div>
         
-        <div class="pd-desc">Grandma's Sweater. The new jersey of the Utah Glizzies HC. Deep Glizzy green body, cream yoke, red-and-cream stripes across the chest, arms, and hem, and a laced collar that says you've been doing this since before visors were optional. Up front, embroidered &quot;Utah ♥ Glizzies&quot; in script, Jacques, a heart, and Frank right where they belong. Together. Mmmmm. No name. No number. No accountability. The jersey for the people — wear it to the game, to brunch, to Grandma's for Sunday dinner. At this point it's less of a sweater and more of a way to identify. Ships in 2–3 weeks. Grandma's fast, but she's not that fast.</div>
+        <div class="pd-desc"><p>Grandma's Sweater. The new jersey of the Utah Glizzies HC. Deep Glizzy green body, cream yoke, red-and-cream stripes across the chest, arms, and hem, and a laced collar that says you've been doing this since before visors were optional.</p><p>Up front, embroidered &quot;Utah ♥ Glizzies&quot; in script, Jacques, a heart, and Frank right where they belong. Together. Mmmmm.</p><p>Mustard bottle elbow patches. Yes, really — each sleeve ends in an embroidered yellow mustard bottle patch at the elbow. For the dogs. For the grease. For the taking of hits.</p><p>No name. No number. No accountability. The jersey for the people — wear it to the game, to brunch, to Grandma's for Sunday dinner. At this point it's less of a sweater and more of a way to identify.</p><p>Ships in 2–3 weeks. Grandma's fast, but she's not that fast.</p></div>
         <div class="pd-specs">Ships in 2–3 weeks • Full front crest: Utah ♥ Glizzies script with bear, heart, and glizzy • Laced collar • Classic striped hockey sweater cut • All sales final, like your decision to play beer league in your thirties</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.textContent = data.desc;
+      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

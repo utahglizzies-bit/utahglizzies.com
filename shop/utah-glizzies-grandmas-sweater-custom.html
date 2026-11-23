@@ -100,7 +100,7 @@
         <h1>Utah Glizzies Grandma's Sweater Custom</h1>
         <div class="pd-price" data-price-slot>$125</div>
         
-        <div class="pd-desc">Grandma's Sweater, with your name on it. Your name. Your number. Welcome to the family. The new drip: deep glizzy green, cream yoke, red-and-cream stripes, laced collar, and &quot;Utah ♥ Glizzies&quot; across the front with Jacques, the heart, and Frank. Then we put your nameplate and number on the back in cream, permanently. Worn at games occasionally, worn to the grocery store more than anyone should admit out loud. Grandma put 80 winters into every stitch. Feel greasy. Spell it right — we will absolutely stitch whatever you type and call it a design choice.</div>
+        <div class="pd-desc"><p>Grandma's Sweater, with your name on it. Your name. Your number. Welcome to the family.</p><p>The new drip: deep Glizzy green, cream yoke, red-and-cream stripes, laced collar, and &quot;Utah ♥ Glizzies&quot; across the front with Jacques, the heart, and Frank. Then we put your nameplate and number on the back in cream, permanently.</p><p>Mustard bottle elbow patches. Yes, really — each sleeve ends in an embroidered yellow mustard bottle patch at the elbow. For the dogs. For the grease. For the taking of hits.</p><p>Worn at games occasionally, worn to the grocery store more than anyone should admit out loud. Grandma put 80 winters into every stitch. Feel greasy.</p><p>Spell it right — we will absolutely stitch whatever you type and call it a design choice.</p></div>
         <div class="pd-specs">Custom nameplate + number on the back • Full front crest: Utah ♥ Glizzies script with bear, heart, and glizzy • Laced collar, classic striped hockey sweater cut • Made to order. All sales final, like your thirties</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -163,7 +163,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.textContent = data.desc;
+      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

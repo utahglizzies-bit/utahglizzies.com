@@ -151,7 +151,7 @@
     GlizzCart.fetchProduct(pid).then(function(data){
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.textContent = data.desc;
+      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }
