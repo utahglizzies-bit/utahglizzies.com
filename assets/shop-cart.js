@@ -27,13 +27,13 @@
     if(!html) return {desc:"", specs:""};
     // drop Printful size-guide tables (rendered separately) and made-to-order boilerplate
     var sg = html.search(/<[^>]*class="size-guide-title"|size guide/i); if(sg>=0) html = html.slice(0, sg);
-    // normalize breaks/paragraph ends to newlines so we can work line-by-line
+    // preserve <br> as a sentinel so we can keep intentional line breaks WITHIN paragraphs
     var t = html
       .replace(/<meta[^>]*>/gi,"")
+      .replace(/<br\s*\/?>/gi,"|||BR|||")
       .replace(/<\/(p|div|li)>/gi,"\n")
-      .replace(/<br\s*\/?>/gi,"\n")
       .replace(/<li[^>]*>/gi,"• ")
-      .replace(/<[^>]+>/g,"")        // strip any remaining tags
+      .replace(/<[^>]+>/g,"")        // strip any remaining tags (including <p>, <strong>, span, etc.)
       .replace(/&nbsp;/gi," ")
       .replace(/&amp;/gi,"&")
       .replace(/&quot;/gi,'"')
@@ -42,15 +42,21 @@
     var lines = t.split("\n").map(function(l){return l.trim();}).filter(function(l){return l.length>0;});
     var descLines=[], specLines=[];
     lines.forEach(function(l){
-      // treat a line as a spec if it starts with a bullet marker
-      if(/^[•\-\u2022]/.test(l)){
-        specLines.push(l.replace(/^[•\-\u2022]\s*/,"").trim());
-      } else if(!/made especially for you|^disclaimer:/i.test(l)) {
-        descLines.push(l);
+      // "first non-break" = content up to the first |||BR||| — used for bullet detection
+      var firstNonBreak = l.split("|||BR|||")[0].trim();
+      if(/^[•\-\u2022]/.test(firstNonBreak)){
+        // whole line is a bullet list — split on |||BR||| for separate spec items
+        l.split("|||BR|||").forEach(function(s){
+          s = s.trim().replace(/^[•\-\u2022]\s*/,"").trim();
+          if(s) specLines.push(s);
+        });
+      } else if(!/made especially for you|^disclaimer:/i.test(firstNonBreak)) {
+        // paragraph of prose — keep |||BR||| as <br> for intentional in-paragraph line breaks
+        descLines.push(l.replace(/\|\|\|BR\|\|\|/g,"<br>").replace(/[ \t]+/g," ").trim());
       }
     });
     return {
-      desc: descLines.join(" ").replace(/\s+/g," ").trim(),
+      desc: descLines.length ? "<p>" + descLines.join("</p><p>") + "</p>" : "",
       specs: specLines.join(" • ").trim()
     };
   }
