@@ -100,7 +100,7 @@
         <h1>Utah Glizzies HC Official Game Puck</h1>
         <div class="pd-price" data-price-slot>$12</div>
         
-        <div class="pd-desc">The official puck we sometimes play with in games. Puck yeah. Rip it top shelf and get it signed after the game. Grandma made, Grandma certified.</div>
+        <div class="pd-desc"><p>The official puck we sometimes play with in games. Puck yeah. Rip it top shelf and get it signed after the game. Grandma made, Grandma certified.</p></div>
         <div class="pd-specs">Official NHL regulation spec: 3&quot; (7.6 cm) diameter × 1&quot; (2.5 cm) thick • 5.5–6 oz</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

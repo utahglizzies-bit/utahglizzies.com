@@ -100,7 +100,7 @@
         <h1>IGTDIM Tee</h1>
         <div class="pd-price" data-price-slot>$32</div>
         
-        <div class="pd-desc">I Got That Dog In Me. Say it louder for the guys in the back row of the bleachers. Crossed sticks, one glizzy, D1 energy. Sleeveless, because some of us have earned the right to show off the guns — and some of us just run hot on the bench.</div>
+        <div class="pd-desc"><p>I Got That Dog In Me. Say it louder for the guys in the back row of the bleachers.</p><p>Crossed sticks, one glizzy, D1 energy. Sleeveless, because some of us have earned the right to show off the guns — and some of us just run hot on the bench.</p></div>
         <div class="pd-specs">Soft sleeveless muscle tank • Relaxed fit, low-cut armholes</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

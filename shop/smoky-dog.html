@@ -100,7 +100,7 @@
         <h1>Smoky Dog</h1>
         <div class="pd-price" data-price-slot>$32</div>
         
-        <div class="pd-desc">Dad hats aren't just for dads. Bear, heart, glizzy, and &quot;Utah Glizzies&quot; in script, embroidered on a low-profile lid that looks like it's seen a few campfires. Wear it to the rink, the trailhead, or the backyard smoker where you're definitely not overcooking the dogs.</div>
+        <div class="pd-desc"><p>Dad hats aren't just for dads. Bear, heart, glizzy, and &quot;Utah Glizzies&quot; in script, embroidered on a low-profile lid that looks like it's seen a few campfires.</p><p>Wear it to the rink, the trailhead, or the backyard smoker where you're definitely not overcooking the dogs.</p></div>
         <div class="pd-specs">100% chino cotton twill • Unstructured, 6-panel, low profile • Adjustable strap with antique buckle</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

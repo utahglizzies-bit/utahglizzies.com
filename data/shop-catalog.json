@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-20T02:57:36.640Z",
+  "syncedAt": "2026-11-25T05:46:14.613Z",
   "products": [
     {
       "id": "10319716089913",
@@ -7,6 +7,7 @@
       "slug": "glizzy-stickies-pack",
       "name": "Glizzy Stickies Pack",
       "card": "One sticker wasn't enough, so we packed a whole litter.",
+      "descHtml": "<p>One sticker wasn't enough, so we packed a whole litter. Pick your pack — Alpha or Ricardo — and put the dogs on everything.</p><p>Golf cart, ski helmet, water bottle, carpool bumper, stop sign, gas station bathroom. You know what we're talking about.</p><p>Alpha:<br>Winter Glizzic 2x<br>Glizz Sweet Relish<br>OG Bear Logo<br>Crossed Sticks &amp; Dog</p><p>Ricardo:<br>Winter Glizzic 2x<br>Glizz Sweet Relish<br>Mountain Love<br>Crossed Sticks &amp; Dog</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/Stickerpack_OGLogo.jpg?v=1795143225&width=640",
       "cats": [
@@ -30,6 +31,7 @@
       "slug": "glizzies-pucks",
       "name": "Utah Glizzies HC Official Game Puck",
       "card": "The official puck we sometimes play with in games. Puck yeah.",
+      "descHtml": "<p>The official puck we sometimes play with in games. Puck yeah. Rip it top shelf and get it signed after the game. Grandma made, Grandma certified.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/JPEGimage.jpg?v=1795126929&width=640",
       "cats": [
@@ -53,6 +55,7 @@
       "slug": "utah-glizzies-grandmas-sweater-blank",
       "name": "Utah Glizzies Grandma's Sweater Blank",
       "card": "Grandma's Sweater. The new jersey of the Utah Glizzies HC.",
+      "descHtml": "<p>Grandma's Sweater. The new jersey of the Utah Glizzies HC.</p><p>Deep Glizzy green body, cream yoke, red-and-cream stripes across the chest, arms, and hem, and a laced collar that says you've been doing this since before visors were optional. Up front, embroidered &quot;Utah ♥ Glizzies&quot; in script, Jacques, a heart, and Frank right where they belong. Together. Mmmmm.</p><p>Mustard bottle elbow patches. Yes, really — each sleeve ends in an embroidered yellow mustard bottle patch at the elbow. For the dogs. For the grease. For the taking of hits.</p><p>No name. No number. No accountability. The jersey for the people — wear it to the game, to brunch, to Grandma's for Sunday dinner. At this point it's less of a sweater and more of a way to identify.</p><p>Ships in 3–4 weeks. Grandma's fast, but she's not that fast.</p>",
       "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1.jpg?v=1795124764&width=640",
       "cats": [
@@ -79,6 +82,7 @@
       "slug": "utah-glizzies-grandmas-sweater-custom",
       "name": "Utah Glizzies Grandma's Sweater Custom",
       "card": "Grandma's Sweater, with your name on it.",
+      "descHtml": "<p>Grandma's Sweater, with your name on it. Your name. Your number. Welcome to the family.</p><p>The new drip: deep Glizzy green, cream yoke, red-and-cream stripes, laced collar, and &quot;Utah ♥ Glizzies&quot; across the front with Jacques, the heart, and Frank. Then we put your nameplate and number on the back in cream, permanently.</p><p>Mustard bottle elbow patches; for the grease in the crease.</p><p>Worn at games occasionally, worn to the grocery store more than anyone should admit out loud. Grandma put 80 winters into every stitch. Feel greasy.</p><p>Spell it right — we will absolutely stitch whatever you type and call it a design choice.</p>",
       "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1_92e6c561-7972-4cfa-a63a-ce877ebdde2d.jpg?v=1795124868&width=640",
       "cats": [
@@ -101,11 +105,36 @@
       "curated": false
     },
     {
+      "id": "10481645453369",
+      "handle": "mountain-love-zip-up",
+      "slug": "mountain-love-zip-up",
+      "name": "Mountain Love Zip-Up",
+      "card": "Mountain love, worn close to the heart with a zip down the middle.",
+      "descHtml": "<p>Mountain love, worn close to the heart with a zip down the middle. The Glizzies crest — grizzly, glizzy, pond ice, and the Wasatch — on back. Grandma's house on the front. Embroidered Utah dogs on each sleeve so you're always locked and loaded with a double barrel.</p><p>Heavy-blend, cozy, and built for the walk from the parking lot to the rink in January.</p>",
+      "noMeasure": false,
+      "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-zip-hoodie-dark-chocolate-back-6b066fe7aa197.jpg?v=1795583998&width=640",
+      "cats": [
+        "hoodies"
+      ],
+      "tags": [],
+      "price": 55,
+      "priceHi": 55.5,
+      "soldOut": false,
+      "badge": null,
+      "isNew": true,
+      "order": 1000,
+      "pin": 999,
+      "created": "2026-11-25T05:44:12Z",
+      "hero": null,
+      "curated": false
+    },
+    {
       "id": "10458957512761",
       "handle": "utah-glizzies-grandmas-house-hat",
       "slug": "utah-glizzies-grandmas-house-hat",
       "name": "Utah Glizzies Grandma's House Hat",
       "card": "The new hero lid. Welcome to Grandma's House.",
+      "descHtml": "<p>The new hero lid. Welcome to Grandma's House.</p><p>Up front, the whole Glizzies story in thread: a bear squaring up with a glizzy on mountain lake ice, two nets, the Wasatch behind them, and a little red heart above, because we're not made of stone. &quot;Utah Glizzies Hockey Club&quot; stitched underneath in script (Grandma signed it herself, btw) with Grandma's suede touch on the bill.</p><p>On the side is the dog house. Don't get on Grandma's bad side. Flip the brim and you'll find the Glizz Toile that was stolen from Grandma's bathroom wallpaper (sorry Grandma). Each hat has its own unique piece of the wallpaper, because why not.</p><p>Wear it to the rink, Sunday dinner, and everywhere you want people asking why a bear is fighting a hot dog.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/Hat_Photo_-_00000003.jpg?v=1795130948&width=640",
       "cats": [
@@ -132,6 +161,7 @@
       "slug": "the-dog-house-zip-up",
       "name": "The Dog House Zip-Up",
       "card": "Welcome to the Dog House.",
+      "descHtml": "<p>Welcome to the Dog House. A log cabin with a glizzy puffing out of the chimney, stitched big on the back — because that's the view everyone gets when you leave the bar early.</p><p>Zip it up over the gear and head home to the place where the dogs are always on.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-zip-hoodie-forest-green-back-6afbef825e216.jpg?v=1794895775&width=640",
       "cats": [
@@ -155,6 +185,7 @@
       "slug": "the-dog-house-hoodie",
       "name": "The Dog House Hoodie",
       "card": "Welcome to the Dog House.",
+      "descHtml": "<p>Welcome to the Dog House. A log cabin with a glizzy puffing out of the chimney, front and center on the back. It's where we live now. Grandma's got you on grill duty.</p><p>A soft heavy-blend pullover for the drive to the rink, the drive home, and every couch in between.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-sand-back-6afbf23c737ce.jpg?v=1794896478&width=640",
       "cats": [
@@ -178,6 +209,7 @@
       "slug": "the-dog-house-embroidered-hoodie",
       "name": "The Dog House Embroidered Hoodie",
       "card": "The Dog House, embroidered small on the chest — quiet enough for the office, loud enough for anyone who knows.",
+      "descHtml": "<p>The Dog House, embroidered small on the chest — quiet enough for the office, loud enough for anyone who knows. Log cabin, glizzy chimney, &quot;Utah Glizzies Hockey Club&quot; in script.</p><p>The grown-up version of the Dog House. Still got that dog in it.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-forest-green-front-6afbf3ae776d1.jpg?v=1794896837&width=640",
       "cats": [
@@ -201,6 +233,7 @@
       "slug": "utah-dog-embroidered-hoodie",
       "name": "Utah Dog Embroidered Hoodie",
       "card": "One dog. That's it. A little embroidered red Utah glizzy on the chest for the minimalists who still want everyone to kno",
+      "descHtml": "<p>One dog. That's it. A little embroidered red Utah glizzy on the chest for the minimalists who still want everyone to know they got that dog in them.</p><p>No crest, no slogan, no explanation. Just the dog.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-dark-chocolate-front-6afbf4e3b5976.jpg?v=1794897142&width=640",
       "cats": [
@@ -224,6 +257,7 @@
       "slug": "glizz-toile-hoodie",
       "name": "Glizz Toile Hoodie",
       "card": "Glizz Toile, now heavyweight.",
+      "descHtml": "<p>Glizz Toile, now heavyweight. Old-world French toile, Glizzies style, printed edge to edge on an oversized hoodie that hangs like it's got somewhere better to be. We'd be lying if we said we didn't tear it off of Grandma's bathroom wallpaper.</p><p>Drop shoulders, soft finish, and enough pattern to get you asked &quot;wait, is that…&quot; all night.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-oversized-cotton-hoodie-white-front-6afbfa187da38.jpg?v=1794898570&width=640",
       "cats": [
@@ -247,6 +281,7 @@
       "slug": "glizz-toile-sweater",
       "name": "Glizz Toile Sweater",
       "card": "Glizz Toile, head to toe.",
+      "descHtml": "<p>Glizz Toile, head to toe. Old-world French toile, Glizzies style — look closer, the countryside's been taken over. The kind of sweater that gets you asked &quot;wait, is that…&quot; at least twice a night. We'd be lying if we said we didn't tear it off from Grandma's bathroom wallpaper.</p><p>All-over printed, precision-cut, and hand-sewn so the pattern lines up cleaner than our breakouts.</p>",
       "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-recycled-unisex-sweatshirt-white-front-6aab1c2747489.jpg?v=1789598962&width=640",
       "cats": [
@@ -270,6 +305,7 @@
       "slug": "grandmas-apron",
       "name": "Grandma's Apron",
       "card": "Grandma's in the kitchen and the dogs are on the grill.",
+      "descHtml": "<p>Grandma's in the kitchen and the dogs are on the grill. Glizz Toile all over, so you look classy even when the buns get burnt.</p><p>Tough enough for mustard, ketchup, and the occasional relish incident.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-apron-white-front-6ac5241ce918f.jpg?v=1791304752&width=640",
       "cats": [
@@ -293,6 +329,7 @@
       "slug": "mountain-love-hoodie",
       "name": "Mountain Love Hoodie",
       "card": "Mountain love, worn close to the heart.",
+      "descHtml": "<p>Mountain love, worn close to the heart. The Glizzies crest — grizzly, glizzy, pond ice, and the Wasatch — on back. Jacques dog watching on the front. Embroidered Utah dogs on each sleeve so you're always locked and loaded with a double barrel.</p><p>Heavy-blend, cozy, and built for the walk from the parking lot to the rink in January.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-black-front-6aeaadc928d8a.jpg?v=1793764823&width=640",
       "cats": [
@@ -316,6 +353,7 @@
       "slug": "glizz-toile-playing-cards",
       "name": "Glizz Toile Playing Cards",
       "card": "Deal 'em like a dog. Glizz Toile on the back of every card, so poker night after the game looks a lot classier than the guys playing it.",
+      "descHtml": "<p>Deal 'em like a dog. Glizz Toile on the back of every card, so poker night after the game looks a lot classier than the guys playing it.</p><p>Comes in a clear case that fits in a hockey bag, a glovebox, or a jacket pocket at the bar.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/poker-playing-cards-white-2.5x3.5-front-6aeac7876567b.jpg?v=1793771419&width=640",
       "cats": [
@@ -339,6 +377,7 @@
       "slug": "grandmas-mug",
       "name": "Grandma's Mug",
       "card": "Grandma's house always had the coffee on and the dogs on the grill.",
+      "descHtml": "<p>Grandma's house always had the coffee on and the dogs on the grill. Utah ♥ Glizzies on one side, the cabin with the glizzy smokestack on the other.</p><p>Morning coffee, post-skate cocoa, or whatever you're calling &quot;tea&quot; in the locker room — it holds all of it.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/white-glossy-mug-white-11-oz-front-view-6aeac93b91605.jpg?v=1793771848&width=640",
       "cats": [
@@ -362,6 +401,7 @@
       "slug": "glizzy-dinkers-pickleball-set",
       "name": "The Glizzy Dinkers™ Pickleball Set",
       "card": "Big dinks. Bad decisions.",
+      "descHtml": "<p>Big dinks. Bad decisions. Even worse trash talk.</p><p>Bring the heat from the rink to the pickleball court with the official Utah Glizzies pickleball set. Whether you're dominating the neighborhood, causing a scene at the park, or just trying to look athletic after a few cold ones, these paddles are ready to relish the competition.</p><p>Glizz Toile on both sides, built for backyard battles, questionable line calls, and absolutely unnecessary celebrations.</p><p>WARNING: May cause excessive trash talk, questionable victory dances, and an uncontrollable urge to yell &quot;LET'S GET RELISH!&quot; Dink hard. Relish harder.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/pickleball-paddle-_set_-wood-7.5-x-15.5-front-6af233ba0ac29.jpg?v=1794257858&width=640",
       "cats": [
@@ -385,6 +425,7 @@
       "slug": "embroidered-love-in-this-grub-beanie",
       "name": "Embroidered Love in this Grub Beanie",
       "card": "There's love in this grub.",
+      "descHtml": "<p>There's love in this grub. A grizzly, a heart, and a glizzy embroidered across the cuff of a snug knit built for the coldest rink in the valley.</p><p>Bear on the left. Dog on the right. Love in the middle. Nobody's getting eaten today.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/cuffed-beanie-spruce-front-6a990e9ec3803.jpg?v=1788415660&width=640",
       "cats": [
@@ -408,6 +449,7 @@
       "slug": "winter-glizzic-crew",
       "name": "Winter Glizzic Crew",
       "card": "The Winter Glizzic. Outdoor ice, Wasatch peaks, and a grizzly squaring up with a glizzy at center ice, all wrapped in one crest.",
+      "descHtml": "<p>The Winter Glizzic. Outdoor ice, Wasatch peaks, and a grizzly squaring up with a glizzy at center ice, all wrapped in one crest. Pond hockey energy, couch-level comfort.</p><p>Wear it to the outdoor game, the chili cook-off after, and every cold morning until April.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-premium-sweatshirt-forest-green-front-6a991145ce831.jpg?v=1788416345&width=640",
       "cats": [
@@ -431,6 +473,7 @@
       "slug": "embroidered-dog-sticks-trucker",
       "name": "Embroidered Dog Sticks Trucker",
       "card": "A mesh-back trucker for the ones who show up early, stay late, and spend the time in between on the dog sticks.",
+      "descHtml": "<p>A mesh-back trucker for the ones who show up early, stay late, and spend the time in between on the dog sticks. Glizzies embroidery up front, mesh in the back so your dome can breathe after a late game.</p><p>Also great for hiding helmet hair at the bar. We don't judge.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/retro-trucker-hat-brown-khaki-front-6aeac57d6b3cb.jpg?v=1793770887&width=640",
       "cats": [
@@ -454,6 +497,7 @@
       "slug": "mountain-love-blanket",
       "name": "Mountain Love Blanket",
       "card": "Mountain love. A grizzly and a glizzy squaring up on mountain lake ice, the Wasatch behind them and a little heart above",
+      "descHtml": "<p>Mountain love. A grizzly and a glizzy squaring up on mountain lake ice, the Wasatch behind them and a little heart above, because we're not made of stone.</p><p>Soft on one side, sherpa on the other. Built for cold bleachers, colder garages, and couch-side post-game breakdowns.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/sublimated-sherpa-blanket-tan-50x60-front-6ab094adeeb88.jpg?v=1789957298&width=640",
       "cats": [
@@ -477,6 +521,7 @@
       "slug": "glizz-toile-bucket-hat",
       "name": "Glizz Toile Bucket Hat",
       "card": "Glizz Toile. Old-world French toile, Glizzies style.",
+      "descHtml": "<p>Glizz Toile. Old-world French toile, Glizzies style. Look closer — the countryside's been taken over. We'd be lying if we said we didn't tear it off from Grandma's bathroom wallpaper.</p><p>Reversible, so you get two hats for the price of one dog. Wear it on the lake, the links, or the beer garden.</p>",
       "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/all-over-print-reversible-bucket-hat-white-front-outside-6ab0994367467.jpg?v=1789958477&width=640",
       "cats": [
@@ -500,6 +545,7 @@
       "slug": "womens-bears-heart-dogs-cropped-hoodie",
       "name": "Womens Bears Heart Dogs Cropped Hoodie",
       "card": "Bears ♥ dogs. It's not complicated.",
+      "descHtml": "<p>Bears ♥ dogs. It's not complicated. A grizzly, a heart, and a glizzy — the whole Utah Glizzies love story, cropped.</p><p>Raw hem, dropped shoulders, and a fit made for the rink, the lodge, and the &quot;I'm only staying for one&quot; afterparty.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/womens-cropped-hoodie-military-green-front-6a95edb892f7f.jpg?v=1788212975&width=640",
       "cats": [
@@ -523,6 +569,7 @@
       "slug": "igtdim-tee",
       "name": "IGTDIM Tee",
       "card": "I Got That Dog In Me.",
+      "descHtml": "<p>I Got That Dog In Me. Say it louder for the guys in the back row of the bleachers.</p><p>Crossed sticks, one glizzy, D1 energy. Sleeveless, because some of us have earned the right to show off the guns — and some of us just run hot on the bench.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-muscle-shirt-black-front-6a96486767677.jpg?v=1788233847&width=640",
       "cats": [
@@ -546,6 +593,7 @@
       "slug": "winter-glizzic-patch-tee",
       "name": "Winter Glizzic Patch Tee",
       "card": "Your ticket stub for the Winter Glizzic.",
+      "descHtml": "<p>Your ticket stub for the Winter Glizzic. A little patch on the chest, a whole lot of outdoor hockey energy underneath.</p><p>Heavyweight, boxy, and dropped at the shoulder — it fits like the tee you stole from your dad's closet and never gave back.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-oversized-boxy-tee-black-front-6a98997a00027.jpg?v=1788385668&width=640",
       "cats": [
@@ -569,6 +617,7 @@
       "slug": "smoky-dog",
       "name": "Smoky Dog",
       "card": "Dad hats aren't just for dads.",
+      "descHtml": "<p>Dad hats aren't just for dads. Bear, heart, glizzy, and &quot;Utah Glizzies&quot; in script, embroidered on a low-profile lid that looks like it's seen a few campfires.</p><p>Wear it to the rink, the trailhead, or the backyard smoker where you're definitely not overcooking the dogs.</p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/classic-dad-hat-spruce-front-6ab09b7a84fdb.jpg?v=1789959045&width=640",
       "cats": [
@@ -592,6 +641,7 @@
       "slug": "embroidered-grandmas-house-hoodie",
       "name": "Embroidered Grandma's House Hoodie",
       "card": "Grandma’s house rules: shoes off, dogs on the grill, and everybody gets a hug.",
+      "descHtml": "<p>Grandma’s house rules: shoes off, dogs on the grill, and everybody gets a hug. A grizzly, a heart, and a glizzy, embroidered small on the chest over “Utah Glizzies Hockey Club” in script, like Grandma stitched it herself.</p><p>Quiet enough for Sunday dinner, loud enough for anyone who knows. Throw it on after the game and stay a while.</p><p><br><br></p>",
       "noMeasure": false,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-sand-front-6ab099b8661ba.jpg?v=1789958593&width=640",
       "cats": [
@@ -615,6 +665,7 @@
       "slug": "glizzies-hat",
       "name": "D1 Legends Utah Glizzies HC Hat",
       "card": "The official lid of Utah Glizzies HC. Cream crown, dark green corduroy brim, full embroidery.",
+      "descHtml": "<p>When your dome wants to feel the glory of living like a champion. The official lid of Utah Glizzies HC. Cream crown, dark green corduroy brim, full embroidery front to back, legend status under the brim.<br><br>One size fits most.</p>",
       "noMeasure": false,
       "img": "assets/products/d1-legends-hat-thumb.jpg",
       "cats": [
@@ -640,6 +691,7 @@
       "slug": "blank-jersey",
       "name": "THE Glizzy Sweater (Blank)",
       "card": "No name. No number. No accountability. The jersey for the people. Full embroidery.",
+      "descHtml": "<p>No name. No number. No accountability.</p><p>This is the jersey for the people. Full embroidery, zero commitment of a nameplate — the sartorial equivalent of a fake name at a party.</p><p>Wear it to the game. Wear it to brunch. Wear it to places that have nothing to do with hockey, because at this point it's less of a jersey and more of a personality.</p><p>Cream or Glizzy Green. S–XXL. Pairs well with a beer you didn't pay for.</p><p>Machine washable. Dryer optional, but so is your back-check, so we understand if you skip steps.</p><p>All sales are final, much like your decision to play beer league hockey in your thirties.<br><br><br><br></p>",
       "noMeasure": false,
       "img": "assets/products/glizzy-jersey-1.jpg",
       "cats": [
@@ -658,34 +710,12 @@
       "curated": true
     },
     {
-      "id": "8319941443641",
-      "handle": "the-glizzy-sweater-custom",
-      "slug": "custom-jersey",
-      "name": "THE Glizzy Sweater (Custom)",
-      "card": "Your name. Your number. Your problem now. Full embroidery, made to order.",
-      "noMeasure": false,
-      "img": "assets/products/glizzy-jersey-1.jpg",
-      "cats": [
-        "jerseys"
-      ],
-      "tags": [],
-      "price": 110,
-      "priceHi": 110,
-      "soldOut": true,
-      "badge": null,
-      "isNew": false,
-      "order": 3,
-      "pin": 999,
-      "created": "2026-09-12T17:02:33Z",
-      "hero": "hero-classic",
-      "curated": true
-    },
-    {
       "id": "8311696687161",
       "handle": "embroidered-glizz-hoodie",
       "slug": "embroidered-glizz-hoodie",
       "name": "Embroidered Glizz Hoodie",
       "card": "The flagship. Full Utah Glizzies HC primary logo, embroidered. The default. The classic. The dog.",
+      "descHtml": "<p>The flagship. The full Utah Glizzies HC primary logo embroidered. No gimmicks, no theme, just the mark that started it all. If you own one Glizzies hoodie, it's this one. The default. The classic. The dog.<br><br>• 60% cotton, 40% polyester<br>• Oversized, relaxed fit <br><br></p>",
       "noMeasure": false,
       "img": "assets/products/embroidered-glizz-hoodie-1.jpg?v=3",
       "cats": [
@@ -715,6 +745,7 @@
       "slug": "double-barrel-hoodie",
       "name": "Double Barrel Hoodie",
       "card": "Two dogs, one bun. Secondary logo front, primary on back. Feed the bear.",
+      "descHtml": "<p>Sometimes you just need to add another dog to the mix. Secondary logo on the front, primary on back. Feed the bear.</p><p><br>• 50% pre-shrunk cotton, 50% polyester<br><br></p>",
       "noMeasure": false,
       "img": "assets/products/double-barrel-hoodie-1.jpg",
       "cats": [
@@ -743,6 +774,7 @@
       "slug": "glizzy-tee",
       "name": "Glizzy Tee",
       "card": "The flagship tee. Full primary logo. The default. The classic. The dog.",
+      "descHtml": "<p>The flagship. Your full Utah Glizzies HC primary logo. No gimmicks, no theme, just the mark that started it all. If you own one Glizzies shirt, it's this one. The default. The classic. The dog.<br><br>• 100% ring-spun cotton<br>• Relaxed fit<br></p>",
       "noMeasure": false,
       "img": "assets/products/glizzy-tee-1.jpg",
       "cats": [
@@ -772,6 +804,7 @@
       "slug": "mustard-gold-tee",
       "name": "Mustard Gold Tee",
       "card": "We waited 46 years for the mustard. Wait no more. Champion mood, oversized fit.",
+      "descHtml": "<p>We waited 46 years for the mustard. Wait no more. Reach for this sauce when the mood is champion and your friends from up North need a reminder how to hold a glizzy.<br><br>• 100% combed ring-spun cotton<br>• Oversized relaxed fit<br><br></p>",
       "noMeasure": false,
       "img": "assets/products/mustard-gold-tee-1.jpg",
       "cats": [
@@ -801,6 +834,7 @@
       "slug": "glizzy-crop-top",
       "name": "Glizzy Crop Top",
       "card": "The flagship, cropped. Full primary logo. The default. The classic. The dog.",
+      "descHtml": "<p>The flagship. The full Utah Glizzies HC primary logo. No gimmicks, no theme, just the mark that started it all. If you own one Glizzies shirt, it's this one. The default. The classic. The dog.<br><br>• 100% combed cotton<br>• Relaxed fit<br>• Cropped length<br>• Preshrunk<br><br></p>",
       "noMeasure": false,
       "img": "assets/products/glizzy-crop-top-1.jpg",
       "cats": [
@@ -830,6 +864,7 @@
       "slug": "tut-tut-beanie",
       "name": "Embroidered Tut Tut Beanie",
       "card": "Glizztopher Robin would wear this deep in the hunnid acre wood.",
+      "descHtml": "<p>Glizztopher Robin would wear this deep in the hunnid acre wood.<br><br>• 100% acrylic<br>• Wide, ribbed knit<br>• One size fits most<br>• Embroidered logo<br></p>",
       "noMeasure": false,
       "img": "assets/products/tut-tut-beanie-1.jpg?v=4",
       "cats": [
@@ -859,6 +894,7 @@
       "slug": "youth-glizzy-hoodie",
       "name": "Youth Glizzy Hoodie",
       "card": "The flagship, youth sized. Primary & secondary logos. The default. The classic. The dog.",
+      "descHtml": "<p>The flagship. Your Utah Glizzies HC primary &amp; secondary logos — No gimmicks, no theme, just the marks that started it all. If you own one Glizzies hoodie, it's this one. The default. The classic. The dog.<br></p>",
       "noMeasure": false,
       "img": "assets/products/youth-glizzy-hoodie-1.jpg",
       "cats": [
@@ -889,6 +925,7 @@
       "slug": "youth-mustard-gold-tee",
       "name": "Youth Mustard Gold Tee",
       "card": "We waited 46 years for the mustard. Youth sized, champion mood.",
+      "descHtml": "<p>We waited 46 years for the mustard. Wait no more. Reach for this sauce when the mood is champion and your friends from up North need a reminder how to hold a glizzy.<br><br>• 100% preshrunk cotton<br>• Relaxed unisex fit<br></p>",
       "noMeasure": false,
       "img": "assets/products/youth-mustard-gold-tee-1.jpg",
       "cats": [
@@ -919,6 +956,7 @@
       "slug": "youth-glizzy-tee",
       "name": "Youth Glizzy Tee",
       "card": "The flagship, youth sized. Primary front, secondary back. The default. The classic. The dog.",
+      "descHtml": "<p>The flagship. The full Utah Glizzies HC primary logo front &amp; secondary logo back. No gimmicks, no theme, just the marks that started it all. If you own one Glizzies shirt, it's this one. The default. The classic. The dog.<br><br>• 100% preshrunk cotton<br>• Classic fit<br></p>",
       "noMeasure": false,
       "img": "assets/products/youth-glizzy-tee-1.jpg",
       "cats": [
@@ -949,14 +987,15 @@
       "slug": "glizzy-stickies",
       "name": "Glizzy Stickies",
       "card": "Stickers with a bear eating a hot dog. For the golf cart, the bumper, the tele, wherever.",
+      "descHtml": "<p>Well, they are stickers. Stickers with a bear eating a hot dog. It's the main logo for your favorite hockey team even though you don't pay attention to hockey.<br><br>For adding to the golf cart, mountain bike, ski helmet, carpool bumper, stop sign, baby stroller, the tele, petrol station toilet room. You know what we're talking about.</p>",
       "noMeasure": false,
       "img": "assets/products/sticker-1.jpg",
       "cats": [
         "gear"
       ],
       "tags": [],
-      "price": 2,
-      "priceHi": 2,
+      "price": 3.5,
+      "priceHi": 3.5,
       "soldOut": false,
       "badge": null,
       "isNew": false,
@@ -972,6 +1011,7 @@
       "slug": "glizzy-links-wiper",
       "name": "Glizzy Links Wiper",
       "card": "\"He's fixin a divot!\" Wipe your shafts clean and get back at it next swing.",
+      "descHtml": "<p>&quot;He's fixin a divot!&quot; We've all been there. Around greatness and buckle when we step into the tee box. Wipe your shafts clean with our face and get back at it next swing. <br></p><p><br></p><p>Note: up to user discretion on whether to use on the golf links or sausage links.<br></p><p><br></p>",
       "noMeasure": false,
       "img": "assets/products/glizzy-links-wiper-1.jpg",
       "cats": [

@@ -100,7 +100,7 @@
         <h1>Glizz Toile Playing Cards</h1>
         <div class="pd-price" data-price-slot>$20</div>
         
-        <div class="pd-desc">Deal 'em like a dog. Glizz Toile on the back of every card, so poker night after the game looks a lot classier than the guys playing it. Comes in a clear case that fits in a hockey bag, a glovebox, or a jacket pocket at the bar.</div>
+        <div class="pd-desc"><p>Deal 'em like a dog. Glizz Toile on the back of every card, so poker night after the game looks a lot classier than the guys playing it.</p><p>Comes in a clear case that fits in a hockey bag, a glovebox, or a jacket pocket at the bar.</p></div>
         <div class="pd-specs">52 cards + 2 jokers • Smooth 305 gsm cardstock, standard 2.5″ × 3.5″ • Clear acrylic box</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

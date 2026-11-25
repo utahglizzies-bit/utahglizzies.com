@@ -100,7 +100,7 @@
         <h1>Utah Glizzies Grandma's House Hat</h1>
         <div class="pd-price" data-price-slot>$42</div>
         
-        <div class="pd-desc">The new hero lid. Welcome to Grandma's House. Up front, the whole Glizzies story in thread: a bear squaring up with a glizzy on mountain lake ice, two nets, the Wasatch behind them, and a little red heart above, because we're not made of stone. &quot;Utah Glizzies Hockey Club&quot; stitched underneath in script (Grandma signed it herself, btw) with Grandma's suede touch on the bill. On the side is the dog house. Don't get on Grandma's bad side. Flip the brim and you'll find the Glizz Toile that was stolen from Grandma's bathroom wallpaper (sorry Grandma). Each hat has its own unique piece of the wallpaper, because why not. Wear it to the rink, Sunday dinner, and everywhere you want people asking why a bear is fighting a hot dog.</div>
+        <div class="pd-desc"><p>The new hero lid. Welcome to Grandma's House.</p><p>Up front, the whole Glizzies story in thread: a bear squaring up with a glizzy on mountain lake ice, two nets, the Wasatch behind them, and a little red heart above, because we're not made of stone. &quot;Utah Glizzies Hockey Club&quot; stitched underneath in script (Grandma signed it herself, btw) with Grandma's suede touch on the bill.</p><p>On the side is the dog house. Don't get on Grandma's bad side. Flip the brim and you'll find the Glizz Toile that was stolen from Grandma's bathroom wallpaper (sorry Grandma). Each hat has its own unique piece of the wallpaper, because why not.</p><p>Wear it to the rink, Sunday dinner, and everywhere you want people asking why a bear is fighting a hot dog.</p></div>
         <div class="pd-specs">Cream structured crown, dark green suede brim • Full front embroidery + dog house side hit • Unique Glizz Toile under-brim • One size fits most</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

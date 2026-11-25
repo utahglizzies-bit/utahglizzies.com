@@ -100,7 +100,7 @@
         <h1>The Glizzy Dinkers™ Pickleball Set</h1>
         <div class="pd-price" data-price-slot>$55.59</div>
         
-        <div class="pd-desc">Big dinks. Bad decisions. Even worse trash talk. Bring the heat from the rink to the pickleball court with the official Utah Glizzies pickleball set. Whether you're dominating the neighborhood, causing a scene at the park, or just trying to look athletic after a few cold ones, these paddles are ready to relish the competition. Glizz Toile on both sides, built for backyard battles, questionable line calls, and absolutely unnecessary celebrations. WARNING: May cause excessive trash talk, questionable victory dances, and an uncontrollable urge to yell &quot;LET'S GET RELISH!&quot; Dink hard. Relish harder.</div>
+        <div class="pd-desc"><p>Big dinks. Bad decisions. Even worse trash talk.</p><p>Bring the heat from the rink to the pickleball court with the official Utah Glizzies pickleball set. Whether you're dominating the neighborhood, causing a scene at the park, or just trying to look athletic after a few cold ones, these paddles are ready to relish the competition.</p><p>Glizz Toile on both sides, built for backyard battles, questionable line calls, and absolutely unnecessary celebrations.</p><p>WARNING: May cause excessive trash talk, questionable victory dances, and an uncontrollable urge to yell &quot;LET'S GET RELISH!&quot; Dink hard. Relish harder.</p></div>
         <div class="pd-specs">Two custom Utah Glizzies wood paddles • Two bright yellow pickleballs • Black grips with wrist straps • Clear carry bag</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

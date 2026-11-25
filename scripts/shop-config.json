@@ -95,18 +95,6 @@
       "soldOut": true,
       "hero": "hero-classic"
     },
-    "8319941443641": {
-      "slug": "custom-jersey",
-      "order": 3,
-      "cats": [
-        "jerseys"
-      ],
-      "img": "assets/products/glizzy-jersey-1.jpg",
-      "name": "THE Glizzy Sweater (Custom)",
-      "card": "Your name. Your number. Your problem now. Full embroidery, made to order.",
-      "soldOut": true,
-      "hero": "hero-classic"
-    },
     "8311696687161": {
       "slug": "embroidered-glizz-hoodie",
       "order": 10,
@@ -232,7 +220,7 @@
     },
     "10430657626169": {
       "slug": "glizzy-dinkers-pickleball-set",
-      "name": "The Glizzy Dinkers™ Pickleball Set"
+      "name": "The Glizzy Dinkers\u2122 Pickleball Set"
     },
     "10458970357817": {
       "sizeGuide": {
@@ -282,7 +270,7 @@
             "37"
           ]
         ],
-        "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut — prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
+        "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut \u2014 prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
       },
       "noMeasureDiagram": true,
       "order": 5
@@ -335,7 +323,7 @@
             "37"
           ]
         ],
-        "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut — prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
+        "note": "Custom jerseys are handmade to order; measurements may vary up to 1\". Chest = lay the jersey flat, measure armpit-seam to armpit-seam, then double it. Length = highest point of the shoulder straight down to the bottom hem. Relaxed athletic cut \u2014 prefer a slimmer fit? Order one size down. Measurements are of the garment, not body."
       },
       "noMeasureDiagram": true,
       "order": 6
@@ -419,7 +407,7 @@
             "28"
           ]
         ],
-        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Heads up: this crew runs small — we recommend ordering one size up."
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Heads up: this crew runs small \u2014 we recommend ordering one size up."
       }
     },
     "8420322705465": {
@@ -532,7 +520,7 @@
             "29 1/2"
           ]
         ],
-        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Cropped fit — size up for a longer, roomier hoodie."
+        "note": "Measurements provided by the supplier (garment laid flat); may vary up to 1\" (2.5 cm). Cropped fit \u2014 size up for a longer, roomier hoodie."
       }
     },
     "8452387962937": {
@@ -609,7 +597,7 @@
             "25"
           ]
         ],
-        "note": "Measure around your head just above the ears and eyebrows. Reversible — same fit both sides."
+        "note": "Measure around your head just above the ears and eyebrows. Reversible \u2014 same fit both sides."
       },
       "noMeasureDiagram": true
     },

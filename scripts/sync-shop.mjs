@@ -85,12 +85,27 @@ function parseDescription(html) {
   const sgIdx = html.search(/<[^>]*class="size-guide-title"|size guide/i);
   const body = sgIdx >= 0 ? html.slice(0, sgIdx) : html;
   const guide = sgIdx >= 0 ? html.slice(sgIdx) : "";
-  const text = decode(body.replace(/<meta[^>]*>/gi, "").replace(/<\/(p|div|li)>/gi, "\n").replace(/<br\s*\/?>/gi, "\n").replace(/<li[^>]*>/gi, "• ").replace(/<[^>]+>/g, ""));
+  // Preserve <br> as a sentinel so intentional in-paragraph line breaks survive tag stripping
+  const text = decode(body.replace(/<meta[^>]*>/gi, "").replace(/<br\s*\/?>/gi, "|||BR|||").replace(/<\/(p|div|li)>/gi, "\n").replace(/<li[^>]*>/gi, "• ").replace(/<[^>]+>/g, ""));
   const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
   const desc = [], specs = [];
-  for (const l of lines) (/^[•\-\u2022]/.test(l) ? specs : desc).push(l.replace(/^[•\-\u2022]\s*/, ""));
-  // keep the fun copy, drop Printful's made-to-order boilerplate from the short desc
-  const prose = desc.filter((l) => !/made especially for you|disclaimer:|this product is made on demand/i.test(l)).join(" ").replace(/\s+/g, " ").trim();
+  for (const l of lines) {
+    const firstNonBreak = l.split("|||BR|||")[0].trim();
+    if (/^[•\-\u2022]/.test(firstNonBreak)) {
+      l.split("|||BR|||").forEach((s) => {
+        s = s.trim().replace(/^[•\-\u2022]\s*/, "").trim();
+        if (s) specs.push(s);
+      });
+    } else {
+      desc.push(l);
+    }
+  }
+  // Prose paragraphs (filter boilerplate)
+  const proseParas = desc.filter((l) => !/made especially for you|disclaimer:|this product is made on demand/i.test(l.split("|||BR|||")[0])).map((l) => l.replace(/[ \t]+/g, " ").trim());
+  // Plain-text prose (for first-sentence card extraction & meta description)
+  const prose = proseParas.map((l) => l.replace(/\|\|\|BR\|\|\|/g, " ")).join(" ").replace(/\s+/g, " ").trim();
+  // Paragraph-structured HTML (for pd-desc on product pages). Each paragraph esc'd, then |||BR||| -> <br>.
+  const proseHtml = proseParas.length ? "<p>" + proseParas.map((pp) => esc(pp).replace(/\|\|\|BR\|\|\|/g, "<br>")).join("</p><p>") + "</p>" : "";
 
   let size = null;
   const tables = [...guide.matchAll(/<table[\s\S]*?<\/table>/gi)].map((m) => m[0]);
@@ -102,7 +117,7 @@ function parseDescription(html) {
       size = { cols, rows: rows.slice(1).filter((r) => r[0]), note: 'Measurements provided by the supplier; may vary up to 2" (5 cm).' };
     }
   }
-  return { desc: prose, specs: specs.join(" • "), size };
+  return { desc: prose, descHtml: proseHtml, specs: specs.join(" • "), size };
 }
 
 function categorize(p, tags) {
@@ -160,7 +175,7 @@ for (const p of live) {
     slug: o.slug || slugify(p.title),
     name: o.name || p.title,
     card: o.card || (parsed.desc.match(/^.{20,140}?[.!?](\s|$)/)?.[0].trim() ?? parsed.desc.slice(0, 120)),
-    desc: parsed.desc, specs: parsed.specs, size: o.sizeGuide || parsed.size, noMeasure: !!o.noMeasureDiagram,
+    desc: parsed.desc, descHtml: parsed.descHtml, specs: parsed.specs, size: o.sizeGuide || parsed.size, noMeasure: !!o.noMeasureDiagram,
     img: o.img || cdn(images[0], 640),
     images, cats, tags,
     price: lo, priceHi: hi,
@@ -222,7 +237,7 @@ for (const p of products) {
     .replaceAll("{{BADGE}}", badgeHtml(p))
     .replaceAll("{{THUMBS}}", thumbs)
     .replaceAll("{{PRICE}}", money(p.price))
-    .replaceAll("{{DESC}}", esc(p.desc))
+    .replaceAll("{{DESC}}", p.descHtml || esc(p.desc))
     .replaceAll("{{SPECS}}", esc(p.specs))
     .replaceAll("{{SIZE_GUIDE}}", sizeGuideHtml(p.size, p.noMeasure ? [] : p.cats))
     .replaceAll("{{BACK_HREF}}", "../shop.html#shop")

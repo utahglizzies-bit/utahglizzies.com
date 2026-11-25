@@ -100,7 +100,7 @@
         <h1>Utah Dog Embroidered Hoodie</h1>
         <div class="pd-price" data-price-slot>$55</div>
         
-        <div class="pd-desc">One dog. That's it. A little embroidered red Utah glizzy on the chest for the minimalists who still want everyone to know they got that dog in them. No crest, no slogan, no explanation. Just the dog.</div>
+        <div class="pd-desc"><p>One dog. That's it. A little embroidered red Utah glizzy on the chest for the minimalists who still want everyone to know they got that dog in them.</p><p>No crest, no slogan, no explanation. Just the dog.</p></div>
         <div class="pd-specs">50% pre-shrunk cotton, 50% polyester • Embroidered chest design • Double-lined hood, front pouch pocket</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }

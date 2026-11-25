@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="../assets/shop.css?v=24" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-49PTYCCKB1"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-49PTYCCKB1');</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Mountain Love Hoodie","image":["https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-black-front-6aeaadc928d8a.jpg?v=1793764823","https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-black-back-6aeaadc92910c.jpg?v=1793764823","https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-dark-chocolate-front-6aeaadc9295c0.jpg?v=1793764822","https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-dark-chocolate-back-6aeaadc929d38.jpg?v=1793764823"],"description":"Mountain love, worn close to the heart. The Glizzies crest — grizzly, glizzy, pond ice, and the Wasatch — on back. Jacques dog watching on the front. Heavy-blend, cozy, and built for the walk from the parking lot to the rink in January.","brand":{"@type":"Brand","name":"Utah Glizzies HC"},"url":"https://www.utahglizzies.com/shop/mountain-love-hoodie.html","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":55,"highPrice":55,"availability":"https://schema.org/InStock"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Mountain Love Hoodie","image":["https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-black-front-6aeaadc928d8a.jpg?v=1793764823","https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-black-back-6aeaadc92910c.jpg?v=1793764823","https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-dark-chocolate-front-6aeaadc9295c0.jpg?v=1793764822","https://cdn.shopify.com/s/files/1/0805/0789/5865/files/unisex-heavy-blend-hoodie-dark-chocolate-back-6aeaadc929d38.jpg?v=1793764823"],"description":"Mountain love, worn close to the heart. The Glizzies crest — grizzly, glizzy, pond ice, and the Wasatch — on back. Jacques dog watching on the front. Embroidered Utah dogs on each sleeve so you're always locked and loaded with a double barrel. Heavy-blend, cozy, and built for the walk from the parki","brand":{"@type":"Brand","name":"Utah Glizzies HC"},"url":"https://www.utahglizzies.com/shop/mountain-love-hoodie.html","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":55,"highPrice":55,"availability":"https://schema.org/InStock"}}</script>
   <style id="presale-sticky-css">
     :root { --presale-h: 44px; }
     .presale-top-banner {
@@ -100,7 +100,7 @@
         <h1>Mountain Love Hoodie</h1>
         <div class="pd-price" data-price-slot>$55</div>
         
-        <div class="pd-desc">Mountain love, worn close to the heart. The Glizzies crest — grizzly, glizzy, pond ice, and the Wasatch — on back. Jacques dog watching on the front. Heavy-blend, cozy, and built for the walk from the parking lot to the rink in January.</div>
+        <div class="pd-desc"><p>Mountain love, worn close to the heart. The Glizzies crest — grizzly, glizzy, pond ice, and the Wasatch — on back. Jacques dog watching on the front. Embroidered Utah dogs on each sleeve so you're always locked and loaded with a double barrel.</p><p>Heavy-blend, cozy, and built for the walk from the parking lot to the rink in January.</p></div>
         <div class="pd-specs">50% pre-shrunk cotton, 50% polyester • Double-lined hood, front pouch pocket • Classic unisex fit</div>
         <div class="pd-noreturn"><span>🦴</span><div><strong>No returns.</strong> All sales final. We’ve only got so many leashes for so many dogs — no returns, just Glizzies out in the wild. Order your size carefully.</div></div>
         <div class="pc-options" data-options></div>
@@ -153,7 +153,7 @@
       if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
       // LIVE description + specs from Shopify (names stay curated on-page)
       var descEl = wrap.querySelector(".pd-desc");
-      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      if(descEl && data && data.desc) descEl.textContent = data.desc;
       var specEl = wrap.querySelector(".pd-specs");
       if(specEl && data){
         if(data.specs){ specEl.textContent = data.specs; specEl.style.display=""; }
