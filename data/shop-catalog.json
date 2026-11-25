@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-25T05:55:41.126Z",
+  "syncedAt": "2026-11-25T06:02:46.884Z",
   "products": [
     {
       "id": "10319716089913",
@@ -55,7 +55,7 @@
       "slug": "utah-glizzies-grandmas-sweater-blank",
       "name": "Utah Glizzies Grandma's Sweater Blank",
       "card": "Grandma's Sweater. The new jersey of the Utah Glizzies HC.",
-      "descHtml": "<p>Grandma's Sweater. The new jersey of the Utah Glizzies HC.</p><p>Deep Glizzy green body, cream yoke, red-and-cream stripes across the chest, arms, and hem, and a laced collar that says you've been doing this since before visors were optional. Up front, embroidered &quot;Utah ♥ Glizzies&quot; in script, Jacques, a heart, and Frank right where they belong. Together. Mmmmm.</p><p>Mustard bottle elbow patches. Yes, really — each sleeve ends in an embroidered yellow mustard bottle patch at the elbow. For the dogs. For the grease. For the taking of hits.</p><p>No name. No number. No accountability. The jersey for the people — wear it to the game, to brunch, to Grandma's for Sunday dinner. At this point it's less of a sweater and more of a way to identify.</p><p>Ships in 3–4 weeks. Grandma's fast, but she's not that fast.</p>",
+      "descHtml": "<p>Grandma's Sweater. The new jersey of the Utah Glizzies HC.</p><p>Deep Glizzy green body, cream yoke, red-and-cream stripes across the chest, arms, and hem, and a laced collar that says you've been doing this since before visors were optional. Up front, embroidered &quot;Utah ♥ Glizzies&quot; in script, Jacques, a heart, and Frank right where they belong. Together. Mmmmm.</p><p>Mustard bottle elbow patches; for the grease in the crease.</p><p>No name. No number. No accountability. The jersey for the people — wear it to the game, to brunch, to Grandma's for Sunday dinner. At this point it's less of a sweater and more of a way to identify.</p><p>Ships in 3–4 weeks. Grandma's fast, but she's not that fast.</p>",
       "noMeasure": true,
       "img": "https://cdn.shopify.com/s/files/1/0805/0789/5865/files/ProductStill4k_1.52.1.jpg?v=1795124764&width=640",
       "cats": [
@@ -698,8 +698,8 @@
         "jerseys"
       ],
       "tags": [],
-      "price": 90,
-      "priceHi": 90,
+      "price": 95,
+      "priceHi": 95,
       "soldOut": true,
       "badge": null,
       "isNew": false,
