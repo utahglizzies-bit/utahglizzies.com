@@ -1,5 +1,5 @@
 {
-  "syncedAt": "2026-11-25T06:02:46.884Z",
+  "syncedAt": "2026-11-27T03:56:10.705Z",
   "products": [
     {
       "id": "10319716089913",
@@ -700,7 +700,7 @@
       "tags": [],
       "price": 95,
       "priceHi": 95,
-      "soldOut": true,
+      "soldOut": false,
       "badge": null,
       "isNew": false,
       "order": 2,
