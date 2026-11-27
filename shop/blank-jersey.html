@@ -129,14 +129,47 @@
   </div></footer>
   <script src="../assets/shop-cart.js?v=20261123"></script>
   <script>
-  /* Presale closed for jerseys — item sold out. Cart/add-to-cart disabled; gallery only. */
+  /* Live: fetches Shopify variants, renders Color/Size dropdowns, handles Add to Cart. */
   (function(){
     var wrap=document.querySelector(".pd-wrap");
+    var pid=wrap.getAttribute("data-product-id");
+    var addBtn=wrap.querySelector("[data-add]");
+    var priceSlot=wrap.querySelector("[data-price-slot]");
+    var optWrap=wrap.querySelector("[data-options]");
+
+    // thumbnails + size-guide toggle
     wrap.addEventListener("click",function(e){
       var thumb=e.target.closest("[data-thumb]");
       if(thumb){ var src=thumb.getAttribute("data-thumb"); var main=document.getElementById("pdMainImg"); if(main) main.src=src; wrap.querySelectorAll(".pd-thumb").forEach(function(t){t.classList.remove("active");}); thumb.classList.add("active"); return; }
       var tog=e.target.closest("[data-sizetoggle]");
       if(tog){ tog.classList.toggle("open"); var panel=wrap.querySelector("[data-sizepanel]"); if(panel) panel.classList.toggle("open"); }
+    });
+
+    // load live variants/price/options from Shopify
+    GlizzCart.fetchProduct(pid).then(function(data){
+      if(data && data.minPrice!=null && priceSlot) priceSlot.textContent = GlizzCart.money(data.minPrice);
+      var descEl = wrap.querySelector(".pd-desc");
+      if(descEl && data && data.desc) descEl.innerHTML = data.desc;
+      wrap.__variants = (data&&data.variants)||[];
+      // Variant-aware options: only renders existing, in-stock Color/Size combos.
+      // When a variant hits 0 on Shopify, availableForSale flips false and it drops out of the dropdown automatically.
+      GlizzCart.renderVariantOptions(optWrap, data);
+      if(data && !data.available && addBtn){ addBtn.disabled=true; addBtn.textContent="Sold Out"; }
+      if(data && data.variants.length===0 && addBtn){ addBtn.disabled=true; addBtn.textContent="Unavailable"; }
+    });
+
+    function resolveVariant(){
+      return GlizzCart.resolveVariantFrom(wrap, wrap.__variants);
+    }
+
+    addBtn.addEventListener("click",function(){
+      var v=resolveVariant();
+      if(!v){ alert("Pick a size and color first."); return; }
+      var mainImg=document.getElementById("pdMainImg");
+      addBtn.disabled=true; addBtn.textContent="Adding…";
+      GlizzCart.add({ productId:pid, variant:v, title:document.querySelector(".pd-info h1").textContent, img:(mainImg?mainImg.src:"") })
+        .then(function(){ addBtn.textContent="Added ✓"; addBtn.classList.add("added"); GlizzCart.open&&GlizzCart.open(); setTimeout(function(){addBtn.disabled=false;addBtn.textContent="Add to Cart";addBtn.classList.remove("added");},1400); })
+        .catch(function(){ addBtn.disabled=false; addBtn.textContent="Add to Cart"; alert("Something went wrong. Please try again."); });
     });
   })();
   </script>
